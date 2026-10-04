@@ -35,7 +35,7 @@ ESLint experiments can run `profiles`, `readiness`, or `both`. The readiness mod
 
 Each experiment publishes a small overview artifact retained for 90 days, alongside larger raw profiles retained for 14 days. Use the overview for routine comparisons and download traces for deeper diagnosis.
 
-For these workflows, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
+For these workflows, use at least three repetitions and compare distributions, not one run. For source experiments, use full 40-character commit hashes or existing branch/tag names; abbreviated hashes are treated as ref names by Actions checkout. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
 
 The Node graph experiment is also available directly:
 

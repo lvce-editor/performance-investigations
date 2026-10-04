@@ -9,7 +9,7 @@ on:
       candidate:
         description: Candidate lvce-editor/eslint commit or branch
         required: true
-        default: feature/startup-performance
+        default: 5b68750c012c31edcc44089ab4663e8e0f77abcb
       workspace_ref:
         description: about-view workspace commit
         required: true

@@ -21,7 +21,7 @@ on:
       candidate_typescript:
         description: Candidate TypeScript extension release
         required: true
-        default: v5.28.0
+        default: v5.28.1
       workspace_ref:
         description: Fixed about-view workspace commit
         required: true

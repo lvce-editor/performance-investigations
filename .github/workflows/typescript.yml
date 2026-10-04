@@ -9,7 +9,7 @@ on:
       candidate:
         description: Candidate TypeScript extension commit
         required: true
-        default: feature/startup-performance
+        default: 4294e8a06bc4d4ba71490750e7b1670902a1d64d
       release:
         description: Fixed official LVCE release for both variants
         required: true
