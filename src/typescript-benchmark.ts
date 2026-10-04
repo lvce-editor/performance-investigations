@@ -3,6 +3,7 @@ import { writeFile } from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import { resolve, join, basename } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 
 const [checkout, workspace, output] = process.argv.slice(2)
@@ -56,10 +57,11 @@ const hash = createHash('sha256').update(JSON.stringify(result)).digest('hex')
 const gc = (globalThis as typeof globalThis & { gc?: () => void }).gc
 gc?.()
 const summary = {
+  sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: resolve(checkout), encoding: 'utf8' }).trim(), nodeVersion: process.version, typescriptVersion: ts.version,
   durationMs, libraryReads, initialMethods, initialRequests, methods: Object.fromEntries(counts), totalRequests: [...counts.values()].reduce((a,b) => a+b, 0), uniqueRequests: queries.size,
   duplicateRequests: [...queries.values()].reduce((sum, count) => sum + count - 1, 0),
   diagnostics: result, diagnosticsHash: hash, editedDiagnostics: edited, restoredDiagnostics: restored, memory: process.memoryUsage(),
   note: 'Diagnostics through the real extension host/resolver with direct Node filesystem transport. Counts represent actual underlying queries; no browser IPC latency is simulated. Not editor startup latency.',
 }
 await writeFile(output, JSON.stringify(summary, null, 2) + '\n')
-console.log({ durationMs, methods: summary.methods, totalRequests: summary.totalRequests, duplicateRequests: summary.duplicateRequests, diagnostics: result.length, diagnosticsHash: hash })
+console.log({ sourceCommit: summary.sourceCommit, durationMs, initialMethods, initialRequests, totalRequestsIncludingEdits: summary.totalRequests, diagnostics: result.length, editedDiagnostics: edited.length, restoredDiagnostics: restored.length, diagnosticsHash: hash })

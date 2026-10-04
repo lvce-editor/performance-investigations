@@ -1,4 +1,6 @@
-# Initial LVCE startup investigation
+# LVCE startup investigation
+
+The merged ESLint optimization reduces **unprofiled cold readiness by 6.1%** in a three-run alternating CI comparison (25.14 s → 23.60 s). Graph construction improves by 14.4% in a separate comparison. TypeScript filesystem RPC caching is undergoing equivalent Electron validation. These readiness measurements concern startup through diagnostics, not first paint.
 
 The supplied capture is approximately 68 seconds long and waits for diagnostics. Its trace is Chromium JSON, despite being named `trace.cpuprofile`. The manifest lists shared-process, filesystem and Git inspector profiles; these processes are also profiled by Chromium. The analyzer retains one profiler per traced thread, avoiding duplicated totals.
 
@@ -63,3 +65,13 @@ The TypeScript candidate in [PR 706](https://github.com/lvce-editor/language-fea
 The TypeScript Electron workflow builds both source refs, injects their worker and matching TypeScript libraries into separate copies of the **same** official release, and verifies identical extension lockfiles. Application activation code, other extensions, workspace and runtime stay fixed. This is an experimental asset override; it does not represent a published extension integration. It retains provenance hashes, alternating captures, request counts and per-worker overview JSON.
 
 The normalized fresh-release profile is retained in `official-release-summary.json` and `official-release-timeline.svg`. Its activity timeline shows TypeScript and ESLint overlapping; their sampled times must not be added to predict elapsed startup.
+
+## Final ESLint patch without profiling
+
+[The fixed-harness readiness experiment](https://github.com/lvce-editor/performance-investigations/actions/runs/37193004666) compares baseline `89c48abd` with final candidate `e45e37b4`. Three alternating runs on one runner reduced median cold readiness from **25,140.1 ms to 23,601.9 ms (6.1%, 1.54 seconds)**. Warm reload changed from 1,372.2 ms to 1,367.7 ms (0.3%), too small to call a material gain. Every candidate cold run was faster than every baseline cold run. The result includes opening the file and completing the benchmark's lint test, using fresh browser state and warm OS filesystem caches. It is not Electron process-entry-to-paint latency.
+
+[ESLint PR 152](https://github.com/lvce-editor/eslint/pull/152) is merged after passing the full Linux/macOS/Windows validation matrix, including existing memory checks. Release `v1.24.1` carries the optimized code for application integration. The complete raw readiness measurements are retained in `eslint-ci-readiness-overview.json`.
+
+## Where the config graph grows
+
+`eslint-package-breakdown.json` groups all resolver reads, including repeated reads and package metadata. TypeScript accounts for about **12.95 million source characters (32.1%)** of the 40.35 million total. SonarJS contributes **1,185 reads / 3.08 million characters**, Unicorn **507 / 2.43 million**, ESLint **380 / 2.67 million**, and the common-misspellings dictionary **2.08 million characters**. These are input-volume counts, not package CPU attribution. They explain why reducing unnecessary plugin and dictionary initialization or using a native desktop config loader has a larger potential than another small path micro-optimization. Loading only applicable plugins must preserve configuration semantics; silently dropping enabled rules is not an optimization.

@@ -22,6 +22,15 @@ const stable = Object.fromEntries(['entry', 'files', 'lazyModules', 'modules', '
 const durationMs = performance.now() - started
 const gc = (globalThis as typeof globalThis & { gc?: () => void }).gc
 gc?.()
+const packages = new Map<string, { package: string; fileReads: number; contentChars: number }>()
+for (const read of capture.reads) {
+  const suffix = read.path.split('/node_modules/').at(-1)
+  const name = suffix === read.path ? '<workspace>' : suffix.startsWith('@') ? suffix.split('/').slice(0, 2).join('/') : suffix.split('/')[0]
+  const entry = packages.get(name) ?? { package: name, fileReads: 0, contentChars: 0 }
+  entry.fileReads++
+  entry.contentChars += read.contentLength ?? 0
+  packages.set(name, entry)
+}
 const result = {
   durationMs,
   forcedGc: Boolean(gc),
@@ -33,6 +42,7 @@ const result = {
   lazyModules: Object.keys(graph.lazyModules).length,
   graphHash: createHash('sha256').update(JSON.stringify(stable)).digest('hex'),
   memory: process.memoryUsage(),
+  packages: [...packages.values()].sort((a, b) => b.contentChars - a.contentChars),
   note: 'Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency',
 }
 await writeFile(output, JSON.stringify(result, null, 2) + '\n')

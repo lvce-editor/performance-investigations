@@ -1,0 +1,86 @@
+[
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "mode": "unprofiled-cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 26681.580618
+  },
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "mode": "unprofiled-reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1373.2367909999994
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "mode": "unprofiled-cold",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 23627.75816
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "mode": "unprofiled-reload",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 1365.769139
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "mode": "unprofiled-cold",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 23113.993737
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "mode": "unprofiled-reload",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 1367.6511890000002
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "mode": "unprofiled-cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 25140.081166
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "mode": "unprofiled-reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1367.5078859999994
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "mode": "unprofiled-cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 25123.775098000002
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "mode": "unprofiled-reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1372.1888470000013
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "mode": "unprofiled-cold",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 23601.869483
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "mode": "unprofiled-reload",
+    "ref": "e45e37b4b39e7b8c0fd9a95386fbac3b4e075bde",
+    "durationMs": 1368.8383959999992
+  }
+]

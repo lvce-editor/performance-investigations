@@ -1,0 +1,1551 @@
+{
+  "durationMs": 14643.554069000002,
+  "forcedGc": true,
+  "peakRssBytes": 805482496,
+  "fileReads": 5471,
+  "uniqueFiles": 5213,
+  "contentChars": 40349521,
+  "modules": 4325,
+  "lazyModules": 0,
+  "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+  "memory": {
+    "rss": 846987264,
+    "heapTotal": 365858816,
+    "heapUsed": 179272120,
+    "external": 91307697,
+    "arrayBuffers": 73182775
+  },
+  "packages": [
+    {
+      "package": "typescript",
+      "fileReads": 113,
+      "contentChars": 12953607
+    },
+    {
+      "package": "eslint-plugin-sonarjs",
+      "fileReads": 1185,
+      "contentChars": 3081205
+    },
+    {
+      "package": "eslint",
+      "fileReads": 380,
+      "contentChars": 2668469
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "fileReads": 507,
+      "contentChars": 2429422
+    },
+    {
+      "package": "@cspell/dict-en-common-misspellings",
+      "fileReads": 7,
+      "contentChars": 2078963
+    },
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "fileReads": 229,
+      "contentChars": 1736211
+    },
+    {
+      "package": "refa",
+      "fileReads": 3,
+      "contentChars": 1018530
+    },
+    {
+      "package": "core-js-compat",
+      "fileReads": 12,
+      "contentChars": 824935
+    },
+    {
+      "package": "<workspace>",
+      "fileReads": 213,
+      "contentChars": 680942
+    },
+    {
+      "package": "katex",
+      "fileReads": 3,
+      "contentChars": 629989
+    },
+    {
+      "package": "eslint-plugin-perfectionist",
+      "fileReads": 230,
+      "contentChars": 549531
+    },
+    {
+      "package": "eslint-plugin-n",
+      "fileReads": 134,
+      "contentChars": 449395
+    },
+    {
+      "package": "eslint-plugin-es-x",
+      "fileReads": 300,
+      "contentChars": 408470
+    },
+    {
+      "package": "module-replacements",
+      "fileReads": 8,
+      "contentChars": 392818
+    },
+    {
+      "package": "@cspell/dict-en-gb-mit",
+      "fileReads": 5,
+      "contentChars": 355043
+    },
+    {
+      "package": "@typescript-eslint/scope-manager",
+      "fileReads": 180,
+      "contentChars": 348264
+    },
+    {
+      "package": "@cspell/dict-cpp",
+      "fileReads": 8,
+      "contentChars": 342894
+    },
+    {
+      "package": "cspell-lib",
+      "fileReads": 114,
+      "contentChars": 341610
+    },
+    {
+      "package": "@cspell/dict-java",
+      "fileReads": 5,
+      "contentChars": 325812
+    },
+    {
+      "package": "@cspell/dict-en_us",
+      "fileReads": 6,
+      "contentChars": 322080
+    },
+    {
+      "package": "@typescript-eslint/typescript-estree",
+      "fileReads": 41,
+      "contentChars": 310787
+    },
+    {
+      "package": "globals",
+      "fileReads": 12,
+      "contentChars": 301063
+    },
+    {
+      "package": "esprima",
+      "fileReads": 3,
+      "contentChars": 292481
+    },
+    {
+      "package": "cspell-trie-lib",
+      "fileReads": 3,
+      "contentChars": 288294
+    },
+    {
+      "package": "yaml",
+      "fileReads": 76,
+      "contentChars": 286390
+    },
+    {
+      "package": "acorn",
+      "fileReads": 3,
+      "contentChars": 246788
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "fileReads": 84,
+      "contentChars": 239958
+    },
+    {
+      "package": "eslint-plugin-yml",
+      "fileReads": 4,
+      "contentChars": 203319
+    },
+    {
+      "package": "@eslint/config-array",
+      "fileReads": 5,
+      "contentChars": 145550
+    },
+    {
+      "package": "@eslint/markdown",
+      "fileReads": 31,
+      "contentChars": 144785
+    },
+    {
+      "package": "@e18e/eslint-plugin",
+      "fileReads": 38,
+      "contentChars": 138707
+    },
+    {
+      "package": "baseline-browser-mapping",
+      "fileReads": 3,
+      "contentChars": 128333
+    },
+    {
+      "package": "@cspell/dict-python",
+      "fileReads": 6,
+      "contentChars": 121575
+    },
+    {
+      "package": "micromark-core-commonmark",
+      "fileReads": 25,
+      "contentChars": 118709
+    },
+    {
+      "package": "@eslint-community/regexpp",
+      "fileReads": 3,
+      "contentChars": 115033
+    },
+    {
+      "package": "ts-api-utils",
+      "fileReads": 3,
+      "contentChars": 104500
+    },
+    {
+      "package": "@humanwhocodes/momoa",
+      "fileReads": 3,
+      "contentChars": 99327
+    },
+    {
+      "package": "@eslint-community/eslint-utils",
+      "fileReads": 3,
+      "contentChars": 94493
+    },
+    {
+      "package": "minimatch",
+      "fileReads": 9,
+      "contentChars": 88317
+    },
+    {
+      "package": "@cspell/eslint-plugin",
+      "fileReads": 15,
+      "contentChars": 81448
+    },
+    {
+      "package": "eslint-plugin-package-json",
+      "fileReads": 33,
+      "contentChars": 76162
+    },
+    {
+      "package": "micromark",
+      "fileReads": 13,
+      "contentChars": 75161
+    },
+    {
+      "package": "package-json-validator",
+      "fileReads": 43,
+      "contentChars": 74685
+    },
+    {
+      "package": "@cspell/dict-golang",
+      "fileReads": 5,
+      "contentChars": 73354
+    },
+    {
+      "package": "@typescript-eslint/type-utils",
+      "fileReads": 24,
+      "contentChars": 72577
+    },
+    {
+      "package": "mdast-util-to-markdown",
+      "fileReads": 50,
+      "contentChars": 72540
+    },
+    {
+      "package": "cspell-dictionary",
+      "fileReads": 30,
+      "contentChars": 70946
+    },
+    {
+      "package": "semver",
+      "fileReads": 48,
+      "contentChars": 70407
+    },
+    {
+      "package": "eslint-scope",
+      "fileReads": 3,
+      "contentChars": 68196
+    },
+    {
+      "package": "regjsparser",
+      "fileReads": 3,
+      "contentChars": 67077
+    },
+    {
+      "package": "picomatch",
+      "fileReads": 8,
+      "contentChars": 66204
+    },
+    {
+      "package": "@cspell/dict-node",
+      "fileReads": 5,
+      "contentChars": 62789
+    },
+    {
+      "package": "@cspell/dict-software-terms",
+      "fileReads": 12,
+      "contentChars": 62237
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-virtual-dom",
+      "fileReads": 3,
+      "contentChars": 62231
+    },
+    {
+      "package": "hookified",
+      "fileReads": 6,
+      "contentChars": 61019
+    },
+    {
+      "package": "node-releases",
+      "fileReads": 4,
+      "contentChars": 58818
+    },
+    {
+      "package": "jsx-ast-utils-x",
+      "fileReads": 39,
+      "contentChars": 57678
+    },
+    {
+      "package": "browserslist",
+      "fileReads": 6,
+      "contentChars": 56050
+    },
+    {
+      "package": "cspell-io",
+      "fileReads": 3,
+      "contentChars": 54780
+    },
+    {
+      "package": "yaml-eslint-parser",
+      "fileReads": 4,
+      "contentChars": 53957
+    },
+    {
+      "package": "cacheable",
+      "fileReads": 3,
+      "contentChars": 52969
+    },
+    {
+      "package": "lodash.merge",
+      "fileReads": 3,
+      "contentChars": 52313
+    },
+    {
+      "package": "@eslint/json",
+      "fileReads": 15,
+      "contentChars": 52176
+    },
+    {
+      "package": "@typescript-eslint/utils",
+      "fileReads": 40,
+      "contentChars": 50995
+    },
+    {
+      "package": "caniuse-lite",
+      "fileReads": 14,
+      "contentChars": 50714
+    },
+    {
+      "package": "@cacheable/utils",
+      "fileReads": 3,
+      "contentChars": 49245
+    },
+    {
+      "package": "jsonc-eslint-parser",
+      "fileReads": 4,
+      "contentChars": 46858
+    },
+    {
+      "package": "ignore",
+      "fileReads": 6,
+      "contentChars": 46609
+    },
+    {
+      "package": "comment-json",
+      "fileReads": 7,
+      "contentChars": 45605
+    },
+    {
+      "package": "@cspell/dict-npm",
+      "fileReads": 5,
+      "contentChars": 45495
+    },
+    {
+      "package": "cspell-config-lib",
+      "fileReads": 28,
+      "contentChars": 44157
+    },
+    {
+      "package": "@cspell/dict-php",
+      "fileReads": 6,
+      "contentChars": 43923
+    },
+    {
+      "package": "esutils",
+      "fileReads": 6,
+      "contentChars": 43565
+    },
+    {
+      "package": "cspell-grammar",
+      "fileReads": 19,
+      "contentChars": 43001
+    },
+    {
+      "package": "esquery",
+      "fileReads": 3,
+      "contentChars": 40791
+    },
+    {
+      "package": "@cspell/dict-typescript",
+      "fileReads": 5,
+      "contentChars": 40321
+    },
+    {
+      "package": "espree",
+      "fileReads": 3,
+      "contentChars": 39957
+    },
+    {
+      "package": "micromark-extension-gfm-table",
+      "fileReads": 7,
+      "contentChars": 37806
+    },
+    {
+      "package": "regexp-ast-analysis",
+      "fileReads": 3,
+      "contentChars": 37737
+    },
+    {
+      "package": "character-entities",
+      "fileReads": 3,
+      "contentChars": 37505
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-github-actions",
+      "fileReads": 3,
+      "contentChars": 36683
+    },
+    {
+      "package": "hashery",
+      "fileReads": 3,
+      "contentChars": 35675
+    },
+    {
+      "package": "mdast-util-from-markdown",
+      "fileReads": 4,
+      "contentChars": 34781
+    },
+    {
+      "package": "@cspell/dict-dotnet",
+      "fileReads": 6,
+      "contentChars": 34506
+    },
+    {
+      "package": "keyv",
+      "fileReads": 3,
+      "contentChars": 34441
+    },
+    {
+      "package": "prelude-ls",
+      "fileReads": 8,
+      "contentChars": 31998
+    },
+    {
+      "package": "fast-equals",
+      "fileReads": 3,
+      "contentChars": 30894
+    },
+    {
+      "package": "@cspell/cspell-pipe",
+      "fileReads": 30,
+      "contentChars": 30105
+    },
+    {
+      "package": "@eslint/plugin-kit",
+      "fileReads": 3,
+      "contentChars": 30051
+    },
+    {
+      "package": "@cacheable/memory",
+      "fileReads": 3,
+      "contentChars": 29591
+    },
+    {
+      "package": "diff-sequences",
+      "fileReads": 3,
+      "contentChars": 29144
+    },
+    {
+      "package": "estraverse",
+      "fileReads": 3,
+      "contentChars": 28975
+    },
+    {
+      "package": "sort-package-json",
+      "fileReads": 3,
+      "contentChars": 28353
+    },
+    {
+      "package": "lru-cache",
+      "fileReads": 3,
+      "contentChars": 28006
+    },
+    {
+      "package": "array-timsort",
+      "fileReads": 3,
+      "contentChars": 27998
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-e2e",
+      "fileReads": 3,
+      "contentChars": 27973
+    },
+    {
+      "package": "@eslint/config-helpers",
+      "fileReads": 3,
+      "contentChars": 27831
+    },
+    {
+      "package": "micromark-extension-gfm-autolink-literal",
+      "fileReads": 5,
+      "contentChars": 27645
+    },
+    {
+      "package": "import-fresh",
+      "fileReads": 3,
+      "contentChars": 27523
+    },
+    {
+      "package": "get-tsconfig",
+      "fileReads": 3,
+      "contentChars": 26909
+    },
+    {
+      "package": "natural-orderby",
+      "fileReads": 5,
+      "contentChars": 26415
+    },
+    {
+      "package": "smol-toml",
+      "fileReads": 3,
+      "contentChars": 26003
+    },
+    {
+      "package": "micromark-extension-gfm-footnote",
+      "fileReads": 5,
+      "contentChars": 25842
+    },
+    {
+      "package": "hosted-git-info",
+      "fileReads": 6,
+      "contentChars": 24884
+    },
+    {
+      "package": "@cspell/filetypes",
+      "fileReads": 5,
+      "contentChars": 24744
+    },
+    {
+      "package": "qified",
+      "fileReads": 3,
+      "contentChars": 24121
+    },
+    {
+      "package": "functional-red-black-tree",
+      "fileReads": 3,
+      "contentChars": 23924
+    },
+    {
+      "package": "fdir",
+      "fileReads": 3,
+      "contentChars": 23598
+    },
+    {
+      "package": "cspell-glob",
+      "fileReads": 3,
+      "contentChars": 23464
+    },
+    {
+      "package": "@cspell/dict-companies",
+      "fileReads": 6,
+      "contentChars": 22765
+    },
+    {
+      "package": "@ota-meshi/ast-token-store",
+      "fileReads": 3,
+      "contentChars": 22185
+    },
+    {
+      "package": "acorn-jsx",
+      "fileReads": 4,
+      "contentChars": 21707
+    },
+    {
+      "package": "@cspell/dict-html",
+      "fileReads": 5,
+      "contentChars": 21540
+    },
+    {
+      "package": "file-entry-cache",
+      "fileReads": 3,
+      "contentChars": 21371
+    },
+    {
+      "package": "@cspell/cspell-bundled-dicts",
+      "fileReads": 8,
+      "contentChars": 21248
+    },
+    {
+      "package": "micromark-extension-math",
+      "fileReads": 7,
+      "contentChars": 21237
+    },
+    {
+      "package": "typescript-eslint",
+      "fileReads": 5,
+      "contentChars": 20959
+    },
+    {
+      "package": "eslint-visitor-keys",
+      "fileReads": 6,
+      "contentChars": 20840
+    },
+    {
+      "package": "eslint-compat-utils",
+      "fileReads": 6,
+      "contentChars": 19839
+    },
+    {
+      "package": "@lvce-editor/eslint-config",
+      "fileReads": 3,
+      "contentChars": 19803
+    },
+    {
+      "package": "@typescript-eslint/types",
+      "fileReads": 7,
+      "contentChars": 19761
+    },
+    {
+      "package": "gensequence",
+      "fileReads": 13,
+      "contentChars": 19443
+    },
+    {
+      "package": "micromark-extension-frontmatter",
+      "fileReads": 6,
+      "contentChars": 19250
+    },
+    {
+      "package": "@cspell/url",
+      "fileReads": 3,
+      "contentChars": 19116
+    },
+    {
+      "package": "@cspell/dict-django",
+      "fileReads": 5,
+      "contentChars": 18801
+    },
+    {
+      "package": "@cspell/dict-aws",
+      "fileReads": 5,
+      "contentChars": 18107
+    },
+    {
+      "package": "@cspell/dict-k8s",
+      "fileReads": 5,
+      "contentChars": 18072
+    },
+    {
+      "package": "flat-cache",
+      "fileReads": 3,
+      "contentChars": 17721
+    },
+    {
+      "package": "@humanwhocodes/retry",
+      "fileReads": 3,
+      "contentChars": 17600
+    },
+    {
+      "package": "@cspell/dict-css",
+      "fileReads": 5,
+      "contentChars": 17478
+    },
+    {
+      "package": "enhanced-resolve",
+      "fileReads": 4,
+      "contentChars": 17342
+    },
+    {
+      "package": "npm-package-arg",
+      "fileReads": 3,
+      "contentChars": 17257
+    },
+    {
+      "package": "tinyglobby",
+      "fileReads": 3,
+      "contentChars": 17228
+    },
+    {
+      "package": "micromark-util-subtokenize",
+      "fileReads": 4,
+      "contentChars": 17218
+    },
+    {
+      "package": "unist-util-visit-parents",
+      "fileReads": 5,
+      "contentChars": 17192
+    },
+    {
+      "package": "@cspell/dict-scala",
+      "fileReads": 5,
+      "contentChars": 17159
+    },
+    {
+      "package": "scslre",
+      "fileReads": 3,
+      "contentChars": 16923
+    },
+    {
+      "package": "@eslint/object-schema",
+      "fileReads": 3,
+      "contentChars": 16843
+    },
+    {
+      "package": "debug",
+      "fileReads": 4,
+      "contentChars": 15976
+    },
+    {
+      "package": "@cspell/dict-ruby",
+      "fileReads": 6,
+      "contentChars": 15757
+    },
+    {
+      "package": "@cspell/dict-latex",
+      "fileReads": 6,
+      "contentChars": 15583
+    },
+    {
+      "package": "@cspell/dict-al",
+      "fileReads": 5,
+      "contentChars": 14866
+    },
+    {
+      "package": "unist-util-visit",
+      "fileReads": 4,
+      "contentChars": 14761
+    },
+    {
+      "package": "unist-util-is",
+      "fileReads": 4,
+      "contentChars": 14468
+    },
+    {
+      "package": "pluralize",
+      "fileReads": 3,
+      "contentChars": 14431
+    },
+    {
+      "package": "brace-expansion",
+      "fileReads": 4,
+      "contentChars": 14365
+    },
+    {
+      "package": "levn",
+      "fileReads": 5,
+      "contentChars": 14326
+    },
+    {
+      "package": "vscode-uri",
+      "fileReads": 3,
+      "contentChars": 14279
+    },
+    {
+      "package": "mdast-util-math",
+      "fileReads": 4,
+      "contentChars": 14006
+    },
+    {
+      "package": "markdown-table",
+      "fileReads": 3,
+      "contentChars": 13984
+    },
+    {
+      "package": "github-slugger",
+      "fileReads": 4,
+      "contentChars": 13882
+    },
+    {
+      "package": "@cspell/dict-fonts",
+      "fileReads": 5,
+      "contentChars": 13571
+    },
+    {
+      "package": "@cspell/dict-julia",
+      "fileReads": 5,
+      "contentChars": 13556
+    },
+    {
+      "package": "mdast-util-gfm-table",
+      "fileReads": 4,
+      "contentChars": 13367
+    },
+    {
+      "package": "@cspell/cspell-types",
+      "fileReads": 3,
+      "contentChars": 13340
+    },
+    {
+      "package": "@typescript-eslint/visitor-keys",
+      "fileReads": 5,
+      "contentChars": 13290
+    },
+    {
+      "package": "vscode-languageserver-textdocument",
+      "fileReads": 3,
+      "contentChars": 12965
+    },
+    {
+      "package": "spdx-license-ids",
+      "fileReads": 4,
+      "contentChars": 12889
+    },
+    {
+      "package": "@cspell/dict-html-symbol-entities",
+      "fileReads": 5,
+      "contentChars": 12838
+    },
+    {
+      "package": "@eslint/js",
+      "fileReads": 5,
+      "contentChars": 12611
+    },
+    {
+      "package": "@cspell/dict-r",
+      "fileReads": 5,
+      "contentChars": 12403
+    },
+    {
+      "package": "mdast-util-gfm-autolink-literal",
+      "fileReads": 4,
+      "contentChars": 12297
+    },
+    {
+      "package": "spdx-correct",
+      "fileReads": 3,
+      "contentChars": 12201
+    },
+    {
+      "package": "@typescript-eslint/parser",
+      "fileReads": 4,
+      "contentChars": 12189
+    },
+    {
+      "package": "@cspell/dict-monkeyc",
+      "fileReads": 5,
+      "contentChars": 12093
+    },
+    {
+      "package": "micromark-extension-gfm-strikethrough",
+      "fileReads": 5,
+      "contentChars": 12078
+    },
+    {
+      "package": "ci-info",
+      "fileReads": 4,
+      "contentChars": 11775
+    },
+    {
+      "package": "@cspell/dict-fullstack",
+      "fileReads": 5,
+      "contentChars": 11733
+    },
+    {
+      "package": "@typescript-eslint/project-service",
+      "fileReads": 5,
+      "contentChars": 11689
+    },
+    {
+      "package": "mdast-util-find-and-replace",
+      "fileReads": 4,
+      "contentChars": 11454
+    },
+    {
+      "package": "@cspell/dict-shell",
+      "fileReads": 7,
+      "contentChars": 11282
+    },
+    {
+      "package": "@cspell/dict-powershell",
+      "fileReads": 5,
+      "contentChars": 11253
+    },
+    {
+      "package": "@cspell/dict-google",
+      "fileReads": 5,
+      "contentChars": 11087
+    },
+    {
+      "package": "eslint-fix-utils",
+      "fileReads": 3,
+      "contentChars": 11012
+    },
+    {
+      "package": "micromark-extension-gfm-task-list-item",
+      "fileReads": 5,
+      "contentChars": 10909
+    },
+    {
+      "package": "mdast-util-gfm-footnote",
+      "fileReads": 4,
+      "contentChars": 10831
+    },
+    {
+      "package": "type-check",
+      "fileReads": 5,
+      "contentChars": 10740
+    },
+    {
+      "package": "@cspell/dict-public-licenses",
+      "fileReads": 5,
+      "contentChars": 10682
+    },
+    {
+      "package": "@cspell/dict-lua",
+      "fileReads": 5,
+      "contentChars": 10662
+    },
+    {
+      "package": "@cspell/dict-dart",
+      "fileReads": 5,
+      "contentChars": 10498
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-devcontainer",
+      "fileReads": 3,
+      "contentChars": 10242
+    },
+    {
+      "package": "@cspell/dict-sql",
+      "fileReads": 5,
+      "contentChars": 10136
+    },
+    {
+      "package": "@cspell/dict-makefile",
+      "fileReads": 5,
+      "contentChars": 10095
+    },
+    {
+      "package": "mdast-util-frontmatter",
+      "fileReads": 4,
+      "contentChars": 9944
+    },
+    {
+      "package": "change-case",
+      "fileReads": 3,
+      "contentChars": 9693
+    },
+    {
+      "package": "micromark-util-character",
+      "fileReads": 3,
+      "contentChars": 9648
+    },
+    {
+      "package": "@cspell/dict-lorem-ipsum",
+      "fileReads": 5,
+      "contentChars": 9468
+    },
+    {
+      "package": "@cspell/dict-data-science",
+      "fileReads": 7,
+      "contentChars": 9369
+    },
+    {
+      "package": "ini",
+      "fileReads": 3,
+      "contentChars": 9239
+    },
+    {
+      "package": "@cspell/dict-swift",
+      "fileReads": 5,
+      "contentChars": 9238
+    },
+    {
+      "package": "@cspell/dict-cryptocurrencies",
+      "fileReads": 6,
+      "contentChars": 9108
+    },
+    {
+      "package": "globrex",
+      "fileReads": 3,
+      "contentChars": 9023
+    },
+    {
+      "package": "super-regex",
+      "fileReads": 3,
+      "contentChars": 8994
+    },
+    {
+      "package": "@altano/repository-tools",
+      "fileReads": 7,
+      "contentChars": 8920
+    },
+    {
+      "package": "p-event",
+      "fileReads": 3,
+      "contentChars": 8701
+    },
+    {
+      "package": "mdast-util-gfm-task-list-item",
+      "fileReads": 4,
+      "contentChars": 8521
+    },
+    {
+      "package": "@cspell/cspell-service-bus",
+      "fileReads": 8,
+      "contentChars": 8503
+    },
+    {
+      "package": "flatted",
+      "fileReads": 3,
+      "contentChars": 8481
+    },
+    {
+      "package": "mdast-util-gfm",
+      "fileReads": 4,
+      "contentChars": 8469
+    },
+    {
+      "package": "@typescript-eslint/tsconfig-utils",
+      "fileReads": 5,
+      "contentChars": 8415
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-tsconfig",
+      "fileReads": 3,
+      "contentChars": 8348
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-extension-json",
+      "fileReads": 3,
+      "contentChars": 8255
+    },
+    {
+      "package": "global-directory",
+      "fileReads": 3,
+      "contentChars": 8216
+    },
+    {
+      "package": "@cspell/dict-markdown",
+      "fileReads": 6,
+      "contentChars": 8149
+    },
+    {
+      "package": "@cspell/dict-zig",
+      "fileReads": 5,
+      "contentChars": 8016
+    },
+    {
+      "package": "micromark-extension-gfm",
+      "fileReads": 3,
+      "contentChars": 7903
+    },
+    {
+      "package": "empathic",
+      "fileReads": 7,
+      "contentChars": 7895
+    },
+    {
+      "package": "@cspell/dict-elixir",
+      "fileReads": 5,
+      "contentChars": 7894
+    },
+    {
+      "package": "@cspell/dict-rust",
+      "fileReads": 6,
+      "contentChars": 7838
+    },
+    {
+      "package": "mdast-util-gfm-strikethrough",
+      "fileReads": 4,
+      "contentChars": 7825
+    },
+    {
+      "package": "spdx-expression-parse",
+      "fileReads": 5,
+      "contentChars": 7622
+    },
+    {
+      "package": "escape-string-regexp",
+      "fileReads": 12,
+      "contentChars": 7616
+    },
+    {
+      "package": "@cspell/dict-flutter",
+      "fileReads": 5,
+      "contentChars": 7578
+    },
+    {
+      "package": "validate-npm-package-name",
+      "fileReads": 4,
+      "contentChars": 7509
+    },
+    {
+      "package": "@cspell/dict-haskell",
+      "fileReads": 5,
+      "contentChars": 7315
+    },
+    {
+      "package": "@cspell/dict-fsharp",
+      "fileReads": 5,
+      "contentChars": 7307
+    },
+    {
+      "package": "zwitch",
+      "fileReads": 3,
+      "contentChars": 7301
+    },
+    {
+      "package": "@cspell/dict-terraform",
+      "fileReads": 5,
+      "contentChars": 7211
+    },
+    {
+      "package": "@cspell/dict-git",
+      "fileReads": 5,
+      "contentChars": 7181
+    },
+    {
+      "package": "micromark-factory-destination",
+      "fileReads": 3,
+      "contentChars": 7150
+    },
+    {
+      "package": "@cspell/strong-weak-map",
+      "fileReads": 4,
+      "contentChars": 7134
+    },
+    {
+      "package": "is-glob",
+      "fileReads": 3,
+      "contentChars": 7124
+    },
+    {
+      "package": "@cspell/dict-svelte",
+      "fileReads": 5,
+      "contentChars": 7078
+    },
+    {
+      "package": "@cspell/dict-csharp",
+      "fileReads": 5,
+      "contentChars": 6967
+    },
+    {
+      "package": "@cspell/dict-ada",
+      "fileReads": 5,
+      "contentChars": 6900
+    },
+    {
+      "package": "@cspell/dict-gaming-terms",
+      "fileReads": 6,
+      "contentChars": 6799
+    },
+    {
+      "package": "make-asynchronous",
+      "fileReads": 3,
+      "contentChars": 6686
+    },
+    {
+      "package": "@cspell/dict-filetypes",
+      "fileReads": 5,
+      "contentChars": 6668
+    },
+    {
+      "package": "mdast-util-to-string",
+      "fileReads": 4,
+      "contentChars": 6564
+    },
+    {
+      "package": "esrecurse",
+      "fileReads": 3,
+      "contentChars": 6560
+    },
+    {
+      "package": "@cspell/dict-vue",
+      "fileReads": 4,
+      "contentChars": 6321
+    },
+    {
+      "package": "unist-util-stringify-position",
+      "fileReads": 4,
+      "contentChars": 6216
+    },
+    {
+      "package": "@cspell/dict-docker",
+      "fileReads": 5,
+      "contentChars": 6207
+    },
+    {
+      "package": "detect-indent",
+      "fileReads": 3,
+      "contentChars": 6201
+    },
+    {
+      "package": "micromark-factory-label",
+      "fileReads": 3,
+      "contentChars": 6126
+    },
+    {
+      "package": "electron-to-chromium",
+      "fileReads": 3,
+      "contentChars": 6101
+    },
+    {
+      "package": "imurmurhash",
+      "fileReads": 3,
+      "contentChars": 6048
+    },
+    {
+      "package": "@cspell/dict-kotlin",
+      "fileReads": 5,
+      "contentChars": 5982
+    },
+    {
+      "package": "micromark-factory-title",
+      "fileReads": 3,
+      "contentChars": 5867
+    },
+    {
+      "package": "proc-log",
+      "fileReads": 3,
+      "contentChars": 5861
+    },
+    {
+      "package": "micromark-util-sanitize-uri",
+      "fileReads": 3,
+      "contentChars": 5837
+    },
+    {
+      "package": "micromark-extension-gfm-tagfilter",
+      "fileReads": 4,
+      "contentChars": 5824
+    },
+    {
+      "package": "micromark-util-combine-extensions",
+      "fileReads": 3,
+      "contentChars": 5806
+    },
+    {
+      "package": "builtin-modules",
+      "fileReads": 7,
+      "contentChars": 5682
+    },
+    {
+      "package": "bytes",
+      "fileReads": 3,
+      "contentChars": 5529
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-eslint-config",
+      "fileReads": 3,
+      "contentChars": 5495
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-rpc",
+      "fileReads": 3,
+      "contentChars": 5390
+    },
+    {
+      "package": "@keyv/serialize",
+      "fileReads": 3,
+      "contentChars": 5349
+    },
+    {
+      "package": "@cspell/dict-bash",
+      "fileReads": 4,
+      "contentChars": 5309
+    },
+    {
+      "package": "decode-named-character-reference",
+      "fileReads": 3,
+      "contentChars": 5294
+    },
+    {
+      "package": "mdast-util-phrasing",
+      "fileReads": 4,
+      "contentChars": 5050
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-nvmrc",
+      "fileReads": 3,
+      "contentChars": 4987
+    },
+    {
+      "package": "balanced-match",
+      "fileReads": 3,
+      "contentChars": 4971
+    },
+    {
+      "package": "fault",
+      "fileReads": 3,
+      "contentChars": 4918
+    },
+    {
+      "package": "micromark-util-chunked",
+      "fileReads": 3,
+      "contentChars": 4866
+    },
+    {
+      "package": "json-stable-stringify-without-jsonify",
+      "fileReads": 3,
+      "contentChars": 4774
+    },
+    {
+      "package": "p-timeout",
+      "fileReads": 3,
+      "contentChars": 4703
+    },
+    {
+      "package": "format",
+      "fileReads": 3,
+      "contentChars": 4559
+    },
+    {
+      "package": "ms",
+      "fileReads": 3,
+      "contentChars": 4488
+    },
+    {
+      "package": "@cspell/cspell-performance-monitor",
+      "fileReads": 3,
+      "contentChars": 4475
+    },
+    {
+      "package": "longest-streak",
+      "fileReads": 3,
+      "contentChars": 4461
+    },
+    {
+      "package": "devlop",
+      "fileReads": 3,
+      "contentChars": 4361
+    },
+    {
+      "package": "ccount",
+      "fileReads": 3,
+      "contentChars": 4297
+    },
+    {
+      "package": "micromark-util-decode-string",
+      "fileReads": 3,
+      "contentChars": 4280
+    },
+    {
+      "package": "fast-deep-equal",
+      "fileReads": 3,
+      "contentChars": 4169
+    },
+    {
+      "package": "micromark-factory-space",
+      "fileReads": 3,
+      "contentChars": 4070
+    },
+    {
+      "package": "resolve-pkg-maps",
+      "fileReads": 3,
+      "contentChars": 4052
+    },
+    {
+      "package": "micromark-util-normalize-identifier",
+      "fileReads": 3,
+      "contentChars": 3985
+    },
+    {
+      "package": "micromark-factory-whitespace",
+      "fileReads": 3,
+      "contentChars": 3977
+    },
+    {
+      "package": "env-paths",
+      "fileReads": 3,
+      "contentChars": 3895
+    },
+    {
+      "package": "micromark-util-html-tag-name",
+      "fileReads": 3,
+      "contentChars": 3834
+    },
+    {
+      "package": "micromark-util-decode-numeric-character-reference",
+      "fileReads": 3,
+      "contentChars": 3787
+    },
+    {
+      "package": "find-up",
+      "fileReads": 3,
+      "contentChars": 3774
+    },
+    {
+      "package": "web-worker",
+      "fileReads": 3,
+      "contentChars": 3733
+    },
+    {
+      "package": "glob-parent",
+      "fileReads": 3,
+      "contentChars": 3714
+    },
+    {
+      "package": "@cspell/cspell-resolver",
+      "fileReads": 5,
+      "contentChars": 3686
+    },
+    {
+      "package": "micromark-util-classify-character",
+      "fileReads": 3,
+      "contentChars": 3613
+    },
+    {
+      "package": "find-up-simple",
+      "fileReads": 3,
+      "contentChars": 3561
+    },
+    {
+      "package": "@cspell/dynamic-import",
+      "fileReads": 3,
+      "contentChars": 3504
+    },
+    {
+      "package": "validate-npm-package-license",
+      "fileReads": 3,
+      "contentChars": 3421
+    },
+    {
+      "package": "p-limit",
+      "fileReads": 3,
+      "contentChars": 3377
+    },
+    {
+      "package": "natural-compare",
+      "fileReads": 3,
+      "contentChars": 3287
+    },
+    {
+      "package": "quote-js-string",
+      "fileReads": 3,
+      "contentChars": 3172
+    },
+    {
+      "package": "reserved-identifiers",
+      "fileReads": 3,
+      "contentChars": 3121
+    },
+    {
+      "package": "p-locate",
+      "fileReads": 3,
+      "contentChars": 3041
+    },
+    {
+      "package": "micromark-util-resolve-all",
+      "fileReads": 3,
+      "contentChars": 3014
+    },
+    {
+      "package": "micromark-util-encode",
+      "fileReads": 3,
+      "contentChars": 2995
+    },
+    {
+      "package": "locate-path",
+      "fileReads": 3,
+      "contentChars": 2901
+    },
+    {
+      "package": "is-extglob",
+      "fileReads": 3,
+      "contentChars": 2881
+    },
+    {
+      "package": "@lvce-editor/eslint-plugin-regex",
+      "fileReads": 3,
+      "contentChars": 2674
+    },
+    {
+      "package": "spdx-exceptions",
+      "fileReads": 3,
+      "contentChars": 2657
+    },
+    {
+      "package": "sort-object-keys",
+      "fileReads": 3,
+      "contentChars": 2636
+    },
+    {
+      "package": "git-hooks-list",
+      "fileReads": 3,
+      "contentChars": 2560
+    },
+    {
+      "package": "xdg-basedir",
+      "fileReads": 3,
+      "contentChars": 2512
+    },
+    {
+      "package": "identifier-regex",
+      "fileReads": 3,
+      "contentChars": 2497
+    },
+    {
+      "package": "resolve-from",
+      "fileReads": 3,
+      "contentChars": 2445
+    },
+    {
+      "package": "function-timeout",
+      "fileReads": 3,
+      "contentChars": 2441
+    },
+    {
+      "package": "is-safe-filename",
+      "fileReads": 3,
+      "contentChars": 2409
+    },
+    {
+      "package": "yocto-queue",
+      "fileReads": 3,
+      "contentChars": 2399
+    },
+    {
+      "package": "time-span",
+      "fileReads": 3,
+      "contentChars": 2255
+    },
+    {
+      "package": "is-identifier",
+      "fileReads": 3,
+      "contentChars": 2254
+    },
+    {
+      "package": "indent-string",
+      "fileReads": 3,
+      "contentChars": 2208
+    },
+    {
+      "package": "is-builtin-module",
+      "fileReads": 3,
+      "contentChars": 2151
+    },
+    {
+      "package": "strip-indent",
+      "fileReads": 3,
+      "contentChars": 2104
+    },
+    {
+      "package": "detect-newline",
+      "fileReads": 3,
+      "contentChars": 2025
+    },
+    {
+      "package": "path-exists",
+      "fileReads": 3,
+      "contentChars": 1561
+    }
+  ],
+  "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+}
