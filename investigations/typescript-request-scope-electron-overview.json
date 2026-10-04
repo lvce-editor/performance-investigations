@@ -1,0 +1,50 @@
+[
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "traceDurationMs": 72444.635,
+    "typescriptNonIdleMs": 52968.522,
+    "invokeSyncSelfMs": 45844.333999999995,
+    "sourceRef": "69ed696ea9aabba65332a84991cdc46c0fd8d13d"
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "traceDurationMs": 66206.689,
+    "typescriptNonIdleMs": 18633.093,
+    "invokeSyncSelfMs": 11586.161,
+    "sourceRef": "62bddc115183bd7af6474ada8263896e051a0b5b"
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "traceDurationMs": 59831.469,
+    "typescriptNonIdleMs": 16874.99,
+    "invokeSyncSelfMs": 10839.268,
+    "sourceRef": "62bddc115183bd7af6474ada8263896e051a0b5b"
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "traceDurationMs": 65666.274,
+    "typescriptNonIdleMs": 49499.567,
+    "invokeSyncSelfMs": 42806.333,
+    "sourceRef": "69ed696ea9aabba65332a84991cdc46c0fd8d13d"
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "traceDurationMs": 64787.978,
+    "typescriptNonIdleMs": 48351.247,
+    "invokeSyncSelfMs": 42005.823,
+    "sourceRef": "69ed696ea9aabba65332a84991cdc46c0fd8d13d"
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "traceDurationMs": 60541.722,
+    "typescriptNonIdleMs": 17463.855,
+    "invokeSyncSelfMs": 11049.840999999999,
+    "sourceRef": "62bddc115183bd7af6474ada8263896e051a0b5b"
+  }
+]
