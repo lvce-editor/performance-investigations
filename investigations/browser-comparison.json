@@ -1,0 +1,138 @@
+{
+  "note": "Compare repeated runs with matching environment and workload. Sampling estimates are not startup latency; missing roles are not zero.",
+  "profiles": [
+    {
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js",
+      "baselineMs": 21268.582,
+      "candidateMs": 21611.312,
+      "deltaMs": 342.7300000000032,
+      "deltaPercent": 1.6114379416549875
+    },
+    {
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js",
+      "baselineMs": 7081.481,
+      "candidateMs": 8366.543,
+      "deltaMs": 1285.062,
+      "deltaPercent": 18.14679725893496
+    },
+    {
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js",
+      "baselineMs": 2978.004,
+      "candidateMs": 3257.33,
+      "deltaMs": 279.326,
+      "deltaPercent": 9.379638173756652
+    },
+    {
+      "role": "<server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+      "baselineMs": 988.772,
+      "candidateMs": 1029.85,
+      "deltaMs": 41.07799999999986,
+      "deltaPercent": 4.154446121047103
+    },
+    {
+      "role": "<server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js",
+      "baselineMs": 921.702,
+      "candidateMs": 1045.705,
+      "deltaMs": 124.00299999999993,
+      "deltaPercent": 13.453697615932256
+    },
+    {
+      "role": "<server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js",
+      "baselineMs": 141.965,
+      "candidateMs": 128.349,
+      "deltaMs": -13.616000000000014,
+      "deltaPercent": -9.59109639699927
+    },
+    {
+      "role": "<server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+      "baselineMs": 55.771,
+      "candidateMs": 50.219,
+      "deltaMs": -5.552,
+      "deltaPercent": -9.954994531207975
+    },
+    {
+      "role": "<server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js",
+      "baselineMs": 23.47,
+      "candidateMs": 23.638,
+      "deltaMs": 0.1680000000000028,
+      "deltaPercent": 0.7158074137196541
+    },
+    {
+      "role": "<server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+      "baselineMs": 23.428,
+      "candidateMs": 29.677,
+      "deltaMs": 6.248999999999999,
+      "deltaPercent": 26.673211541744912
+    },
+    {
+      "role": "<server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+      "baselineMs": 17.708,
+      "candidateMs": 6.712,
+      "deltaMs": -10.995999999999999,
+      "deltaPercent": -62.096227693697756
+    },
+    {
+      "role": "<server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+      "baselineMs": 16.12,
+      "candidateMs": 18.174,
+      "deltaMs": 2.0539999999999985,
+      "deltaPercent": 12.741935483870959
+    },
+    {
+      "role": "<server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+      "baselineMs": 14.182,
+      "candidateMs": 16.86,
+      "deltaMs": 2.677999999999999,
+      "deltaPercent": 18.88309124241996
+    },
+    {
+      "role": "<server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+      "baselineMs": 9.951,
+      "candidateMs": 22.685,
+      "deltaMs": 12.733999999999998,
+      "deltaPercent": 127.96703848859407
+    },
+    {
+      "role": "<server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+      "baselineMs": 9.684,
+      "candidateMs": 9.844,
+      "deltaMs": 0.16000000000000014,
+      "deltaPercent": 1.652209830648494
+    },
+    {
+      "role": "<server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+      "baselineMs": 9.353,
+      "candidateMs": 7.345,
+      "deltaMs": -2.008,
+      "deltaPercent": -21.469047364481987
+    },
+    {
+      "role": "<server>/8669cbe/packages/test-worker/dist/testWorkerMain.js",
+      "baselineMs": 7.393,
+      "candidateMs": 13.712,
+      "deltaMs": 6.319,
+      "deltaPercent": 85.47274448802922
+    },
+    {
+      "role": "<server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+      "baselineMs": 7.116,
+      "candidateMs": 5.158,
+      "deltaMs": -1.9579999999999993,
+      "deltaPercent": -27.515458122540743
+    },
+    {
+      "role": "<server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+      "baselineMs": 5.732,
+      "candidateMs": 4.135,
+      "deltaMs": -1.5970000000000004,
+      "deltaPercent": -27.86113049546407
+    },
+    {
+      "role": "<server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+      "baselineMs": 3.803,
+      "candidateMs": 3.91,
+      "deltaMs": 0.1070000000000002,
+      "deltaPercent": 2.8135682356034764
+    }
+  ]
+}

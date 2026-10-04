@@ -1,0 +1,71 @@
+name: ESLint startup experiment
+on:
+  workflow_dispatch:
+    inputs:
+      baseline:
+        description: Baseline lvce-editor/eslint commit or branch
+        required: true
+        default: 89c48abd5e6bab29e735b4daba490d251adfef87
+      candidate:
+        description: Candidate lvce-editor/eslint commit or branch
+        required: true
+        default: feature/startup-performance
+      workspace_ref:
+        description: about-view workspace commit
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Repetitions per variant (1 to 5)
+        default: '3'
+        required: true
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      REPEATS: ${{ inputs.repeats }}
+      BASELINE: ${{ inputs.baseline }}
+      CANDIDATE: ${{ inputs.candidate }}
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.tmp/browsers
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/eslint
+          ref: ${{ inputs.baseline }}
+          path: experiments/baseline
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/eslint
+          ref: ${{ inputs.candidate }}
+          path: experiments/candidate
+      - name: Install workspace dependencies
+        run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Prepare both variants before measuring
+        run: |
+          for variant in baseline candidate; do
+            (cd "experiments/$variant" && nice npm ci && npm run build && node packages/build/src/prepare-e2e.js)
+          done
+          cd experiments/baseline
+          npx playwright install --with-deps chromium
+      - name: Measure graph, cold browser startup and warm reload
+        run: node --max-old-space-size=4096 src/eslint-experiment.ts
+      - name: Save measurement artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eslint-startup-experiment
+          path: |
+            results/
+          retention-days: 14

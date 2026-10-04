@@ -1,0 +1,13 @@
+{
+  "durationMs": 4607.670521,
+  "importMs": 104.004568,
+  "version": "10.11.0",
+  "results": [
+    {
+      "messages": [],
+      "errorCount": 0,
+      "warningCount": 0
+    }
+  ],
+  "note": "Architecture experiment only: native Node filesystem and module loading, no browser sandbox or IPC. Not an equivalent production path or startup measurement."
+}

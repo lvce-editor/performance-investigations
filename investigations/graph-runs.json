@@ -1,0 +1,243 @@
+[
+  {
+    "variant": "baseline",
+    "run": "baseline-1.json",
+    "data": {
+      "durationMs": 18774.909895999997,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 836603904,
+        "heapTotal": 471789568,
+        "heapUsed": 237251664,
+        "external": 100358365,
+        "arrayBuffers": 73607712
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "baseline",
+    "run": "baseline-2.json",
+    "data": {
+      "durationMs": 18583.882606,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 839401472,
+        "heapTotal": 364961792,
+        "heapUsed": 201619808,
+        "external": 109495671,
+        "arrayBuffers": 79591483
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "baseline",
+    "run": "baseline-3.json",
+    "data": {
+      "durationMs": 19047.249021,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 840695808,
+        "heapTotal": 379940864,
+        "heapUsed": 201707016,
+        "external": 109831565,
+        "arrayBuffers": 78995009
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "baseline",
+    "run": "baseline-gc.json",
+    "data": {
+      "durationMs": 18520.598856,
+      "forcedGc": true,
+      "peakRssBytes": 780148736,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 831344640,
+        "heapTotal": 419074048,
+        "heapUsed": 176383456,
+        "external": 91307697,
+        "arrayBuffers": 73182775
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "candidate",
+    "run": "candidate-1.json",
+    "data": {
+      "durationMs": 16667.911451,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 844849152,
+        "heapTotal": 375447552,
+        "heapUsed": 201487728,
+        "external": 109495671,
+        "arrayBuffers": 79396619
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "candidate",
+    "run": "candidate-2.json",
+    "data": {
+      "durationMs": 17271.982931000002,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 860729344,
+        "heapTotal": 491130880,
+        "heapUsed": 254051304,
+        "external": 109618990,
+        "arrayBuffers": 73305774
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "candidate",
+    "run": "candidate-3.json",
+    "data": {
+      "durationMs": 16368.185058000001,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 1321295872,
+        "heapTotal": 469024768,
+        "heapUsed": 206777912,
+        "external": 117881863,
+        "arrayBuffers": 82377249
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "candidate",
+    "run": "candidate-gc.json",
+    "data": {
+      "durationMs": 16871.130184999998,
+      "forcedGc": true,
+      "peakRssBytes": 802938880,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 855478272,
+        "heapTotal": 365072384,
+        "heapUsed": 176863256,
+        "external": 91307697,
+        "arrayBuffers": 73182775
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "counter",
+    "run": "counter-candidate-1.json",
+    "data": {
+      "durationMs": 15489.376866,
+      "forcedGc": true,
+      "peakRssBytes": 782749696,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 819863552,
+        "heapTotal": 376344576,
+        "heapUsed": 177174616,
+        "external": 91307697,
+        "arrayBuffers": 73182775
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "counter",
+    "run": "counter-candidate-2.json",
+    "data": {
+      "durationMs": 15839.358862000001,
+      "forcedGc": true,
+      "peakRssBytes": 801665024,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 855105536,
+        "heapTotal": 382373888,
+        "heapUsed": 176956168,
+        "external": 91307697,
+        "arrayBuffers": 73182775
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  },
+  {
+    "variant": "counter",
+    "run": "counter-candidate-3.json",
+    "data": {
+      "durationMs": 16138.015663000002,
+      "forcedGc": true,
+      "peakRssBytes": 776564736,
+      "fileReads": 5471,
+      "uniqueFiles": 5213,
+      "contentChars": 40349521,
+      "modules": 4325,
+      "lazyModules": 0,
+      "graphHash": "c6ec3821fe56e96932cbc64853952bcd18451b7be2924a23fa9d09730240746c",
+      "memory": {
+        "rss": 814092288,
+        "heapTotal": 372150272,
+        "heapUsed": 176886992,
+        "external": 91307697,
+        "arrayBuffers": 73182775
+      },
+      "note": "Node graph-only experiment; browser cache storage and IPC absent; not end-to-end startup latency"
+    }
+  }
+]

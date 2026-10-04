@@ -1,0 +1,5463 @@
+{
+  "schemaVersion": 1,
+  "method": "Timestamp-ordered sample residency; non-idle time is an estimate, not OS CPU time or startup latency. Inclusive rows overlap. First sample gap is unobserved.",
+  "traceDurationMs": 36338.095,
+  "windowMs": null,
+  "excludedDuplicateProfiles": [],
+  "profiles": [
+    {
+      "key": "213512:0x13",
+      "pid": 213512,
+      "tid": 213585,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js",
+      "startOffsetMs": 1874.063,
+      "durationMs": 33525.202,
+      "observedMs": 33456.589,
+      "nonIdleMs": 21611.312,
+      "statesMs": {
+        "unattributed": 1503.123,
+        "javascriptOrNative": 18359.157,
+        "gc": 1749.032,
+        "idle": 11845.277
+      },
+      "earlyNonIdleMs": 2827.115,
+      "firstActiveOffsetMs": 1942.676,
+      "lastActiveOffsetMs": 34299.331,
+      "samples": 91189,
+      "nodes": 87217,
+      "negativeDeltas": 2169,
+      "gapsOver10Ms": 3,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 11845.277
+        },
+        {
+          "name": "setCachedValue @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1422",
+          "ms": 4901.886
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 1749.032
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1503.123
+        },
+        {
+          "name": "visitModule @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:2587",
+          "ms": 781.876
+        },
+        {
+          "name": "normalize @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1846",
+          "ms": 608.565
+        },
+        {
+          "name": "setJson @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1524",
+          "ms": 569.823
+        },
+        {
+          "name": "create @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1376",
+          "ms": 537.417
+        },
+        {
+          "name": "_visitPaths @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 496.225
+        },
+        {
+          "name": "_visit @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 427.273
+        },
+        {
+          "name": "visit @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:2267",
+          "ms": 427.118
+        },
+        {
+          "name": "computeTextHash @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1242",
+          "ms": 415.782
+        },
+        {
+          "name": "traverseNode @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 363.143
+        },
+        {
+          "name": "_traverse @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 358.91
+        },
+        {
+          "name": "readWord @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 305.367
+        },
+        {
+          "name": "get @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1071",
+          "ms": 271.557
+        },
+        {
+          "name": "computeBytesHash @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1238",
+          "ms": 245.326
+        },
+        {
+          "name": "(anonymous) @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 210.102
+        },
+        {
+          "name": "preloadCspellFile @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:2733",
+          "ms": 209.091
+        },
+        {
+          "name": "getCachedValue @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1413",
+          "ms": 197.144
+        },
+        {
+          "name": "send @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:349",
+          "ms": 195.647
+        },
+        {
+          "name": "getFileType @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1942",
+          "ms": 180.316
+        },
+        {
+          "name": "setScope @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1071",
+          "ms": 175.032
+        },
+        {
+          "name": "toUri @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1295",
+          "ms": 163.405
+        },
+        {
+          "name": "setLoc @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 148.404
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 33456.589
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 11845.277
+        },
+        {
+          "name": "loadOrCompute @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1431",
+          "ms": 8622.613
+        },
+        {
+          "name": "(anonymous) @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:2475",
+          "ms": 8401.04
+        },
+        {
+          "name": "transpileUncached @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:2403",
+          "ms": 8394.274
+        },
+        {
+          "name": "(anonymous) @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 7386.868
+        },
+        {
+          "name": "transformFromAst @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1224",
+          "ms": 5210.39
+        },
+        {
+          "name": "transformFromAstSync @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1116",
+          "ms": 5202.226
+        },
+        {
+          "name": "sync @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1071",
+          "ms": 5193.879
+        },
+        {
+          "name": "Object.defineProperty.value @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1116",
+          "ms": 5193.205
+        },
+        {
+          "name": "evaluateSync @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1071",
+          "ms": 5187.621
+        },
+        {
+          "name": "setCachedValue @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1422",
+          "ms": 5107.361
+        },
+        {
+          "name": "(anonymous) @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1116",
+          "ms": 5049.938
+        },
+        {
+          "name": "traverse @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:1071",
+          "ms": 3200.789
+        },
+        {
+          "name": "traverseNode @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 3199.848
+        },
+        {
+          "name": "_visitPaths @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 3198.232
+        },
+        {
+          "name": "_visit @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:915",
+          "ms": 3180.652
+        },
+        {
+          "name": "parse$3 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2628.692
+        },
+        {
+          "name": "parse @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2569.712
+        },
+        {
+          "name": "parseTopLevel @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2557.229
+        },
+        {
+          "name": "parseProgram @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2553.965
+        },
+        {
+          "name": "parseBlockBody @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2543.998
+        },
+        {
+          "name": "parseBlockOrModuleBlockBody @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2539.812
+        },
+        {
+          "name": "parseModuleItem @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2525.057
+        },
+        {
+          "name": "parseStatementLike @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js:897",
+          "ms": 2524.366
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/moduleResolutionWorkerMain.js",
+          "ms": 18292.498
+        },
+        {
+          "name": "(idle)",
+          "ms": 11845.277
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 1749.032
+        },
+        {
+          "name": "(program)",
+          "ms": 1503.123
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 27.852
+        },
+        {
+          "name": "set USBOutTransferResult",
+          "ms": 8.063
+        },
+        {
+          "name": "RegExp: ^(\\/?|)([\\s\\S]*?)((?:\\.{1,2}|[^\\/]+?|)(\\.[^.\\/]*|))(?:[\\/]*)$",
+          "ms": 7.964
+        },
+        {
+          "name": "get caches",
+          "ms": 6.964
+        },
+        {
+          "name": "RegExp: \\brequire(?:\\.resolve)?\\s*\\(\\s*[\"']([^\"'\\\\]+)[\"']",
+          "ms": 3.721
+        },
+        {
+          "name": "RegExp: \\r\\n|[\\r\\n\\u2028\\u2029]",
+          "ms": 3.241
+        },
+        {
+          "name": "atob",
+          "ms": 2.588
+        },
+        {
+          "name": "RegExp: (?:\\s|\\/\\/.*|\\/\\*[^]*?\\*\\/)*",
+          "ms": 1.718
+        },
+        {
+          "name": "RegExp: \\breaddirSync\\s*\\(",
+          "ms": 1.226
+        },
+        {
+          "name": "RegExp: \\.(\\w+)$",
+          "ms": 1.053
+        },
+        {
+          "name": "RegExp: (?:^|[^\\\\])(?:\\\\\\\\)*\"",
+          "ms": 0.908
+        },
+        {
+          "name": "RegExp: in(?:stanceof)?",
+          "ms": 0.289
+        },
+        {
+          "name": "RegExp: \\r\\n?",
+          "ms": 0.285
+        },
+        {
+          "name": "addEventListener",
+          "ms": 0.217
+        },
+        {
+          "name": "RegExp: \\s+",
+          "ms": 0.206
+        },
+        {
+          "name": "RegExp: ([\\uD800-\\uDBFF][\\uDC00-\\uDFFF])|([\\uD800-\\uDFFF])|(['\"`])|[^ !#-&\\(-\\[\\]-_a-~]",
+          "ms": 0.189
+        },
+        {
+          "name": "RegExp: \\.0+$",
+          "ms": 0.175
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 57.324
+        },
+        {
+          "second": 2,
+          "nonIdleMs": 861.249
+        },
+        {
+          "second": 3,
+          "nonIdleMs": 941.977
+        },
+        {
+          "second": 4,
+          "nonIdleMs": 966.565
+        },
+        {
+          "second": 5,
+          "nonIdleMs": 920.165
+        },
+        {
+          "second": 6,
+          "nonIdleMs": 980.926
+        },
+        {
+          "second": 7,
+          "nonIdleMs": 978.461
+        },
+        {
+          "second": 8,
+          "nonIdleMs": 961.021
+        },
+        {
+          "second": 9,
+          "nonIdleMs": 901.969
+        },
+        {
+          "second": 10,
+          "nonIdleMs": 951.731
+        },
+        {
+          "second": 11,
+          "nonIdleMs": 921.472
+        },
+        {
+          "second": 12,
+          "nonIdleMs": 977.08
+        },
+        {
+          "second": 13,
+          "nonIdleMs": 958.144
+        },
+        {
+          "second": 14,
+          "nonIdleMs": 944.079
+        },
+        {
+          "second": 15,
+          "nonIdleMs": 944.32
+        },
+        {
+          "second": 16,
+          "nonIdleMs": 942.512
+        },
+        {
+          "second": 17,
+          "nonIdleMs": 946.404
+        },
+        {
+          "second": 18,
+          "nonIdleMs": 916.733
+        },
+        {
+          "second": 19,
+          "nonIdleMs": 689.658
+        },
+        {
+          "second": 20,
+          "nonIdleMs": 313.431
+        },
+        {
+          "second": 21,
+          "nonIdleMs": 257.45
+        },
+        {
+          "second": 22,
+          "nonIdleMs": 251.731
+        },
+        {
+          "second": 23,
+          "nonIdleMs": 92.124
+        },
+        {
+          "second": 24,
+          "nonIdleMs": 113.591
+        },
+        {
+          "second": 25,
+          "nonIdleMs": 78.531
+        },
+        {
+          "second": 26,
+          "nonIdleMs": 101.966
+        },
+        {
+          "second": 27,
+          "nonIdleMs": 616.69
+        },
+        {
+          "second": 28,
+          "nonIdleMs": 981.923
+        },
+        {
+          "second": 29,
+          "nonIdleMs": 987.661
+        },
+        {
+          "second": 30,
+          "nonIdleMs": 168.384
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 264.587
+        },
+        {
+          "second": 33,
+          "nonIdleMs": 340.079
+        },
+        {
+          "second": 34,
+          "nonIdleMs": 281.374
+        }
+      ]
+    },
+    {
+      "key": "213512:0x11",
+      "pid": 213512,
+      "tid": 213581,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js",
+      "startOffsetMs": 1691.282,
+      "durationMs": 34620.365,
+      "observedMs": 34613.671,
+      "nonIdleMs": 8366.543,
+      "statesMs": {
+        "unattributed": 932.898,
+        "javascriptOrNative": 7327.355,
+        "idle": 26247.128,
+        "gc": 106.29
+      },
+      "earlyNonIdleMs": 1186.668,
+      "firstActiveOffsetMs": 1697.976,
+      "lastActiveOffsetMs": 35943.189,
+      "samples": 104957,
+      "nodes": 211,
+      "negativeDeltas": 7153,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 26247.128
+        },
+        {
+          "name": "setText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2331",
+          "ms": 4501.53
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 932.898
+        },
+        {
+          "name": "create @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2248",
+          "ms": 681.582
+        },
+        {
+          "name": "computeTextHash @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2235",
+          "ms": 587.509
+        },
+        {
+          "name": "readText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2271",
+          "ms": 324.29
+        },
+        {
+          "name": "send @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:889",
+          "ms": 275.317
+        },
+        {
+          "name": "getData$2 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:715",
+          "ms": 180.876
+        },
+        {
+          "name": "getText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2315",
+          "ms": 133.948
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 123.867
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 106.29
+        },
+        {
+          "name": "handleMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:549",
+          "ms": 95.16
+        },
+        {
+          "name": "cacheContent @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2432",
+          "ms": 91.357
+        },
+        {
+          "name": "bytesToBase64 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2463",
+          "ms": 77.36
+        },
+        {
+          "name": "getExpirationDate @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2242",
+          "ms": 47.084
+        },
+        {
+          "name": "ipc._resolve @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1345",
+          "ms": 23.249
+        },
+        {
+          "name": "normalize$1 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2711",
+          "ms": 22.446
+        },
+        {
+          "name": "registerPromise @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1316",
+          "ms": 18.335
+        },
+        {
+          "name": "toHex @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2228",
+          "ms": 14.791
+        },
+        {
+          "name": "handleMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1386",
+          "ms": 12.477
+        },
+        {
+          "name": "readFileAsBase64 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2471",
+          "ms": 9.772
+        },
+        {
+          "name": "readFileCached @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2443",
+          "ms": 9.516
+        },
+        {
+          "name": "getFileHashes @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2391",
+          "ms": 8.384
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1259",
+          "ms": 7.959
+        },
+        {
+          "name": "toUri @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2367",
+          "ms": 6.003
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 34613.671
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 26247.128
+        },
+        {
+          "name": "setText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2331",
+          "ms": 5202.61
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 932.898
+        },
+        {
+          "name": "create @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2248",
+          "ms": 728.666
+        },
+        {
+          "name": "computeTextHash @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2235",
+          "ms": 602.3
+        },
+        {
+          "name": "cacheContent @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2432",
+          "ms": 597.617
+        },
+        {
+          "name": "readFileCached @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2443",
+          "ms": 535.755
+        },
+        {
+          "name": "handleMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:549",
+          "ms": 467.92
+        },
+        {
+          "name": "getText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2315",
+          "ms": 454.657
+        },
+        {
+          "name": "readText @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2271",
+          "ms": 324.29
+        },
+        {
+          "name": "send @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:889",
+          "ms": 275.317
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1259",
+          "ms": 217.027
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 192.089
+        },
+        {
+          "name": "getData$2 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:715",
+          "ms": 180.876
+        },
+        {
+          "name": "invokeHelper @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1329",
+          "ms": 144.931
+        },
+        {
+          "name": "invoke @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1423",
+          "ms": 141.485
+        },
+        {
+          "name": "invoke @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1358",
+          "ms": 137.158
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 106.29
+        },
+        {
+          "name": "readFileAsBase64 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2471",
+          "ms": 90.777
+        },
+        {
+          "name": "bytesToBase64 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2463",
+          "ms": 80.11
+        },
+        {
+          "name": "handleMessage @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1386",
+          "ms": 67.993
+        },
+        {
+          "name": "getCachedContent @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2419",
+          "ms": 61.448
+        },
+        {
+          "name": "getExpirationDate @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:2242",
+          "ms": 47.084
+        },
+        {
+          "name": "getResponse @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js:1213",
+          "ms": 27.632
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 26247.128
+        },
+        {
+          "name": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintMain.js",
+          "ms": 7195.889
+        },
+        {
+          "name": "(program)",
+          "ms": 932.898
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 123.867
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 106.29
+        },
+        {
+          "name": "RegExp: ^[a-z][a-z\\d+.-]*:",
+          "ms": 3.344
+        },
+        {
+          "name": "btoa",
+          "ms": 2.75
+        },
+        {
+          "name": "get caches",
+          "ms": 0.915
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.59
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 13.313
+        },
+        {
+          "second": 2,
+          "nonIdleMs": 181.775
+        },
+        {
+          "second": 3,
+          "nonIdleMs": 271.749
+        },
+        {
+          "second": 4,
+          "nonIdleMs": 719.831
+        },
+        {
+          "second": 5,
+          "nonIdleMs": 200.735
+        },
+        {
+          "second": 6,
+          "nonIdleMs": 10.67
+        },
+        {
+          "second": 7,
+          "nonIdleMs": 30.538
+        },
+        {
+          "second": 8,
+          "nonIdleMs": 451.149
+        },
+        {
+          "second": 9,
+          "nonIdleMs": 663.952
+        },
+        {
+          "second": 10,
+          "nonIdleMs": 774.756
+        },
+        {
+          "second": 11,
+          "nonIdleMs": 538.422
+        },
+        {
+          "second": 12,
+          "nonIdleMs": 231.481
+        },
+        {
+          "second": 13,
+          "nonIdleMs": 82.123
+        },
+        {
+          "second": 14,
+          "nonIdleMs": 572.168
+        },
+        {
+          "second": 15,
+          "nonIdleMs": 356.336
+        },
+        {
+          "second": 16,
+          "nonIdleMs": 400.324
+        },
+        {
+          "second": 17,
+          "nonIdleMs": 319.685
+        },
+        {
+          "second": 18,
+          "nonIdleMs": 175.44
+        },
+        {
+          "second": 19,
+          "nonIdleMs": 240.112
+        },
+        {
+          "second": 20,
+          "nonIdleMs": 168.971
+        },
+        {
+          "second": 21,
+          "nonIdleMs": 132.874
+        },
+        {
+          "second": 22,
+          "nonIdleMs": 147.764
+        },
+        {
+          "second": 23,
+          "nonIdleMs": 318.43
+        },
+        {
+          "second": 24,
+          "nonIdleMs": 206.283
+        },
+        {
+          "second": 25,
+          "nonIdleMs": 327.361
+        },
+        {
+          "second": 26,
+          "nonIdleMs": 205.213
+        },
+        {
+          "second": 27,
+          "nonIdleMs": 7.803
+        },
+        {
+          "second": 30,
+          "nonIdleMs": 155.774
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 191.448
+        },
+        {
+          "second": 33,
+          "nonIdleMs": 225.737
+        },
+        {
+          "second": 34,
+          "nonIdleMs": 10.651
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 33.675
+        }
+      ]
+    },
+    {
+      "key": "213512:0x12",
+      "pid": 213512,
+      "tid": 213583,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js",
+      "startOffsetMs": 1749.301,
+      "durationMs": 34571.959,
+      "observedMs": 34562.951,
+      "nonIdleMs": 3257.33,
+      "statesMs": {
+        "unattributed": 2.928,
+        "javascriptOrNative": 3088.413,
+        "idle": 31305.621,
+        "gc": 165.989
+      },
+      "earlyNonIdleMs": 4.372,
+      "firstActiveOffsetMs": 1758.309,
+      "lastActiveOffsetMs": 35398.618,
+      "samples": 88327,
+      "nodes": 9650,
+      "negativeDeltas": 12,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 31305.621
+        },
+        {
+          "name": "load @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10767",
+          "ms": 1080.927
+        },
+        {
+          "name": "normalize @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:896",
+          "ms": 203.814
+        },
+        {
+          "name": "fingerprint @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10655",
+          "ms": 170.111
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 165.989
+        },
+        {
+          "name": "utf8ToBytes @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:3081",
+          "ms": 87.049
+        },
+        {
+          "name": "validateRulesConfig @ <repos>/about-view/node_modules/eslint/lib/config/config.js:686",
+          "ms": 61.562
+        },
+        {
+          "name": "getData$2 @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:273",
+          "ms": 47.446
+        },
+        {
+          "name": "resolveKnownSpecifier @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10757",
+          "ms": 46.51
+        },
+        {
+          "name": "localCompile @ <repos>/about-view/node_modules/ajv/lib/compile/index.js:91",
+          "ms": 35.291
+        },
+        {
+          "name": "require @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10794",
+          "ms": 28.414
+        },
+        {
+          "name": "structuredClone @ :0",
+          "ms": 27.857
+        },
+        {
+          "name": "basename @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:925",
+          "ms": 24.714
+        },
+        {
+          "name": "sortTranspositions @ <repos>/about-view/node_modules/spdx-correct/index.js:39",
+          "ms": 24.065
+        },
+        {
+          "name": "dirname @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:917",
+          "ms": 21.035
+        },
+        {
+          "name": "scan @ <repos>/about-view/node_modules/typescript/lib/typescript.js:12805",
+          "ms": 20.573
+        },
+        {
+          "name": "addVirtualPath @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10665",
+          "ms": 20.564
+        },
+        {
+          "name": "normalizeRuleOptions @ <repos>/about-view/node_modules/eslint/lib/config/flat-config-schema.js:137",
+          "ms": 18.334
+        },
+        {
+          "name": "utf8Slice @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:2285",
+          "ms": 18.118
+        },
+        {
+          "name": "merge @ <repos>/about-view/node_modules/eslint/lib/config/flat-config-schema.js:459",
+          "ms": 16.461
+        },
+        {
+          "name": "webpackUniversalModuleDefinition @ <repos>/about-view/node_modules/katex/dist/katex.js:6",
+          "ms": 15.765
+        },
+        {
+          "name": "blitBuffer @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:3168",
+          "ms": 12.551
+        },
+        {
+          "name": "mergeExecutables @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10694",
+          "ms": 11.865
+        },
+        {
+          "name": "mergeResolutions @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10714",
+          "ms": 11.511
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/typescript/lib/typescript.js:21",
+          "ms": 10.886
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 34562.951
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 31305.621
+        },
+        {
+          "name": "(anonymous) @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10952",
+          "ms": 2032.855
+        },
+        {
+          "name": "evaluateGraph @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10745",
+          "ms": 2032.081
+        },
+        {
+          "name": "evaluate @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10889",
+          "ms": 2032.081
+        },
+        {
+          "name": "require @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10794",
+          "ms": 1624.245
+        },
+        {
+          "name": "load @ <server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js:10767",
+          "ms": 1616.262
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/eslint.config.js:4",
+          "ms": 1591.059
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/@lvce-editor/eslint-config/index.js:4",
+          "ms": 1589.532
+        },
+        {
+          "name": "lintText @ <repos>/about-view/node_modules/eslint/lib/eslint/eslint.js:1107",
+          "ms": 1001.773
+        },
+        {
+          "name": "verifyText @ <repos>/about-view/node_modules/eslint/lib/eslint/eslint-helpers.js:1138",
+          "ms": 731.59
+        },
+        {
+          "name": "verify @ <repos>/about-view/node_modules/eslint/lib/linter/linter.js:867",
+          "ms": 730.935
+        },
+        {
+          "name": "verifyAndFix @ <repos>/about-view/node_modules/eslint/lib/linter/linter.js:1526",
+          "ms": 730.935
+        },
+        {
+          "name": "_verifyWithFlatConfigArrayAndWithoutProcessors @ <repos>/about-view/node_modules/eslint/lib/linter/linter.js:1363",
+          "ms": 730.214
+        },
+        {
+          "name": "_verifyWithFlatConfigArray @ <repos>/about-view/node_modules/eslint/lib/linter/linter.js:1403",
+          "ms": 730.214
+        },
+        {
+          "name": "#flatVerifyWithoutProcessors @ <repos>/about-view/node_modules/eslint/lib/linter/linter.js:1017",
+          "ms": 729.88
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/eslint-plugin-jest/lib/index.js:4",
+          "ms": 712.141
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/eslint-plugin-jest/lib/index.js:23",
+          "ms": 710.995
+        },
+        {
+          "name": "importDefault @ <repos>/about-view/node_modules/eslint-plugin-jest/lib/index.js:18",
+          "ms": 709.262
+        },
+        {
+          "name": "parseSync @ <repos>/about-view/node_modules/eslint/lib/services/parser-service.js:37",
+          "ms": 573.887
+        },
+        {
+          "name": "parse @ <repos>/about-view/node_modules/eslint/lib/languages/js/index.js:243",
+          "ms": 573.227
+        },
+        {
+          "name": "parseForESLint @ <repos>/about-view/node_modules/@typescript-eslint/parser/dist/parser.js:69",
+          "ms": 572.721
+        },
+        {
+          "name": "parseAndGenerateServices @ <repos>/about-view/node_modules/@typescript-eslint/typescript-estree/dist/parser.js:98",
+          "ms": 569.037
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/eslint-plugin-jest/lib/rules/unbound-method.js:15",
+          "ms": 568.726
+        },
+        {
+          "name": "(anonymous) @ <repos>/about-view/node_modules/eslint-plugin-jest/lib/rules/unbound-method.js:4",
+          "ms": 568.726
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 31305.621
+        },
+        {
+          "name": "<server>/remote<repos>/eslint.worktrees/startup-performance/packages/extension/dist/eslintEvaluationWorkerMain.js",
+          "ms": 1835.875
+        },
+        {
+          "name": "<repos>/about-view/node_modules/typescript/lib/typescript.js",
+          "ms": 408.706
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 165.989
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint/lib/config/config.js",
+          "ms": 68.436
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint/lib/config/flat-config-schema.js",
+          "ms": 39.029
+        },
+        {
+          "name": "<repos>/about-view/node_modules/ajv/lib/compile/index.js",
+          "ms": 35.722
+        },
+        {
+          "name": "structuredClone",
+          "ms": 27.857
+        },
+        {
+          "name": "<repos>/about-view/node_modules/spdx-correct/index.js",
+          "ms": 25.378
+        },
+        {
+          "name": "<repos>/about-view/node_modules/katex/dist/katex.js",
+          "ms": 20.11
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint-plugin-unicorn/rules/rule/unicorn-listeners.js",
+          "ms": 17.66
+        },
+        {
+          "name": "<repos>/about-view/node_modules/ajv/lib/compile/util.js",
+          "ms": 15.178
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint/lib/linter/linter.js",
+          "ms": 15.111
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint-plugin-unicorn/rules/no-unnecessary-polyfills.js",
+          "ms": 11.187
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint-plugin-unicorn/rules/rule/to-eslint-create.js",
+          "ms": 10.386
+        },
+        {
+          "name": "<repos>/about-view/node_modules/esquery/dist/esquery.min.js",
+          "ms": 9.357
+        },
+        {
+          "name": "<repos>/about-view/node_modules/fast-json-stable-stringify/index.js",
+          "ms": 8.751
+        },
+        {
+          "name": "<repos>/about-view/node_modules/uri-js/dist/es5/uri.all.js",
+          "ms": 8.715
+        },
+        {
+          "name": "<repos>/about-view/node_modules/ajv/lib/dotjs/validate.js",
+          "ms": 8.082
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint/lib/linter/source-code-visitor.js",
+          "ms": 7.839
+        },
+        {
+          "name": "<repos>/about-view/node_modules/change-case/dist/index.js",
+          "ms": 6.8
+        },
+        {
+          "name": "<repos>/about-view/node_modules/refa/index.js",
+          "ms": 6.151
+        },
+        {
+          "name": "internIdentifier",
+          "ms": 5.928
+        },
+        {
+          "name": "<repos>/about-view/node_modules/eslint-plugin-unicorn/rules/filename-case.js",
+          "ms": 5.788
+        },
+        {
+          "name": "<repos>/about-view/node_modules/@eslint/config-array/dist/cjs/index.cjs",
+          "ms": 5.05
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 4.372
+        },
+        {
+          "second": 30,
+          "nonIdleMs": 589.039
+        },
+        {
+          "second": 31,
+          "nonIdleMs": 1000
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 575.682
+        },
+        {
+          "second": 34,
+          "nonIdleMs": 689.619
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 398.618
+        }
+      ]
+    },
+    {
+      "key": "213512:0x1",
+      "pid": 213512,
+      "tid": 213512,
+      "thread": "CrRendererMain",
+      "role": "<server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js",
+      "startOffsetMs": 0,
+      "durationMs": 36329.165,
+      "observedMs": 36318.903,
+      "nonIdleMs": 1045.705,
+      "statesMs": {
+        "unattributed": 909.088,
+        "javascriptOrNative": 119.185,
+        "idle": 35273.198,
+        "gc": 17.432
+      },
+      "earlyNonIdleMs": 426.323,
+      "firstActiveOffsetMs": 10.262,
+      "lastActiveOffsetMs": 36329.165,
+      "samples": 94473,
+      "nodes": 193,
+      "negativeDeltas": 65,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35273.198
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 909.088
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 17.432
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1",
+          "ms": 16.389
+        },
+        {
+          "name": "create$4$1 @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2771",
+          "ms": 9.344
+        },
+        {
+          "name": "query @ :5719",
+          "ms": 8.85
+        },
+        {
+          "name": "getTitleBarHeight @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1960",
+          "ms": 5.29
+        },
+        {
+          "name": "(anonymous) @ :1",
+          "ms": 4.749
+        },
+        {
+          "name": "parseEvaluationResultValue @ :106",
+          "ms": 3.103
+        },
+        {
+          "name": "InjectedScript @ :6810",
+          "ms": 2.982
+        },
+        {
+          "name": "(anonymous) @ :2",
+          "ms": 2.945
+        },
+        {
+          "name": "UtilityScript @ :6743",
+          "ms": 2.782
+        },
+        {
+          "name": "renderDomElement @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1564",
+          "ms": 2.431
+        },
+        {
+          "name": "addEventListener @ :0",
+          "ms": 2.426
+        },
+        {
+          "name": "(anonymous) @ :5717",
+          "ms": 2.41
+        },
+        {
+          "name": "querySelectorAll @ :0",
+          "ms": 2.324
+        },
+        {
+          "name": "addCssStyleSheet @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:142",
+          "ms": 2.308
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:3182",
+          "ms": 2.187
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2800",
+          "ms": 1.832
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2421",
+          "ms": 1.741
+        },
+        {
+          "name": "setProp @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1478",
+          "ms": 1.732
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:10303",
+          "ms": 1.694
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2811",
+          "ms": 1.602
+        },
+        {
+          "name": "rememberFocus$1 @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1901",
+          "ms": 1.533
+        },
+        {
+          "name": "launchWorkers @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:10204",
+          "ms": 1.495
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 36318.903
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35273.198
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 909.088
+        },
+        {
+          "name": "(anonymous) @ :1",
+          "ms": 40.396
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:1",
+          "ms": 35.014
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2421",
+          "ms": 31.66
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:3182",
+          "ms": 28.93
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 28.087
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:3309",
+          "ms": 27.644
+        },
+        {
+          "name": "evaluate @ :305",
+          "ms": 26.654
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:3136",
+          "ms": 24.808
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:2850",
+          "ms": 24.628
+        },
+        {
+          "name": "querySelectorAll @ :7010",
+          "ms": 17.647
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 17.432
+        },
+        {
+          "name": "_queryEngineAll @ :7058",
+          "ms": 16.629
+        },
+        {
+          "name": "queryAll @ :7079",
+          "ms": 16.329
+        },
+        {
+          "name": "query @ :5534",
+          "ms": 16.311
+        },
+        {
+          "name": "_cached @ :5500",
+          "ms": 15.995
+        },
+        {
+          "name": "_queryEngine @ :5696",
+          "ms": 15.776
+        },
+        {
+          "name": "(anonymous) @ :5538",
+          "ms": 15.776
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js:10303",
+          "ms": 15.559
+        },
+        {
+          "name": "query @ :5747",
+          "ms": 15.373
+        },
+        {
+          "name": "(anonymous) @ :5709",
+          "ms": 15.373
+        },
+        {
+          "name": "_callQuery @ :5708",
+          "ms": 15.373
+        },
+        {
+          "name": "_querySimple @ :5595",
+          "ms": 14.68
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35273.198
+        },
+        {
+          "name": "(program)",
+          "ms": 909.088
+        },
+        {
+          "name": "<server>/8669cbe/packages/renderer-process/dist/rendererProcessMain.js",
+          "ms": 77.004
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 17.432
+        },
+        {
+          "name": "",
+          "ms": 10.799
+        },
+        {
+          "name": "query",
+          "ms": 9.338
+        },
+        {
+          "name": "querySelectorAll",
+          "ms": 3.509
+        },
+        {
+          "name": "parseEvaluationResultValue",
+          "ms": 3.103
+        },
+        {
+          "name": "InjectedScript",
+          "ms": 2.982
+        },
+        {
+          "name": "UtilityScript",
+          "ms": 2.946
+        },
+        {
+          "name": "addEventListener",
+          "ms": 2.426
+        },
+        {
+          "name": "evaluate",
+          "ms": 1.18
+        },
+        {
+          "name": "_querySimple",
+          "ms": 0.829
+        },
+        {
+          "name": "previewNode",
+          "ms": 0.704
+        },
+        {
+          "name": "isElementVisible",
+          "ms": 0.672
+        },
+        {
+          "name": "safeJson",
+          "ms": 0.566
+        },
+        {
+          "name": "oneLine",
+          "ms": 0.518
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.443
+        },
+        {
+          "name": "_queryEngine",
+          "ms": 0.403
+        },
+        {
+          "name": "_queryCSS",
+          "ms": 0.267
+        },
+        {
+          "name": "_cached",
+          "ms": 0.219
+        },
+        {
+          "name": "createElement",
+          "ms": 0.206
+        },
+        {
+          "name": "SelectorEvaluatorImpl",
+          "ms": 0.2
+        },
+        {
+          "name": "begin",
+          "ms": 0.195
+        },
+        {
+          "name": "_setupGlobalListenersRemovalDetection",
+          "ms": 0.19
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 214.046
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 131.394
+        },
+        {
+          "second": 2,
+          "nonIdleMs": 11.353
+        },
+        {
+          "second": 3,
+          "nonIdleMs": 22.3
+        },
+        {
+          "second": 4,
+          "nonIdleMs": 47.23
+        },
+        {
+          "second": 5,
+          "nonIdleMs": 16.454
+        },
+        {
+          "second": 6,
+          "nonIdleMs": 1.465
+        },
+        {
+          "second": 7,
+          "nonIdleMs": 16.18
+        },
+        {
+          "second": 8,
+          "nonIdleMs": 30.081
+        },
+        {
+          "second": 9,
+          "nonIdleMs": 52.526
+        },
+        {
+          "second": 10,
+          "nonIdleMs": 27.377
+        },
+        {
+          "second": 11,
+          "nonIdleMs": 36.461
+        },
+        {
+          "second": 12,
+          "nonIdleMs": 27
+        },
+        {
+          "second": 13,
+          "nonIdleMs": 18.321
+        },
+        {
+          "second": 14,
+          "nonIdleMs": 44.388
+        },
+        {
+          "second": 15,
+          "nonIdleMs": 37.936
+        },
+        {
+          "second": 16,
+          "nonIdleMs": 33.02
+        },
+        {
+          "second": 17,
+          "nonIdleMs": 29.494
+        },
+        {
+          "second": 18,
+          "nonIdleMs": 23.203
+        },
+        {
+          "second": 19,
+          "nonIdleMs": 27.971
+        },
+        {
+          "second": 20,
+          "nonIdleMs": 17.957
+        },
+        {
+          "second": 21,
+          "nonIdleMs": 17.153
+        },
+        {
+          "second": 22,
+          "nonIdleMs": 17.577
+        },
+        {
+          "second": 23,
+          "nonIdleMs": 9.501
+        },
+        {
+          "second": 24,
+          "nonIdleMs": 10.351
+        },
+        {
+          "second": 25,
+          "nonIdleMs": 11.359
+        },
+        {
+          "second": 26,
+          "nonIdleMs": 1.931
+        },
+        {
+          "second": 27,
+          "nonIdleMs": 1.193
+        },
+        {
+          "second": 28,
+          "nonIdleMs": 1.732
+        },
+        {
+          "second": 29,
+          "nonIdleMs": 1.753
+        },
+        {
+          "second": 30,
+          "nonIdleMs": 19.67
+        },
+        {
+          "second": 31,
+          "nonIdleMs": 2.917
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 13.882
+        },
+        {
+          "second": 33,
+          "nonIdleMs": 15.523
+        },
+        {
+          "second": 34,
+          "nonIdleMs": 1.637
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 49.34
+        },
+        {
+          "second": 36,
+          "nonIdleMs": 4.029
+        }
+      ]
+    },
+    {
+      "key": "213512:0x7",
+      "pid": 213512,
+      "tid": 213539,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+      "startOffsetMs": 686.692,
+      "durationMs": 35646.02,
+      "observedMs": 35641.268,
+      "nonIdleMs": 1029.85,
+      "statesMs": {
+        "unattributed": 19.531,
+        "javascriptOrNative": 958.291,
+        "idle": 34611.418,
+        "gc": 52.028
+      },
+      "earlyNonIdleMs": 128.562,
+      "firstActiveOffsetMs": 691.444,
+      "lastActiveOffsetMs": 35939.832,
+      "samples": 114051,
+      "nodes": 122,
+      "negativeDeltas": 7148,
+      "gapsOver10Ms": 1,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 34611.418
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:738",
+          "ms": 274.281
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 134.319
+        },
+        {
+          "name": "parse @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:705",
+          "ms": 123.509
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:678",
+          "ms": 122.567
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:335",
+          "ms": 97.958
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:501",
+          "ms": 54.867
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 52.028
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:735",
+          "ms": 34.241
+        },
+        {
+          "name": "stringifyCompact @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:702",
+          "ms": 23.154
+        },
+        {
+          "name": "fetch @ :0",
+          "ms": 21.72
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 19.531
+        },
+        {
+          "name": "ipc._resolve @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1194",
+          "ms": 12.288
+        },
+        {
+          "name": "registerPromise @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1165",
+          "ms": 9.025
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1235",
+          "ms": 6.532
+        },
+        {
+          "name": "getCommand @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:773",
+          "ms": 6.471
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1178",
+          "ms": 5.407
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1108",
+          "ms": 5.218
+        },
+        {
+          "name": "readFileAsBlob @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:2020",
+          "ms": 5.157
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1062",
+          "ms": 2.99
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:776",
+          "ms": 2.074
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1480",
+          "ms": 1.928
+        },
+        {
+          "name": "unwrapJsonRpcResult @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:962",
+          "ms": 1.519
+        },
+        {
+          "name": "getFileHash$1 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1740",
+          "ms": 1.025
+        },
+        {
+          "name": "exists$3 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1670",
+          "ms": 0.982
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35641.268
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 34611.418
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:335",
+          "ms": 822.318
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 514.255
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1108",
+          "ms": 496.522
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1235",
+          "ms": 379.499
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1062",
+          "ms": 356.756
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:776",
+          "ms": 352.475
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1178",
+          "ms": 315.203
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1480",
+          "ms": 314.454
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1207",
+          "ms": 312.526
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:738",
+          "ms": 297.435
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:735",
+          "ms": 157.75
+        },
+        {
+          "name": "getFileHash @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1984",
+          "ms": 152.451
+        },
+        {
+          "name": "getFileHash$1 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1740",
+          "ms": 151.529
+        },
+        {
+          "name": "parse @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:705",
+          "ms": 123.509
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:678",
+          "ms": 122.567
+        },
+        {
+          "name": "readFile @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1972",
+          "ms": 96.603
+        },
+        {
+          "name": "readFile$4 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1528",
+          "ms": 95.632
+        },
+        {
+          "name": "readDirWithFileTypes @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1993",
+          "ms": 56.127
+        },
+        {
+          "name": "readDirWithFileTypes$4 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:1535",
+          "ms": 55.412
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:501",
+          "ms": 54.867
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 52.028
+        },
+        {
+          "name": "stringifyCompact @ <server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js:702",
+          "ms": 23.154
+        },
+        {
+          "name": "fetch @ :0",
+          "ms": 21.72
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 34611.418
+        },
+        {
+          "name": "<server>/8669cbe/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+          "ms": 802.015
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 134.319
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 52.028
+        },
+        {
+          "name": "fetch",
+          "ms": 21.72
+        },
+        {
+          "name": "(program)",
+          "ms": 19.531
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.237
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 9.91
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 12.309
+        },
+        {
+          "second": 2,
+          "nonIdleMs": 28.023
+        },
+        {
+          "second": 3,
+          "nonIdleMs": 38.762
+        },
+        {
+          "second": 4,
+          "nonIdleMs": 39.558
+        },
+        {
+          "second": 5,
+          "nonIdleMs": 8.663
+        },
+        {
+          "second": 6,
+          "nonIdleMs": 1.901
+        },
+        {
+          "second": 7,
+          "nonIdleMs": 2.958
+        },
+        {
+          "second": 8,
+          "nonIdleMs": 38.618
+        },
+        {
+          "second": 9,
+          "nonIdleMs": 47.251
+        },
+        {
+          "second": 10,
+          "nonIdleMs": 49.783
+        },
+        {
+          "second": 11,
+          "nonIdleMs": 24.4
+        },
+        {
+          "second": 12,
+          "nonIdleMs": 9.865
+        },
+        {
+          "second": 13,
+          "nonIdleMs": 7.072
+        },
+        {
+          "second": 14,
+          "nonIdleMs": 44.868
+        },
+        {
+          "second": 15,
+          "nonIdleMs": 43.934
+        },
+        {
+          "second": 16,
+          "nonIdleMs": 38.153
+        },
+        {
+          "second": 17,
+          "nonIdleMs": 42.559
+        },
+        {
+          "second": 18,
+          "nonIdleMs": 25.392
+        },
+        {
+          "second": 19,
+          "nonIdleMs": 47.681
+        },
+        {
+          "second": 20,
+          "nonIdleMs": 55.585
+        },
+        {
+          "second": 21,
+          "nonIdleMs": 37.063
+        },
+        {
+          "second": 22,
+          "nonIdleMs": 40.241
+        },
+        {
+          "second": 23,
+          "nonIdleMs": 62.13
+        },
+        {
+          "second": 24,
+          "nonIdleMs": 63.55
+        },
+        {
+          "second": 25,
+          "nonIdleMs": 73.649
+        },
+        {
+          "second": 26,
+          "nonIdleMs": 47.802
+        },
+        {
+          "second": 27,
+          "nonIdleMs": 4.303
+        },
+        {
+          "second": 30,
+          "nonIdleMs": 3.846
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 19.427
+        },
+        {
+          "second": 33,
+          "nonIdleMs": 33.238
+        },
+        {
+          "second": 34,
+          "nonIdleMs": 11.716
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 15.64
+        }
+      ]
+    },
+    {
+      "key": "213512:0x4",
+      "pid": 213512,
+      "tid": 213526,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js",
+      "startOffsetMs": 289.399,
+      "durationMs": 36022.884,
+      "observedMs": 35991.343,
+      "nonIdleMs": 128.349,
+      "statesMs": {
+        "unattributed": 5.552,
+        "javascriptOrNative": 97.743,
+        "idle": 35862.994,
+        "gc": 25.054
+      },
+      "earlyNonIdleMs": 109.85,
+      "firstActiveOffsetMs": 320.94,
+      "lastActiveOffsetMs": 35936.758,
+      "samples": 93653,
+      "nodes": 325,
+      "negativeDeltas": 177,
+      "gapsOver10Ms": 1,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35862.994
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 25.054
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10223",
+          "ms": 14.827
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:0",
+          "ms": 6.72
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 5.552
+        },
+        {
+          "name": "mark @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:7773",
+          "ms": 4.312
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10250",
+          "ms": 3.943
+        },
+        {
+          "name": "load$4 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5573",
+          "ms": 3.538
+        },
+        {
+          "name": "loadCommand @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:597",
+          "ms": 2.465
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1750",
+          "ms": 2.13
+        },
+        {
+          "name": "getModuleId$3 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:246",
+          "ms": 1.911
+        },
+        {
+          "name": "createWorkerViewletInternal @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:19712",
+          "ms": 1.843
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10087",
+          "ms": 1.754
+        },
+        {
+          "name": "create$11 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10062",
+          "ms": 1.64
+        },
+        {
+          "name": "handleUpdate @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5477",
+          "ms": 1.577
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 1.551
+        },
+        {
+          "name": "registerWrappedCommands @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5450",
+          "ms": 1.492
+        },
+        {
+          "name": "startup @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:8893",
+          "ms": 1.473
+        },
+        {
+          "name": "wrappedListener @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10240",
+          "ms": 1.424
+        },
+        {
+          "name": "register$2 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:603",
+          "ms": 1.349
+        },
+        {
+          "name": "loadContent$x @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:22262",
+          "ms": 1.336
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1784",
+          "ms": 1.259
+        },
+        {
+          "name": "getBrowser @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:3443",
+          "ms": 1.193
+        },
+        {
+          "name": "getTestFilePath @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:3288",
+          "ms": 1.181
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:9615",
+          "ms": 1.164
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35991.343
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35862.994
+        },
+        {
+          "name": "wrappedListener @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10240",
+          "ms": 25.651
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 25.054
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10223",
+          "ms": 14.827
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:0",
+          "ms": 13.877
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1784",
+          "ms": 11.303
+        },
+        {
+          "name": "load$4 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5573",
+          "ms": 10.763
+        },
+        {
+          "name": "execute$4 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:610",
+          "ms": 9.813
+        },
+        {
+          "name": "handleMessage$1 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1814",
+          "ms": 9.57
+        },
+        {
+          "name": "startup @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:8893",
+          "ms": 9.496
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1717",
+          "ms": 5.987
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 5.552
+        },
+        {
+          "name": "loadCommand @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:597",
+          "ms": 4.801
+        },
+        {
+          "name": "mark @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:7773",
+          "ms": 4.312
+        },
+        {
+          "name": "invoke$H @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1730",
+          "ms": 4.184
+        },
+        {
+          "name": "invokeHelper$1 @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1170",
+          "ms": 4.071
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:10250",
+          "ms": 3.943
+        },
+        {
+          "name": "createWorkerViewlet @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:19973",
+          "ms": 3.937
+        },
+        {
+          "name": "maybeRegisterWrappedCommands @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5456",
+          "ms": 3.551
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1750",
+          "ms": 3.449
+        },
+        {
+          "name": "actuallyLoadModule @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5548",
+          "ms": 3.099
+        },
+        {
+          "name": "registerWrappedCommands @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:5450",
+          "ms": 2.988
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:9615",
+          "ms": 2.865
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js:1746",
+          "ms": 2.614
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35862.994
+        },
+        {
+          "name": "<server>/8669cbe/packages/renderer-worker/dist/rendererWorkerMain.js",
+          "ms": 95.078
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 25.054
+        },
+        {
+          "name": "(program)",
+          "ms": 5.552
+        },
+        {
+          "name": "postMessage",
+          "ms": 1.551
+        },
+        {
+          "name": "fetch",
+          "ms": 0.568
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.546
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 51.345
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 58.505
+        },
+        {
+          "second": 31,
+          "nonIdleMs": 13.94
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 4.559
+        }
+      ]
+    },
+    {
+      "key": "213512:0x6",
+      "pid": 213512,
+      "tid": 213537,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+      "startOffsetMs": 576.782,
+      "durationMs": 35741.948,
+      "observedMs": 35734.649,
+      "nonIdleMs": 50.219,
+      "statesMs": {
+        "unattributed": 0.778,
+        "javascriptOrNative": 40.054,
+        "idle": 35684.43,
+        "gc": 9.387
+      },
+      "earlyNonIdleMs": 37.898,
+      "firstActiveOffsetMs": 584.081,
+      "lastActiveOffsetMs": 35940.337,
+      "samples": 91983,
+      "nodes": 152,
+      "negativeDeltas": 96,
+      "gapsOver10Ms": 5,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35684.43
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 9.387
+        },
+        {
+          "name": "parse @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:532",
+          "ms": 5.724
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:404",
+          "ms": 2.589
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 2.495
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:505",
+          "ms": 2.283
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:603",
+          "ms": 1.807
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:328",
+          "ms": 1.651
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:565",
+          "ms": 1.651
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1062",
+          "ms": 1.226
+        },
+        {
+          "name": "executeCommand$1 @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1785",
+          "ms": 1.186
+        },
+        {
+          "name": "getAllExtensions @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2444",
+          "ms": 1.078
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:562",
+          "ms": 1.016
+        },
+        {
+          "name": "getStack @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:825",
+          "ms": 1.011
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:162",
+          "ms": 0.963
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.778
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1324",
+          "ms": 0.706
+        },
+        {
+          "name": "getCurrentStack @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:679",
+          "ms": 0.704
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:0",
+          "ms": 0.691
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 0.69
+        },
+        {
+          "name": "getAllExtensionsWithState @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2427",
+          "ms": 0.636
+        },
+        {
+          "name": "getStatusBarItems @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:4257",
+          "ms": 0.611
+        },
+        {
+          "name": "sendAndTransfer @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:407",
+          "ms": 0.591
+        },
+        {
+          "name": "connect @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1209",
+          "ms": 0.55
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2787",
+          "ms": 0.528
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35734.649
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35684.43
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:162",
+          "ms": 21.024
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 11.67
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:935",
+          "ms": 9.716
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 9.387
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1062",
+          "ms": 9.175
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1005",
+          "ms": 7.451
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:889",
+          "ms": 7.403
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:562",
+          "ms": 6.74
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1324",
+          "ms": 5.941
+        },
+        {
+          "name": "parse @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:532",
+          "ms": 5.724
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1034",
+          "ms": 5.259
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:603",
+          "ms": 4.995
+        },
+        {
+          "name": "getAllExtensionsWithState @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2427",
+          "ms": 3.448
+        },
+        {
+          "name": "getRemoteDisabledExtensionIds @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2211",
+          "ms": 3.013
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:404",
+          "ms": 2.589
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1099",
+          "ms": 2.498
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:505",
+          "ms": 2.283
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:0",
+          "ms": 2.163
+        },
+        {
+          "name": "exists @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1386",
+          "ms": 2.04
+        },
+        {
+          "name": "getExtensionsWithState @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:2415",
+          "ms": 2.008
+        },
+        {
+          "name": "getRpcRemote @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:4401",
+          "ms": 1.847
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:328",
+          "ms": 1.651
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:565",
+          "ms": 1.651
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35684.43
+        },
+        {
+          "name": "<server>/8669cbe/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+          "ms": 36.869
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 9.387
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 2.495
+        },
+        {
+          "name": "(program)",
+          "ms": 0.778
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.69
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 19.133
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 18.765
+        },
+        {
+          "second": 23,
+          "nonIdleMs": 2.424
+        },
+        {
+          "second": 24,
+          "nonIdleMs": 0.619
+        },
+        {
+          "second": 25,
+          "nonIdleMs": 0.39
+        },
+        {
+          "second": 31,
+          "nonIdleMs": 3.083
+        },
+        {
+          "second": 32,
+          "nonIdleMs": 2.868
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 2.937
+        }
+      ]
+    },
+    {
+      "key": "213512:0xa",
+      "pid": 213512,
+      "tid": 213557,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+      "startOffsetMs": 1000.071,
+      "durationMs": 35321.841,
+      "observedMs": 35319.146,
+      "nonIdleMs": 29.677,
+      "statesMs": {
+        "unattributed": 1.727,
+        "javascriptOrNative": 20.602,
+        "idle": 35289.469,
+        "gc": 7.348
+      },
+      "earlyNonIdleMs": 19.438,
+      "firstActiveOffsetMs": 1002.766,
+      "lastActiveOffsetMs": 35899.537,
+      "samples": 90257,
+      "nodes": 44,
+      "negativeDeltas": 3,
+      "gapsOver10Ms": 3,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35289.469
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 7.348
+        },
+        {
+          "name": "getJsonCached @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1404",
+          "ms": 4.953
+        },
+        {
+          "name": "putInCache @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1393",
+          "ms": 4.759
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.727
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:386",
+          "ms": 1.66
+        },
+        {
+          "name": "toLowerCaseMap @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1128",
+          "ms": 1.255
+        },
+        {
+          "name": "getCacheInternal @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+          "ms": 1.152
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:310",
+          "ms": 1.071
+        },
+        {
+          "name": "supportsStorageBuckets @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1311",
+          "ms": 0.878
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1129",
+          "ms": 0.736
+        },
+        {
+          "name": "doGetIconThemeJson @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1458",
+          "ms": 0.628
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1230",
+          "ms": 0.478
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:324",
+          "ms": 0.473
+        },
+        {
+          "name": "loadIconThemeJson @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1506",
+          "ms": 0.4
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:0",
+          "ms": 0.315
+        },
+        {
+          "name": "getExtensionRemoteUri @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1250",
+          "ms": 0.312
+        },
+        {
+          "name": "parseContentLength @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1381",
+          "ms": 0.223
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:522",
+          "ms": 0.211
+        },
+        {
+          "name": "addLanguages @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1097",
+          "ms": 0.196
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:361",
+          "ms": 0.194
+        },
+        {
+          "name": "waitForFirstMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:349",
+          "ms": 0.189
+        },
+        {
+          "name": "create @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1023",
+          "ms": 0.182
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:151",
+          "ms": 0.171
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:854",
+          "ms": 0.166
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35319.146
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35289.469
+        },
+        {
+          "name": "getJsonCached @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1404",
+          "ms": 11.628
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:151",
+          "ms": 8.502
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:854",
+          "ms": 8.447
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 7.348
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:981",
+          "ms": 6.787
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 6.787
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:522",
+          "ms": 6.621
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:808",
+          "ms": 6.621
+        },
+        {
+          "name": "putInCache @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1393",
+          "ms": 4.982
+        },
+        {
+          "name": "loadIconThemeJson @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1506",
+          "ms": 3.869
+        },
+        {
+          "name": "doGetIconThemeJson @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1458",
+          "ms": 3.469
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1230",
+          "ms": 2.469
+        },
+        {
+          "name": "getIcons @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1228",
+          "ms": 2.469
+        },
+        {
+          "name": "getCacheInternal @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+          "ms": 2.03
+        },
+        {
+          "name": "toLowerCaseMap @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1128",
+          "ms": 1.991
+        },
+        {
+          "name": "getFileIconFromFileNames @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1131",
+          "ms": 1.991
+        },
+        {
+          "name": "getFileNameIcon @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1174",
+          "ms": 1.991
+        },
+        {
+          "name": "getFileIcon @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1184",
+          "ms": 1.991
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.727
+        },
+        {
+          "name": "getCache @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1331",
+          "ms": 1.693
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:386",
+          "ms": 1.66
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:310",
+          "ms": 1.071
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:383",
+          "ms": 1.071
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35289.469
+        },
+        {
+          "name": "<server>/8669cbe/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+          "ms": 20.602
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 7.348
+        },
+        {
+          "name": "(program)",
+          "ms": 1.727
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 19.438
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 10.239
+        }
+      ]
+    },
+    {
+      "key": "213512:0x3",
+      "pid": 213512,
+      "tid": 213525,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js",
+      "startOffsetMs": 255.338,
+      "durationMs": 36057.188,
+      "observedMs": 36037.165,
+      "nonIdleMs": 23.638,
+      "statesMs": {
+        "unattributed": 1.735,
+        "javascriptOrNative": 21.903,
+        "idle": 36013.527
+      },
+      "earlyNonIdleMs": 16.583,
+      "firstActiveOffsetMs": 275.361,
+      "lastActiveOffsetMs": 35921.183,
+      "samples": 93691,
+      "nodes": 106,
+      "negativeDeltas": 19,
+      "gapsOver10Ms": 0,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 36013.527
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:0",
+          "ms": 1.843
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.735
+        },
+        {
+          "name": "getEditorContentVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13341",
+          "ms": 1.333
+        },
+        {
+          "name": "execute$1 @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:552",
+          "ms": 1.125
+        },
+        {
+          "name": "getEditorSelectionsVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13280",
+          "ms": 1.026
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:884",
+          "ms": 0.791
+        },
+        {
+          "name": "getSortedRanges @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:2189",
+          "ms": 0.771
+        },
+        {
+          "name": "loadContent @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:12580",
+          "ms": 0.753
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 0.724
+        },
+        {
+          "name": "normalizeParams @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:861",
+          "ms": 0.707
+        },
+        {
+          "name": "getEditorVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13408",
+          "ms": 0.707
+        },
+        {
+          "name": "getQuickPickMenuEntries @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:12104",
+          "ms": 0.691
+        },
+        {
+          "name": "toCommandId @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:1627",
+          "ms": 0.616
+        },
+        {
+          "name": "ensure @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:11620",
+          "ms": 0.613
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:1011",
+          "ms": 0.587
+        },
+        {
+          "name": "apply @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13894",
+          "ms": 0.585
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:838",
+          "ms": 0.571
+        },
+        {
+          "name": "updateDiagnostics @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13865",
+          "ms": 0.528
+        },
+        {
+          "name": "diffExistingChild @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13024",
+          "ms": 0.494
+        },
+        {
+          "name": "updateDerivedState @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:8136",
+          "ms": 0.466
+        },
+        {
+          "name": "getLanguageByExtension @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:4444",
+          "ms": 0.449
+        },
+        {
+          "name": "registerPromise @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:941",
+          "ms": 0.4
+        },
+        {
+          "name": "setTimeout @ :0",
+          "ms": 0.398
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:174",
+          "ms": 0.392
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 36037.165
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 36013.527
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:174",
+          "ms": 12.107
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 11.357
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:1011",
+          "ms": 10.633
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:884",
+          "ms": 10.046
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:838",
+          "ms": 8.548
+        },
+        {
+          "name": "execute$1 @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:552",
+          "ms": 7.977
+        },
+        {
+          "name": "applyRender @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13508",
+          "ms": 3.834
+        },
+        {
+          "name": "render2 @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13524",
+          "ms": 3.834
+        },
+        {
+          "name": "renderIncremental @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13478",
+          "ms": 3.676
+        },
+        {
+          "name": "getDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13464",
+          "ms": 3.182
+        },
+        {
+          "name": "getEditorVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13408",
+          "ms": 3.066
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:0",
+          "ms": 2.722
+        },
+        {
+          "name": "loadContent @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:12580",
+          "ms": 2.696
+        },
+        {
+          "name": "getEditorContentVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13341",
+          "ms": 2.359
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.735
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13945",
+          "ms": 1.597
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:954",
+          "ms": 1.307
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:14733",
+          "ms": 1.109
+        },
+        {
+          "name": "getEditorSelectionsVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13280",
+          "ms": 1.026
+        },
+        {
+          "name": "getEditorLayersVirtualDom @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13294",
+          "ms": 1.026
+        },
+        {
+          "name": "updateDiagnostics @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:13865",
+          "ms": 0.835
+        },
+        {
+          "name": "getSortedRanges @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:2189",
+          "ms": 0.771
+        },
+        {
+          "name": "getVisibleLineCount @ <server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js:2200",
+          "ms": 0.771
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 36013.527
+        },
+        {
+          "name": "<server>/8669cbe/packages/editor-worker/dist/editorWorkerMain.js",
+          "ms": 20.6
+        },
+        {
+          "name": "(program)",
+          "ms": 1.735
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.724
+        },
+        {
+          "name": "setTimeout",
+          "ms": 0.398
+        },
+        {
+          "name": "addEventListener",
+          "ms": 0.181
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 4.642
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 11.941
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 7.055
+        }
+      ]
+    },
+    {
+      "key": "213512:0xb",
+      "pid": 213512,
+      "tid": 213559,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+      "startOffsetMs": 1016.705,
+      "durationMs": 35302.728,
+      "observedMs": 35298.503,
+      "nonIdleMs": 22.685,
+      "statesMs": {
+        "unattributed": 0.401,
+        "javascriptOrNative": 22.284,
+        "idle": 35275.818
+      },
+      "earlyNonIdleMs": 22.685,
+      "firstActiveOffsetMs": 1020.93,
+      "lastActiveOffsetMs": 1614.733,
+      "samples": 90275,
+      "nodes": 43,
+      "negativeDeltas": 7,
+      "gapsOver10Ms": 3,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35275.818
+        },
+        {
+          "name": "measureTextWidthSlow @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1176",
+          "ms": 12.409
+        },
+        {
+          "name": "createMeasureContext @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1151",
+          "ms": 3.798
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:703",
+          "ms": 1.531
+        },
+        {
+          "name": "loadFont @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1108",
+          "ms": 0.854
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:794",
+          "ms": 0.664
+        },
+        {
+          "name": "getFontString @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1143",
+          "ms": 0.61
+        },
+        {
+          "name": "addEventListener @ :0",
+          "ms": 0.477
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.401
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:267",
+          "ms": 0.282
+        },
+        {
+          "name": "waitForFirstMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:306",
+          "ms": 0.238
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:964",
+          "ms": 0.199
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:951",
+          "ms": 0.194
+        },
+        {
+          "name": "getType @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:816",
+          "ms": 0.186
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:0",
+          "ms": 0.183
+        },
+        {
+          "name": "getFonts @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1103",
+          "ms": 0.18
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:993",
+          "ms": 0.179
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:108",
+          "ms": 0.158
+        },
+        {
+          "name": "string @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:844",
+          "ms": 0.142
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35298.503
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35275.818
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:108",
+          "ms": 20.392
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:703",
+          "ms": 20.194
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:951",
+          "ms": 19.952
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 19.952
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:749",
+          "ms": 19.758
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:794",
+          "ms": 18.663
+        },
+        {
+          "name": "measureTextWidthSlow @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1176",
+          "ms": 17.145
+        },
+        {
+          "name": "measureTextWidth @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1198",
+          "ms": 17.145
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1342",
+          "ms": 15.755
+        },
+        {
+          "name": "measureTextWidths @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1341",
+          "ms": 15.755
+        },
+        {
+          "name": "createMeasureContext @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1151",
+          "ms": 3.798
+        },
+        {
+          "name": "getOrCreate @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1161",
+          "ms": 3.798
+        },
+        {
+          "name": "getContext @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1169",
+          "ms": 3.798
+        },
+        {
+          "name": "loadFont @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1108",
+          "ms": 1.034
+        },
+        {
+          "name": "ensure @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1125",
+          "ms": 0.854
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:0",
+          "ms": 0.62
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:993",
+          "ms": 0.616
+        },
+        {
+          "name": "getFontString @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1143",
+          "ms": 0.61
+        },
+        {
+          "name": "addEventListener @ :0",
+          "ms": 0.477
+        },
+        {
+          "name": "onMessage @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:451",
+          "ms": 0.477
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:107",
+          "ms": 0.477
+        },
+        {
+          "name": "Ipc @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:121",
+          "ms": 0.477
+        },
+        {
+          "name": "IpcParentWithMessagePort @ <server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:439",
+          "ms": 0.477
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35275.818
+        },
+        {
+          "name": "<server>/8669cbe/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+          "ms": 21.807
+        },
+        {
+          "name": "addEventListener",
+          "ms": 0.477
+        },
+        {
+          "name": "(program)",
+          "ms": 0.401
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 22.685
+        }
+      ]
+    },
+    {
+      "key": "213512:0xd",
+      "pid": 213512,
+      "tid": 213563,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+      "startOffsetMs": 1065.339,
+      "durationMs": 35259.79,
+      "observedMs": 35246.227,
+      "nonIdleMs": 18.174,
+      "statesMs": {
+        "unattributed": 1.106,
+        "javascriptOrNative": 17.068,
+        "idle": 35228.053
+      },
+      "earlyNonIdleMs": 12.322,
+      "firstActiveOffsetMs": 1078.902,
+      "lastActiveOffsetMs": 35892.292,
+      "samples": 89857,
+      "nodes": 98,
+      "negativeDeltas": 14,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35228.053
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:593",
+          "ms": 2.677
+        },
+        {
+          "name": "renderEditorGroupHeader @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7269",
+          "ms": 1.763
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:470",
+          "ms": 1.358
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:0",
+          "ms": 1.305
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.106
+        },
+        {
+          "name": "diff2 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:2905",
+          "ms": 0.699
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:631",
+          "ms": 0.67
+        },
+        {
+          "name": "diffRootNode @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:6908",
+          "ms": 0.552
+        },
+        {
+          "name": "openUriWithContext @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:4404",
+          "ms": 0.541
+        },
+        {
+          "name": "Ipc @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:224",
+          "ms": 0.453
+        },
+        {
+          "name": "getActiveTabId @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:3709",
+          "ms": 0.439
+        },
+        {
+          "name": "registerPromise @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1020",
+          "ms": 0.428
+        },
+        {
+          "name": "diffTrees @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:6950",
+          "ms": 0.403
+        },
+        {
+          "name": "create$5 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1240",
+          "ms": 0.35
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:963",
+          "ms": 0.341
+        },
+        {
+          "name": "getStateWithTab @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:4030",
+          "ms": 0.318
+        },
+        {
+          "name": "getOpenInputOptions @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:4386",
+          "ms": 0.304
+        },
+        {
+          "name": "notifyMountedViewlets @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:2041",
+          "ms": 0.271
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1062",
+          "ms": 0.267
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1231",
+          "ms": 0.256
+        },
+        {
+          "name": "getMenuIds @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:3442",
+          "ms": 0.253
+        },
+        {
+          "name": "renderItems @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7527",
+          "ms": 0.232
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:2055",
+          "ms": 0.23
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:917",
+          "ms": 0.229
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35246.227
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35228.053
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:211",
+          "ms": 6.025
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 5.853
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:963",
+          "ms": 5.649
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1090",
+          "ms": 5.649
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:917",
+          "ms": 5.537
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:631",
+          "ms": 5.308
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1033",
+          "ms": 3.697
+        },
+        {
+          "name": "applyRender @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7586",
+          "ms": 3.549
+        },
+        {
+          "name": "render2 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7598",
+          "ms": 3.549
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1145",
+          "ms": 3.387
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1062",
+          "ms": 3.372
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:0",
+          "ms": 3.324
+        },
+        {
+          "name": "renderIncremental @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7553",
+          "ms": 3.131
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:593",
+          "ms": 2.677
+        },
+        {
+          "name": "run @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1638",
+          "ms": 2.633
+        },
+        {
+          "name": "create$5 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1240",
+          "ms": 2.369
+        },
+        {
+          "name": "renderItems @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:7527",
+          "ms": 2.053
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:470",
+          "ms": 2.019
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1105",
+          "ms": 2.019
+        },
+        {
+          "name": "openUriWithContext @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:4404",
+          "ms": 1.975
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:2063",
+          "ms": 1.975
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:1790",
+          "ms": 1.975
+        },
+        {
+          "name": "openInputWithContext @ <server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js:4257",
+          "ms": 1.866
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35228.053
+        },
+        {
+          "name": "<server>/8669cbe/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+          "ms": 16.656
+        },
+        {
+          "name": "(program)",
+          "ms": 1.106
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.208
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.204
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 12.322
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 5.852
+        }
+      ]
+    },
+    {
+      "key": "213512:0x2",
+      "pid": 213512,
+      "tid": 213524,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+      "startOffsetMs": 225.907,
+      "durationMs": 36101.813,
+      "observedMs": 36096.282,
+      "nonIdleMs": 16.86,
+      "statesMs": {
+        "unattributed": 3.352,
+        "idle": 36079.422,
+        "javascriptOrNative": 13.508
+      },
+      "earlyNonIdleMs": 13.739,
+      "firstActiveOffsetMs": 231.438,
+      "lastActiveOffsetMs": 35921.11,
+      "samples": 93763,
+      "nodes": 44,
+      "negativeDeltas": 3,
+      "gapsOver10Ms": 1,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 36079.422
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 3.352
+        },
+        {
+          "name": "safeTokenizeLine @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1088",
+          "ms": 2.792
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 2.579
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:310",
+          "ms": 1.427
+        },
+        {
+          "name": "tokenizeLine @ <server>/remote<repos>/eslint.worktrees/startup-performance/node_modules/@lvce-editor/static-server/static/8669cbe/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:403",
+          "ms": 1.37
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:994",
+          "ms": 0.807
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:151",
+          "ms": 0.658
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:0",
+          "ms": 0.549
+        },
+        {
+          "name": "loadTokenizer @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1192",
+          "ms": 0.479
+        },
+        {
+          "name": "getTokensViewport @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1300",
+          "ms": 0.436
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 0.421
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:561",
+          "ms": 0.374
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:425",
+          "ms": 0.372
+        },
+        {
+          "name": "Ipc @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:164",
+          "ms": 0.197
+        },
+        {
+          "name": "create @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1035",
+          "ms": 0.189
+        },
+        {
+          "name": "IpcChildWithModuleWorker @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:362",
+          "ms": 0.185
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:523",
+          "ms": 0.174
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:150",
+          "ms": 0.157
+        },
+        {
+          "name": "structuredClone @ :0",
+          "ms": 0.133
+        },
+        {
+          "name": "waitForFirstMessage @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:388",
+          "ms": 0.126
+        },
+        {
+          "name": "get WorkerGlobalScope @ :0",
+          "ms": 0.083
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 36096.282
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 36079.422
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:151",
+          "ms": 10.248
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 8.163
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:852",
+          "ms": 6.13
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:561",
+          "ms": 5.584
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:806",
+          "ms": 5.584
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:979",
+          "ms": 5.584
+        },
+        {
+          "name": "getTokensViewport @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1300",
+          "ms": 4.731
+        },
+        {
+          "name": "safeTokenizeLine @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1088",
+          "ms": 4.162
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 3.352
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:0",
+          "ms": 2.214
+        },
+        {
+          "name": "create @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1035",
+          "ms": 1.854
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:994",
+          "ms": 1.665
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1467",
+          "ms": 1.665
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1473",
+          "ms": 1.665
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:310",
+          "ms": 1.427
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:363",
+          "ms": 1.427
+        },
+        {
+          "name": "tokenizeLine @ <server>/remote<repos>/eslint.worktrees/startup-performance/node_modules/@lvce-editor/static-server/static/8669cbe/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:403",
+          "ms": 1.37
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:400",
+          "ms": 1.012
+        },
+        {
+          "name": "loadTokenizer @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1192",
+          "ms": 0.479
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 0.421
+        },
+        {
+          "name": "IpcChildWithModuleWorker @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:362",
+          "ms": 0.382
+        },
+        {
+          "name": "wrap$f @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:385",
+          "ms": 0.382
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:425",
+          "ms": 0.372
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 36079.422
+        },
+        {
+          "name": "<server>/8669cbe/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+          "ms": 8.922
+        },
+        {
+          "name": "(program)",
+          "ms": 3.352
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 2.579
+        },
+        {
+          "name": "<server>/remote<repos>/eslint.worktrees/startup-performance/node_modules/@lvce-editor/static-server/static/8669cbe/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js",
+          "ms": 1.37
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.421
+        },
+        {
+          "name": "structuredClone",
+          "ms": 0.133
+        },
+        {
+          "name": "get WorkerGlobalScope",
+          "ms": 0.083
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 4.535
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 9.204
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 3.121
+        }
+      ]
+    },
+    {
+      "key": "213512:0x5",
+      "pid": 213512,
+      "tid": 213535,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/test-worker/dist/testWorkerMain.js",
+      "startOffsetMs": 542.47,
+      "durationMs": 35767.013,
+      "observedMs": 35760.189,
+      "nonIdleMs": 13.712,
+      "statesMs": {
+        "unattributed": 0.408,
+        "javascriptOrNative": 13.304,
+        "idle": 35746.477
+      },
+      "earlyNonIdleMs": 8.302,
+      "firstActiveOffsetMs": 549.294,
+      "lastActiveOffsetMs": 35948.691,
+      "samples": 92521,
+      "nodes": 52,
+      "negativeDeltas": 9,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35746.477
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:0",
+          "ms": 2.801
+        },
+        {
+          "name": "test @ <server>/remote<repos>/eslint.worktrees/startup-performance/.tmp/eslint-benchmark-test-PxEIL7/src/eslint.benchmark.ts:3",
+          "ms": 2.214
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:934",
+          "ms": 1.151
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 0.898
+        },
+        {
+          "name": "isTransferrable @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:122",
+          "ms": 0.785
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:156",
+          "ms": 0.77
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:322",
+          "ms": 0.624
+        },
+        {
+          "name": "importScript @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6257",
+          "ms": 0.556
+        },
+        {
+          "name": "executeTest2 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6163",
+          "ms": 0.554
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.408
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6494",
+          "ms": 0.381
+        },
+        {
+          "name": "create$1 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1109",
+          "ms": 0.297
+        },
+        {
+          "name": "hotReloadEnabled @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6252",
+          "ms": 0.289
+        },
+        {
+          "name": "wrap$f @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:358",
+          "ms": 0.254
+        },
+        {
+          "name": "execute$2 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:532",
+          "ms": 0.239
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:991",
+          "ms": 0.219
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:818",
+          "ms": 0.215
+        },
+        {
+          "name": "normalizeParams @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:841",
+          "ms": 0.199
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:373",
+          "ms": 0.193
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6995",
+          "ms": 0.184
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1006",
+          "ms": 0.177
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1078",
+          "ms": 0.166
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:398",
+          "ms": 0.138
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35760.189
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35746.477
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:156",
+          "ms": 4.101
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:0",
+          "ms": 3.775
+        },
+        {
+          "name": "test @ <server>/remote<repos>/eslint.worktrees/startup-performance/.tmp/eslint-benchmark-test-PxEIL7/src/eslint.benchmark.ts:3",
+          "ms": 2.999
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 2.707
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:934",
+          "ms": 1.936
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:991",
+          "ms": 1.809
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6494",
+          "ms": 1.78
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:864",
+          "ms": 1.728
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1063",
+          "ms": 1.479
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:818",
+          "ms": 1.391
+        },
+        {
+          "name": "execute$2 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:532",
+          "ms": 1.176
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6995",
+          "ms": 0.974
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:6999",
+          "ms": 0.974
+        },
+        {
+          "name": "create$1 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1109",
+          "ms": 0.921
+        },
+        {
+          "name": "isTransferrable @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:122",
+          "ms": 0.785
+        },
+        {
+          "name": "walkValue @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:130",
+          "ms": 0.785
+        },
+        {
+          "name": "getTransferrables @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:150",
+          "ms": 0.785
+        },
+        {
+          "name": "sendAndTransfer @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:401",
+          "ms": 0.785
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:966",
+          "ms": 0.785
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1165",
+          "ms": 0.785
+        },
+        {
+          "name": "sendMessagePortToExtensionManagementWorker @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1248",
+          "ms": 0.785
+        },
+        {
+          "name": "send$2 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1278",
+          "ms": 0.785
+        },
+        {
+          "name": "create$4 @ <server>/8669cbe/packages/test-worker/dist/testWorkerMain.js:1033",
+          "ms": 0.785
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35746.477
+        },
+        {
+          "name": "<server>/8669cbe/packages/test-worker/dist/testWorkerMain.js",
+          "ms": 10.192
+        },
+        {
+          "name": "<server>/remote<repos>/eslint.worktrees/startup-performance/.tmp/eslint-benchmark-test-PxEIL7/src/eslint.benchmark.ts",
+          "ms": 2.214
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.898
+        },
+        {
+          "name": "(program)",
+          "ms": 0.408
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 5.936
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 2.366
+        },
+        {
+          "second": 35,
+          "nonIdleMs": 5.41
+        }
+      ]
+    },
+    {
+      "key": "213512:0x10",
+      "pid": 213512,
+      "tid": 213569,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+      "startOffsetMs": 1153.755,
+      "durationMs": 35177.214,
+      "observedMs": 35169.457,
+      "nonIdleMs": 9.844,
+      "statesMs": {
+        "unattributed": 0.397,
+        "javascriptOrNative": 9.447,
+        "idle": 35159.613
+      },
+      "earlyNonIdleMs": 9.844,
+      "firstActiveOffsetMs": 1161.512,
+      "lastActiveOffsetMs": 1562.97,
+      "samples": 89781,
+      "nodes": 60,
+      "negativeDeltas": 18,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35159.613
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:107",
+          "ms": 1.369
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:0",
+          "ms": 1.061
+        },
+        {
+          "name": "runCommand @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3761",
+          "ms": 1.034
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:485",
+          "ms": 0.889
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:349",
+          "ms": 0.812
+        },
+        {
+          "name": "diffTree @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3608",
+          "ms": 0.531
+        },
+        {
+          "name": "getActionButtonVirtualDom @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7783",
+          "ms": 0.499
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:106",
+          "ms": 0.419
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.397
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:817",
+          "ms": 0.394
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:944",
+          "ms": 0.384
+        },
+        {
+          "name": "diff @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3963",
+          "ms": 0.277
+        },
+        {
+          "name": "toCommandId @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:1489",
+          "ms": 0.256
+        },
+        {
+          "name": "renderItems @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7642",
+          "ms": 0.226
+        },
+        {
+          "name": "getErrorResponse @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:742",
+          "ms": 0.217
+        },
+        {
+          "name": "registerPromise @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:874",
+          "ms": 0.202
+        },
+        {
+          "name": "renderCss @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7175",
+          "ms": 0.199
+        },
+        {
+          "name": "normalizeParams @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:794",
+          "ms": 0.193
+        },
+        {
+          "name": "compareNodes @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3429",
+          "ms": 0.191
+        },
+        {
+          "name": "getActions @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7738",
+          "ms": 0.151
+        },
+        {
+          "name": "getVisibleExplorerItems @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3662",
+          "ms": 0.143
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35169.457
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35159.613
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:107",
+          "ms": 5.584
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:817",
+          "ms": 4.843
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:944",
+          "ms": 4.215
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 4.215
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:771",
+          "ms": 3.638
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:485",
+          "ms": 3.421
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:0",
+          "ms": 1.48
+        },
+        {
+          "name": "runCommand @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3761",
+          "ms": 1.379
+        },
+        {
+          "name": "applyRender @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7708",
+          "ms": 1.147
+        },
+        {
+          "name": "render2 @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7720",
+          "ms": 1.147
+        },
+        {
+          "name": "renderIncremental @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7668",
+          "ms": 0.948
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:349",
+          "ms": 0.812
+        },
+        {
+          "name": "diffTree @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:3608",
+          "ms": 0.722
+        },
+        {
+          "name": "renderActions @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7817",
+          "ms": 0.65
+        },
+        {
+          "name": "getActionButtonVirtualDom @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7783",
+          "ms": 0.499
+        },
+        {
+          "name": "getActionVirtualDom @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7798",
+          "ms": 0.499
+        },
+        {
+          "name": "getActionsVirtualDom @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:7807",
+          "ms": 0.499
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:106",
+          "ms": 0.419
+        },
+        {
+          "name": "Ipc @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:120",
+          "ms": 0.419
+        },
+        {
+          "name": "IpcChildWithModuleWorker @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:286",
+          "ms": 0.419
+        },
+        {
+          "name": "wrap$f @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:309",
+          "ms": 0.419
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:324",
+          "ms": 0.419
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js:959",
+          "ms": 0.419
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35159.613
+        },
+        {
+          "name": "<server>/8669cbe/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+          "ms": 9.447
+        },
+        {
+          "name": "(program)",
+          "ms": 0.397
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 9.844
+        }
+      ]
+    },
+    {
+      "key": "213512:0xf",
+      "pid": 213512,
+      "tid": 213567,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+      "startOffsetMs": 1123.969,
+      "durationMs": 35186.219,
+      "observedMs": 35181.585,
+      "nonIdleMs": 7.345,
+      "statesMs": {
+        "unattributed": 0.431,
+        "javascriptOrNative": 6.914,
+        "idle": 35174.24
+      },
+      "earlyNonIdleMs": 7.345,
+      "firstActiveOffsetMs": 1128.603,
+      "lastActiveOffsetMs": 1157.622,
+      "samples": 89810,
+      "nodes": 58,
+      "negativeDeltas": 7,
+      "gapsOver10Ms": 3,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35174.24
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1663",
+          "ms": 0.942
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:0",
+          "ms": 0.778
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1923",
+          "ms": 0.616
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1377",
+          "ms": 0.574
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1165",
+          "ms": 0.486
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.431
+        },
+        {
+          "name": "diffTrees @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3236",
+          "ms": 0.323
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1851",
+          "ms": 0.311
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2209",
+          "ms": 0.297
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2242",
+          "ms": 0.297
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 0.267
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1339",
+          "ms": 0.255
+        },
+        {
+          "name": "isTransferrable @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:965",
+          "ms": 0.254
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:999",
+          "ms": 0.234
+        },
+        {
+          "name": "diffTree @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3255",
+          "ms": 0.218
+        },
+        {
+          "name": "getVirtualDom @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3467",
+          "ms": 0.204
+        },
+        {
+          "name": "loadPreferences @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2889",
+          "ms": 0.192
+        },
+        {
+          "name": "renderIncremental @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3512",
+          "ms": 0.179
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3816",
+          "ms": 0.175
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 0.174
+        },
+        {
+          "name": "create$4 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1860",
+          "ms": 0.138
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35181.585
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35174.24
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:999",
+          "ms": 3.955
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 3.235
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1663",
+          "ms": 3.061
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1709",
+          "ms": 3.061
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1836",
+          "ms": 3.061
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1377",
+          "ms": 2.119
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:0",
+          "ms": 1.705
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3834",
+          "ms": 0.927
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3839",
+          "ms": 0.927
+        },
+        {
+          "name": "renderIncremental @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3512",
+          "ms": 0.924
+        },
+        {
+          "name": "applyRender @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3539",
+          "ms": 0.924
+        },
+        {
+          "name": "render2 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3551",
+          "ms": 0.924
+        },
+        {
+          "name": "loadContent @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2900",
+          "ms": 0.918
+        },
+        {
+          "name": "invoke @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1908",
+          "ms": 0.684
+        },
+        {
+          "name": "loadPreferences @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2889",
+          "ms": 0.621
+        },
+        {
+          "name": "wrapped @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:123",
+          "ms": 0.621
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1923",
+          "ms": 0.616
+        },
+        {
+          "name": "initializeExtensionManagementWorker @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3819",
+          "ms": 0.616
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1878",
+          "ms": 0.567
+        },
+        {
+          "name": "diffTree @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3255",
+          "ms": 0.541
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1779",
+          "ms": 0.509
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1165",
+          "ms": 0.486
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.431
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35174.24
+        },
+        {
+          "name": "<server>/8669cbe/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+          "ms": 6.473
+        },
+        {
+          "name": "(program)",
+          "ms": 0.431
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.267
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.174
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 7.345
+        }
+      ]
+    },
+    {
+      "key": "213512:0xe",
+      "pid": 213512,
+      "tid": 213565,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+      "startOffsetMs": 1101.307,
+      "durationMs": 35228.123,
+      "observedMs": 35221.783,
+      "nonIdleMs": 6.712,
+      "statesMs": {
+        "unattributed": 0.347,
+        "javascriptOrNative": 6.365,
+        "idle": 35215.071
+      },
+      "earlyNonIdleMs": 6.712,
+      "firstActiveOffsetMs": 1107.647,
+      "lastActiveOffsetMs": 1552.278,
+      "samples": 90522,
+      "nodes": 44,
+      "negativeDeltas": 12,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35215.071
+        },
+        {
+          "name": "wrapped @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:1712",
+          "ms": 0.791
+        },
+        {
+          "name": "parseTitleTemplate @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3894",
+          "ms": 0.77
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:0",
+          "ms": 0.699
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:1003",
+          "ms": 0.639
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:273",
+          "ms": 0.585
+        },
+        {
+          "name": "getSuccessResponse @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:755",
+          "ms": 0.539
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:485",
+          "ms": 0.404
+        },
+        {
+          "name": "create$4 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:986",
+          "ms": 0.371
+        },
+        {
+          "name": "getKeyBindings @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3377",
+          "ms": 0.369
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.347
+        },
+        {
+          "name": "sendAndTransfer @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:352",
+          "ms": 0.23
+        },
+        {
+          "name": "diff3 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:2175",
+          "ms": 0.23
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3958",
+          "ms": 0.212
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 0.207
+        },
+        {
+          "name": "create$1 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:1594",
+          "ms": 0.176
+        },
+        {
+          "name": "postMessage @ :0",
+          "ms": 0.143
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35221.783
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35215.071
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:107",
+          "ms": 3.153
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:771",
+          "ms": 2.9
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 2.568
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:485",
+          "ms": 2.361
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:817",
+          "ms": 2.361
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:944",
+          "ms": 2.361
+        },
+        {
+          "name": "wrapped @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:1712",
+          "ms": 1.561
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:0",
+          "ms": 1.337
+        },
+        {
+          "name": "measureTextWidths2 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3964",
+          "ms": 0.813
+        },
+        {
+          "name": "parseTitleTemplate @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3894",
+          "ms": 0.77
+        },
+        {
+          "name": "getWorkspaceTitle @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3919",
+          "ms": 0.77
+        },
+        {
+          "name": "getTitle @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3935",
+          "ms": 0.77
+        },
+        {
+          "name": "handleWorkspaceChange @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3983",
+          "ms": 0.77
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:1003",
+          "ms": 0.639
+        },
+        {
+          "name": "create$4 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:986",
+          "ms": 0.601
+        },
+        {
+          "name": "launchTextMeasurementWorker @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3949",
+          "ms": 0.601
+        },
+        {
+          "name": "measureTextWidths @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:3975",
+          "ms": 0.601
+        },
+        {
+          "name": "addWidths @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:4032",
+          "ms": 0.601
+        },
+        {
+          "name": "loadContent2 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:4047",
+          "ms": 0.601
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:273",
+          "ms": 0.585
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:346",
+          "ms": 0.585
+        },
+        {
+          "name": "getSuccessResponse @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:755",
+          "ms": 0.539
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js:5474",
+          "ms": 0.462
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35215.071
+        },
+        {
+          "name": "<server>/8669cbe/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+          "ms": 6.015
+        },
+        {
+          "name": "(program)",
+          "ms": 0.347
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.207
+        },
+        {
+          "name": "postMessage",
+          "ms": 0.143
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 6.712
+        }
+      ]
+    },
+    {
+      "key": "213512:0xc",
+      "pid": 213512,
+      "tid": 213561,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+      "startOffsetMs": 1036.964,
+      "durationMs": 35268.635,
+      "observedMs": 35265.359,
+      "nonIdleMs": 5.158,
+      "statesMs": {
+        "unattributed": 0.547,
+        "javascriptOrNative": 4.611,
+        "idle": 35260.201
+      },
+      "earlyNonIdleMs": 5.158,
+      "firstActiveOffsetMs": 1040.24,
+      "lastActiveOffsetMs": 1084.793,
+      "samples": 90223,
+      "nodes": 29,
+      "negativeDeltas": 9,
+      "gapsOver10Ms": 0,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35260.201
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:714",
+          "ms": 1.041
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1000",
+          "ms": 0.741
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:578",
+          "ms": 0.615
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:0",
+          "ms": 0.567
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.547
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:335",
+          "ms": 0.446
+        },
+        {
+          "name": "getStatusBarItems @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1529",
+          "ms": 0.436
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 0.228
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:336",
+          "ms": 0.19
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:553",
+          "ms": 0.177
+        },
+        {
+          "name": "initializeRenderWorker @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1907",
+          "ms": 0.17
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35265.359
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35260.201
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1000",
+          "ms": 1.782
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1046",
+          "ms": 1.656
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:336",
+          "ms": 1.459
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 1.269
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:0",
+          "ms": 1.154
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:714",
+          "ms": 1.041
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1173",
+          "ms": 1.041
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1188",
+          "ms": 0.623
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:578",
+          "ms": 0.615
+        },
+        {
+          "name": "initializeRenderWorker @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1907",
+          "ms": 0.587
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1914",
+          "ms": 0.587
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1919",
+          "ms": 0.587
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.547
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:335",
+          "ms": 0.446
+        },
+        {
+          "name": "Ipc @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:349",
+          "ms": 0.446
+        },
+        {
+          "name": "getStatusBarItems @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1529",
+          "ms": 0.436
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:553",
+          "ms": 0.417
+        },
+        {
+          "name": "create$1 @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:1215",
+          "ms": 0.417
+        },
+        {
+          "name": "IpcChildWithModuleWorker @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:515",
+          "ms": 0.24
+        },
+        {
+          "name": "wrap$f @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:538",
+          "ms": 0.24
+        },
+        {
+          "name": "IpcChildWithModuleWorkerAndMessagePort @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:574",
+          "ms": 0.206
+        },
+        {
+          "name": "wrap$e @ <server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js:598",
+          "ms": 0.206
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35260.201
+        },
+        {
+          "name": "<server>/8669cbe/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+          "ms": 4.383
+        },
+        {
+          "name": "(program)",
+          "ms": 0.547
+        },
+        {
+          "name": "dispatchEvent",
+          "ms": 0.228
+        }
+      ],
+      "timeline": [
+        {
+          "second": 1,
+          "nonIdleMs": 5.158
+        }
+      ]
+    },
+    {
+      "key": "213512:0x9",
+      "pid": 213512,
+      "tid": 213555,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+      "startOffsetMs": 981.765,
+      "durationMs": 35356.33,
+      "observedMs": 35351.665,
+      "nonIdleMs": 4.135,
+      "statesMs": {
+        "unattributed": 1.521,
+        "idle": 35347.53,
+        "javascriptOrNative": 2.614
+      },
+      "earlyNonIdleMs": 4.135,
+      "firstActiveOffsetMs": 986.43,
+      "lastActiveOffsetMs": 1025.794,
+      "samples": 90614,
+      "nodes": 32,
+      "negativeDeltas": 6,
+      "gapsOver10Ms": 2,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35347.53
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.521
+        },
+        {
+          "name": "getProtocol @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1641",
+          "ms": 0.499
+        },
+        {
+          "name": "sendMessagePortToTextMeasurementWorker @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3222",
+          "ms": 0.369
+        },
+        {
+          "name": "getEnabledProviderIds @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1719",
+          "ms": 0.355
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:814",
+          "ms": 0.231
+        },
+        {
+          "name": "getTransferrables @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:151",
+          "ms": 0.194
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1046",
+          "ms": 0.184
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1029",
+          "ms": 0.184
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:987",
+          "ms": 0.18
+        },
+        {
+          "name": "sendMessagePortToExtensionHostWorker$1 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1156",
+          "ms": 0.179
+        },
+        {
+          "name": "attachEvents @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+          "ms": 0.12
+        },
+        {
+          "name": "sendAndTransfer @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:395",
+          "ms": 0.119
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35351.665
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35347.53
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:987",
+          "ms": 2.126
+        },
+        {
+          "name": "dispatchEvent @ :0",
+          "ms": 2.126
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:157",
+          "ms": 2.126
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:814",
+          "ms": 1.946
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:860",
+          "ms": 1.946
+        },
+        {
+          "name": "execute @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:528",
+          "ms": 1.715
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 1.521
+        },
+        {
+          "name": "create$3 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1029",
+          "ms": 1.045
+        },
+        {
+          "name": "initialize @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3259",
+          "ms": 0.861
+        },
+        {
+          "name": "getWorkspaceBadgeCount @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1708",
+          "ms": 0.854
+        },
+        {
+          "name": "getProtocol @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1641",
+          "ms": 0.499
+        },
+        {
+          "name": "sendMessagePortToExtensionHostWorker$1 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1156",
+          "ms": 0.492
+        },
+        {
+          "name": "sendMessagePortToExtensionHostWorker @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3206",
+          "ms": 0.492
+        },
+        {
+          "name": "createExtensionHostRpc @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3210",
+          "ms": 0.492
+        },
+        {
+          "name": "sendMessagePortToTextMeasurementWorker @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3222",
+          "ms": 0.369
+        },
+        {
+          "name": "createTextMeasurementWorkerRpc @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:3226",
+          "ms": 0.369
+        },
+        {
+          "name": "getEnabledProviderIds @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1719",
+          "ms": 0.355
+        },
+        {
+          "name": "sendAndTransfer @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:395",
+          "ms": 0.313
+        },
+        {
+          "name": "invokeHelper @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:930",
+          "ms": 0.313
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:962",
+          "ms": 0.313
+        },
+        {
+          "name": "invokeAndTransfer @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1102",
+          "ms": 0.313
+        },
+        {
+          "name": "getTransferrables @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:151",
+          "ms": 0.194
+        },
+        {
+          "name": "create$2 @ <server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js:1046",
+          "ms": 0.184
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35347.53
+        },
+        {
+          "name": "<server>/8669cbe/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+          "ms": 2.614
+        },
+        {
+          "name": "(program)",
+          "ms": 1.521
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 3.281
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 0.854
+        }
+      ]
+    },
+    {
+      "key": "213512:0x8",
+      "pid": 213512,
+      "tid": 213553,
+      "thread": "DedicatedWorker thread",
+      "role": "<server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+      "startOffsetMs": 952.476,
+      "durationMs": 35369.303,
+      "observedMs": 35364.35,
+      "nonIdleMs": 3.91,
+      "statesMs": {
+        "unattributed": 0.317,
+        "javascriptOrNative": 3.593,
+        "idle": 35360.44
+      },
+      "earlyNonIdleMs": 3.91,
+      "firstActiveOffsetMs": 957.429,
+      "lastActiveOffsetMs": 1010.178,
+      "samples": 90211,
+      "nodes": 25,
+      "negativeDeltas": 4,
+      "gapsOver10Ms": 4,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 35360.44
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:0",
+          "ms": 1.322
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:328",
+          "ms": 0.634
+        },
+        {
+          "name": "createTable @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:2149",
+          "ms": 0.43
+        },
+        {
+          "name": "create$5 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:1100",
+          "ms": 0.326
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.317
+        },
+        {
+          "name": "create$6 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:1086",
+          "ms": 0.294
+        },
+        {
+          "name": "signal$8 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:338",
+          "ms": 0.218
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:4736",
+          "ms": 0.177
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:404",
+          "ms": 0.152
+        },
+        {
+          "name": "create$c @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:803",
+          "ms": 0.04
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 35364.35
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 35360.44
+        },
+        {
+          "name": "(anonymous) @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:0",
+          "ms": 2.57
+        },
+        {
+          "name": "main @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:4736",
+          "ms": 0.818
+        },
+        {
+          "name": "listen @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:4730",
+          "ms": 0.641
+        },
+        {
+          "name": "getData$2 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:328",
+          "ms": 0.634
+        },
+        {
+          "name": "handleMessage @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:169",
+          "ms": 0.634
+        },
+        {
+          "name": "create$5 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:1100",
+          "ms": 0.544
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:401",
+          "ms": 0.459
+        },
+        {
+          "name": "createTable @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:2149",
+          "ms": 0.43
+        },
+        {
+          "name": "initializeRendererWorker @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:4723",
+          "ms": 0.347
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 0.317
+        },
+        {
+          "name": "create$6 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:1086",
+          "ms": 0.294
+        },
+        {
+          "name": "initializeEditorWorker @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:4693",
+          "ms": 0.294
+        },
+        {
+          "name": "signal$8 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:338",
+          "ms": 0.218
+        },
+        {
+          "name": "listen$6 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:379",
+          "ms": 0.218
+        },
+        {
+          "name": "listen$1 @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:1014",
+          "ms": 0.218
+        },
+        {
+          "name": "getData @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:342",
+          "ms": 0.175
+        },
+        {
+          "name": "send @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:404",
+          "ms": 0.152
+        },
+        {
+          "name": "handleJsonRpcMessage @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:872",
+          "ms": 0.152
+        },
+        {
+          "name": "create$c @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:803",
+          "ms": 0.04
+        },
+        {
+          "name": "getSuccessResponse @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:810",
+          "ms": 0.04
+        },
+        {
+          "name": "getResponse @ <server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js:826",
+          "ms": 0.04
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 35360.44
+        },
+        {
+          "name": "<server>/8669cbe/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+          "ms": 3.593
+        },
+        {
+          "name": "(program)",
+          "ms": 0.317
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 3.718
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 0.192
+        }
+      ]
+    }
+  ],
+  "captureErrors": []
+}

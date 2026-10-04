@@ -1,0 +1,40 @@
+# LVCE performance investigations
+
+Analyze Electron/Chromium startup traces and V8 CPU profiles, run repeatable experiments, and retain machine-readable results. Requires Node 24; the analysis tools have no npm dependencies.
+
+```sh
+npm ci
+npm test
+npm run analyze -- /path/to/lvce-cpu-capture summary.json
+npm run analyze -- trace.cpuprofile first-five-seconds.json 5000
+npm run compare -- baseline-summary.json candidate-summary.json comparison.json
+npm run capture -- /usr/bin/lvce /path/to/workspace relative/file.ts results/run-1
+```
+
+`trace.cpuprofile` can contain Chromium `traceEvents`, despite its suffix. The analyzer also accepts ordinary V8 `nodes`/`samples` profiles. It reconstructs incremental `ProfileChunk` events by process and profile ID, uses the original profiling thread rather than the chunk writer thread, and removes duplicate simultaneous inspector/Chromium utility recordings. The original capture's manifest refers to `trace.json`, which was renamed to `trace.cpuprofile`; directory input handles that case.
+
+Outputs include self and inclusive function timings, source-file totals, GC/idle/unattributed time, worker start times, and a one-second activity timeline. Query parameters, development server ports and common local checkout prefixes are normalized. Standalone utility profiles can be analyzed individually; **do not add their totals to a Chromium trace that already contains those same utility processes**.
+
+Timings represent timestamp-ordered **sample residency**, not measured OS CPU time. V8 emits some out-of-order samples; negative deltas are retained when constructing timestamps, then samples are sorted. The gap before the first sample is unobserved. Long sampling gaps are counted; native calls and blocking work can affect attribution. Recursive frames contribute once per sample to their inclusive row. Inclusive rows overlap and must not be summed.
+
+A profile capture ending at diagnostics readiness is different from first paint or time to usable text. The Electron trace starts after `app.whenReady`, so it misses earlier Electron startup/module evaluation. Capture metadata includes launch-to-exit time separately from trace time and analysis time. Fresh XDG and Chromium directories isolate application state; OS filesystem caches remain uncontrolled. Profile artifacts can contain workspace paths and source metadata. The checked-in original findings contain normalized summaries, not the original user-data or trace contents.
+
+## Experiments
+
+[Electron startup profiles](https://github.com/lvce-editor/performance-investigations/actions/workflows/startup.yml) compares official Debian release tags on one Linux runner. Each run starts with isolated application state. Variant order alternates across repetitions. It preserves profiles and summaries without installing either package into the runner's system.
+
+[ESLint startup experiment](https://github.com/lvce-editor/performance-investigations/actions/workflows/eslint.yml) checks out two explicit `lvce-editor/eslint` refs and a fixed `about-view` workspace commit. Both variants are built before measurements. It measures graph construction in Node, fresh-browser startup, and warmed renderer reload on one runner. Each result contains a profile summary and timings; the workflow produces an overview JSON and a Markdown table. The existing ESLint benchmark harness waits for its test overlay and explicitly invokes lint after opening the file; its reported lint-command duration may reflect a graph already initialized by automatic diagnostics. Prefer the full cold-run duration for evaluating cold graph initialization.
+
+For either workflow, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
+
+The Node graph experiment is also available directly:
+
+```sh
+node --expose-gc src/graph-benchmark.ts /path/to/eslint-checkout /path/to/workspace graph.json
+```
+
+It uses direct filesystem reads and no browser cache storage or IPC. The graph hash permits exact producer-output comparison between variants. It does not measure end-to-end startup.
+
+An optional activity heatmap can be regenerated with `python3 scripts/plot-activity.py summary.json timeline.svg` (requires NumPy and Matplotlib). The [original timeline](investigations/original-timeline.svg) shows where the long ESLint tail occurs.
+
+See [the initial investigation](investigations/startup.md) for hotspot evidence, measurements and optimization priorities.

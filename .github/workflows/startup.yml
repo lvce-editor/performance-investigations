@@ -1,0 +1,72 @@
+name: Electron startup profiles
+on:
+  workflow_dispatch:
+    inputs:
+      baseline:
+        description: Baseline LVCE release tag
+        required: true
+        default: v0.119.23
+      candidate:
+        description: Candidate LVCE release tag
+        required: true
+        default: v0.119.25
+      workspace_ref:
+        description: about-view workspace commit (keep fixed across variants)
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Repetitions per variant (1 to 5)
+        default: '3'
+        required: true
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BASELINE: ${{ inputs.baseline }}
+      CANDIDATE: ${{ inputs.candidate }}
+      REPEATS: ${{ inputs.repeats }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Install runtime prerequisites
+        run: sudo apt-get update && sudo apt-get install -y xvfb libnss3 libatk-bridge2.0-0 libgtk-3-0 libasound2t64
+      - name: Fetch official Debian artifacts
+        run: |
+          for variant in baseline candidate; do
+            if [ "$variant" = baseline ]; then tag="$BASELINE"; else tag="$CANDIDATE"; fi
+            mkdir -p "runtimes/$variant"
+            gh release download "$tag" --repo lvce-editor/lvce-editor --pattern '*_amd64.deb' --dir "runtimes/$variant"
+            dpkg-deb -x "runtimes/$variant/"*.deb "runtimes/$variant/root"
+            sudo chown root:root "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+            sudo chmod 4755 "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+          done
+      - name: Run isolated profiles in alternating order
+        run: xvfb-run -a node src/startup-experiment.ts
+      - name: Preserve summaries and traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: startup-profiles
+          path: |
+            results/**/summary.json
+            results/**/capture.json
+            results/**/stdout.log
+            results/**/stderr.log
+            results/**/manifest.json
+            results/**/trace.json
+            results/**/*.cpuprofile
+            results/overview.json
+          retention-days: 14
