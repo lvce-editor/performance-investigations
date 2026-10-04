@@ -52,7 +52,7 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
   const exited = new Promise<void>(done => child.once('exit', () => done()))
   const kill = (signal: NodeJS.Signals) => { try { if (child.pid) process.kill(-child.pid, signal) } catch (error: any) { if (error.code !== 'ESRCH') throw error } }
   try {
-    const url = `http://127.0.0.1:${address.port}`
+    const url = `http://localhost:${address.port}`
     const start = performance.now()
     let ready = false
     while (performance.now() - start < 60_000) {
