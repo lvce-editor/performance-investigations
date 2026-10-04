@@ -77,6 +77,8 @@ An experimental TypeScript `createModuleResolutionCache` with lifetime bounded t
 
 The immediate priority is filesystem metadata batching or a correctly invalidated worker snapshot. Rewriting the TypeScript checker, changing `skipLibCheck`, or adding more parallel startup workers is not supported as the main fix by these measurements. In particular, single-file diagnostics already spend only about 13 ms checking the opened file; the CLI's much longer whole-project check does not imply that this stage dominates extension startup.
 
+Separately, [the OPFS project/dependency content cache](https://github.com/lvce-editor/language-features-typescript/pull/702) has landed on extension main at `776f269cc1bc` after the measured v5.28.1 commit. It is outside this comparison. Its [documented fixture measurements](https://github.com/lvce-editor/language-features-typescript/blob/776f269cc1bc/docs/typescript-file-cache.md) demonstrate warm persistent content reuse, but explicitly do not establish faster diagnostics: cold validation and identity checks add work. That cache addresses file contents; it does not remove the thousands of existence probes dominating this experiment. A fresh worker using warm persistent journals is also a different workload from the unchanged-document, same-service warm request measured here.
+
 ## Reproduction
 
 Use the repository's **TypeScript CLI and extension comparison** workflow. It pins both repositories and the Node version, checks source-graph equality, stores JSON summaries, logs and profiles, and retains artifacts for 90 days. The [scripts and local commands](../README.md) also support local runs.
