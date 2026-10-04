@@ -1,0 +1,992 @@
+[
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "mode": "cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 48219.497598,
+    "lintDurationMs": 51.241,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 32671.208
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 11977.775
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3773.312
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 2003.229
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 743.799
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 126.405
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 52.756
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 33.055
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 27.307
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 16.27
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 16.216
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 12.247
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 11.607
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 10.835
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 10.309
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 9.195
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 7.891
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 5.55
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.548
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "mode": "reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1909.4282850000018,
+    "lintDurationMs": 26.182,
+    "warmupDurationMs": 25060.886488,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 149.737
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 84.641
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 57.749
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 35.334
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 26.742
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 19.541
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 19.083
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 15.917
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 10.067
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 9.981
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 9.635
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 8.701
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 7.859
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 7.03
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 6.636
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 4.216
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.813
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "mode": "cold",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 44380.518108000004,
+    "lintDurationMs": 27.828,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 28651.393
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 11495.128
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3721.521
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 1860.026
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 758.451
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 131.612
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 45.781
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 32.785
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 28.504
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 24.634
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 15.956
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 14.033
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 11.003
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 10.63
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 10.025
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 7.647
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 7.24
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 6.703
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.558
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "mode": "reload",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 1914.5492319999976,
+    "lintDurationMs": 27.071,
+    "warmupDurationMs": 23598.714467,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 166.8
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 95.797
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 58.382
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 35.418
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 33.966
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 32.602
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 24.166
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 15.289
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 13.114
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 11.883
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 10.676
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 10.564
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 9.517
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 8.944
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 8.824
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 4.242
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 3.725
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "mode": "cold",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 43864.396781,
+    "lintDurationMs": 38.308,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 28014.161
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 10789.135
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3847.498
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 1826.867
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 767.361
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 123.997
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 49.578
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 25.025
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 21.475
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 19.898
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 15.703
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 13.374
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 12.983
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.545
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 11.479
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 9.713
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 6.894
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 3.564
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 3.094
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "mode": "reload",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 1908.6369129999985,
+    "lintDurationMs": 22.166,
+    "warmupDurationMs": 23589.458294,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 145.448
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 101.238
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 56.751
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 33.195
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 29.423
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 24.773
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 24.394
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 19.311
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 14.285
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.494
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 11.949
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 8.169
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 7.584
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 7.413
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 6.818
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 6.389
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 3.448
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "mode": "cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 46018.426192000006,
+    "lintDurationMs": 27.706,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 30588.959
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 11128.7
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3676.084
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 1862.13
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 785.477
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 119.796
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 46.675
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 29.586
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 25.459
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 22.444
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 12.372
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 10.374
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 10.239
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 9.737
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 9.517
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 8.222
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 7.096
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 4.994
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.436
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "mode": "reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1906.9573569999993,
+    "lintDurationMs": 37.619,
+    "warmupDurationMs": 24597.955059,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 143.3
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 84.288
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 54.989
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 30.402
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 26.258
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 25.265
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 17.59
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 13.39
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 11.109
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 9.931
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 9.447
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 9.257
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 8.24
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 6.911
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 6.863
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 6.653
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.628
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "mode": "cold",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 45919.533414,
+    "lintDurationMs": 30.571,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 30618.57
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 10941.711
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3760.476
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 1822.184
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 772.322
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 117.953
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 54.605
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 35.437
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 26.632
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 23.3
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.739
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 11.186
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 10.787
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 8.082
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 7.472
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 7.383
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 5.383
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 4.635
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 3.821
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "mode": "reload",
+    "ref": "89c48abd5e6bab29e735b4daba490d251adfef87",
+    "durationMs": 1911.5733529999998,
+    "lintDurationMs": 38.036,
+    "warmupDurationMs": 25073.753669,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 153.528
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 89.927
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 59.954
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 32.19
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 28.476
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 23.92
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 17.71
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 15.922
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.566
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 9.338
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 9.062
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 8.631
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 8.385
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 7.519
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 5.811
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 4.336
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.945
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "mode": "cold",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 43919.550374,
+    "lintDurationMs": 27.758,
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 28294.065
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 10924.524
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 3807.472
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 1777.94
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 758.699
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 120.796
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 47.776
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 34.284
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 32.462
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 22.263
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 15.26
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 14.448
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 13.707
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 11.643
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 10.11
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 9.825
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 4.65
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 2.579
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 2.389
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "mode": "reload",
+    "ref": "141b2da392dd4264fce0eec002455364a1f47906",
+    "durationMs": 1898.9889739999999,
+    "lintDurationMs": 44.587,
+    "warmupDurationMs": 23597.579291,
+    "profiles": [
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 155.714
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 88.498
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 57.519
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 32.336
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 30.459
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 27.839
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 27.733
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 23.608
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.456
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 9.977
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 9.632
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 9.194
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 9.056
+      },
+      {
+        "role": "<app>/packages/test-worker/dist/testWorkerMain.js",
+        "nonIdleMs": 8.758
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 5.639
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 5.092
+      },
+      {
+        "role": "<app>/packages/quick-pick-worker/dist/quickPickWorkerMain.js",
+        "nonIdleMs": 3.214
+      }
+    ]
+  }
+]

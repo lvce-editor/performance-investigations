@@ -1,0 +1,102 @@
+name: TypeScript Electron startup experiment
+on:
+  workflow_dispatch:
+    inputs:
+      baseline:
+        description: Baseline TypeScript extension commit
+        required: true
+        default: 69ed696ea9aa
+      candidate:
+        description: Candidate TypeScript extension commit
+        required: true
+        default: feature/startup-performance
+      release:
+        description: Fixed official LVCE release for both variants
+        required: true
+        default: v0.119.25
+      workspace_ref:
+        description: Fixed about-view workspace commit
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Repetitions per variant (1 to 5)
+        required: true
+        default: '3'
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPEATS: ${{ inputs.repeats }}
+      BASELINE: ${{ inputs.baseline }}
+      CANDIDATE: ${{ inputs.candidate }}
+      RELEASE: ${{ inputs.release }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/language-features-typescript
+          ref: ${{ inputs.baseline }}
+          path: experiments/baseline
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/language-features-typescript
+          ref: ${{ inputs.candidate }}
+          path: experiments/candidate
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Prepare both extensions before measuring
+        run: |
+          for variant in baseline candidate; do
+            (cd "experiments/$variant" && nice npm ci && npm run build)
+          done
+      - name: Install runtime prerequisites
+        run: sudo apt-get update && sudo apt-get install -y xvfb libnss3 libatk-bridge2.0-0 libgtk-3-0 libasound2t64
+      - name: Extract identical official runtimes
+        run: |
+          mkdir -p downloads
+          gh release download "$RELEASE" --repo lvce-editor/lvce-editor --pattern '*_amd64.deb' --dir downloads
+          for variant in baseline candidate; do
+            mkdir -p "runtimes/$variant"
+            dpkg-deb -x downloads/*.deb "runtimes/$variant/root"
+            sudo chown root:root "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+            sudo chmod 4755 "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+          done
+      - name: Install experimental workers into isolated copies
+        run: node src/prepare-typescript-experiment.ts
+      - name: Count requests and check document edits
+        run: |
+          mkdir -p results
+          for variant in baseline candidate; do
+            node --expose-gc src/typescript-benchmark.ts "experiments/$variant" benchmark-workspace "results/$variant-requests.json"
+          done
+      - name: Profile isolated Electron startups in alternating order
+        run: xvfb-run -a node src/startup-experiment.ts
+      - name: Preserve profiles and experimental provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: typescript-startup-experiment
+          path: |
+            results/**/summary.json
+            results/**/capture.json
+            results/**/stdout.log
+            results/**/stderr.log
+            results/**/manifest.json
+            results/**/trace.json
+            results/**/*.cpuprofile
+            results/*-requests.json
+            results/overview.json
+            results/provenance.json
+          retention-days: 14

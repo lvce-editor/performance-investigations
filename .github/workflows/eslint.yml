@@ -14,6 +14,11 @@ on:
         description: about-view workspace commit
         required: true
         default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      measurement:
+        description: Measurement mode
+        type: choice
+        options: [both, profiles, readiness]
+        default: both
       repeats:
         description: Repetitions per variant (1 to 5)
         default: '3'
@@ -26,6 +31,7 @@ jobs:
     timeout-minutes: 60
     env:
       REPEATS: ${{ inputs.repeats }}
+      MEASUREMENT: ${{ inputs.measurement }}
       BASELINE: ${{ inputs.baseline }}
       CANDIDATE: ${{ inputs.candidate }}
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.tmp/browsers

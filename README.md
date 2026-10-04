@@ -25,7 +25,11 @@ A profile capture ending at diagnostics readiness is different from first paint 
 
 [ESLint startup experiment](https://github.com/lvce-editor/performance-investigations/actions/workflows/eslint.yml) checks out two explicit `lvce-editor/eslint` refs and a fixed `about-view` workspace commit. Both variants are built before measurements. It measures graph construction in Node, fresh-browser startup, and warmed renderer reload on one runner. Each result contains a profile summary and timings; the workflow produces an overview JSON and a Markdown table. The existing ESLint benchmark harness waits for its test overlay and explicitly invokes lint after opening the file; its reported lint-command duration may reflect a graph already initialized by automatic diagnostics. Prefer the full cold-run duration for evaluating cold graph initialization.
 
-For either workflow, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
+[TypeScript Electron startup experiment](https://github.com/lvce-editor/performance-investigations/actions/workflows/typescript.yml) compares worker refs in isolated copies of one fixed official Electron release. It also checks filesystem request counts and document edits. Provenance includes worker and lockfile hashes; it rejects differing lockfiles.
+
+ESLint experiments can run `profiles`, `readiness`, or `both`. The readiness mode uses the same baseline harness for both variants and disables profiling.
+
+For these workflows, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
 
 The Node graph experiment is also available directly:
 

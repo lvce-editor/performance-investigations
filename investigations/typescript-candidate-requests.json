@@ -1,0 +1,22 @@
+{
+  "durationMs": 1257.782265,
+  "libraryReads": 88,
+  "methods": {
+    "SyncApi.exists": 4168,
+    "SyncApi.readFileSync": 716,
+    "SyncApi.readDirSync": 98
+  },
+  "totalRequests": 4982,
+  "uniqueRequests": 4952,
+  "duplicateRequests": 30,
+  "diagnostics": [],
+  "diagnosticsHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "memory": {
+    "rss": 335220736,
+    "heapTotal": 268001280,
+    "heapUsed": 127682504,
+    "external": 12793207,
+    "arrayBuffers": 28915
+  },
+  "note": "Diagnostics through the real extension host/resolver with direct Node filesystem transport. Counts represent actual underlying queries; no browser IPC latency is simulated. Not editor startup latency."
+}

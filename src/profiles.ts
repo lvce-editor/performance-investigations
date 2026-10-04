@@ -65,11 +65,13 @@ export const reconstruct = (events: TraceEvent[]): { profiles: Profile[]; exclud
 
 export const cleanUrl = (url = ''): string => {
   const withoutQuery = url.split(/[?#]/, 1)[0].replace(/http:\/\/(?:localhost|127\.0\.0\.1):\d+\//g, '<server>/')
-  return withoutQuery.replace(/<server>\/[^/]+\/packages\//g, '<app>/packages/').replace(/<server>\/remote.*?\/packages\/extension\/dist\//g, '<app>/extensions/builtin.eslint/dist/').replace(/\/home\/[^/]+\/Documents\/levivilet\//g, '<repos>/')
+  const cleaned = withoutQuery.replace(/<server>\/[^/]+\/packages\//g, '<app>/packages/').replace(/<server>\/remote.*?\/packages\/extension\/dist\//g, '<app>/extensions/builtin.eslint/dist/').replace(/\/home\/[^/]+\/Documents\/levivilet\//g, '<repos>/')
     .replace(/\/usr\/lib\/lvce\/resources\/app\/static\/[^/]+\//g, '<app>/')
     .replace(/(?:file:\/\/)?\/usr\/lib\/lvce\/resources\/app\//g, '<app>/')
     .replace(/lvce:\/\/-\/[^/]+\/packages\//g, '<app>/packages/')
     .replace(/lvce:\/\/-\/[^/]+\/extensions\//g, '<app>/extensions/')
+  const appIndex = cleaned.indexOf('<app>')
+  return appIndex === -1 ? cleaned : cleaned.slice(appIndex)
 }
 const label = (frame: Frame): string => `${frame.functionName || '(anonymous)'} @ ${cleanUrl(frame.url)}:${(frame.lineNumber ?? -1) + 1}`
 const round = (us: number): number => Math.round(us) / 1000

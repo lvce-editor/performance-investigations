@@ -4,6 +4,8 @@ import { resolve, join } from 'node:path'
 import { analyze } from './analyze.ts'
 const repeats = Number(process.env.REPEATS ?? '3')
 if (!Number.isSafeInteger(repeats) || repeats < 1 || repeats > 5) throw new Error('REPEATS must be 1 to 5')
+const measurement = process.env.MEASUREMENT ?? 'both'
+if (!['both', 'profiles', 'readiness'].includes(measurement)) throw new Error('Unknown measurement mode')
 const root = process.cwd()
 const run = (args: string[], cwd = root) => new Promise<void>((done, reject) => {
   const child = spawn(process.execPath, args, { cwd, stdio: 'inherit' })
@@ -18,8 +20,8 @@ for (let iteration = 0; iteration < repeats; iteration++) {
     const workspace = resolve('benchmark-workspace')
     const output = resolve(`results/${variant}-${iteration}`)
     await mkdir(output)
-    await run(['--expose-gc', 'src/graph-benchmark.ts', checkout, workspace, join(output, 'graph.json')])
-    for (const mode of ['cold', 'reload']) {
+    if (measurement !== 'readiness') await run(['--expose-gc', 'src/graph-benchmark.ts', checkout, workspace, join(output, 'graph.json')])
+    for (const mode of measurement === 'readiness' ? [] : ['cold', 'reload']) {
       const browserOutput = join(output, mode)
       await run(['packages/benchmark/src/main.ts', '--repo', workspace, '--file', 'packages/about-view/src/aboutWorkerMain.ts', '--output', browserOutput, '--timeout', '180000', ...(mode === 'reload' ? ['--reload'] : [])], checkout)
       const summary = await analyze(join(browserOutput, 'cpu-profile.json'))
@@ -28,11 +30,20 @@ for (let iteration = 0; iteration < repeats; iteration++) {
       runs.push({ variant, iteration, mode, ref: process.env[variant.toUpperCase()], durationMs: benchmark.durationMs, lintDurationMs: benchmark.lintDurationMs, warmupDurationMs: benchmark.warmupDurationMs, profiles: summary.profiles.map((p: any) => ({ role: p.role, nonIdleMs: p.nonIdleMs })) })
       await writeFile('results/overview.json', JSON.stringify(runs, null, 2) + '\n')
     }
+    if (measurement !== 'profiles') {
+      const readinessOutput = join(output, 'readiness.json')
+      await run(['src/readiness-benchmark.ts', resolve('experiments/baseline'), checkout, workspace, readinessOutput])
+      const readiness = JSON.parse(await readFile(readinessOutput, 'utf8'))
+      for (const [mode, durationMs] of Object.entries(readiness.durationsMs)) {
+        runs.push({ variant, iteration, mode: `unprofiled-${mode}`, ref: process.env[variant.toUpperCase()], durationMs })
+      }
+      await writeFile('results/overview.json', JSON.stringify(runs, null, 2) + '\n')
+    }
   }
 }
 const median = (values: number[]) => { values.sort((a, b) => a - b); const m = Math.floor(values.length / 2); return values.length % 2 ? values[m] : (values[m - 1] + values[m]) / 2 }
 let markdown = '### ESLint benchmark\n\nSame pinned workspace and machine; alternating variant order. Cold means fresh browser context, with warm OS file caches. The harness waits for its test overlay, not first paint.\n\n| Mode | Baseline median (ms) | Candidate median (ms) | Change |\n| --- | ---: | ---: | ---: |\n'
-for (const mode of ['cold', 'reload']) {
+for (const mode of [...new Set(runs.map((r) => r.mode))]) {
   const baseline = median(runs.filter((r) => r.mode === mode && r.variant === 'baseline').map((r) => r.durationMs))
   const candidate = median(runs.filter((r) => r.mode === mode && r.variant === 'candidate').map((r) => r.durationMs))
   markdown += `| ${mode} | ${baseline.toFixed(1)} | ${candidate.toFixed(1)} | ${((candidate - baseline) / baseline * 100).toFixed(1)}% |\n`
