@@ -83,6 +83,16 @@ jobs:
           done
       - name: Profile isolated Electron startups in alternating order
         run: xvfb-run -a node src/startup-experiment.ts
+      - name: Save compact overview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: typescript-startup-overview
+          path: |
+            results/overview.json
+            results/provenance.json
+            results/*-requests.json
+          retention-days: 90
       - name: Preserve profiles and experimental provenance
         if: always()
         uses: actions/upload-artifact@v4

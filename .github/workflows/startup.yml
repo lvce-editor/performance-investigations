@@ -55,6 +55,14 @@ jobs:
           done
       - name: Run isolated profiles in alternating order
         run: xvfb-run -a node src/startup-experiment.ts
+      - name: Save compact overview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: startup-overview
+          path: |
+            results/overview.json
+          retention-days: 90
       - name: Preserve summaries and traces
         if: always()
         uses: actions/upload-artifact@v4

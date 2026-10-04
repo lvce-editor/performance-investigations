@@ -33,6 +33,8 @@ ESLint experiments can run `profiles`, `readiness`, or `both`. The readiness mod
 
 [Early main-process startup profile](https://github.com/lvce-editor/performance-investigations/actions/workflows/main-startup.yml) attaches an inspector before application JavaScript runs, captures its first ten seconds, and exports the existing main-process performance marks. It includes pre-`appReady` JS missing from the regular Chromium capture. Debugger pauses perturb timing; use it to identify work, then validate timing without the debugger.
 
+Each experiment publishes a small overview artifact retained for 90 days, alongside larger raw profiles retained for 14 days. Use the overview for routine comparisons and download traces for deeper diagnosis.
+
 For these workflows, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
 
 The Node graph experiment is also available directly:

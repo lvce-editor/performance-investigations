@@ -1,0 +1,53 @@
+{
+  "sampleMs": 10000,
+  "beforeResumePerformanceNow": 236.234425,
+  "childState": {
+    "XDG_CONFIG_HOME": "/home/runner/work/performance-investigations/performance-investigations/results/runtime/config",
+    "XDG_DATA_HOME": "/home/runner/work/performance-investigations/performance-investigations/results/runtime/data",
+    "XDG_CACHE_HOME": "/home/runner/work/performance-investigations/performance-investigations/results/runtime/cache",
+    "XDG_STATE_HOME": "/home/runner/work/performance-investigations/performance-investigations/results/runtime/state"
+  },
+  "binary": "/home/runner/work/performance-investigations/performance-investigations/runtime/root/usr/lib/lvce/lvce",
+  "args": [
+    "--inspect-brk=127.0.0.1:0",
+    "--user-data-dir=/home/runner/work/performance-investigations/performance-investigations/results/runtime/chromium",
+    "/home/runner/work/performance-investigations/performance-investigations/benchmark-workspace",
+    "--open",
+    "packages/about-view/src/aboutWorkerMain.ts"
+  ],
+  "marks": [
+    {
+      "name": "code/start",
+      "startTime": 283.32942
+    },
+    {
+      "name": "code/appReady",
+      "startTime": 1196.550605
+    },
+    {
+      "name": "code/willStartSharedProcess",
+      "startTime": 1196.749028
+    },
+    {
+      "name": "code/didStartSharedProcess",
+      "startTime": 1371.00214
+    },
+    {
+      "name": "code/willCreateCodeWindow",
+      "startTime": 1394.301501
+    },
+    {
+      "name": "code/didCreateCodeWindow",
+      "startTime": 1461.498239
+    },
+    {
+      "name": "code/willLoadUrl",
+      "startTime": 1526.670028
+    },
+    {
+      "name": "code/didLoadUrl",
+      "startTime": 1608.371298
+    }
+  ],
+  "method": "Inspector attaches before application startup and samples the first interval after resume. Main-process JS includes pre-appReady work. Debugger startup perturbs timing and native Electron initialization may continue while paused; these are not unprofiled process-start milestones."
+}

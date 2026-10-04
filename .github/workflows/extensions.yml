@@ -88,6 +88,15 @@ jobs:
           export BASELINE="$BASELINE_ESLINT / $BASELINE_TYPESCRIPT"
           export CANDIDATE="$CANDIDATE_ESLINT / $CANDIDATE_TYPESCRIPT"
           xvfb-run -a node src/startup-experiment.ts
+      - name: Save compact overview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: released-extension-overview
+          path: |
+            results/overview.json
+            results/provenance.json
+          retention-days: 90
       - name: Save profiles and release provenance
         if: always()
         uses: actions/upload-artifact@v4

@@ -67,6 +67,17 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Measure graph, cold browser startup and warm reload
         run: node --max-old-space-size=4096 src/eslint-experiment.ts
+      - name: Save compact overview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eslint-startup-overview
+          path: |
+            results/overview.json
+            results/summary.md
+            results/*/graph.json
+            results/*/readiness.json
+          retention-days: 90
       - name: Save measurement artifacts
         if: always()
         uses: actions/upload-artifact@v4

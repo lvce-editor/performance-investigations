@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "method": "Timestamp-ordered sample residency; non-idle time is an estimate, not OS CPU time or startup latency. Inclusive rows overlap. First sample gap is unobserved.",
+  "traceDurationMs": 10159.58,
+  "windowMs": null,
+  "excludedDuplicateProfiles": [],
+  "browserMilestones": [],
+  "profiles": [
+    {
+      "key": "standalone",
+      "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+      "startOffsetMs": 0,
+      "durationMs": 10159.58,
+      "observedMs": 10151.515,
+      "nonIdleMs": 365.442,
+      "statesMs": {
+        "idle": 9786.073,
+        "javascriptOrNative": 349.53,
+        "unattributed": 9.514,
+        "gc": 6.398
+      },
+      "earlyNonIdleMs": 365.256,
+      "firstActiveOffsetMs": 45.486,
+      "lastActiveOffsetMs": 10159.58,
+      "samples": 8695,
+      "nodes": 441,
+      "negativeDeltas": 0,
+      "gapsOver10Ms": 10,
+      "topSelf": [
+        {
+          "name": "(idle) @ :0",
+          "ms": 9786.073
+        },
+        {
+          "name": "createAppWindow @ <app>/packages/main-process/dist/mainProcessMain.js:5875",
+          "ms": 129.409
+        },
+        {
+          "name": "callAndPauseOnStart @ :0",
+          "ms": 65.139
+        },
+        {
+          "name": "compileForInternalLoader @ node:internal/bootstrap/realm:383",
+          "ms": 32.463
+        },
+        {
+          "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+          "ms": 18.285
+        },
+        {
+          "name": "(program) @ :0",
+          "ms": 9.514
+        },
+        {
+          "name": "compileSourceTextModule @ node:internal/modules/esm/utils:318",
+          "ms": 7.44
+        },
+        {
+          "name": "ForkUtilityProcess @ node:electron/js2c/browser_init:1",
+          "ms": 6.689
+        },
+        {
+          "name": "(garbage collector) @ :0",
+          "ms": 6.398
+        },
+        {
+          "name": "__require @ node:internal/deps/undici/undici:5",
+          "ms": 5.405
+        },
+        {
+          "name": "main @ <app>/packages/main-process/dist/mainProcessMain.js:10200",
+          "ms": 3.803
+        },
+        {
+          "name": "createConfig @ <app>/packages/main-process/dist/mainProcessMain.js:5562",
+          "ms": 3.354
+        },
+        {
+          "name": "internalBinding @ node:internal/bootstrap/realm:182",
+          "ms": 3.204
+        },
+        {
+          "name": "readNext @ node:internal/blob:496",
+          "ms": 3.13
+        },
+        {
+          "name": "createElectronSession @ <app>/packages/main-process/dist/mainProcessMain.js:5635",
+          "ms": 2.821
+        },
+        {
+          "name": "WriteStream @ node:internal/fs/streams:355",
+          "ms": 2.63
+        },
+        {
+          "name": "emit @ node:events:489",
+          "ms": 2.226
+        },
+        {
+          "name": "createElectronUtilityProcessRpc @ <app>/packages/main-process/dist/mainProcessMain.js:4140",
+          "ms": 2.223
+        },
+        {
+          "name": "register$1 @ <app>/packages/main-process/dist/mainProcessMain.js:3150",
+          "ms": 2.175
+        },
+        {
+          "name": "#asyncInstantiate @ node:internal/modules/esm/module_job:433",
+          "ms": 2.125
+        },
+        {
+          "name": "_Response @ node:internal/deps/undici/undici:11650",
+          "ms": 1.783
+        },
+        {
+          "name": "createBlobFromFilePath @ node:internal/blob:424",
+          "ms": 1.767
+        },
+        {
+          "name": "(anonymous) @ node:internal/deps/undici/undici:5085",
+          "ms": 1.719
+        },
+        {
+          "name": "highWaterMarkFrom @ node:internal/streams/state:15",
+          "ms": 1.519
+        },
+        {
+          "name": "create$7 @ <app>/packages/main-process/dist/mainProcessMain.js:3749",
+          "ms": 1.227
+        }
+      ],
+      "topInclusive": [
+        {
+          "name": "(root) @ :0",
+          "ms": 10151.515
+        },
+        {
+          "name": "(idle) @ :0",
+          "ms": 9786.073
+        },
+        {
+          "name": "createAppWindow @ <app>/packages/main-process/dist/mainProcessMain.js:5875",
+          "ms": 141.552
+        },
+        {
+          "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+          "ms": 93.767
+        },
+        {
+          "name": "processTicksAndRejections @ node:internal/process/task_queues:72",
+          "ms": 79.305
+        },
+        {
+          "name": "runMicrotasks @ :0",
+          "ms": 72.659
+        },
+        {
+          "name": "#asyncInstantiate @ node:internal/modules/esm/module_job:433",
+          "ms": 68.348
+        },
+        {
+          "name": "callAndPauseOnStart @ :0",
+          "ms": 66.223
+        },
+        {
+          "name": "compileForInternalLoader @ node:internal/bootstrap/realm:383",
+          "ms": 49.524
+        },
+        {
+          "name": "requireBuiltin @ node:internal/bootstrap/realm:420",
+          "ms": 47.389
+        },
+        {
+          "name": "emit @ node:events:489",
+          "ms": 34.123
+        },
+        {
+          "name": "handleMessage @ <app>/packages/main-process/dist/mainProcessMain.js:2247",
+          "ms": 29.752
+        },
+        {
+          "name": "getOrCreateModuleJob @ node:internal/modules/esm/loader:600",
+          "ms": 22.376
+        },
+        {
+          "name": "(anonymous) @ node:internal/modules/esm/loader:632",
+          "ms": 22.376
+        },
+        {
+          "name": "tracePromise @ node:diagnostics_channel:360",
+          "ms": 22.376
+        },
+        {
+          "name": "import @ node:internal/modules/esm/loader:631",
+          "ms": 22.376
+        },
+        {
+          "name": "asyncRunEntryPointWithESMLoader @ node:internal/modules/run_main:89",
+          "ms": 22.376
+        },
+        {
+          "name": "runEntryPointWithESMLoader @ node:internal/modules/run_main:122",
+          "ms": 22.376
+        },
+        {
+          "name": "#getOrCreateModuleJobAfterResolve @ node:internal/modules/esm/loader:526",
+          "ms": 21.305
+        },
+        {
+          "name": "afterResolve @ node:internal/modules/esm/loader:610",
+          "ms": 21.305
+        },
+        {
+          "name": "afterLoad @ node:internal/modules/esm/loader:499",
+          "ms": 20.239
+        },
+        {
+          "name": "loadAndTranslate @ node:internal/modules/esm/loader:496",
+          "ms": 20.239
+        },
+        {
+          "name": "(anonymous) @ node:internal/deps/undici/undici:1",
+          "ms": 19.431
+        },
+        {
+          "name": "#translate @ node:internal/modules/esm/loader:429",
+          "ms": 19.18
+        },
+        {
+          "name": "__require @ node:internal/deps/undici/undici:5",
+          "ms": 18.352
+        }
+      ],
+      "topUrls": [
+        {
+          "name": "(idle)",
+          "ms": 9786.073
+        },
+        {
+          "name": "<app>/packages/main-process/dist/mainProcessMain.js",
+          "ms": 151.502
+        },
+        {
+          "name": "callAndPauseOnStart",
+          "ms": 65.139
+        },
+        {
+          "name": "node:internal/bootstrap/realm",
+          "ms": 35.667
+        },
+        {
+          "name": "node:electron/js2c/browser_init",
+          "ms": 27.123
+        },
+        {
+          "name": "node:internal/deps/undici/undici",
+          "ms": 15.422
+        },
+        {
+          "name": "(program)",
+          "ms": 9.514
+        },
+        {
+          "name": "node:internal/blob",
+          "ms": 8.091
+        },
+        {
+          "name": "node:internal/modules/esm/utils",
+          "ms": 7.44
+        },
+        {
+          "name": "(garbage collector)",
+          "ms": 6.398
+        },
+        {
+          "name": "node:internal/streams/readable",
+          "ms": 5.295
+        },
+        {
+          "name": "node:events",
+          "ms": 2.993
+        },
+        {
+          "name": "node:internal/fs/streams",
+          "ms": 2.63
+        },
+        {
+          "name": "node:internal/process/task_queues",
+          "ms": 2.13
+        },
+        {
+          "name": "node:internal/modules/esm/module_job",
+          "ms": 2.125
+        },
+        {
+          "name": "node:internal/streams/state",
+          "ms": 1.519
+        },
+        {
+          "name": "node:internal/abort_controller",
+          "ms": 1.117
+        },
+        {
+          "name": "",
+          "ms": 1.106
+        },
+        {
+          "name": "node:electron/js2c/node_init",
+          "ms": 1.077
+        },
+        {
+          "name": "node:zlib",
+          "ms": 1.077
+        },
+        {
+          "name": "node:internal/encoding",
+          "ms": 1.074
+        },
+        {
+          "name": "node:internal/crypto/keys",
+          "ms": 1.074
+        },
+        {
+          "name": "runEmbedderPreload",
+          "ms": 1.073
+        },
+        {
+          "name": "lstat",
+          "ms": 1.071
+        },
+        {
+          "name": "node:crypto",
+          "ms": 1.07
+        }
+      ],
+      "timeline": [
+        {
+          "second": 0,
+          "nonIdleMs": 118.548
+        },
+        {
+          "second": 1,
+          "nonIdleMs": 228.574
+        },
+        {
+          "second": 2,
+          "nonIdleMs": 11.786
+        },
+        {
+          "second": 3,
+          "nonIdleMs": 6.348
+        },
+        {
+          "second": 10,
+          "nonIdleMs": 0.186
+        }
+      ]
+    }
+  ]
+}
