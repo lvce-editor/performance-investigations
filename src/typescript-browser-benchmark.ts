@@ -61,7 +61,7 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
       await delay(100)
     }
     if (!ready) throw new Error(`Server readiness timeout: ${log}`)
-    browser = await chromium.launch({ headless: true, args: ['--disable-background-timer-throttling', '--disable-renderer-backgrounding'] })
+    browser = await chromium.launch({ env, headless: true, args: ['--disable-background-timer-throttling', '--disable-renderer-backgrounding'] })
     const context = await browser.newContext()
     const page = await context.newPage()
     await page.goto(`${url}/tests/typescript.benchmark.html`, { waitUntil: 'domcontentloaded', timeout: 120_000 })
