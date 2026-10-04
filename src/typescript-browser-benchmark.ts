@@ -32,16 +32,16 @@ for (let iteration = 0; iteration < repeats; iteration++) {
   await writeFile(join(testDirectory, 'src/typescript.benchmark.ts'), `export const name = 'typescript.benchmark'
 export const test = async ({ Command, FileSystem, Main, Settings }) => {
   await Settings.update({ 'editor.diagnostics': false })
-  await Command.execute('Workspace.setUri', ${JSON.stringify(workspace)})
+  await Command.execute('Workspace.setUri', ${JSON.stringify(pathToFileURL(workspace).href)})
   const uri = ${JSON.stringify(pathToFileURL(join(workspace, 'packages/about-view/src/aboutWorkerMain.ts')).href)}
   await Main.openUri(uri)
   const text = await FileSystem.readFile(uri)
   const cold = await Command.executeExtensionCommand('typescript.showPerformanceTrace', { text, uri })
   if (cold.error || cold.languageService.cache !== 'created' || cold.diagnostics.count !== 0) throw new Error(JSON.stringify(cold))
-  await FileSystem.writeFile(${JSON.stringify(coldOutput)}, JSON.stringify(cold))
+  await FileSystem.writeFile(${JSON.stringify(pathToFileURL(coldOutput).href)}, JSON.stringify(cold))
   const warm = await Command.executeExtensionCommand('typescript.showPerformanceTrace', { text, uri })
   if (warm.error || warm.languageService.cache !== 'reused' || warm.diagnostics.count !== 0) throw new Error(JSON.stringify(warm))
-  await FileSystem.writeFile(${JSON.stringify(warmOutput)}, JSON.stringify(warm))
+  await FileSystem.writeFile(${JSON.stringify(pathToFileURL(warmOutput).href)}, JSON.stringify(warm))
 }
 `)
   const child = spawn(process.execPath, [serverPath, workspace, `--only-extension=${join(checkout, 'packages/extension')}`, `--test-path=${testDirectory}`], { env, detached: true, stdio: ['ignore', 'pipe', 'pipe'] })
