@@ -51,6 +51,8 @@ jobs:
         env:
           REPEATS: ${{ inputs.repeats }}
         run: node src/typescript-browser-benchmark.ts experiments/typescript benchmark-workspace results/browser "$REPEATS"
+      - name: Validate matching browser graph and summarize costs
+        run: node src/summarize-typescript-comparison.ts results/node/overview.json results/browser/browser-overview.json results/overview.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

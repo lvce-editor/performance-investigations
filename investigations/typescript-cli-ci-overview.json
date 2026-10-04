@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "nodeVersion": "v24.15.0",
+  "typescriptVersion": "6.0.3",
+  "extensionCommit": "4294e8a06bc4d4ba71490750e7b1670902a1d64d",
+  "workspaceCommit": "db84fa6c54201e7ebb026be3d7aab3436785e9f5",
+  "nodeRepeats": 5,
+  "browserRepeats": 5,
+  "graphValidation": {
+    "nodeContentHashesEqual": true,
+    "browserPathsAndSizesEqual": true,
+    "loadedFiles": 732,
+    "bytes": 4533477
+  },
+  "node": {
+    "tsc": {
+      "processElapsedMs": 2909.2920250000006,
+      "diagnosticRequestMs": null,
+      "compilerMeasures": null,
+      "methods": null,
+      "extendedDiagnostics": {
+        "Files": "732",
+        "Lines of Library": "29591",
+        "Lines of Definitions": "67501",
+        "Lines of TypeScript": "3649",
+        "Lines of JavaScript": "0",
+        "Lines of JSON": "0",
+        "Lines of Other": "0",
+        "Identifiers": "96719",
+        "Symbols": "127939",
+        "Types": "64849",
+        "Instantiations": "147807",
+        "Memory used": "242875K",
+        "Assignability cache size": "16417",
+        "Identity cache size": "214",
+        "Subtype cache size": "29",
+        "Strict subtype cache size": "111",
+        "I/O Read time": "0.03s",
+        "Parse time": "0.37s",
+        "ResolveModule time": "0.09s",
+        "ResolveTypeReference time": "0s",
+        "Program time": "0.6s",
+        "Bind time": "0.2s",
+        "Check time": "1.84s",
+        "transformTime time": "0.05s",
+        "I/O Write time": "0s",
+        "printTime time": "0.01s",
+        "Emit time": "0.01s",
+        "Total time": "2.65s"
+      }
+    },
+    "native": {
+      "processElapsedMs": 1295.2308300000004,
+      "diagnosticRequestMs": 989.46686,
+      "compilerMeasures": {
+        "Parse": 495.96277900000035,
+        "ResolveModule": 86.80153900000025,
+        "ResolveTypeReference": 2.0199780000000374,
+        "Program": 712.884931,
+        "Bind": 226.79065800000387,
+        "Check": 13.326776999999765,
+        "transformTime": 2.0544820000000072
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "durationMs": 28.303034999999966,
+          "bytes": 4587892
+        },
+        "readDirectory": {
+          "calls": 1,
+          "durationMs": 6.704937000000001,
+          "bytes": 0
+        },
+        "directoryExists": {
+          "calls": 679,
+          "durationMs": 5.536586000000199,
+          "bytes": 0
+        },
+        "fileExists": {
+          "calls": 2066,
+          "durationMs": 10.91723199999953,
+          "bytes": 0
+        },
+        "realpath": {
+          "calls": 45,
+          "durationMs": 1.0959920000002512,
+          "bytes": 6093
+        }
+      },
+      "rootFiles": 145,
+      "loadedFiles": 732,
+      "extendedDiagnostics": null
+    },
+    "lvce": {
+      "processElapsedMs": 1481.7510220000004,
+      "diagnosticRequestMs": 1102.005857,
+      "compilerMeasures": {
+        "Parse": 486.43153399999943,
+        "ResolveModule": 166.25160099999908,
+        "ResolveTypeReference": 3.241456999999855,
+        "Program": 828.525662,
+        "Bind": 220.80695900000183,
+        "Check": 13.182972999999947,
+        "transformTime": 2.038331999999855
+      },
+      "methods": {
+        "SyncApi.exists": {
+          "calls": 4243,
+          "durationMs": 26.2917720000014,
+          "bytes": 0
+        },
+        "SyncApi.readFileSync": {
+          "calls": 717,
+          "durationMs": 20.28727599999928,
+          "bytes": 3215325
+        },
+        "SyncApi.readDirSync": {
+          "calls": 98,
+          "durationMs": 1.8085199999996462,
+          "bytes": 0
+        },
+        "libraryRead": {
+          "calls": 88,
+          "durationMs": 13.028781999999751,
+          "bytes": 1407882
+        }
+      },
+      "rootFiles": 145,
+      "loadedFiles": 732,
+      "extendedDiagnostics": null
+    }
+  },
+  "browser": {
+    "diagnosticRequestMs": 4138.080000000016,
+    "syncRpcMs": 2978.359999999404,
+    "remainingMs": 1163.064999998256,
+    "methods": {
+      "SyncApi.exists": {
+        "calls": 4213,
+        "durationMs": 2267.6199999983655
+      },
+      "SyncApi.readFileSync": {
+        "calls": 717,
+        "durationMs": 640.2250000009662
+      },
+      "SyncApi.readDirSync": {
+        "calls": 98,
+        "durationMs": 63.87000000005355
+      }
+    },
+    "warmDiagnosticRequestMs": 0.10500000003958121,
+    "warmRpcCalls": 0,
+    "coldDurationsMs": [
+      4138.080000000016,
+      4253.01999999996,
+      4353.615000000049,
+      4078.9950000000536,
+      4062.445000000007
+    ]
+  },
+  "note": "Medians from separate unprofiled runs on one runner; compiler measures overlap. CLI checks every project file/declaration, hosts check one opened file. Node request timers exclude module startup; processElapsedMs includes it. Browser worker timer excludes activation and UI rendering. Remaining browser time includes libraries, parsing, binding, checking, and trace collection; it is not isolated compiler CPU. Warm requests reuse unchanged text and are not edit latency."
+}

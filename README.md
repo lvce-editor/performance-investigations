@@ -50,6 +50,9 @@ It uses direct filesystem reads and no browser cache storage or IPC. The graph h
 An optional activity heatmap can be regenerated with `python3 scripts/plot-activity.py summary.json timeline.svg` (requires NumPy and Matplotlib). The [original timeline](investigations/original-timeline.svg) shows where the long ESLint tail occurs.
 
 See [the initial investigation](investigations/startup.md) for hotspot evidence, measurements and optimization priorities.
+
+See [the TypeScript 6 comparison](investigations/typescript-cli.md) for CLI versus Node-host and real browser IPC measurements.
+
 The **TypeScript CLI and extension comparison** workflow pins the compiler and about-view workspace, checks matching source graphs, and measures whole-project `tsc`, one-file diagnostics with the standard Node host, the LVCE host with direct Node filesystem access, and the real browser extension with IPC. It saves unprofiled repetitions separately from CPU profiles. Run the Node comparison locally with:
 
 ```sh
