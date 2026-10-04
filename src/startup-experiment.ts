@@ -17,7 +17,7 @@ for (let iteration = 0; iteration < repeats; iteration++) {
     })
     const capture = JSON.parse(await readFile(`${output}/capture.json`, 'utf8'))
     const summary = JSON.parse(await readFile(`${output}/summary.json`, 'utf8'))
-    runs.push({ variant, iteration, tag: process.env[variant.toUpperCase()], elapsedMs: capture.elapsedMs, traceDurationMs: summary.traceDurationMs, profiles: summary.profiles.map((p: any) => ({ role: p.role, nonIdleMs: p.nonIdleMs, earlyNonIdleMs: p.earlyNonIdleMs })) })
+    runs.push({ variant, iteration, tag: process.env[variant.toUpperCase()], elapsedMs: capture.elapsedMs, traceDurationMs: summary.traceDurationMs, profiles: summary.profiles.map((p: any) => ({ role: p.role, nonIdleMs: p.nonIdleMs, earlyNonIdleMs: p.earlyNonIdleMs, firstActiveOffsetMs: p.firstActiveOffsetMs, lastActiveOffsetMs: p.lastActiveOffsetMs, statesMs: p.statesMs, topSelf: p.topSelf.slice(0, 5) })) })
     await writeFile('results/overview.json', JSON.stringify(runs, null, 2) + '\n')
   }
 }
