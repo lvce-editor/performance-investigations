@@ -73,7 +73,7 @@ export const cleanUrl = (url = ''): string => {
   const appIndex = cleaned.indexOf('<app>')
   return appIndex === -1 ? cleaned : cleaned.slice(appIndex)
 }
-const label = (frame: Frame): string => `${frame.functionName || '(anonymous)'} @ ${cleanUrl(frame.url)}:${(frame.lineNumber ?? -1) + 1}`
+const label = (frame: Frame): string => `${frame.functionName || '(anonymous)'} @ ${cleanUrl(frame.url)}:${(frame.lineNumber ?? -1) + 1}:${(frame.columnNumber ?? -1) + 1}`
 const round = (us: number): number => Math.round(us) / 1000
 const top = (values: Map<string, number>, limit = 25) => [...values.entries()]
   .sort((a, b) => b[1] - a[1]).slice(0, limit).map(([name, us]) => ({ name, ms: round(us) }))

@@ -59,3 +59,14 @@ test('normalizes localhost ports, build ids and variant checkout paths for compa
   assert.equal(cleanUrl('http://localhost:5678/remote/home/runner/work/performance/experiments/baseline/packages/extension/dist/eslintMain.js'), '<app>/extensions/builtin.eslint/dist/eslintMain.js')
   assert.equal(cleanUrl('lvce://-/abc/packages/editor-worker/dist/editorWorkerMain.js?config=private'), '<app>/packages/editor-worker/dist/editorWorkerMain.js')
 })
+
+test('separates distinct minified functions on the same source line', () => {
+  const profile = fixture()
+  profile.nodes[1].callFrame = { functionName: 'm', url: 'bundle.js', lineNumber: 0, columnNumber: 10 }
+  profile.nodes[2].callFrame = { functionName: 'm', url: 'bundle.js', lineNumber: 0, columnNumber: 200 }
+  const summary = summarize(profile)
+  const functions = summary.topInclusive.filter((row) => row.name.startsWith('m @ '))
+  assert.equal(functions.length, 2)
+  assert.equal(functions.find((row) => row.name.endsWith(':1:11'))?.ms, 3)
+  assert.equal(functions.find((row) => row.name.endsWith(':1:201'))?.ms, 1)
+})

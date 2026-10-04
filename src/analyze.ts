@@ -13,7 +13,7 @@ export const analyze = async (input: string, windowMs?: number) => {
   if (!profiles.length) throw new Error('No CPU profiles found')
   const origin = Math.min(...profiles.map((p) => p.startTime))
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     method: 'Timestamp-ordered sample residency; non-idle time is an estimate, not OS CPU time or startup latency. Inclusive rows overlap. First sample gap is unobserved.',
     traceDurationMs: (Math.max(...profiles.map((p) => p.endTime ?? p.startTime + p.timeDeltas.reduce((a, b) => a + b, 0))) - origin) / 1000,
     windowMs: windowMs ?? null, excludedDuplicateProfiles: excluded,

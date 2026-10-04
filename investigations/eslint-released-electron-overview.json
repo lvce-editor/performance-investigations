@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "releases": "v1.23.5 / v5.26.1",
+    "traceDurationMs": 69816.471,
+    "eslintResolverNonIdleMs": 48804.938
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "releases": "v1.24.1 / v5.26.1",
+    "traceDurationMs": 64665.537,
+    "eslintResolverNonIdleMs": 44541.41
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "releases": "v1.24.1 / v5.26.1",
+    "traceDurationMs": 61250.015,
+    "eslintResolverNonIdleMs": 40821.354
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "releases": "v1.23.5 / v5.26.1",
+    "traceDurationMs": 66481.261,
+    "eslintResolverNonIdleMs": 45820.771
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "releases": "v1.23.5 / v5.26.1",
+    "traceDurationMs": 65042.558,
+    "eslintResolverNonIdleMs": 44859.648
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "releases": "v1.24.1 / v5.26.1",
+    "traceDurationMs": 61423.788,
+    "eslintResolverNonIdleMs": 40274.659
+  }
+]

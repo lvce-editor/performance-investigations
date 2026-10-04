@@ -55,7 +55,7 @@ try {
   const pauseTimer = setTimeout(() => paused.reject(new Error('Expected an initial debugger pause')), 10000)
   try { await paused.promise } finally { clearTimeout(pauseTimer) }
   const before = await invoke('Runtime.evaluate', { expression: '({ now: globalThis.performance.now(), state: Object.fromEntries(["XDG_CONFIG_HOME", "XDG_DATA_HOME", "XDG_CACHE_HOME", "XDG_STATE_HOME"].map(key => [key, process.env[key]])) })', returnByValue: true })
-  if (before.exceptionDetails || Object.entries(before.result?.value?.state ?? {}).some(([key, value]) => value !== env[key])) throw new Error('Child state isolation could not be verified')
+  if (before.exceptionDetails || !before.result?.value?.state || Object.keys(before.result.value.state).length !== 4 || Object.entries(before.result.value.state).some(([key, value]) => value !== env[key])) throw new Error('Child state isolation could not be verified')
   await invoke('Debugger.resume')
   await delay(sampleMs)
   const marks = await invoke('Runtime.evaluate', { expression: 'globalThis.performance.getEntriesByType("mark").map(e => ({ name: e.name, startTime: e.startTime }))', returnByValue: true })

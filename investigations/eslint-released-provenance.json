@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "baseline",
+    "repository": "lvce-editor/eslint",
+    "tag": "v1.23.5",
+    "runtime": "v0.119.25",
+    "assetName": "eslint-v1.23.5.tar.br",
+    "digest": "sha256:7904e7ba801737c45fa9c9bafed371c83b199943b84dbff07c98c5004cc0a3b9",
+    "publishedAt": "2026-10-01T02:06:25Z"
+  },
+  {
+    "variant": "baseline",
+    "repository": "lvce-editor/language-features-typescript",
+    "tag": "v5.26.1",
+    "runtime": "v0.119.25",
+    "assetName": "language-features-typescript-v5.26.1.tar.br",
+    "digest": "sha256:2defa314619b9bfcb4383bb2e3b31d0300175815f4e9bef1837c3c169d294aaa",
+    "publishedAt": "2026-10-01T18:11:06Z"
+  },
+  {
+    "variant": "candidate",
+    "repository": "lvce-editor/eslint",
+    "tag": "v1.24.1",
+    "runtime": "v0.119.25",
+    "assetName": "eslint-v1.24.1.tar.br",
+    "digest": "sha256:2f1e9ed270346ffae860228126e484be92498feb349c71e4c08c96f1fefd9f2a",
+    "publishedAt": "2026-10-04T09:58:35Z"
+  },
+  {
+    "variant": "candidate",
+    "repository": "lvce-editor/language-features-typescript",
+    "tag": "v5.26.1",
+    "runtime": "v0.119.25",
+    "assetName": "language-features-typescript-v5.26.1.tar.br",
+    "digest": "sha256:2defa314619b9bfcb4383bb2e3b31d0300175815f4e9bef1837c3c169d294aaa",
+    "publishedAt": "2026-10-01T18:11:06Z"
+  }
+]

@@ -1,0 +1,5906 @@
+[
+  {
+    "variant": "baseline",
+    "iteration": 0,
+    "tag": "v1.23.5 / v5.26.1",
+    "elapsedMs": 109462.77697800001,
+    "traceDurationMs": 71787.026,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 853.083,
+        "pid": 3469,
+        "tid": 17,
+        "frame": "5B51284F37B15D09EABE9780A080D503",
+        "navigationId": "F73D0BA33340FE5FF3A115B7183A7019",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1767.122,
+        "pid": 3469,
+        "tid": 17,
+        "frame": "5B51284F37B15D09EABE9780A080D503",
+        "navigationId": "F73D0BA33340FE5FF3A115B7183A7019",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1767.122,
+        "pid": 3469,
+        "tid": 17,
+        "frame": "5B51284F37B15D09EABE9780A080D503",
+        "navigationId": "F73D0BA33340FE5FF3A115B7183A7019",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2613.895,
+        "pid": 3469,
+        "tid": 17,
+        "frame": "5B51284F37B15D09EABE9780A080D503",
+        "navigationId": "F73D0BA33340FE5FF3A115B7183A7019",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 50920.911,
+        "earlyNonIdleMs": 2026.909,
+        "firstActiveOffsetMs": 2792.19,
+        "lastActiveOffsetMs": 63134.307,
+        "statesMs": {
+          "unattributed": 422.167,
+          "javascriptOrNative": 49966.03,
+          "idle": 18060.576,
+          "gc": 532.714
+        },
+        "topSelf": [
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2522",
+            "ms": 43987.5
+          },
+          {
+            "name": "(idle) @ :0",
+            "ms": 18060.576
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:349",
+            "ms": 966.003
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1262",
+            "ms": 708.638
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 532.714
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 50309.448,
+        "earlyNonIdleMs": 1530.723,
+        "firstActiveOffsetMs": 3291.579,
+        "lastActiveOffsetMs": 71066.566,
+        "statesMs": {
+          "unattributed": 2413.621,
+          "javascriptOrNative": 43210.751,
+          "gc": 4685.076,
+          "idle": 17468.581
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 17468.581
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 8457.258
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 4685.076
+          },
+          {
+            "name": "visit @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:2267",
+            "ms": 3608.413
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2413.621
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 16252.243,
+        "earlyNonIdleMs": 174.942,
+        "firstActiveOffsetMs": 2628.262,
+        "lastActiveOffsetMs": 71541.117,
+        "statesMs": {
+          "unattributed": 2197.126,
+          "javascriptOrNative": 13755.016,
+          "idle": 52883.905,
+          "gc": 300.101
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 52883.905
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 8081.972
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2197.126
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1321.995
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1259.252
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 10824.487,
+        "earlyNonIdleMs": 308.686,
+        "firstActiveOffsetMs": 1203.398,
+        "lastActiveOffsetMs": 71689.489,
+        "statesMs": {
+          "javascriptOrNative": 9219.131,
+          "idle": 59753.017,
+          "gc": 325.832,
+          "unattributed": 1279.524
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 59753.017
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 2785.165
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1279.524
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 808.2
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 669.971
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 5593.209,
+        "earlyNonIdleMs": 173.232,
+        "firstActiveOffsetMs": 1052.126,
+        "lastActiveOffsetMs": 71530.345,
+        "statesMs": {
+          "unattributed": 114.153,
+          "javascriptOrNative": 5312.641,
+          "idle": 65113.418,
+          "gc": 166.415
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 65113.418
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 2816.02
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 861.373
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 630.436
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 540.725
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 5107.117,
+        "earlyNonIdleMs": 4.788,
+        "firstActiveOffsetMs": 2758.765,
+        "lastActiveOffsetMs": 71304.488,
+        "statesMs": {
+          "unattributed": 7.558,
+          "javascriptOrNative": 4644.433,
+          "idle": 63891.152,
+          "gc": 455.126
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63891.152
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10767",
+            "ms": 1341.648
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 455.126
+          },
+          {
+            "name": "normalize @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:896",
+            "ms": 331.695
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10655",
+            "ms": 256.641
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 4159.415,
+        "earlyNonIdleMs": 158.274,
+        "firstActiveOffsetMs": 2663.095,
+        "lastActiveOffsetMs": 60276.832,
+        "statesMs": {
+          "unattributed": 90.212,
+          "javascriptOrNative": 3830.658,
+          "idle": 64958.768,
+          "gc": 238.545
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 64958.768
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 1169.553
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1968",
+            "ms": 679.789
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 631.833
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:107",
+            "ms": 433.741
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1503.665,
+        "earlyNonIdleMs": 1110.074,
+        "firstActiveOffsetMs": 182.076,
+        "lastActiveOffsetMs": 71622.559,
+        "statesMs": {
+          "javascriptOrNative": 1169.8,
+          "gc": 153.46,
+          "unattributed": 180.405,
+          "idle": 70088.605
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70088.605
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 180.405
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 153.46
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 109.374
+          },
+          {
+            "name": "read @ :0",
+            "ms": 107.403
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1122.724,
+        "earlyNonIdleMs": 350.283,
+        "firstActiveOffsetMs": 25.762,
+        "lastActiveOffsetMs": 71787.026,
+        "statesMs": {
+          "javascriptOrNative": 747.141,
+          "idle": 70638.54,
+          "unattributed": 278.812,
+          "gc": 96.771
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70638.54
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 278.812
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 199.704
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 96.771
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 35.331
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 411.541,
+        "earlyNonIdleMs": 310.772,
+        "firstActiveOffsetMs": 1917.568,
+        "lastActiveOffsetMs": 71772.025,
+        "statesMs": {
+          "javascriptOrNative": 298.982,
+          "gc": 43.828,
+          "unattributed": 68.731,
+          "idle": 69445.038
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69445.038
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 130.893
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 68.731
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 43.828
+          },
+          {
+            "name": "getEnv @ <app>/extensions/builtin.git/node/gitProcess.js:3339",
+            "ms": 14.612
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 229.474,
+        "earlyNonIdleMs": 171.553,
+        "firstActiveOffsetMs": 967.266,
+        "lastActiveOffsetMs": 31688.328,
+        "statesMs": {
+          "unattributed": 19.499,
+          "javascriptOrNative": 145.719,
+          "gc": 64.256,
+          "idle": 70569.134
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70569.134
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 64.256
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 23.265
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 22.944
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 19.499
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 179.03,
+        "earlyNonIdleMs": 149.657,
+        "firstActiveOffsetMs": 1030.01,
+        "lastActiveOffsetMs": 56905.238,
+        "statesMs": {
+          "unattributed": 7.145,
+          "javascriptOrNative": 139.562,
+          "idle": 70574.058,
+          "gc": 32.323
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70574.058
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 50.822
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 32.323
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 17.335
+          },
+          {
+            "name": "handleMessage @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:363",
+            "ms": 9.831
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 101.497,
+        "earlyNonIdleMs": 101.497,
+        "firstActiveOffsetMs": 523.815,
+        "lastActiveOffsetMs": 3466.76,
+        "statesMs": {
+          "unattributed": 9.258,
+          "javascriptOrNative": 90.512,
+          "idle": 71142.875,
+          "gc": 1.727
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 71142.875
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 13.127
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 11.126
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 9.258
+          },
+          {
+            "name": "focusElement @ <app>/packages/renderer-process/dist/rendererProcessMain.js:3814",
+            "ms": 4.51
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 59.414,
+        "earlyNonIdleMs": 50.282,
+        "firstActiveOffsetMs": 1346.037,
+        "lastActiveOffsetMs": 32377.36,
+        "statesMs": {
+          "unattributed": 1.813,
+          "javascriptOrNative": 43.7,
+          "idle": 70343.445,
+          "gc": 13.901
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70343.445
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 17.011
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 13.901
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 8.752
+          },
+          {
+            "name": "getJsonCached @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1567",
+            "ms": 4.395
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 44.888,
+        "earlyNonIdleMs": 44.888,
+        "firstActiveOffsetMs": 1488.513,
+        "lastActiveOffsetMs": 2331.673,
+        "statesMs": {
+          "unattributed": 0.303,
+          "javascriptOrNative": 44.585,
+          "idle": 70244.834
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70244.834
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 15.289
+          },
+          {
+            "name": "escapeRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3140",
+            "ms": 2.57
+          },
+          {
+            "name": "handleMessage @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:168",
+            "ms": 2.463
+          },
+          {
+            "name": "loadContent @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:6553",
+            "ms": 1.897
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 41.36,
+        "earlyNonIdleMs": 41.079,
+        "firstActiveOffsetMs": 904.489,
+        "lastActiveOffsetMs": 71542.66,
+        "statesMs": {
+          "unattributed": 0.867,
+          "javascriptOrNative": 39.387,
+          "idle": 70821.014,
+          "gc": 1.106
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70821.014
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/editor-worker/dist/editorWorkerMain.js:18196",
+            "ms": 2.749
+          },
+          {
+            "name": "loadContent @ <app>/packages/editor-worker/dist/editorWorkerMain.js:16239",
+            "ms": 1.733
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/editor-worker/dist/editorWorkerMain.js:0",
+            "ms": 1.598
+          },
+          {
+            "name": "getData$2 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:340",
+            "ms": 1.547
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 39.549,
+        "earlyNonIdleMs": 16.188,
+        "firstActiveOffsetMs": 1611.176,
+        "lastActiveOffsetMs": 32766.121,
+        "statesMs": {
+          "unattributed": 1.324,
+          "javascriptOrNative": 14.864,
+          "idle": 70117.055,
+          "gc": 23.361
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70117.055
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 23.361
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:349",
+            "ms": 1.964
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.792
+          },
+          {
+            "name": "exec$1 @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:1146",
+            "ms": 1.638
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 35.59,
+        "earlyNonIdleMs": 35.59,
+        "firstActiveOffsetMs": 1557.903,
+        "lastActiveOffsetMs": 3254.294,
+        "statesMs": {
+          "unattributed": 1.952,
+          "idle": 70164.095,
+          "javascriptOrNative": 33.638
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70164.095
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/dist/gitMain.js:107",
+            "ms": 7.365
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:349",
+            "ms": 2.873
+          },
+          {
+            "name": "getData$2 @ <app>/extensions/builtin.git/dist/gitMain.js:273",
+            "ms": 2.752
+          },
+          {
+            "name": "create$2 @ <app>/extensions/builtin.git/dist/gitMain.js:1181",
+            "ms": 2.295
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 30.578,
+        "earlyNonIdleMs": 30.578,
+        "firstActiveOffsetMs": 1428.756,
+        "lastActiveOffsetMs": 2811.769,
+        "statesMs": {
+          "unattributed": 1.002,
+          "javascriptOrNative": 29.576,
+          "idle": 70324.323
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70324.323
+          },
+          {
+            "name": "openInputWithContext @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5577",
+            "ms": 3.391
+          },
+          {
+            "name": "handleMessage @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:162",
+            "ms": 1.974
+          },
+          {
+            "name": "diffTrees @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:3861",
+            "ms": 1.664
+          },
+          {
+            "name": "getFileIconsForTabs @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5474",
+            "ms": 1.654
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 22.865,
+        "earlyNonIdleMs": 22.865,
+        "firstActiveOffsetMs": 1381.68,
+        "lastActiveOffsetMs": 3167.964,
+        "statesMs": {
+          "unattributed": 1.041,
+          "javascriptOrNative": 21.824,
+          "idle": 70358.619
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70358.619
+          },
+          {
+            "name": "handleMessage @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:804",
+            "ms": 4.89
+          },
+          {
+            "name": "send @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1144",
+            "ms": 1.48
+          },
+          {
+            "name": "execute @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1182",
+            "ms": 1.323
+          },
+          {
+            "name": "getBuiltinStatusBarItems @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:2504",
+            "ms": 1.321
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 18.172,
+        "earlyNonIdleMs": 18.172,
+        "firstActiveOffsetMs": 1452.87,
+        "lastActiveOffsetMs": 2725.074,
+        "statesMs": {
+          "unattributed": 0.47,
+          "javascriptOrNative": 17.702,
+          "idle": 70309.891
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70309.891
+          },
+          {
+            "name": "renderItems @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1249",
+            "ms": 3.363
+          },
+          {
+            "name": "getKeys @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:647",
+            "ms": 1.902
+          },
+          {
+            "name": "getActivityBarVirtualDom @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1218",
+            "ms": 1.834
+          },
+          {
+            "name": "getActivityBarItems @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3388",
+            "ms": 1.247
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 14.73,
+        "earlyNonIdleMs": 14.73,
+        "firstActiveOffsetMs": 1514.89,
+        "lastActiveOffsetMs": 1704.461,
+        "statesMs": {
+          "unattributed": 0.397,
+          "javascriptOrNative": 14.333,
+          "idle": 70246.866
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70246.866
+          },
+          {
+            "name": "loadContent2 @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:4492",
+            "ms": 2.379
+          },
+          {
+            "name": "execute @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:540",
+            "ms": 1.851
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.232
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:0",
+            "ms": 1.186
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 12.649,
+        "earlyNonIdleMs": 12.649,
+        "firstActiveOffsetMs": 851.005,
+        "lastActiveOffsetMs": 2474.857,
+        "statesMs": {
+          "unattributed": 5.365,
+          "idle": 70916.677,
+          "javascriptOrNative": 7.284
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70916.677
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 5.365
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 3.191
+          },
+          {
+            "name": "getTokensViewport @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1308",
+            "ms": 1.544
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 1.437
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 11.923,
+        "earlyNonIdleMs": 11.923,
+        "firstActiveOffsetMs": 1630.87,
+        "lastActiveOffsetMs": 2506.969,
+        "statesMs": {
+          "unattributed": 1.492,
+          "idle": 70114.069,
+          "javascriptOrNative": 10.431
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70114.069
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 7.8
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.492
+          },
+          {
+            "name": "loadFont @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1152",
+            "ms": 0.564
+          },
+          {
+            "name": "Ipc @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:175",
+            "ms": 0.526
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 9.978,
+        "earlyNonIdleMs": 9.978,
+        "firstActiveOffsetMs": 1330.102,
+        "lastActiveOffsetMs": 3254.483,
+        "statesMs": {
+          "unattributed": 0.887,
+          "javascriptOrNative": 9.091,
+          "idle": 70411.975
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70411.975
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.23
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:902",
+            "ms": 1.226
+          },
+          {
+            "name": "handleMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+            "ms": 1.07
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 0.887
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 8.472,
+        "earlyNonIdleMs": 8.472,
+        "firstActiveOffsetMs": 1697.265,
+        "lastActiveOffsetMs": 2689.675,
+        "statesMs": {
+          "unattributed": 0.694,
+          "javascriptOrNative": 7.778,
+          "idle": 70055.104
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70055.104
+          },
+          {
+            "name": "handleMessage @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:439",
+            "ms": 1.782
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:1149",
+            "ms": 1.595
+          },
+          {
+            "name": "addEventListener @ :0",
+            "ms": 0.888
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:0",
+            "ms": 0.83
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 7.103,
+        "earlyNonIdleMs": 7.103,
+        "firstActiveOffsetMs": 1533.91,
+        "lastActiveOffsetMs": 1641.923,
+        "statesMs": {
+          "unattributed": 0.256,
+          "javascriptOrNative": 6.847,
+          "idle": 70233.521
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 70233.521
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 4.296
+          },
+          {
+            "name": "getCache @ <app>/packages/cache-worker/cacheWorkerMain.js:716",
+            "ms": 1.083
+          },
+          {
+            "name": "attachEvents @ <app>/packages/cache-worker/cacheWorkerMain.js:50",
+            "ms": 0.535
+          },
+          {
+            "name": "getData @ <app>/packages/cache-worker/cacheWorkerMain.js:124",
+            "ms": 0.526
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 0,
+    "tag": "v1.24.1 / v5.28.1",
+    "elapsedMs": 94613.143481,
+    "traceDurationMs": 64806.54,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 635.247,
+        "pid": 3757,
+        "tid": 17,
+        "frame": "97816805DF71DE8A8ACAC558009153B0",
+        "navigationId": "1167217E4C07422A17E140A41F24F9A8",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1682.659,
+        "pid": 3757,
+        "tid": 17,
+        "frame": "97816805DF71DE8A8ACAC558009153B0",
+        "navigationId": "1167217E4C07422A17E140A41F24F9A8",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1682.659,
+        "pid": 3757,
+        "tid": 17,
+        "frame": "97816805DF71DE8A8ACAC558009153B0",
+        "navigationId": "1167217E4C07422A17E140A41F24F9A8",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2524.913,
+        "pid": 3757,
+        "tid": 17,
+        "frame": "97816805DF71DE8A8ACAC558009153B0",
+        "navigationId": "1167217E4C07422A17E140A41F24F9A8",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 44502.574,
+        "earlyNonIdleMs": 1508.216,
+        "firstActiveOffsetMs": 3288.213,
+        "lastActiveOffsetMs": 62055.435,
+        "statesMs": {
+          "unattributed": 2912.531,
+          "javascriptOrNative": 36517.55,
+          "gc": 5072.493,
+          "idle": 16317.916
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 16317.916
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 7862.393
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 5072.493
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2912.531
+          },
+          {
+            "name": "_visitPaths @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:915",
+            "ms": 1023.613
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 18741.904,
+        "earlyNonIdleMs": 2165.978,
+        "firstActiveOffsetMs": 2660.923,
+        "lastActiveOffsetMs": 42061.89,
+        "statesMs": {
+          "unattributed": 443.683,
+          "idle": 43390.105,
+          "javascriptOrNative": 17548.052,
+          "gc": 750.169
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 43390.105
+          },
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2552",
+            "ms": 11466.214
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1292",
+            "ms": 768.238
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 750.169
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 443.683
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 14963.114,
+        "earlyNonIdleMs": 191.397,
+        "firstActiveOffsetMs": 2532.441,
+        "lastActiveOffsetMs": 64546.821,
+        "statesMs": {
+          "unattributed": 2236.243,
+          "javascriptOrNative": 12453.109,
+          "idle": 47310.985,
+          "gc": 273.762
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 47310.985
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 7095.568
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2236.243
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1177.847
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1134.913
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 7702.336,
+        "earlyNonIdleMs": 302.655,
+        "firstActiveOffsetMs": 1005.901,
+        "lastActiveOffsetMs": 64728.674,
+        "statesMs": {
+          "javascriptOrNative": 6594.624,
+          "idle": 56096.208,
+          "gc": 258.375,
+          "unattributed": 849.337
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56096.208
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 1524.304
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 866.576
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 849.337
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 579.503
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 5099.994,
+        "earlyNonIdleMs": 11.503,
+        "firstActiveOffsetMs": 2737.675,
+        "lastActiveOffsetMs": 64103.093,
+        "statesMs": {
+          "unattributed": 2.607,
+          "javascriptOrNative": 4843.404,
+          "idle": 56942.299,
+          "gc": 253.983
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56942.299
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10771",
+            "ms": 1628.56
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10659",
+            "ms": 370.296
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 253.983
+          },
+          {
+            "name": "utf8ToBytes @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:3085",
+            "ms": 156.735
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 2659.182,
+        "earlyNonIdleMs": 162.911,
+        "firstActiveOffsetMs": 857.889,
+        "lastActiveOffsetMs": 64541.028,
+        "statesMs": {
+          "unattributed": 51.597,
+          "javascriptOrNative": 2407.989,
+          "idle": 61270.828,
+          "gc": 199.596
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 61270.828
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 1179.866
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 380.661
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 281.772
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 257.597
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1519.258,
+        "earlyNonIdleMs": 1177.577,
+        "firstActiveOffsetMs": 208.122,
+        "lastActiveOffsetMs": 64634.831,
+        "statesMs": {
+          "javascriptOrNative": 1211.265,
+          "gc": 113.633,
+          "idle": 63068.827,
+          "unattributed": 194.36
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63068.827
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 194.36
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 117.42
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 113.633
+          },
+          {
+            "name": "close @ :0",
+            "ms": 110.374
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 1321.463,
+        "earlyNonIdleMs": 167.399,
+        "firstActiveOffsetMs": 2559.546,
+        "lastActiveOffsetMs": 34606.843,
+        "statesMs": {
+          "unattributed": 24.78,
+          "javascriptOrNative": 1194.081,
+          "idle": 60902.642,
+          "gc": 102.602
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 60902.642
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 387.582
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1966",
+            "ms": 229.279
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:107",
+            "ms": 154.762
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 140.687
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1240.943,
+        "earlyNonIdleMs": 401.297,
+        "firstActiveOffsetMs": 26.246,
+        "lastActiveOffsetMs": 64804.49,
+        "statesMs": {
+          "javascriptOrNative": 871.32,
+          "idle": 63537.301,
+          "unattributed": 296.059,
+          "gc": 73.564
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63537.301
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 296.059
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 259.617
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 73.564
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 42.473
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 443.977,
+        "earlyNonIdleMs": 334.781,
+        "firstActiveOffsetMs": 1730.774,
+        "lastActiveOffsetMs": 64783.322,
+        "statesMs": {
+          "javascriptOrNative": 317.924,
+          "gc": 63.703,
+          "unattributed": 62.35,
+          "idle": 62619.394
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 62619.394
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 125.094
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 63.703
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 62.35
+          },
+          {
+            "name": "__require @ node:internal/deps/undici/undici:5",
+            "ms": 14.803
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 216.559,
+        "earlyNonIdleMs": 183.78,
+        "firstActiveOffsetMs": 768.071,
+        "lastActiveOffsetMs": 64554.436,
+        "statesMs": {
+          "unattributed": 21.384,
+          "javascriptOrNative": 159.719,
+          "gc": 35.456,
+          "idle": 63797.129
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63797.129
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 35.456
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 25.433
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 21.384
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 14.764
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 187.269,
+        "earlyNonIdleMs": 146.441,
+        "firstActiveOffsetMs": 833.997,
+        "lastActiveOffsetMs": 49069.691,
+        "statesMs": {
+          "unattributed": 4.31,
+          "javascriptOrNative": 133.933,
+          "idle": 63766.092,
+          "gc": 49.026
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63766.092
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 50.032
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 49.026
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 17.441
+          },
+          {
+            "name": "hashWorkspaceUri @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:1913",
+            "ms": 9.321
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 105.919,
+        "earlyNonIdleMs": 105.919,
+        "firstActiveOffsetMs": 547.915,
+        "lastActiveOffsetMs": 3479.284,
+        "statesMs": {
+          "unattributed": 7.955,
+          "javascriptOrNative": 96.04,
+          "idle": 64136.336,
+          "gc": 1.924
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 64136.336
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 14.203
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 7.955
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 7.865
+          },
+          {
+            "name": "setEventProp @ <app>/packages/renderer-process/dist/rendererProcessMain.js:3380",
+            "ms": 4.445
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 95.492,
+        "earlyNonIdleMs": 68.144,
+        "firstActiveOffsetMs": 1157.292,
+        "lastActiveOffsetMs": 32231.319,
+        "statesMs": {
+          "unattributed": 3.61,
+          "javascriptOrNative": 57.937,
+          "idle": 63535.607,
+          "gc": 33.945
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63535.607
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 33.945
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 14.096
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 7.231
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1657",
+            "ms": 6.683
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 54.837,
+        "earlyNonIdleMs": 51.274,
+        "firstActiveOffsetMs": 689.178,
+        "lastActiveOffsetMs": 64554.647,
+        "statesMs": {
+          "unattributed": 1.448,
+          "javascriptOrNative": 51.676,
+          "gc": 1.713,
+          "idle": 64047.397
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 64047.397
+          },
+          {
+            "name": "send @ <app>/packages/editor-worker/dist/editorWorkerMain.js:416",
+            "ms": 4.139
+          },
+          {
+            "name": "loadContent @ <app>/packages/editor-worker/dist/editorWorkerMain.js:16239",
+            "ms": 2.683
+          },
+          {
+            "name": "updateDerivedState @ <app>/packages/editor-worker/dist/editorWorkerMain.js:5184",
+            "ms": 2.297
+          },
+          {
+            "name": "handleMessage @ <app>/packages/editor-worker/dist/editorWorkerMain.js:174",
+            "ms": 2.169
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 41.505,
+        "earlyNonIdleMs": 41.505,
+        "firstActiveOffsetMs": 1306.25,
+        "lastActiveOffsetMs": 2186.972,
+        "statesMs": {
+          "unattributed": 2.302,
+          "javascriptOrNative": 39.203,
+          "idle": 63427.493
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63427.493
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 12.598
+          },
+          {
+            "name": "invoke @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1195",
+            "ms": 2.474
+          },
+          {
+            "name": "escapeRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3140",
+            "ms": 2.32
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.302
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 37.38,
+        "earlyNonIdleMs": 37.38,
+        "firstActiveOffsetMs": 1191.67,
+        "lastActiveOffsetMs": 3093.877,
+        "statesMs": {
+          "unattributed": 0.865,
+          "javascriptOrNative": 36.515,
+          "idle": 63545.216
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63545.216
+          },
+          {
+            "name": "applyRender @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:2207",
+            "ms": 3.754
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 3.687
+          },
+          {
+            "name": "handleMessage @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:804",
+            "ms": 3.275
+          },
+          {
+            "name": "create$9 @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:273",
+            "ms": 2.593
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 36.112,
+        "earlyNonIdleMs": 36.112,
+        "firstActiveOffsetMs": 1236.069,
+        "lastActiveOffsetMs": 2758.304,
+        "statesMs": {
+          "unattributed": 1.706,
+          "javascriptOrNative": 34.406,
+          "idle": 63501.499
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63501.499
+          },
+          {
+            "name": "send @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:443",
+            "ms": 3.182
+          },
+          {
+            "name": "openInputWithContext @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5577",
+            "ms": 2.996
+          },
+          {
+            "name": "invoke$1 @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:1772",
+            "ms": 2.744
+          },
+          {
+            "name": "hasActiveTextEditor @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:1839",
+            "ms": 2.646
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 28.276,
+        "earlyNonIdleMs": 28.276,
+        "firstActiveOffsetMs": 1263.183,
+        "lastActiveOffsetMs": 2615.29,
+        "statesMs": {
+          "unattributed": 0.383,
+          "javascriptOrNative": 27.893,
+          "idle": 63498.034
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63498.034
+          },
+          {
+            "name": "loadContent @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3801",
+            "ms": 5.048
+          },
+          {
+            "name": "handleMessage @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1586",
+            "ms": 2.925
+          },
+          {
+            "name": "invokeHelper @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2385",
+            "ms": 1.781
+          },
+          {
+            "name": "handleMessage @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:2442",
+            "ms": 1.532
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 26.591,
+        "earlyNonIdleMs": 26.591,
+        "firstActiveOffsetMs": 1364.082,
+        "lastActiveOffsetMs": 3223.258,
+        "statesMs": {
+          "unattributed": 1.252,
+          "javascriptOrNative": 24.841,
+          "idle": 63387.357,
+          "gc": 0.498
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63387.357
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:450",
+            "ms": 5.458
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 4.777
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:349",
+            "ms": 3.672
+          },
+          {
+            "name": "createNodeRpc @ <app>/extensions/builtin.git/dist/gitMain.js:2071",
+            "ms": 1.679
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 19.965,
+        "earlyNonIdleMs": 19.965,
+        "firstActiveOffsetMs": 1483.56,
+        "lastActiveOffsetMs": 2411.825,
+        "statesMs": {
+          "unattributed": 0.559,
+          "javascriptOrNative": 19.406,
+          "idle": 63291.717
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63291.717
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 9.438
+          },
+          {
+            "name": "execute @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:540",
+            "ms": 1.909
+          },
+          {
+            "name": "send @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:502",
+            "ms": 1.445
+          },
+          {
+            "name": "handleMessage @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:999",
+            "ms": 1.175
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 19.287,
+        "earlyNonIdleMs": 19.287,
+        "firstActiveOffsetMs": 636.395,
+        "lastActiveOffsetMs": 2379.404,
+        "statesMs": {
+          "unattributed": 7.387,
+          "idle": 64121.429,
+          "javascriptOrNative": 11.9
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 64121.429
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 7.387
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 6.388
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 2.427
+          },
+          {
+            "name": "getTokensViewport @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1308",
+            "ms": 0.67
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 13.956,
+        "earlyNonIdleMs": 13.956,
+        "firstActiveOffsetMs": 1336.344,
+        "lastActiveOffsetMs": 1603.536,
+        "statesMs": {
+          "unattributed": 0.296,
+          "javascriptOrNative": 13.66,
+          "idle": 63454.298
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63454.298
+          },
+          {
+            "name": "create$a @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:834",
+            "ms": 2.718
+          },
+          {
+            "name": "getTitleBarButtons @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:2179",
+            "ms": 2.582
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:0",
+            "ms": 1.878
+          },
+          {
+            "name": "execute @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:540",
+            "ms": 1.32
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 11.335,
+        "earlyNonIdleMs": 11.335,
+        "firstActiveOffsetMs": 1137.97,
+        "lastActiveOffsetMs": 3224.98,
+        "statesMs": {
+          "unattributed": 0.832,
+          "javascriptOrNative": 10.503,
+          "idle": 63628.676
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63628.676
+          },
+          {
+            "name": "handleMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+            "ms": 1.638
+          },
+          {
+            "name": "send @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:496",
+            "ms": 1.442
+          },
+          {
+            "name": "invoke @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:1180",
+            "ms": 1.319
+          },
+          {
+            "name": "execute @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:534",
+            "ms": 0.881
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 10.909,
+        "earlyNonIdleMs": 10.909,
+        "firstActiveOffsetMs": 1452.038,
+        "lastActiveOffsetMs": 3222.089,
+        "statesMs": {
+          "unattributed": 1.195,
+          "javascriptOrNative": 9.714,
+          "idle": 63314.039
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63314.039
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:349",
+            "ms": 1.54
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:107",
+            "ms": 1.306
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.195
+          },
+          {
+            "name": "main @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:4323",
+            "ms": 0.861
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 9.839,
+        "earlyNonIdleMs": 9.839,
+        "firstActiveOffsetMs": 1387.485,
+        "lastActiveOffsetMs": 1474.296,
+        "statesMs": {
+          "unattributed": 0.645,
+          "javascriptOrNative": 9.194,
+          "idle": 63377.134
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63377.134
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 5.859
+          },
+          {
+            "name": "getData$2 @ <app>/packages/cache-worker/cacheWorkerMain.js:71",
+            "ms": 0.878
+          },
+          {
+            "name": "listen$1 @ <app>/packages/cache-worker/cacheWorkerMain.js:682",
+            "ms": 0.818
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 0.645
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 5.599,
+        "earlyNonIdleMs": 5.599,
+        "firstActiveOffsetMs": 1593.889,
+        "lastActiveOffsetMs": 2582.374,
+        "statesMs": {
+          "unattributed": 1.095,
+          "javascriptOrNative": 4.504,
+          "idle": 63203.73
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63203.73
+          },
+          {
+            "name": "postMessage @ :0",
+            "ms": 1.175
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.111
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.095
+          },
+          {
+            "name": "attachEvents @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:438",
+            "ms": 1.039
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 1,
+    "tag": "v1.24.1 / v5.28.1",
+    "elapsedMs": 85550.836746,
+    "traceDurationMs": 58720.67,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 614.172,
+        "pid": 4095,
+        "tid": 17,
+        "frame": "0A837552A7E4E29D1FEDFB0590D8ABE3",
+        "navigationId": "F2F975B33472EFEB3318C62992B8D191",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1582.82,
+        "pid": 4095,
+        "tid": 17,
+        "frame": "0A837552A7E4E29D1FEDFB0590D8ABE3",
+        "navigationId": "F2F975B33472EFEB3318C62992B8D191",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1648.34,
+        "pid": 4095,
+        "tid": 17,
+        "frame": "0A837552A7E4E29D1FEDFB0590D8ABE3",
+        "navigationId": "F2F975B33472EFEB3318C62992B8D191",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2651.289,
+        "pid": 4095,
+        "tid": 17,
+        "frame": "0A837552A7E4E29D1FEDFB0590D8ABE3",
+        "navigationId": "F2F975B33472EFEB3318C62992B8D191",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 38915.331,
+        "earlyNonIdleMs": 1402.195,
+        "firstActiveOffsetMs": 3398.734,
+        "lastActiveOffsetMs": 58129.056,
+        "statesMs": {
+          "unattributed": 2320.63,
+          "javascriptOrNative": 32131.858,
+          "gc": 4462.843,
+          "idle": 15817.685
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 15817.685
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 6885.01
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 4462.843
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2320.63
+          },
+          {
+            "name": "_visitPaths @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:915",
+            "ms": 1002.317
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 16473.551,
+        "earlyNonIdleMs": 1894.851,
+        "firstActiveOffsetMs": 2848.64,
+        "lastActiveOffsetMs": 42261.92,
+        "statesMs": {
+          "unattributed": 454.788,
+          "javascriptOrNative": 15491.601,
+          "idle": 39383.511,
+          "gc": 527.162
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 39383.511
+          },
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2552",
+            "ms": 10221.885
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1292",
+            "ms": 895.679
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 527.162
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 454.788
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 13347.474,
+        "earlyNonIdleMs": 267.923,
+        "firstActiveOffsetMs": 2672.523,
+        "lastActiveOffsetMs": 58547.508,
+        "statesMs": {
+          "unattributed": 2029.38,
+          "javascriptOrNative": 11103.531,
+          "idle": 42664.949,
+          "gc": 214.563
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 42664.949
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 6496.779
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2029.38
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1029.481
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1019.226
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 7520.475,
+        "earlyNonIdleMs": 313.663,
+        "firstActiveOffsetMs": 976.029,
+        "lastActiveOffsetMs": 58649.176,
+        "statesMs": {
+          "javascriptOrNative": 6328.897,
+          "idle": 50219.453,
+          "gc": 303.608,
+          "unattributed": 887.97
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 50219.453
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 1508.16
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 887.97
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 748.614
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 524.226
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 4512.015,
+        "earlyNonIdleMs": 10.598,
+        "firstActiveOffsetMs": 2802.79,
+        "lastActiveOffsetMs": 58127.871,
+        "statesMs": {
+          "unattributed": 0.969,
+          "javascriptOrNative": 4280.478,
+          "idle": 51397.585,
+          "gc": 230.568
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 51397.585
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10771",
+            "ms": 1409.63
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10659",
+            "ms": 276.117
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 230.568
+          },
+          {
+            "name": "utf8ToBytes @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:3085",
+            "ms": 130.331
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 2441.03,
+        "earlyNonIdleMs": 169.252,
+        "firstActiveOffsetMs": 816.582,
+        "lastActiveOffsetMs": 58539.809,
+        "statesMs": {
+          "unattributed": 46.096,
+          "javascriptOrNative": 2251.056,
+          "idle": 55419.458,
+          "gc": 143.878
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 55419.458
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 1117.588
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 336.745
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 291.289
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 269.711
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1583.309,
+        "earlyNonIdleMs": 1246.77,
+        "firstActiveOffsetMs": 181.426,
+        "lastActiveOffsetMs": 58591.467,
+        "statesMs": {
+          "javascriptOrNative": 1319.691,
+          "gc": 115.609,
+          "unattributed": 148.009,
+          "idle": 56942.035
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56942.035
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 148.009
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 132.11
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 115.609
+          },
+          {
+            "name": "close @ :0",
+            "ms": 110.626
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1145.491,
+        "earlyNonIdleMs": 444.304,
+        "firstActiveOffsetMs": 24.293,
+        "lastActiveOffsetMs": 58714.656,
+        "statesMs": {
+          "javascriptOrNative": 801.389,
+          "idle": 57544.872,
+          "unattributed": 277.552,
+          "gc": 66.55
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57544.872
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 277.552
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 228.339
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 66.55
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 37.613
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 1070.103,
+        "earlyNonIdleMs": 124.813,
+        "firstActiveOffsetMs": 2718.457,
+        "lastActiveOffsetMs": 35843.764,
+        "statesMs": {
+          "unattributed": 20.803,
+          "javascriptOrNative": 989.712,
+          "idle": 54896.671,
+          "gc": 59.588
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 54896.671
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 307.737
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1966",
+            "ms": 229.809
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 114.716
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:107",
+            "ms": 109.102
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 495.769,
+        "earlyNonIdleMs": 413.855,
+        "firstActiveOffsetMs": 1791.774,
+        "lastActiveOffsetMs": 58705.122,
+        "statesMs": {
+          "javascriptOrNative": 400.57,
+          "gc": 50.898,
+          "idle": 56430.914,
+          "unattributed": 44.301
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56430.914
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 162.213
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 50.898
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 44.301
+          },
+          {
+            "name": "compileForInternalLoader @ node:internal/bootstrap/realm:383",
+            "ms": 21.459
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 186.783,
+        "earlyNonIdleMs": 149.095,
+        "firstActiveOffsetMs": 794.779,
+        "lastActiveOffsetMs": 44936.941,
+        "statesMs": {
+          "unattributed": 3.419,
+          "javascriptOrNative": 134.378,
+          "idle": 57728.132,
+          "gc": 48.986
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57728.132
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 48.986
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 45.427
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 19.627
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:605",
+            "ms": 7.735
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 168.927,
+        "earlyNonIdleMs": 168.927,
+        "firstActiveOffsetMs": 729.824,
+        "lastActiveOffsetMs": 2722.805,
+        "statesMs": {
+          "unattributed": 13.291,
+          "javascriptOrNative": 141.793,
+          "gc": 13.843,
+          "idle": 1830.041
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 1830.041
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 29.66
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 13.843
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 13.291
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 12.036
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 114.275,
+        "earlyNonIdleMs": 101.499,
+        "firstActiveOffsetMs": 1131.521,
+        "lastActiveOffsetMs": 32166.261,
+        "statesMs": {
+          "unattributed": 0.471,
+          "javascriptOrNative": 85.645,
+          "idle": 57445.227,
+          "gc": 28.159
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57445.227
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 32.132
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 28.159
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 12.124
+          },
+          {
+            "name": "isStringRecord @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1617",
+            "ms": 11.238
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 93.363,
+        "earlyNonIdleMs": 93.363,
+        "firstActiveOffsetMs": 538.56,
+        "lastActiveOffsetMs": 3574.036,
+        "statesMs": {
+          "unattributed": 5.865,
+          "javascriptOrNative": 85.086,
+          "idle": 58080.302,
+          "gc": 2.412
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 58080.302
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 13.646
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 11.129
+          },
+          {
+            "name": "focusElement @ <app>/packages/renderer-process/dist/rendererProcessMain.js:3814",
+            "ms": 10.419
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 5.865
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 66.978,
+        "earlyNonIdleMs": 66.498,
+        "firstActiveOffsetMs": 668.893,
+        "lastActiveOffsetMs": 58548.39,
+        "statesMs": {
+          "unattributed": 1.999,
+          "javascriptOrNative": 64.631,
+          "idle": 57950.042,
+          "gc": 0.348
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57950.042
+          },
+          {
+            "name": "send @ <app>/packages/editor-worker/dist/editorWorkerMain.js:514",
+            "ms": 8.608
+          },
+          {
+            "name": "send @ <app>/packages/editor-worker/dist/editorWorkerMain.js:416",
+            "ms": 4.025
+          },
+          {
+            "name": "execute$1 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:552",
+            "ms": 3.937
+          },
+          {
+            "name": "getEditorRowsVirtualDom$1 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:17018",
+            "ms": 2.458
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 63.707,
+        "earlyNonIdleMs": 63.707,
+        "firstActiveOffsetMs": 1284.05,
+        "lastActiveOffsetMs": 2318.933,
+        "statesMs": {
+          "unattributed": 0.471,
+          "javascriptOrNative": 63.236,
+          "idle": 57330.235
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57330.235
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 31.345
+          },
+          {
+            "name": "escapeRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3140",
+            "ms": 5.617
+          },
+          {
+            "name": "isGitIgnored @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3201",
+            "ms": 2.479
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:0",
+            "ms": 2.447
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 31.12,
+        "earlyNonIdleMs": 31.12,
+        "firstActiveOffsetMs": 1396.02,
+        "lastActiveOffsetMs": 3422.388,
+        "statesMs": {
+          "unattributed": 2.644,
+          "javascriptOrNative": 28.476,
+          "idle": 57287.365
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57287.365
+          },
+          {
+            "name": "executeEditorGutterDecorationProvider @ <app>/extensions/builtin.git/dist/gitMain.js:1650",
+            "ms": 5.156
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:349",
+            "ms": 3.095
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:450",
+            "ms": 3.039
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 3.01
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 28.831,
+        "earlyNonIdleMs": 28.831,
+        "firstActiveOffsetMs": 1325.616,
+        "lastActiveOffsetMs": 1560.679,
+        "statesMs": {
+          "unattributed": 0.541,
+          "javascriptOrNative": 28.29,
+          "idle": 57336.267
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57336.267
+          },
+          {
+            "name": "walkValue @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:136",
+            "ms": 4.441
+          },
+          {
+            "name": "execute @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:540",
+            "ms": 4.345
+          },
+          {
+            "name": "getMenuEntries$2 @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:3142",
+            "ms": 2.645
+          },
+          {
+            "name": "getRemoteSshWorkspace @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:4342",
+            "ms": 2.164
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 28.4,
+        "earlyNonIdleMs": 28.4,
+        "firstActiveOffsetMs": 1216.547,
+        "lastActiveOffsetMs": 2731.186,
+        "statesMs": {
+          "unattributed": 0.569,
+          "javascriptOrNative": 27.831,
+          "idle": 57448.268
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57448.268
+          },
+          {
+            "name": "openInputWithContext @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5577",
+            "ms": 4.104
+          },
+          {
+            "name": "getCss @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:8485",
+            "ms": 2.802
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:0",
+            "ms": 1.574
+          },
+          {
+            "name": "diffTrees @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:3861",
+            "ms": 1.36
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 24.221,
+        "earlyNonIdleMs": 24.221,
+        "firstActiveOffsetMs": 1524.547,
+        "lastActiveOffsetMs": 2547.946,
+        "statesMs": {
+          "unattributed": 1.339,
+          "idle": 57165.263,
+          "javascriptOrNative": 22.882
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57165.263
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 11.068
+          },
+          {
+            "name": "handleMessage @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:999",
+            "ms": 3.06
+          },
+          {
+            "name": "send @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:502",
+            "ms": 2.351
+          },
+          {
+            "name": "send @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:404",
+            "ms": 1.459
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 20.587,
+        "earlyNonIdleMs": 20.587,
+        "firstActiveOffsetMs": 1170.62,
+        "lastActiveOffsetMs": 3357.104,
+        "statesMs": {
+          "unattributed": 1.718,
+          "javascriptOrNative": 18.869,
+          "idle": 57529.463
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57529.463
+          },
+          {
+            "name": "send @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1144",
+            "ms": 3
+          },
+          {
+            "name": "getItemWidths @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:2236",
+            "ms": 1.945
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.718
+          },
+          {
+            "name": "execute @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1182",
+            "ms": 1.578
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 18.277,
+        "earlyNonIdleMs": 18.277,
+        "firstActiveOffsetMs": 1471.765,
+        "lastActiveOffsetMs": 3292.757,
+        "statesMs": {
+          "unattributed": 1.131,
+          "javascriptOrNative": 17.146,
+          "idle": 57191.681
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57191.681
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:349",
+            "ms": 3.138
+          },
+          {
+            "name": "toRemoteUri @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:1001",
+            "ms": 1.852
+          },
+          {
+            "name": "getChangedFiles @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:2301",
+            "ms": 1.679
+          },
+          {
+            "name": "toResourceUri @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:1015",
+            "ms": 1.327
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 16.622,
+        "earlyNonIdleMs": 16.622,
+        "firstActiveOffsetMs": 1245.002,
+        "lastActiveOffsetMs": 2766.454,
+        "statesMs": {
+          "unattributed": 2.254,
+          "idle": 57453.709,
+          "javascriptOrNative": 14.368
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57453.709
+          },
+          {
+            "name": "getData$2 @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1752",
+            "ms": 2.804
+          },
+          {
+            "name": "arrayToTree @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:652",
+            "ms": 2.593
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.254
+          },
+          {
+            "name": "handleMessage @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1586",
+            "ms": 1.588
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 15.67,
+        "earlyNonIdleMs": 15.67,
+        "firstActiveOffsetMs": 617.41,
+        "lastActiveOffsetMs": 2509.719,
+        "statesMs": {
+          "unattributed": 4.629,
+          "javascriptOrNative": 10.676,
+          "idle": 58081.452,
+          "gc": 0.365
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 58081.452
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 4.629
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 3.624
+          },
+          {
+            "name": "loadTokenizer @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1199",
+            "ms": 1.795
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 1.259
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 8.782,
+        "earlyNonIdleMs": 8.782,
+        "firstActiveOffsetMs": 1351.838,
+        "lastActiveOffsetMs": 1404.946,
+        "statesMs": {
+          "unattributed": 0.843,
+          "javascriptOrNative": 7.939,
+          "idle": 57355.106
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57355.106
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 4.636
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 0.843
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/packages/cache-worker/cacheWorkerMain.js:537",
+            "ms": 0.635
+          },
+          {
+            "name": "handleMessage @ <app>/packages/cache-worker/cacheWorkerMain.js:664",
+            "ms": 0.546
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 7.149,
+        "earlyNonIdleMs": 7.149,
+        "firstActiveOffsetMs": 1624.721,
+        "lastActiveOffsetMs": 2739.864,
+        "statesMs": {
+          "unattributed": 1.916,
+          "idle": 57051.53,
+          "javascriptOrNative": 5.233
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57051.53
+          },
+          {
+            "name": "isOffscreenCanvas @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:395",
+            "ms": 2.072
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.916
+          },
+          {
+            "name": "send @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:681",
+            "ms": 0.905
+          },
+          {
+            "name": "handleMessage @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:1276",
+            "ms": 0.72
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 6.235,
+        "earlyNonIdleMs": 6.235,
+        "firstActiveOffsetMs": 1112.58,
+        "lastActiveOffsetMs": 3360.848,
+        "statesMs": {
+          "unattributed": 0.38,
+          "javascriptOrNative": 5.855,
+          "idle": 57568.378
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57568.378
+          },
+          {
+            "name": "handleMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+            "ms": 0.758
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:0",
+            "ms": 0.729
+          },
+          {
+            "name": "ipc._resolve @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:988",
+            "ms": 0.636
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 0.519
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 1,
+    "tag": "v1.23.5 / v5.26.1",
+    "elapsedMs": 106273.334354,
+    "traceDurationMs": 70116.21,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 644.261,
+        "pid": 4371,
+        "tid": 17,
+        "frame": "077FFF48D06F2247C0523380BE9431AA",
+        "navigationId": "D1224370C8558CE8D32FB7285CF72D2B",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1648.634,
+        "pid": 4371,
+        "tid": 17,
+        "frame": "077FFF48D06F2247C0523380BE9431AA",
+        "navigationId": "D1224370C8558CE8D32FB7285CF72D2B",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1648.634,
+        "pid": 4371,
+        "tid": 17,
+        "frame": "077FFF48D06F2247C0523380BE9431AA",
+        "navigationId": "D1224370C8558CE8D32FB7285CF72D2B",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2557.197,
+        "pid": 4371,
+        "tid": 17,
+        "frame": "077FFF48D06F2247C0523380BE9431AA",
+        "navigationId": "D1224370C8558CE8D32FB7285CF72D2B",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 48101.834,
+        "earlyNonIdleMs": 2093.021,
+        "firstActiveOffsetMs": 2720.195,
+        "lastActiveOffsetMs": 60914.839,
+        "statesMs": {
+          "unattributed": 431.029,
+          "javascriptOrNative": 46902.181,
+          "idle": 19285.178,
+          "gc": 768.624
+        },
+        "topSelf": [
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2522",
+            "ms": 41039.071
+          },
+          {
+            "name": "(idle) @ :0",
+            "ms": 19285.178
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:349",
+            "ms": 975.529
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 768.624
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1262",
+            "ms": 636.754
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 42670.246,
+        "earlyNonIdleMs": 1551.63,
+        "firstActiveOffsetMs": 3247.184,
+        "lastActiveOffsetMs": 66110.661,
+        "statesMs": {
+          "unattributed": 565.416,
+          "javascriptOrNative": 38316.01,
+          "gc": 3788.82,
+          "idle": 23503.051
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 23503.051
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 5375.518
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 3788.82
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:723",
+            "ms": 3435.266
+          },
+          {
+            "name": "toUri @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1295",
+            "ms": 3205.78
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 15009.334,
+        "earlyNonIdleMs": 192.249,
+        "firstActiveOffsetMs": 2572.104,
+        "lastActiveOffsetMs": 69874.798,
+        "statesMs": {
+          "unattributed": 2199.341,
+          "javascriptOrNative": 12459.167,
+          "idle": 52534.772,
+          "gc": 350.826
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 52534.772
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 7242.403
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2199.341
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1161.773
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1125.834
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 10530.034,
+        "earlyNonIdleMs": 351.95,
+        "firstActiveOffsetMs": 1029.087,
+        "lastActiveOffsetMs": 70028.766,
+        "statesMs": {
+          "javascriptOrNative": 9046.455,
+          "unattributed": 1255.803,
+          "idle": 58540.74,
+          "gc": 227.776
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 58540.74
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 2917.92
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1255.803
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 723.669
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 592.753
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 5448.313,
+        "earlyNonIdleMs": 175.803,
+        "firstActiveOffsetMs": 868.29,
+        "lastActiveOffsetMs": 69849.865,
+        "statesMs": {
+          "unattributed": 105.049,
+          "javascriptOrNative": 5160.396,
+          "idle": 63773.632,
+          "gc": 182.868
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63773.632
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 2784.641
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 813.41
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 565.703
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 534.697
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 5267.703,
+        "earlyNonIdleMs": 7.152,
+        "firstActiveOffsetMs": 2676.982,
+        "lastActiveOffsetMs": 69416.865,
+        "statesMs": {
+          "unattributed": 2.526,
+          "javascriptOrNative": 4980.104,
+          "idle": 62151.223,
+          "gc": 285.073
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 62151.223
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10767",
+            "ms": 1498.35
+          },
+          {
+            "name": "normalize @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:896",
+            "ms": 361.701
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10655",
+            "ms": 311.285
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 285.073
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 3819.704,
+        "earlyNonIdleMs": 162.515,
+        "firstActiveOffsetMs": 2612.049,
+        "lastActiveOffsetMs": 60326.144,
+        "statesMs": {
+          "unattributed": 97.325,
+          "idle": 63671.121,
+          "javascriptOrNative": 3531.393,
+          "gc": 190.986
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63671.121
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 1141.808
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1968",
+            "ms": 615.592
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 560.629
+          },
+          {
+            "name": "getData$2 @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:273",
+            "ms": 390.173
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1722.869,
+        "earlyNonIdleMs": 1367.072,
+        "firstActiveOffsetMs": 212.744,
+        "lastActiveOffsetMs": 69951.493,
+        "statesMs": {
+          "javascriptOrNative": 1403.882,
+          "gc": 148.373,
+          "idle": 68163.64,
+          "unattributed": 170.614
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68163.64
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 170.614
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 148.373
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 141.594
+          },
+          {
+            "name": "read @ :0",
+            "ms": 119.548
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1166.864,
+        "earlyNonIdleMs": 403.622,
+        "firstActiveOffsetMs": 24.718,
+        "lastActiveOffsetMs": 70114.566,
+        "statesMs": {
+          "javascriptOrNative": 784.163,
+          "idle": 68923.322,
+          "unattributed": 301.898,
+          "gc": 80.803
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68923.322
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 301.898
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 194.745
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 80.803
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 49.417
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 521.379,
+        "earlyNonIdleMs": 400.242,
+        "firstActiveOffsetMs": 1784.866,
+        "lastActiveOffsetMs": 70080.153,
+        "statesMs": {
+          "javascriptOrNative": 389.497,
+          "gc": 59.093,
+          "unattributed": 72.789,
+          "idle": 67801.974
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 67801.974
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 183.295
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 72.789
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 59.093
+          },
+          {
+            "name": "compileForInternalLoader @ node:internal/bootstrap/realm:383",
+            "ms": 15.747
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 244.687,
+        "earlyNonIdleMs": 191.519,
+        "firstActiveOffsetMs": 785.576,
+        "lastActiveOffsetMs": 69878.06,
+        "statesMs": {
+          "unattributed": 17.695,
+          "javascriptOrNative": 166.283,
+          "gc": 60.709,
+          "idle": 69064.525
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69064.525
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 60.709
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 28.824
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 21.272
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 17.695
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 204.633,
+        "earlyNonIdleMs": 171.603,
+        "firstActiveOffsetMs": 849.88,
+        "lastActiveOffsetMs": 69875.566,
+        "statesMs": {
+          "unattributed": 4.258,
+          "javascriptOrNative": 154.467,
+          "idle": 69046.067,
+          "gc": 45.908
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69046.067
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 45.908
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 43.37
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 24.525
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 12.8
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 103.902,
+        "earlyNonIdleMs": 103.902,
+        "firstActiveOffsetMs": 560.221,
+        "lastActiveOffsetMs": 3731.569,
+        "statesMs": {
+          "unattributed": 7.309,
+          "javascriptOrNative": 94.02,
+          "idle": 69451.369,
+          "gc": 2.573
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69451.369
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 11.333
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 10.614
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 7.309
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 6.874
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 93.081,
+        "earlyNonIdleMs": 69.747,
+        "firstActiveOffsetMs": 1186.648,
+        "lastActiveOffsetMs": 32300.495,
+        "statesMs": {
+          "unattributed": 2.491,
+          "javascriptOrNative": 49.153,
+          "idle": 68823.174,
+          "gc": 41.437
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68823.174
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 41.437
+          },
+          {
+            "name": "getJsonCached @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1567",
+            "ms": 11.225
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 11.042
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 8.48
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 54.435,
+        "earlyNonIdleMs": 54.435,
+        "firstActiveOffsetMs": 1328.259,
+        "lastActiveOffsetMs": 2267.464,
+        "statesMs": {
+          "unattributed": 1.299,
+          "javascriptOrNative": 53.136,
+          "idle": 68699.198
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68699.198
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 17.856
+          },
+          {
+            "name": "escapeRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3140",
+            "ms": 3.139
+          },
+          {
+            "name": "getResponse @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:868",
+            "ms": 2.551
+          },
+          {
+            "name": "create$5 @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1114",
+            "ms": 1.87
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 50.831,
+        "earlyNonIdleMs": 50.59,
+        "firstActiveOffsetMs": 713.307,
+        "lastActiveOffsetMs": 69876.764,
+        "statesMs": {
+          "unattributed": 2.209,
+          "javascriptOrNative": 48.622,
+          "idle": 69334.645
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69334.645
+          },
+          {
+            "name": "execute$1 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:552",
+            "ms": 5.954
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/editor-worker/dist/editorWorkerMain.js:18196",
+            "ms": 3.26
+          },
+          {
+            "name": "getCommandIds @ <app>/packages/editor-worker/dist/editorWorkerMain.js:1610",
+            "ms": 2.282
+          },
+          {
+            "name": "loadContent @ <app>/packages/editor-worker/dist/editorWorkerMain.js:16239",
+            "ms": 2.24
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 36.292,
+        "earlyNonIdleMs": 36.292,
+        "firstActiveOffsetMs": 1265.411,
+        "lastActiveOffsetMs": 2739.354,
+        "statesMs": {
+          "unattributed": 0.68,
+          "javascriptOrNative": 35.612,
+          "idle": 68788.873
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68788.873
+          },
+          {
+            "name": "hasActiveTextEditor @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:1839",
+            "ms": 5.232
+          },
+          {
+            "name": "openInputWithContext @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5577",
+            "ms": 4.121
+          },
+          {
+            "name": "getTabsVirtualDom @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:4492",
+            "ms": 2.39
+          },
+          {
+            "name": "render2 @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:8612",
+            "ms": 1.851
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 34.192,
+        "earlyNonIdleMs": 34.192,
+        "firstActiveOffsetMs": 1390.943,
+        "lastActiveOffsetMs": 3919.664,
+        "statesMs": {
+          "unattributed": 0.74,
+          "javascriptOrNative": 33.452,
+          "idle": 68677.365
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68677.365
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/dist/gitMain.js:107",
+            "ms": 4.987
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:450",
+            "ms": 4.32
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:349",
+            "ms": 2.791
+          },
+          {
+            "name": "getType @ <app>/extensions/builtin.git/dist/gitMain.js:2277",
+            "ms": 2.56
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 30.037,
+        "earlyNonIdleMs": 30.037,
+        "firstActiveOffsetMs": 649.65,
+        "lastActiveOffsetMs": 2424.745,
+        "statesMs": {
+          "unattributed": 5.131,
+          "javascriptOrNative": 24.906,
+          "idle": 69416.027
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69416.027
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 8.724
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 6.411
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 5.131
+          },
+          {
+            "name": "getTokensViewport @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1308",
+            "ms": 1.428
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 27.762,
+        "earlyNonIdleMs": 27.762,
+        "firstActiveOffsetMs": 1223.184,
+        "lastActiveOffsetMs": 3732.296,
+        "statesMs": {
+          "unattributed": 1.73,
+          "idle": 68847.012,
+          "javascriptOrNative": 26.032
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68847.012
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 3.653
+          },
+          {
+            "name": "send @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1144",
+            "ms": 3.565
+          },
+          {
+            "name": "getData$2 @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:970",
+            "ms": 2.275
+          },
+          {
+            "name": "handleEditorStatusChangedAll @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:2368",
+            "ms": 1.759
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 18.773,
+        "earlyNonIdleMs": 18.773,
+        "firstActiveOffsetMs": 1510.744,
+        "lastActiveOffsetMs": 2451.736,
+        "statesMs": {
+          "unattributed": 0.862,
+          "javascriptOrNative": 17.911,
+          "idle": 68563.828
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68563.828
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 12.075
+          },
+          {
+            "name": "handleMessagePort @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1378",
+            "ms": 2.243
+          },
+          {
+            "name": "createMeasureContext @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1195",
+            "ms": 0.989
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:0",
+            "ms": 0.946
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 15.982,
+        "earlyNonIdleMs": 15.982,
+        "firstActiveOffsetMs": 1477.835,
+        "lastActiveOffsetMs": 3606.744,
+        "statesMs": {
+          "unattributed": 1.185,
+          "javascriptOrNative": 14.797,
+          "idle": 68609.828
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68609.828
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:349",
+            "ms": 3.614
+          },
+          {
+            "name": "(anonymous) @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:0",
+            "ms": 1.402
+          },
+          {
+            "name": "getChangedFiles @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:2301",
+            "ms": 1.356
+          },
+          {
+            "name": "(anonymous) @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:3484",
+            "ms": 1.188
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 14.495,
+        "earlyNonIdleMs": 14.495,
+        "firstActiveOffsetMs": 1363.875,
+        "lastActiveOffsetMs": 1614.033,
+        "statesMs": {
+          "unattributed": 2.947,
+          "idle": 68722.564,
+          "javascriptOrNative": 11.548
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68722.564
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.947
+          },
+          {
+            "name": "execute @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:540",
+            "ms": 2.713
+          },
+          {
+            "name": "create3 @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:2202",
+            "ms": 2.623
+          },
+          {
+            "name": "renderTitleBar @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:3753",
+            "ms": 2.307
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 13.824,
+        "earlyNonIdleMs": 13.824,
+        "firstActiveOffsetMs": 1418.25,
+        "lastActiveOffsetMs": 1535.329,
+        "statesMs": {
+          "unattributed": 0.431,
+          "javascriptOrNative": 13.393,
+          "idle": 68661.678
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68661.678
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 5.145
+          },
+          {
+            "name": "send @ <app>/packages/cache-worker/cacheWorkerMain.js:127",
+            "ms": 2.238
+          },
+          {
+            "name": "execute @ <app>/packages/cache-worker/cacheWorkerMain.js:169",
+            "ms": 1.682
+          },
+          {
+            "name": "handleMessage @ <app>/packages/cache-worker/cacheWorkerMain.js:51",
+            "ms": 1.463
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 12.459,
+        "earlyNonIdleMs": 12.459,
+        "firstActiveOffsetMs": 1291.058,
+        "lastActiveOffsetMs": 2693.641,
+        "statesMs": {
+          "unattributed": 0.582,
+          "javascriptOrNative": 11.877,
+          "idle": 68800.989
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68800.989
+          },
+          {
+            "name": "handleMessage @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1586",
+            "ms": 3.022
+          },
+          {
+            "name": "isTransferrable @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1552",
+            "ms": 1.231
+          },
+          {
+            "name": "loadPreferences @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3789",
+            "ms": 1.142
+          },
+          {
+            "name": "diffChildren @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:831",
+            "ms": 0.679
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 9.973,
+        "earlyNonIdleMs": 9.973,
+        "firstActiveOffsetMs": 1580.259,
+        "lastActiveOffsetMs": 2635.824,
+        "statesMs": {
+          "unattributed": 0.709,
+          "javascriptOrNative": 9.264,
+          "idle": 68518.952
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68518.952
+          },
+          {
+            "name": "attachEvents @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:438",
+            "ms": 1.913
+          },
+          {
+            "name": "getProblemsSummary @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:2688",
+            "ms": 1.512
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:0",
+            "ms": 1.498
+          },
+          {
+            "name": "send @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:681",
+            "ms": 1.101
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 9.543,
+        "earlyNonIdleMs": 9.543,
+        "firstActiveOffsetMs": 1164.184,
+        "lastActiveOffsetMs": 2736.356,
+        "statesMs": {
+          "unattributed": 0.548,
+          "javascriptOrNative": 8.995,
+          "idle": 68937.038
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68937.038
+          },
+          {
+            "name": "create$9 @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:828",
+            "ms": 1.197
+          },
+          {
+            "name": "handleMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+            "ms": 1.083
+          },
+          {
+            "name": "RegExp: ^([a-z-]+):\\/\\/ @ :0",
+            "ms": 1.077
+          },
+          {
+            "name": "invokeHelper @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:972",
+            "ms": 0.697
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "variant": "baseline",
+    "iteration": 2,
+    "tag": "v1.23.5 / v5.26.1",
+    "elapsedMs": 102209.851049,
+    "traceDurationMs": 69759.79,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 630.782,
+        "pid": 4651,
+        "tid": 17,
+        "frame": "F94C7C22684E69274659C7C72E436EC7",
+        "navigationId": "737A7D1B45C2991A3C2D9FE416353137",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1663.677,
+        "pid": 4651,
+        "tid": 17,
+        "frame": "F94C7C22684E69274659C7C72E436EC7",
+        "navigationId": "737A7D1B45C2991A3C2D9FE416353137",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1738.122,
+        "pid": 4651,
+        "tid": 17,
+        "frame": "F94C7C22684E69274659C7C72E436EC7",
+        "navigationId": "737A7D1B45C2991A3C2D9FE416353137",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2720.327,
+        "pid": 4651,
+        "tid": 17,
+        "frame": "F94C7C22684E69274659C7C72E436EC7",
+        "navigationId": "737A7D1B45C2991A3C2D9FE416353137",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 48514.045,
+        "earlyNonIdleMs": 1219.45,
+        "firstActiveOffsetMs": 3544.708,
+        "lastActiveOffsetMs": 69023.361,
+        "statesMs": {
+          "unattributed": 2647.811,
+          "javascriptOrNative": 41525.71,
+          "gc": 4340.524,
+          "idle": 16965.398
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 16965.398
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 7807.402
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 4340.524
+          },
+          {
+            "name": "visit @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:2267",
+            "ms": 3402.934
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2647.811
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 46692.24,
+        "earlyNonIdleMs": 1840.731,
+        "firstActiveOffsetMs": 2903.759,
+        "lastActiveOffsetMs": 59632.88,
+        "statesMs": {
+          "unattributed": 451.1,
+          "javascriptOrNative": 45603.746,
+          "idle": 20151.68,
+          "gc": 637.394
+        },
+        "topSelf": [
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2522",
+            "ms": 40152.735
+          },
+          {
+            "name": "(idle) @ :0",
+            "ms": 20151.68
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:349",
+            "ms": 907.637
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 637.394
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1262",
+            "ms": 619.036
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 14704.669,
+        "earlyNonIdleMs": 181.89,
+        "firstActiveOffsetMs": 2738.75,
+        "lastActiveOffsetMs": 69534.712,
+        "statesMs": {
+          "unattributed": 1965.561,
+          "javascriptOrNative": 12404.231,
+          "idle": 52299.13,
+          "gc": 334.877
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 52299.13
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 7210.977
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1965.561
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1186.094
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1174.984
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 10624.992,
+        "earlyNonIdleMs": 301.683,
+        "firstActiveOffsetMs": 1009.097,
+        "lastActiveOffsetMs": 69693.746,
+        "statesMs": {
+          "javascriptOrNative": 9067.35,
+          "gc": 324.589,
+          "idle": 58124.654,
+          "unattributed": 1233.053
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 58124.654
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 2839.1
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1233.053
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 819.906
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 660.355
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 5004.115,
+        "earlyNonIdleMs": 157.235,
+        "firstActiveOffsetMs": 851.573,
+        "lastActiveOffsetMs": 69505.585,
+        "statesMs": {
+          "unattributed": 107.165,
+          "javascriptOrNative": 4768.038,
+          "idle": 63875.98,
+          "gc": 128.912
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63875.98
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 2548.402
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 752.455
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 524.518
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 492.96
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 4938.551,
+        "earlyNonIdleMs": 4.278,
+        "firstActiveOffsetMs": 2862.061,
+        "lastActiveOffsetMs": 69021.287,
+        "statesMs": {
+          "unattributed": 1.82,
+          "javascriptOrNative": 4709.728,
+          "idle": 61957.145,
+          "gc": 227.003
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 61957.145
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10767",
+            "ms": 1423.227
+          },
+          {
+            "name": "normalize @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:896",
+            "ms": 346.124
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10655",
+            "ms": 243.538
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 227.003
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 3700.285,
+        "earlyNonIdleMs": 120.364,
+        "firstActiveOffsetMs": 2778.586,
+        "lastActiveOffsetMs": 59357.156,
+        "statesMs": {
+          "unattributed": 96.921,
+          "idle": 63247.787,
+          "javascriptOrNative": 3402.347,
+          "gc": 201.017
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 63247.787
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 1074.693
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1968",
+            "ms": 590.785
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 551.716
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:107",
+            "ms": 382.034
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1569.492,
+        "earlyNonIdleMs": 1265.682,
+        "firstActiveOffsetMs": 189.193,
+        "lastActiveOffsetMs": 69638.535,
+        "statesMs": {
+          "javascriptOrNative": 1270.664,
+          "gc": 107.682,
+          "unattributed": 191.146,
+          "idle": 67989.844
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 67989.844
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 191.146
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 127.656
+          },
+          {
+            "name": "read @ :0",
+            "ms": 115.832
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 107.682
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1126.75,
+        "earlyNonIdleMs": 496.651,
+        "firstActiveOffsetMs": 24.416,
+        "lastActiveOffsetMs": 69759.335,
+        "statesMs": {
+          "javascriptOrNative": 771.663,
+          "idle": 68608.415,
+          "gc": 62.734,
+          "unattributed": 292.353
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68608.415
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 292.353
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 203.022
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 62.734
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 39.519
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 522.225,
+        "earlyNonIdleMs": 419.171,
+        "firstActiveOffsetMs": 1808.054,
+        "lastActiveOffsetMs": 69743.486,
+        "statesMs": {
+          "javascriptOrNative": 406.192,
+          "gc": 55.206,
+          "idle": 67424.721,
+          "unattributed": 60.827
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 67424.721
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 199.134
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 60.827
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 55.206
+          },
+          {
+            "name": "compileForInternalLoader @ node:internal/bootstrap/realm:383",
+            "ms": 15.687
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 267.891,
+        "earlyNonIdleMs": 219.928,
+        "firstActiveOffsetMs": 759.385,
+        "lastActiveOffsetMs": 69540.014,
+        "statesMs": {
+          "unattributed": 16.915,
+          "javascriptOrNative": 198.218,
+          "gc": 52.758,
+          "idle": 68731.303
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68731.303
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 52.758
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 31.078
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 24.926
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 16.915
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 200.993,
+        "earlyNonIdleMs": 162.618,
+        "firstActiveOffsetMs": 824.397,
+        "lastActiveOffsetMs": 54680.237,
+        "statesMs": {
+          "unattributed": 8.153,
+          "javascriptOrNative": 147.818,
+          "idle": 68700.96,
+          "gc": 45.022
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68700.96
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 45.022
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 26.69
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 26.407
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:605",
+            "ms": 15.782
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 115.13,
+        "earlyNonIdleMs": 84.607,
+        "firstActiveOffsetMs": 1173.72,
+        "lastActiveOffsetMs": 32254.133,
+        "statesMs": {
+          "unattributed": 0.468,
+          "javascriptOrNative": 71.14,
+          "idle": 68453.122,
+          "gc": 43.522
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68453.122
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 43.522
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 22.57
+          },
+          {
+            "name": "getJsonCached @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1567",
+            "ms": 17.009
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 8.909
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 105.426,
+        "earlyNonIdleMs": 105.426,
+        "firstActiveOffsetMs": 548.784,
+        "lastActiveOffsetMs": 3730.362,
+        "statesMs": {
+          "unattributed": 7.336,
+          "javascriptOrNative": 96.817,
+          "idle": 69072.41,
+          "gc": 1.273
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69072.41
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 14.274
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 8.763
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:588",
+            "ms": 7.765
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 7.336
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 61.99,
+        "earlyNonIdleMs": 61.99,
+        "firstActiveOffsetMs": 1333.519,
+        "lastActiveOffsetMs": 2326.228,
+        "statesMs": {
+          "unattributed": 0.561,
+          "javascriptOrNative": 61.429,
+          "idle": 68322.629
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68322.629
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 23.524
+          },
+          {
+            "name": "execute @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:546",
+            "ms": 2.343
+          },
+          {
+            "name": "globToRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3143",
+            "ms": 2.251
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:0",
+            "ms": 1.729
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 54.034,
+        "earlyNonIdleMs": 52.674,
+        "firstActiveOffsetMs": 687.198,
+        "lastActiveOffsetMs": 69535.643,
+        "statesMs": {
+          "unattributed": 0.551,
+          "javascriptOrNative": 52.655,
+          "idle": 69015.021,
+          "gc": 0.828
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69015.021
+          },
+          {
+            "name": "send @ <app>/packages/editor-worker/dist/editorWorkerMain.js:416",
+            "ms": 3.572
+          },
+          {
+            "name": "send @ <app>/packages/editor-worker/dist/editorWorkerMain.js:514",
+            "ms": 3.41
+          },
+          {
+            "name": "execute$1 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:552",
+            "ms": 3.105
+          },
+          {
+            "name": "handleMessage @ <app>/packages/editor-worker/dist/editorWorkerMain.js:174",
+            "ms": 2.438
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 41.047,
+        "earlyNonIdleMs": 41.047,
+        "firstActiveOffsetMs": 1426.781,
+        "lastActiveOffsetMs": 3507.807,
+        "statesMs": {
+          "unattributed": 1.779,
+          "javascriptOrNative": 39.268,
+          "idle": 68277.967
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68277.967
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:450",
+            "ms": 7.328
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/dist/gitMain.js:107",
+            "ms": 4.644
+          },
+          {
+            "name": "(anonymous) @ <app>/extensions/builtin.git/dist/gitMain.js:4008",
+            "ms": 2.792
+          },
+          {
+            "name": "set @ <app>/extensions/builtin.git/dist/gitMain.js:1254",
+            "ms": 2.593
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 34.972,
+        "earlyNonIdleMs": 34.972,
+        "firstActiveOffsetMs": 632.897,
+        "lastActiveOffsetMs": 2546.13,
+        "statesMs": {
+          "unattributed": 10.714,
+          "idle": 69071.318,
+          "javascriptOrNative": 24.258
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 69071.318
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 10.714
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 6.277
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 4.338
+          },
+          {
+            "name": "attachEvents @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:150",
+            "ms": 4.151
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 32.343,
+        "earlyNonIdleMs": 32.343,
+        "firstActiveOffsetMs": 1262.998,
+        "lastActiveOffsetMs": 3721.873,
+        "statesMs": {
+          "unattributed": 1.004,
+          "javascriptOrNative": 31.079,
+          "idle": 68436.319,
+          "gc": 0.26
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68436.319
+          },
+          {
+            "name": "invoke @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:1389",
+            "ms": 5.796
+          },
+          {
+            "name": "send @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:443",
+            "ms": 3.498
+          },
+          {
+            "name": "openInputWithContext @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5577",
+            "ms": 2.412
+          },
+          {
+            "name": "updateTabIcon @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:5501",
+            "ms": 2.291
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 30.573,
+        "earlyNonIdleMs": 30.573,
+        "firstActiveOffsetMs": 1210.512,
+        "lastActiveOffsetMs": 3403.759,
+        "statesMs": {
+          "unattributed": 1.456,
+          "javascriptOrNative": 29.117,
+          "idle": 68488.753
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68488.753
+          },
+          {
+            "name": "send @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1144",
+            "ms": 5.126
+          },
+          {
+            "name": "handleMessage @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:804",
+            "ms": 3.018
+          },
+          {
+            "name": "getStatusBarItems @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:2598",
+            "ms": 2.179
+          },
+          {
+            "name": "handleMessage @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1677",
+            "ms": 2.17
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 25.299,
+        "earlyNonIdleMs": 25.299,
+        "firstActiveOffsetMs": 1289.11,
+        "lastActiveOffsetMs": 2820.697,
+        "statesMs": {
+          "unattributed": 0.458,
+          "javascriptOrNative": 24.841,
+          "idle": 68425.441
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68425.441
+          },
+          {
+            "name": "getGeneration @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:10",
+            "ms": 5.783
+          },
+          {
+            "name": "sendAndTransfer @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1831",
+            "ms": 2.468
+          },
+          {
+            "name": "handleDirectMessagePort @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:4242",
+            "ms": 1.523
+          },
+          {
+            "name": "getActivityBarItems @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:3388",
+            "ms": 1.385
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 20.319,
+        "earlyNonIdleMs": 20.319,
+        "firstActiveOffsetMs": 1546.718,
+        "lastActiveOffsetMs": 2585.495,
+        "statesMs": {
+          "unattributed": 0.735,
+          "javascriptOrNative": 19.584,
+          "idle": 68172.645
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68172.645
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 9.21
+          },
+          {
+            "name": "getResponse @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:826",
+            "ms": 2.932
+          },
+          {
+            "name": "loadFont @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1152",
+            "ms": 1.771
+          },
+          {
+            "name": "send @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:502",
+            "ms": 1.093
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 12.836,
+        "earlyNonIdleMs": 12.836,
+        "firstActiveOffsetMs": 1367.09,
+        "lastActiveOffsetMs": 1698.902,
+        "statesMs": {
+          "unattributed": 0.36,
+          "javascriptOrNative": 12.476,
+          "idle": 68379.864
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68379.864
+          },
+          {
+            "name": "getVisibleTitleBarEntries @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:3681",
+            "ms": 2.809
+          },
+          {
+            "name": "execute @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:540",
+            "ms": 1.248
+          },
+          {
+            "name": "sendAndTransfer @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:407",
+            "ms": 1.215
+          },
+          {
+            "name": "onMessage @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:419",
+            "ms": 0.919
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 12.11,
+        "earlyNonIdleMs": 12.11,
+        "firstActiveOffsetMs": 1517.076,
+        "lastActiveOffsetMs": 3270.968,
+        "statesMs": {
+          "unattributed": 3.399,
+          "javascriptOrNative": 8.711,
+          "idle": 68194.767
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68194.767
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 3.399
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:886",
+            "ms": 2.128
+          },
+          {
+            "name": "(anonymous) @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:0",
+            "ms": 1.863
+          },
+          {
+            "name": "getCurrent @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:1292",
+            "ms": 1.831
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 11.804,
+        "earlyNonIdleMs": 11.804,
+        "firstActiveOffsetMs": 1390.543,
+        "lastActiveOffsetMs": 1483.916,
+        "statesMs": {
+          "unattributed": 1.023,
+          "idle": 68342.348,
+          "javascriptOrNative": 10.781
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68342.348
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 10.241
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.023
+          },
+          {
+            "name": "getCache @ <app>/packages/cache-worker/cacheWorkerMain.js:716",
+            "ms": 0.54
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 11.417,
+        "earlyNonIdleMs": 11.417,
+        "firstActiveOffsetMs": 1153.056,
+        "lastActiveOffsetMs": 3406.135,
+        "statesMs": {
+          "unattributed": 1.04,
+          "javascriptOrNative": 10.377,
+          "idle": 68565.836
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68565.836
+          },
+          {
+            "name": "send @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:496",
+            "ms": 1.83
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:0",
+            "ms": 1.164
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.04
+          },
+          {
+            "name": "getData$2 @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:322",
+            "ms": 0.908
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 5.673,
+        "earlyNonIdleMs": 5.673,
+        "firstActiveOffsetMs": 1684.241,
+        "lastActiveOffsetMs": 2814.888,
+        "statesMs": {
+          "unattributed": 2.428,
+          "javascriptOrNative": 3.245,
+          "idle": 68048.42
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 68048.42
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.428
+          },
+          {
+            "name": "send @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:681",
+            "ms": 1.142
+          },
+          {
+            "name": "listen$1 @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:1291",
+            "ms": 0.674
+          },
+          {
+            "name": "initializeEditorWorkerRpc @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:3959",
+            "ms": 0.4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "iteration": 2,
+    "tag": "v1.24.1 / v5.28.1",
+    "elapsedMs": 86414.008326,
+    "traceDurationMs": 58024.17,
+    "browserMilestones": [
+      {
+        "name": "firstPaint",
+        "offsetMs": 636.771,
+        "pid": 4921,
+        "tid": 17,
+        "frame": "2691E6A27C905146DFE897613D0E85C0",
+        "navigationId": "F8AFDF63F0561CB8A315677B31E4DD83",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "firstContentfulPaint",
+        "offsetMs": 1632.449,
+        "pid": 4921,
+        "tid": 17,
+        "frame": "2691E6A27C905146DFE897613D0E85C0",
+        "navigationId": "F8AFDF63F0561CB8A315677B31E4DD83",
+        "nodeName": null,
+        "isMainFrame": null
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 1632.449,
+        "pid": 4921,
+        "tid": 17,
+        "frame": "2691E6A27C905146DFE897613D0E85C0",
+        "navigationId": "F8AFDF63F0561CB8A315677B31E4DD83",
+        "nodeName": "DIV class='TitleBarTitle'",
+        "isMainFrame": true
+      },
+      {
+        "name": "largestContentfulPaint::Candidate",
+        "offsetMs": 2331.745,
+        "pid": 4921,
+        "tid": 17,
+        "frame": "2691E6A27C905146DFE897613D0E85C0",
+        "navigationId": "F8AFDF63F0561CB8A315677B31E4DD83",
+        "nodeName": "DIV class='EditorRow'",
+        "isMainFrame": true
+      }
+    ],
+    "profiles": [
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js",
+        "nonIdleMs": 38721.906,
+        "earlyNonIdleMs": 1877.306,
+        "firstActiveOffsetMs": 2899.666,
+        "lastActiveOffsetMs": 55300.483,
+        "statesMs": {
+          "unattributed": 2704.435,
+          "javascriptOrNative": 31572.294,
+          "gc": 4445.177,
+          "idle": 15812.868
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 15812.868
+          },
+          {
+            "name": "setCachedValue @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:1422",
+            "ms": 7170.721
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 4445.177
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2704.435
+          },
+          {
+            "name": "_visitPaths @ <app>/extensions/builtin.eslint/dist/moduleResolutionWorkerMain.js:915",
+            "ms": 879.142
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js",
+        "nonIdleMs": 16323.198,
+        "earlyNonIdleMs": 2352.081,
+        "firstActiveOffsetMs": 2465.082,
+        "lastActiveOffsetMs": 41822.043,
+        "statesMs": {
+          "unattributed": 426.462,
+          "javascriptOrNative": 15262.261,
+          "idle": 39212.39,
+          "gc": 634.475
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 39212.39
+          },
+          {
+            "name": "invokeSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:2552",
+            "ms": 9755.014
+          },
+          {
+            "name": "getTextSync @ <app>/extensions/builtin.language-features-typescript/typescriptWorkerMain.js:1292",
+            "ms": 812.289
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 634.475
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 426.462
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintMain.js",
+        "nonIdleMs": 13808.928,
+        "earlyNonIdleMs": 385.753,
+        "firstActiveOffsetMs": 2339.318,
+        "lastActiveOffsetMs": 57818.219,
+        "statesMs": {
+          "unattributed": 1883.82,
+          "javascriptOrNative": 11619.638,
+          "idle": 41861.939,
+          "gc": 305.47
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 41861.939
+          },
+          {
+            "name": "setText @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2331",
+            "ms": 6795.956
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1883.82
+          },
+          {
+            "name": "create @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2248",
+            "ms": 1081.786
+          },
+          {
+            "name": "computeTextHash @ <app>/extensions/builtin.eslint/dist/eslintMain.js:2235",
+            "ms": 1048.387
+          }
+        ]
+      },
+      {
+        "role": "file-system-process",
+        "nonIdleMs": 7291.499,
+        "earlyNonIdleMs": 421.441,
+        "firstActiveOffsetMs": 992.749,
+        "lastActiveOffsetMs": 57973.746,
+        "statesMs": {
+          "javascriptOrNative": 6267.616,
+          "idle": 49729.624,
+          "gc": 211.396,
+          "unattributed": 812.487
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 49729.624
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 1525.547
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 812.487
+          },
+          {
+            "name": "stat @ :0",
+            "ms": 783.163
+          },
+          {
+            "name": "openFileHandle @ :0",
+            "ms": 557.947
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js",
+        "nonIdleMs": 4809.803,
+        "earlyNonIdleMs": 6.764,
+        "firstActiveOffsetMs": 2437.027,
+        "lastActiveOffsetMs": 57423.529,
+        "statesMs": {
+          "unattributed": 2.715,
+          "javascriptOrNative": 4545.302,
+          "idle": 50763.631,
+          "gc": 261.786
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 50763.631
+          },
+          {
+            "name": "load @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10771",
+            "ms": 1435.979
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 261.786
+          },
+          {
+            "name": "fingerprint @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:10659",
+            "ms": 261.631
+          },
+          {
+            "name": "utf8ToBytes @ <app>/extensions/builtin.eslint/dist/eslintEvaluationWorkerMain.js:3085",
+            "ms": 196.033
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/file-system-worker/dist/fileSystemWorkerMain.js",
+        "nonIdleMs": 2435.191,
+        "earlyNonIdleMs": 224.284,
+        "firstActiveOffsetMs": 838.149,
+        "lastActiveOffsetMs": 57805.428,
+        "statesMs": {
+          "unattributed": 45.793,
+          "javascriptOrNative": 2233.388,
+          "idle": 54750.83,
+          "gc": 156.01
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 54750.83
+          },
+          {
+            "name": "send @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:650",
+            "ms": 1107.442
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 353.98
+          },
+          {
+            "name": "getData$2 @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:473",
+            "ms": 274.814
+          },
+          {
+            "name": "handleMessage @ <app>/packages/file-system-worker/dist/fileSystemWorkerMain.js:307",
+            "ms": 237.691
+          }
+        ]
+      },
+      {
+        "role": "shared-process",
+        "nonIdleMs": 1404.369,
+        "earlyNonIdleMs": 1059.17,
+        "firstActiveOffsetMs": 200.801,
+        "lastActiveOffsetMs": 57906.74,
+        "statesMs": {
+          "javascriptOrNative": 1122.693,
+          "gc": 103.839,
+          "idle": 56414.685,
+          "unattributed": 177.837
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56414.685
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 177.837
+          },
+          {
+            "name": "postMessage @ node:electron/js2c/utility_init:1",
+            "ms": 109.293
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 103.839
+          },
+          {
+            "name": "fstat @ :0",
+            "ms": 103.582
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-process/dist/mainProcessMain.js",
+        "nonIdleMs": 1108.35,
+        "earlyNonIdleMs": 397.391,
+        "firstActiveOffsetMs": 27.41,
+        "lastActiveOffsetMs": 58020.26,
+        "statesMs": {
+          "javascriptOrNative": 777.848,
+          "idle": 56884.5,
+          "unattributed": 263.147,
+          "gc": 67.355
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56884.5
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 263.147
+          },
+          {
+            "name": "(anonymous) @ :0",
+            "ms": 255.631
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 67.355
+          },
+          {
+            "name": "(anonymous) @ node:electron/js2c/browser_init:1",
+            "ms": 33.222
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js",
+        "nonIdleMs": 1062.705,
+        "earlyNonIdleMs": 174.715,
+        "firstActiveOffsetMs": 2371.218,
+        "lastActiveOffsetMs": 34820.79,
+        "statesMs": {
+          "unattributed": 23.122,
+          "javascriptOrNative": 968.298,
+          "idle": 54573.818,
+          "gc": 71.285
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 54573.818
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:447",
+            "ms": 276.049
+          },
+          {
+            "name": "writeSharedResult @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:1966",
+            "ms": 210.74
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 135.794
+          },
+          {
+            "name": "getData$2 @ <app>/extensions/builtin.language-features-typescript/dist/languageFeaturesTypeScriptMain.js:273",
+            "ms": 97.738
+          }
+        ]
+      },
+      {
+        "role": "node.CrUtilityMain",
+        "nonIdleMs": 370.372,
+        "earlyNonIdleMs": 280.547,
+        "firstActiveOffsetMs": 1667.194,
+        "lastActiveOffsetMs": 58008.595,
+        "statesMs": {
+          "javascriptOrNative": 271.888,
+          "gc": 55.333,
+          "idle": 55971.029,
+          "unattributed": 43.151
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 55971.029
+          },
+          {
+            "name": "spawn @ :0",
+            "ms": 122.866
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 55.333
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 43.151
+          },
+          {
+            "name": "__require @ node:internal/deps/undici/undici:5",
+            "ms": 14.895
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js",
+        "nonIdleMs": 196.37,
+        "earlyNonIdleMs": 164.295,
+        "firstActiveOffsetMs": 820.832,
+        "lastActiveOffsetMs": 57816.996,
+        "statesMs": {
+          "unattributed": 3.425,
+          "javascriptOrNative": 144.213,
+          "idle": 57002.186,
+          "gc": 48.732
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57002.186
+          },
+          {
+            "name": "getData$2 @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:529",
+            "ms": 54.014
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 48.732
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:706",
+            "ms": 23.943
+          },
+          {
+            "name": "send @ <app>/packages/extension-management-worker/dist/extensionManagementWorkerMain.js:605",
+            "ms": 9.801
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-worker/dist/rendererWorkerMain.js",
+        "nonIdleMs": 194.459,
+        "earlyNonIdleMs": 161.843,
+        "firstActiveOffsetMs": 759.128,
+        "lastActiveOffsetMs": 57818.747,
+        "statesMs": {
+          "unattributed": 13.603,
+          "javascriptOrNative": 144.563,
+          "idle": 57062.85,
+          "gc": 36.293
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57062.85
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 36.293
+          },
+          {
+            "name": "getData$1 @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4865",
+            "ms": 30.144
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 13.603
+          },
+          {
+            "name": "send @ <app>/packages/renderer-worker/dist/rendererWorkerMain.js:4892",
+            "ms": 12.074
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/renderer-process/dist/rendererProcessMain.js",
+        "nonIdleMs": 93.866,
+        "earlyNonIdleMs": 93.866,
+        "firstActiveOffsetMs": 544.148,
+        "lastActiveOffsetMs": 3099.348,
+        "statesMs": {
+          "unattributed": 4.371,
+          "javascriptOrNative": 87.893,
+          "idle": 57360.932,
+          "gc": 1.602
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57360.932
+          },
+          {
+            "name": "scrollSelectorIntoView @ <app>/packages/renderer-process/dist/rendererProcessMain.js:10066",
+            "ms": 21.051
+          },
+          {
+            "name": "create$4$1 @ <app>/packages/renderer-process/dist/rendererProcessMain.js:559",
+            "ms": 9.076
+          },
+          {
+            "name": "focusElement @ <app>/packages/renderer-process/dist/rendererProcessMain.js:3814",
+            "ms": 8.148
+          },
+          {
+            "name": "renderInternal @ <app>/packages/renderer-process/dist/rendererProcessMain.js:3558",
+            "ms": 4.522
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js",
+        "nonIdleMs": 71.288,
+        "earlyNonIdleMs": 59.067,
+        "firstActiveOffsetMs": 1135.869,
+        "lastActiveOffsetMs": 32149.455,
+        "statesMs": {
+          "unattributed": 1.913,
+          "javascriptOrNative": 46.918,
+          "idle": 56782.049,
+          "gc": 22.457
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56782.049
+          },
+          {
+            "name": "(garbage collector) @ :0",
+            "ms": 22.457
+          },
+          {
+            "name": "toLowerCaseMap @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1316",
+            "ms": 18.335
+          },
+          {
+            "name": "optimizeBuiltinIconTheme @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1651",
+            "ms": 7.394
+          },
+          {
+            "name": "getJsonCached @ <app>/packages/icon-theme-worker/dist/iconThemeWorkerMain.js:1567",
+            "ms": 4.925
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/explorer-worker/dist/explorerViewWorkerMain.js",
+        "nonIdleMs": 53.069,
+        "earlyNonIdleMs": 53.069,
+        "firstActiveOffsetMs": 1264.125,
+        "lastActiveOffsetMs": 2061.542,
+        "statesMs": {
+          "unattributed": 0.282,
+          "javascriptOrNative": 52.787,
+          "idle": 56688.897
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56688.897
+          },
+          {
+            "name": "getOrCreateNumericCollator @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1757",
+            "ms": 22.369
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3993",
+            "ms": 4.807
+          },
+          {
+            "name": "escapeRegex @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:3140",
+            "ms": 2.892
+          },
+          {
+            "name": "handleMessage @ <app>/packages/explorer-worker/dist/explorerViewWorkerMain.js:1041",
+            "ms": 1.35
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/editor-worker/dist/editorWorkerMain.js",
+        "nonIdleMs": 43.232,
+        "earlyNonIdleMs": 42.384,
+        "firstActiveOffsetMs": 694.841,
+        "lastActiveOffsetMs": 18444.605,
+        "statesMs": {
+          "unattributed": 1.398,
+          "javascriptOrNative": 40.89,
+          "idle": 57276.386,
+          "gc": 0.944
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57276.386
+          },
+          {
+            "name": "getData$2 @ <app>/packages/editor-worker/dist/editorWorkerMain.js:340",
+            "ms": 4.052
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/editor-worker/dist/editorWorkerMain.js:18196",
+            "ms": 3.262
+          },
+          {
+            "name": "applyRender @ <app>/packages/editor-worker/dist/editorWorkerMain.js:17787",
+            "ms": 2.517
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/editor-worker/dist/editorWorkerMain.js:0",
+            "ms": 1.782
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/main-area-worker/dist/mainAreaWorkerMain.js",
+        "nonIdleMs": 30.777,
+        "earlyNonIdleMs": 30.777,
+        "firstActiveOffsetMs": 1206.608,
+        "lastActiveOffsetMs": 3066.152,
+        "statesMs": {
+          "unattributed": 0.988,
+          "javascriptOrNative": 29.789,
+          "idle": 56765.081
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56765.081
+          },
+          {
+            "name": "send @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:443",
+            "ms": 2.604
+          },
+          {
+            "name": "getData$2 @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:328",
+            "ms": 1.921
+          },
+          {
+            "name": "getEditorGroupCss @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:8370",
+            "ms": 1.45
+          },
+          {
+            "name": "run @ <app>/packages/main-area-worker/dist/mainAreaWorkerMain.js:1154",
+            "ms": 1.394
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js",
+        "nonIdleMs": 22.264,
+        "earlyNonIdleMs": 22.264,
+        "firstActiveOffsetMs": 1232.13,
+        "lastActiveOffsetMs": 2420.876,
+        "statesMs": {
+          "unattributed": 1.426,
+          "javascriptOrNative": 20.838,
+          "idle": 56737.806
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56737.806
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.969
+          },
+          {
+            "name": "getCustomIconSignature @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:292",
+            "ms": 1.901
+          },
+          {
+            "name": "compareNodes @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:702",
+            "ms": 1.703
+          },
+          {
+            "name": "execute @ <app>/packages/activity-bar-worker/dist/activityBarWorkerMain.js:1964",
+            "ms": 1.692
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js",
+        "nonIdleMs": 19.468,
+        "earlyNonIdleMs": 19.468,
+        "firstActiveOffsetMs": 640.601,
+        "lastActiveOffsetMs": 2209.199,
+        "statesMs": {
+          "unattributed": 3.37,
+          "javascriptOrNative": 15.764,
+          "idle": 57343.881,
+          "gc": 0.334
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 57343.881
+          },
+          {
+            "name": "safeTokenizeLine @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:1089",
+            "ms": 4.195
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 3.37
+          },
+          {
+            "name": "tokenizeLine @ <app>/extensions/builtin.language-basics-typescript/src/tokenizeTypeScript.js:548",
+            "ms": 2.837
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/packages/syntax-highlighting-worker/dist/syntaxHighlightingWorkerMain.js:852",
+            "ms": 1.134
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/dist/gitMain.js",
+        "nonIdleMs": 18.773,
+        "earlyNonIdleMs": 18.773,
+        "firstActiveOffsetMs": 1335.242,
+        "lastActiveOffsetMs": 2965.702,
+        "statesMs": {
+          "unattributed": 4.972,
+          "idle": 56668.933,
+          "javascriptOrNative": 13.801
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56668.933
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/dist/gitMain.js:450",
+            "ms": 5.936
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 4.972
+          },
+          {
+            "name": "invokeHelper @ <app>/extensions/builtin.git/dist/gitMain.js:986",
+            "ms": 1.707
+          },
+          {
+            "name": "handleMessage @ <app>/extensions/builtin.git/dist/gitMain.js:107",
+            "ms": 1.137
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/status-bar-worker/dist/statusBarWorkerMain.js",
+        "nonIdleMs": 18.61,
+        "earlyNonIdleMs": 18.61,
+        "firstActiveOffsetMs": 1165.79,
+        "lastActiveOffsetMs": 2839.035,
+        "statesMs": {
+          "unattributed": 1.124,
+          "javascriptOrNative": 17.486,
+          "idle": 56833.927
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56833.927
+          },
+          {
+            "name": "send @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1144",
+            "ms": 4.585
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 2.283
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.124
+          },
+          {
+            "name": "execute @ <app>/packages/status-bar-worker/dist/statusBarWorkerMain.js:1182",
+            "ms": 1.1
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js",
+        "nonIdleMs": 15.909,
+        "earlyNonIdleMs": 15.909,
+        "firstActiveOffsetMs": 1424.378,
+        "lastActiveOffsetMs": 2232.263,
+        "statesMs": {
+          "unattributed": 2.449,
+          "idle": 56556.222,
+          "javascriptOrNative": 13.46
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56556.222
+          },
+          {
+            "name": "measureTextWidthSlow @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:1220",
+            "ms": 7.433
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.449
+          },
+          {
+            "name": "send @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:502",
+            "ms": 1.945
+          },
+          {
+            "name": "handleMessage @ <app>/packages/text-measurement-worker/dist/textMeasurementWorkerMain.js:162",
+            "ms": 1.838
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/title-bar-worker/dist/titleBarWorkerMain.js",
+        "nonIdleMs": 14.988,
+        "earlyNonIdleMs": 14.988,
+        "firstActiveOffsetMs": 1290.127,
+        "lastActiveOffsetMs": 1482.196,
+        "statesMs": {
+          "unattributed": 0.263,
+          "javascriptOrNative": 14.725,
+          "idle": 56704.69
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56704.69
+          },
+          {
+            "name": "loadContent2 @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:4492",
+            "ms": 3.147
+          },
+          {
+            "name": "file @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:2069",
+            "ms": 2.04
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 1.354
+          },
+          {
+            "name": "(anonymous) @ <app>/packages/title-bar-worker/dist/titleBarWorkerMain.js:0",
+            "ms": 1.02
+          }
+        ]
+      },
+      {
+        "role": "<app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js",
+        "nonIdleMs": 12.925,
+        "earlyNonIdleMs": 12.925,
+        "firstActiveOffsetMs": 1385.644,
+        "lastActiveOffsetMs": 2905.413,
+        "statesMs": {
+          "unattributed": 1.17,
+          "javascriptOrNative": 11.755,
+          "idle": 56615.756
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56615.756
+          },
+          {
+            "name": "send @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:349",
+            "ms": 2.629
+          },
+          {
+            "name": "getData$2 @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:273",
+            "ms": 1.474
+          },
+          {
+            "name": "getFileDecorations @ <app>/extensions/builtin.git/git-worker/dist/gitWorkerMain.js:3827",
+            "ms": 1.381
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 1.17
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/cache-worker/cacheWorkerMain.js",
+        "nonIdleMs": 11.556,
+        "earlyNonIdleMs": 11.556,
+        "firstActiveOffsetMs": 1307.705,
+        "lastActiveOffsetMs": 1419.837,
+        "statesMs": {
+          "unattributed": 0.562,
+          "javascriptOrNative": 10.994,
+          "idle": 56689.084
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56689.084
+          },
+          {
+            "name": "setCacheStorageItem @ <app>/packages/cache-worker/cacheWorkerMain.js:748",
+            "ms": 6.996
+          },
+          {
+            "name": "getData$2 @ <app>/packages/cache-worker/cacheWorkerMain.js:71",
+            "ms": 1.05
+          },
+          {
+            "name": "handleMessagePort @ <app>/packages/cache-worker/cacheWorkerMain.js:1224",
+            "ms": 0.6
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 0.562
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/source-control-worker/dist/sourceControlWorkerMain.js",
+        "nonIdleMs": 9.564,
+        "earlyNonIdleMs": 9.564,
+        "firstActiveOffsetMs": 1120.2,
+        "lastActiveOffsetMs": 2842.108,
+        "statesMs": {
+          "unattributed": 0.567,
+          "javascriptOrNative": 8.997,
+          "idle": 56894.153
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56894.153
+          },
+          {
+            "name": "normalizeParams @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:879",
+            "ms": 1.877
+          },
+          {
+            "name": "create$9 @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:828",
+            "ms": 0.865
+          },
+          {
+            "name": "handleJsonRpcMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:902",
+            "ms": 0.785
+          },
+          {
+            "name": "handleMessage @ <app>/packages/source-control-worker/dist/sourceControlWorkerMain.js:156",
+            "ms": 0.715
+          }
+        ]
+      },
+      {
+        "role": "<app>/packages/problems-view/dist/problemsViewWorkerMain.js",
+        "nonIdleMs": 6.986,
+        "earlyNonIdleMs": 6.986,
+        "firstActiveOffsetMs": 1553.178,
+        "lastActiveOffsetMs": 2393.92,
+        "statesMs": {
+          "unattributed": 2.101,
+          "idle": 56454.266,
+          "javascriptOrNative": 4.885
+        },
+        "topSelf": [
+          {
+            "name": "(idle) @ :0",
+            "ms": 56454.266
+          },
+          {
+            "name": "(program) @ :0",
+            "ms": 2.101
+          },
+          {
+            "name": "invokeHelper @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:1219",
+            "ms": 1.371
+          },
+          {
+            "name": "IpcChildWithModuleWorkerAndMessagePort @ <app>/packages/problems-view/dist/problemsViewWorkerMain.js:677",
+            "ms": 1.081
+          },
+          {
+            "name": "dispatchEvent @ :0",
+            "ms": 0.702
+          }
+        ]
+      }
+    ]
+  }
+]
