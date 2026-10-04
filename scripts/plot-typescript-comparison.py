@@ -1,6 +1,7 @@
 """Plot saved TypeScript comparison medians. Requires matplotlib."""
 import json
 import sys
+from pathlib import Path
 import matplotlib.pyplot as plt
 
 with open(sys.argv[1], encoding="utf-8") as source:
@@ -35,3 +36,6 @@ for axis in axes:
     axis.spines[["top", "right"]].set_visible(False)
 fig.text(.01, -.04, "*CLI includes process/module startup. Host timers exclude it; browser timer excludes activation and UI rendering.", fontsize=9)
 fig.savefig(sys.argv[2], bbox_inches="tight")
+destination = Path(sys.argv[2])
+if destination.suffix == ".svg":
+    destination.write_text("\n".join(line.rstrip() for line in destination.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
