@@ -29,6 +29,8 @@ All modes report zero diagnostics. Both Node hosts have the same **145 root file
 
 The browser cold requests range from **4.062 to 4.354 seconds**. Immediately repeating the unchanged document takes a median **0.105 ms** inside the worker, with zero SyncApi calls. That demonstrates reuse; it does not measure edit latency or the time to update the editor UI.
 
+A [second complete CI run](https://github.com/lvce-editor/performance-investigations/actions/runs/37233640780), also with five unprofiled repetitions and [saved overview](typescript-cli-validation-overview.json), was faster across all modes: CLI **1.937 s**, standard Node host **0.639 s**, LVCE Node host **0.726 s**, and browser **2.419 s**. It automatically verified the same 732-file graph. Browser IPC took **1.623 s** (existence **1.207 s**, reads **0.378 s**), leaving **0.796 s**. Thus the browser is about **3.3–3.8 times** slower than the direct Node LVCE request across these two runners, with the same explanation. Absolute times vary substantially across hosted runners; do not pool them into a performance-change claim.
+
 ## Where the difference comes from
 
 | Filesystem operation | Node LVCE host: calls / median time | Browser: calls / median time |
