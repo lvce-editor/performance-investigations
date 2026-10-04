@@ -1,0 +1,56 @@
+{
+  "sourceCommit": "69ed696ea9aabba65332a84991cdc46c0fd8d13d",
+  "nodeVersion": "v24.15.0",
+  "typescriptVersion": "6.0.3",
+  "durationMs": 695.890687,
+  "libraryReads": 264,
+  "initialMethods": {
+    "SyncApi.exists": 20642,
+    "SyncApi.readFileSync": 2884,
+    "SyncApi.readDirSync": 98
+  },
+  "initialRequests": 23624,
+  "methods": {
+    "SyncApi.exists": 22296,
+    "SyncApi.readFileSync": 4236,
+    "SyncApi.readDirSync": 98
+  },
+  "totalRequests": 26630,
+  "uniqueRequests": 5028,
+  "duplicateRequests": 21602,
+  "diagnostics": [],
+  "diagnosticsHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "editedDiagnostics": [
+    {
+      "code": 2322,
+      "columnIndex": 6,
+      "endColumnIndex": 29,
+      "endRowIndex": 4,
+      "message": "Type 'number' is not assignable to type 'string'.",
+      "rowIndex": 4,
+      "source": "ts",
+      "type": "error",
+      "uri": "file:///home/runner/work/performance-investigations/performance-investigations/benchmark-workspace/packages/about-view/src/aboutWorkerMain.ts"
+    },
+    {
+      "code": 6133,
+      "columnIndex": 6,
+      "endColumnIndex": 29,
+      "endRowIndex": 4,
+      "message": "'startupPerformanceError' is declared but its value is never read.",
+      "rowIndex": 4,
+      "source": "ts",
+      "type": "warning",
+      "uri": "file:///home/runner/work/performance-investigations/performance-investigations/benchmark-workspace/packages/about-view/src/aboutWorkerMain.ts"
+    }
+  ],
+  "restoredDiagnostics": [],
+  "memory": {
+    "rss": 373075968,
+    "heapTotal": 273506304,
+    "heapUsed": 129852984,
+    "external": 8437382,
+    "arrayBuffers": 28956
+  },
+  "note": "Diagnostics through the real extension host/resolver with direct Node filesystem transport. Counts represent actual underlying queries; no browser IPC latency is simulated. Not editor startup latency."
+}

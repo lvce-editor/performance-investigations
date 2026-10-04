@@ -1,0 +1,106 @@
+name: Released extension startup experiment
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Fixed official LVCE runtime
+        required: true
+        default: v0.119.25
+      baseline_eslint:
+        description: Baseline ESLint extension release
+        required: true
+        default: v1.23.5
+      candidate_eslint:
+        description: Candidate ESLint extension release
+        required: true
+        default: v1.24.1
+      baseline_typescript:
+        description: Baseline TypeScript extension release
+        required: true
+        default: v5.26.1
+      candidate_typescript:
+        description: Candidate TypeScript extension release
+        required: true
+        default: v5.28.0
+      workspace_ref:
+        description: Fixed about-view workspace commit
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Repetitions per variant (1 to 5)
+        required: true
+        default: '3'
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPEATS: ${{ inputs.repeats }}
+      RELEASE: ${{ inputs.release }}
+      BASELINE_ESLINT: ${{ inputs.baseline_eslint }}
+      CANDIDATE_ESLINT: ${{ inputs.candidate_eslint }}
+      BASELINE_TYPESCRIPT: ${{ inputs.baseline_typescript }}
+      CANDIDATE_TYPESCRIPT: ${{ inputs.candidate_typescript }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Install runtime prerequisites
+        run: sudo apt-get update && sudo apt-get install -y xvfb libnss3 libatk-bridge2.0-0 libgtk-3-0 libasound2t64
+      - name: Fetch official runtime and extension releases
+        run: |
+          mkdir -p downloads
+          gh release download "$RELEASE" --repo lvce-editor/lvce-editor --pattern '*_amd64.deb' --dir downloads
+          for variant in baseline candidate; do
+            mkdir -p "runtimes/$variant"
+            dpkg-deb -x downloads/*.deb "runtimes/$variant/root"
+            sudo chown root:root "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+            sudo chmod 4755 "runtimes/$variant/root/usr/lib/lvce/chrome-sandbox"
+            for extension in eslint typescript; do
+              if [ "$extension" = eslint ]; then
+                repository=lvce-editor/eslint
+                if [ "$variant" = baseline ]; then tag="$BASELINE_ESLINT"; else tag="$CANDIDATE_ESLINT"; fi
+              else
+                repository=lvce-editor/language-features-typescript
+                if [ "$variant" = baseline ]; then tag="$BASELINE_TYPESCRIPT"; else tag="$CANDIDATE_TYPESCRIPT"; fi
+              fi
+              directory="downloads/$variant/$extension"
+              mkdir -p "$directory"
+              gh release download "$tag" --repo "$repository" --pattern '*.tar.br' --dir "$directory"
+              gh release view "$tag" --repo "$repository" --json assets,tagName,isDraft,publishedAt > "$directory/release.json"
+            done
+          done
+      - name: Validate and install released extensions into isolated runtimes
+        run: node src/prepare-released-extensions.ts
+      - name: Capture alternating startups
+        run: |
+          export BASELINE="$BASELINE_ESLINT / $BASELINE_TYPESCRIPT"
+          export CANDIDATE="$CANDIDATE_ESLINT / $CANDIDATE_TYPESCRIPT"
+          xvfb-run -a node src/startup-experiment.ts
+      - name: Save profiles and release provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: released-extension-startup-experiment
+          path: |
+            results/**/summary.json
+            results/**/capture.json
+            results/**/stdout.log
+            results/**/stderr.log
+            results/**/manifest.json
+            results/**/trace.json
+            results/**/*.cpuprofile
+            results/overview.json
+            results/provenance.json
+          retention-days: 14

@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "baseline",
+    "ref": "69ed696ea9aabba65332a84991cdc46c0fd8d13d",
+    "release": "v0.119.25",
+    "workerHash": "3525e54ffde0c8d7f9dbdf7e1b8fca8f7cbd7121563d9dcae92f13535d50607f",
+    "typescriptVersion": "6.0.3",
+    "lockfileHash": "895f1633c7182c50d9cffe7b2bf7db304e95979677409ef6c7ae90e7b8467df2"
+  },
+  {
+    "variant": "candidate",
+    "ref": "5a6dc834e6054b770d418f52549565c3d914e77d",
+    "release": "v0.119.25",
+    "workerHash": "a20c64d3f26d0afb8d0c6c619a99b662307a680050cff05a5bc8e0994caea4c3",
+    "typescriptVersion": "6.0.3",
+    "lockfileHash": "895f1633c7182c50d9cffe7b2bf7db304e95979677409ef6c7ae90e7b8467df2"
+  }
+]

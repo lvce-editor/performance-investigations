@@ -27,6 +27,8 @@ A profile capture ending at diagnostics readiness is different from first paint 
 
 [TypeScript Electron startup experiment](https://github.com/lvce-editor/performance-investigations/actions/workflows/typescript.yml) compares worker refs in isolated copies of one fixed official Electron release. It also checks filesystem request counts and document edits. Provenance includes worker and lockfile hashes; it rejects differing lockfiles.
 
+[Released extension startup experiment](https://github.com/lvce-editor/performance-investigations/actions/workflows/extensions.yml) installs exact published ESLint and TypeScript extension archives into isolated copies of one fixed runtime. It validates available asset digests and records release provenance, allowing combined release experiments without a full application rebuild.
+
 ESLint experiments can run `profiles`, `readiness`, or `both`. The readiness mode uses the same baseline harness for both variants and disables profiling.
 
 For these workflows, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.

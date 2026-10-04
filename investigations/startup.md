@@ -1,6 +1,6 @@
 # LVCE startup investigation
 
-The merged ESLint optimization reduces **unprofiled cold readiness by 6.1%** in a three-run alternating CI comparison (25.14 s → 23.60 s). Graph construction improves by 14.4% in a separate comparison. TypeScript filesystem RPC caching is undergoing equivalent Electron validation. These readiness measurements concern startup through diagnostics, not first paint.
+The merged ESLint optimization reduces **unprofiled cold readiness by 6.1%** in a three-run alternating CI comparison (25.14 s → 23.60 s). Graph construction improves by 14.4% in a separate comparison. The existing TypeScript RPC cache cuts actual filesystem requests by **78.3%** and sampled worker residency by **68.1%** in Electron; its full platform CI is running before release. These readiness measurements concern startup through diagnostics, not first paint.
 
 The supplied capture is approximately 68 seconds long and waits for diagnostics. Its trace is Chromium JSON, despite being named `trace.cpuprofile`. The manifest lists shared-process, filesystem and Git inspector profiles; these processes are also profiled by Chromium. The analyzer retains one profiler per traced thread, avoiding duplicated totals.
 
@@ -87,3 +87,9 @@ The previous PR 703 CI passed Linux and macOS but failed one Windows Firefox Pro
 ## Electron result for the request-scoped alternative
 
 [The three-run request-scoped Electron experiment](https://github.com/lvce-editor/performance-investigations/actions/runs/37193115073) completed successfully. Median TypeScript sampled non-idle time fell from **49.50 s to 17.46 s (64.7%)**; median whole-trace duration fell from **65.67 s to 60.54 s (7.8%)**. One representative run reduced `invokeSync` self residency from 45.70 s to 11.38 s. These samples include blocking transport waits; the trace covers diagnostics and profiling overhead, not first paint. ESLint still dominates the end of the capture. This measures the now-closed alternative, so PR 703 is being measured independently before claiming the same result for its implementation. `typescript-request-scope-electron-overview.json` retains each run's values and exact refs.
+
+## Electron validation of the consolidated TypeScript candidate
+
+[The PR 703 Electron experiment](https://github.com/lvce-editor/performance-investigations/actions/runs/37193655550) compared `69ed696e` with `5a6dc834` on one runner for three alternating runs. Median TypeScript non-idle sample residency fell from **25.08 s to 8.00 s (68.1%)**. Median `invokeSync` self residency fell from **21.55 s to 4.89 s (77.3%)**. Median whole-trace duration fell from **38.49 s to 34.54 s (10.3%)**. Every candidate TypeScript run was faster than every baseline run. The source refs use identical lockfiles and TypeScript 6.0.3; worker hashes and lockfile hashes are retained in `typescript-ci-provenance.json`.
+
+This independently validates the implementation proposed for integration, rather than relying on the closed alternative. Absolute times differ substantially from the earlier experiment's runner, so compare variants within each run and do not compare the two candidates across runners. The whole trace includes diagnostics, profiling and shutdown; it does not measure first usable paint. These results also show that reducing TypeScript blocking leaves the ESLint graph as the main remaining tail. Raw per-run values are in `typescript-ci-electron-overview.json` and Node edit/request results in `typescript-ci-*-requests.json`.
