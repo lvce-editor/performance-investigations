@@ -31,6 +31,8 @@ A profile capture ending at diagnostics readiness is different from first paint 
 
 ESLint experiments can run `profiles`, `readiness`, or `both`. The readiness mode uses the same baseline harness for both variants and disables profiling.
 
+[Early main-process startup profile](https://github.com/lvce-editor/performance-investigations/actions/workflows/main-startup.yml) attaches an inspector before application JavaScript runs, captures its first ten seconds, and exports the existing main-process performance marks. It includes pre-`appReady` JS missing from the regular Chromium capture. Debugger pauses perturb timing; use it to identify work, then validate timing without the debugger.
+
 For these workflows, use at least three repetitions and compare distributions, not one run. Keep workspace, lockfile, Electron/Chromium version, runtime settings and machine class identical when isolating a code change. Release comparisons can change several dependencies together and establish a release difference, not causality for one patch. Profiling overhead can amplify differences; confirm meaningful changes with an unprofiled readiness benchmark before calling them product startup gains.
 
 The Node graph experiment is also available directly:

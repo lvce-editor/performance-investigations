@@ -1,0 +1,56 @@
+name: Early main-process startup profile
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Official LVCE release
+        required: true
+        default: v0.119.25
+      workspace_ref:
+        description: about-view workspace commit (keep fixed across variants)
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE: ${{ inputs.release }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Install runtime prerequisites
+        run: sudo apt-get update && sudo apt-get install -y xvfb libnss3 libatk-bridge2.0-0 libgtk-3-0 libasound2t64
+      - name: Fetch official Debian artifacts
+        run: |
+          mkdir -p runtime
+          gh release download "$RELEASE" --repo lvce-editor/lvce-editor --pattern '*_amd64.deb' --dir runtime
+          dpkg-deb -x runtime/*.deb runtime/root
+          sudo chown root:root runtime/root/usr/lib/lvce/chrome-sandbox
+          sudo chmod 4755 runtime/root/usr/lib/lvce/chrome-sandbox
+      - name: Profile early main-process JS
+        run: xvfb-run -a node src/main-startup.ts runtime/root/usr/lib/lvce/lvce benchmark-workspace packages/about-view/src/aboutWorkerMain.ts results
+      - name: Preserve main profile and marks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: early-main-startup
+          path: |
+            results/summary.json
+            results/marks.json
+            results/main.cpuprofile
+            results/stdout.log
+            results/stderr.log
+          retention-days: 14
