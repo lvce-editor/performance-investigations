@@ -17,6 +17,16 @@ export const analyze = async (input: string, windowMs?: number) => {
     method: 'Timestamp-ordered sample residency; non-idle time is an estimate, not OS CPU time or startup latency. Inclusive rows overlap. First sample gap is unobserved.',
     traceDurationMs: (Math.max(...profiles.map((p) => p.endTime ?? p.startTime + p.timeDeltas.reduce((a, b) => a + b, 0))) - origin) / 1000,
     windowMs: windowMs ?? null, excludedDuplicateProfiles: excluded,
+    browserMilestones: (data.traceEvents ?? []).filter((event: any) =>
+      ['firstPaint', 'firstContentfulPaint', 'largestContentfulPaint::Candidate'].includes(event.name) &&
+      event.ts >= origin && (windowMs === undefined || event.ts <= origin + windowMs * 1000)
+    ).map((event: any) => ({
+      name: event.name, offsetMs: (event.ts - origin) / 1000, pid: event.pid, tid: event.tid,
+      frame: event.args?.frame ?? event.args?.data?.frame ?? null,
+      navigationId: event.args?.data?.navigationId ?? null,
+      nodeName: event.args?.data?.nodeName ?? null,
+      isMainFrame: event.args?.data?.isMainFrame ?? null,
+    })).sort((a: any, b: any) => a.offsetMs - b.offsetMs),
     profiles: profiles.map((p) => summarize(p, origin, windowMs)).sort((a, b) => b.nonIdleMs - a.nonIdleMs),
   }
 }

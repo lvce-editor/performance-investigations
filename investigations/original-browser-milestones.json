@@ -1,0 +1,62 @@
+[
+  {
+    "name": "firstPaint",
+    "offsetMs": 812.001,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": null,
+    "isMainFrame": null
+  },
+  {
+    "name": "firstContentfulPaint",
+    "offsetMs": 2130.14,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": null,
+    "isMainFrame": null
+  },
+  {
+    "name": "largestContentfulPaint::Candidate",
+    "offsetMs": 2130.141,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": "DIV class='TitleBarTitle'",
+    "isMainFrame": true
+  },
+  {
+    "name": "largestContentfulPaint::Candidate",
+    "offsetMs": 3348.168,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": "DIV class='Label'",
+    "isMainFrame": true
+  },
+  {
+    "name": "largestContentfulPaint::Candidate",
+    "offsetMs": 3515.022,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": "SPAN class='TabTitle'",
+    "isMainFrame": true
+  },
+  {
+    "name": "largestContentfulPaint::Candidate",
+    "offsetMs": 3548.394,
+    "pid": 22567,
+    "tid": 17,
+    "frame": "E3776F5EFDB3AB84034C166DBFFE85FA",
+    "navigationId": "B7DD898EF41092E03D992071422769A6",
+    "nodeName": "DIV class='EditorRow'",
+    "isMainFrame": true
+  }
+]
