@@ -17,14 +17,19 @@ const text = readFileSync(file, 'utf8')
 const methods: Record<string, { calls: number; durationMs: number; bytes: number }> = {}
 const queries = new Set<string>()
 const physicalQueries = new Map<string, Set<string>>()
+const invalidPaths = new Map<string, number>()
 const timed = (method: string, path: string, callback: () => any) => {
   const entry = methods[method] ??= { calls: 0, durationMs: 0, bytes: 0 }
   entry.calls++
   queries.add(`${method}:${path}`)
   if (method.startsWith('SyncApi.')) {
-    const key = `${method}:${toPath(path)}`
-    const aliases = physicalQueries.get(key) ?? new Set<string>()
-    aliases.add(path); physicalQueries.set(key, aliases)
+    try {
+      const key = `${method}:${toPath(path)}`
+      const aliases = physicalQueries.get(key) ?? new Set<string>()
+      aliases.add(path); physicalQueries.set(key, aliases)
+    } catch {
+      invalidPaths.set(path, (invalidPaths.get(path) ?? 0) + 1)
+    }
   }
   const start = performance.now()
   try {
@@ -138,6 +143,7 @@ const summary = {
   durationMs, cpuMs: { user: cpu.user / 1000, system: cpu.system / 1000 }, stages, compilerMeasures,
   methods, uniqueQueries: queries.size, libraryReads, trace, diagnostics, options,
   physicalQueryCount: physicalQueries.size,
+  invalidPaths: Object.fromEntries(invalidPaths),
   aliasedQueries: [...physicalQueries].filter(([,aliases]) => aliases.size > 1).map(([path,aliases]) => ({ path, aliases: [...aliases] })),
   rootFiles: rootFiles.map(normalizedPath).sort(), loadedFiles, memory: process.memoryUsage(),
   note: 'Fresh process and language service; one semantic diagnostic request. Direct Node filesystem, no IPC. Timer excludes loading TypeScript and harness modules, includes config and program initialization. Filesystem timings are synchronous wall time; compiler measures can overlap.',
