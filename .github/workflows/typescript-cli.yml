@@ -1,0 +1,59 @@
+name: TypeScript CLI and extension comparison
+on:
+  workflow_dispatch:
+    inputs:
+      extension_ref:
+        description: Fixed TypeScript extension commit
+        required: true
+        default: 4294e8a06bc4d4ba71490750e7b1670902a1d64d
+      workspace_ref:
+        description: Fixed about-view workspace commit
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Fresh processes and browsers per mode (1 to 20)
+        required: true
+        default: '5'
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref }}
+          path: benchmark-workspace
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/language-features-typescript
+          ref: ${{ inputs.extension_ref }}
+          path: experiments/typescript
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - run: nice npm ci
+        working-directory: experiments/typescript
+      - run: npm run build
+        working-directory: experiments/typescript
+      - run: npx --no-install playwright install --with-deps chromium
+        working-directory: experiments/typescript
+      - name: Compare whole-project CLI and single-file language services
+        env:
+          REPEATS: ${{ inputs.repeats }}
+        run: node src/typescript-cli-experiment.ts experiments/typescript benchmark-workspace results/node "$REPEATS"
+      - name: Measure real browser IPC without a profiler
+        env:
+          REPEATS: ${{ inputs.repeats }}
+        run: node src/typescript-browser-benchmark.ts experiments/typescript benchmark-workspace results/browser "$REPEATS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: typescript-cli-comparison
+          path: results
+          retention-days: 90
