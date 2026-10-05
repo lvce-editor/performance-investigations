@@ -64,3 +64,5 @@ Both checkouts need `npm ci` and the same TypeScript version. Browser measuremen
 ```sh
 node src/typescript-browser-benchmark.ts /path/to/language-features-typescript /path/to/about-view results/typescript-browser 5
 ```
+
+See [TypeScript resource identities](investigations/typescript-path-identities.md) for URI compatibility, escaping probes and a provider-mounted compiler-path prototype. The **TypeScript path identity experiment** workflow compares four standard language-service hosts with identical source graphs and saves repeated timing results and resolver traces.

@@ -1,0 +1,58 @@
+name: TypeScript path identity experiment
+on:
+  pull_request:
+    paths:
+      - src/compiler-path-map.ts
+      - src/typescript-path*.ts
+      - src/typescript-uri-probes.ts
+      - test/compiler-path-map.test.ts
+      - .github/workflows/typescript-paths.yml
+  workflow_dispatch:
+    inputs:
+      extension_ref:
+        description: Checkout providing pinned TypeScript dependency
+        required: true
+        default: c7434ae2cc7d89f5e178f84556a8656756591b7e
+      workspace_ref:
+        description: Fixed about-view workspace
+        required: true
+        default: db84fa6c54201e7ebb026be3d7aab3436785e9f5
+      repeats:
+        description: Fresh processes per path representation (1 to 20)
+        required: true
+        default: '7'
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/language-features-typescript
+          ref: ${{ inputs.extension_ref || 'c7434ae2cc7d89f5e178f84556a8656756591b7e' }}
+          path: compiler
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: ${{ inputs.workspace_ref || 'db84fa6c54201e7ebb026be3d7aab3436785e9f5' }}
+          path: benchmark-workspace
+      - run: nice npm ci
+        working-directory: compiler
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - name: Compare path representations and probe URI resolution
+        env:
+          REPEATS: ${{ inputs.repeats || '7' }}
+        run: node src/typescript-path-experiment.ts compiler benchmark-workspace results "$REPEATS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: typescript-path-identities
+          path: results
+          retention-days: 90
