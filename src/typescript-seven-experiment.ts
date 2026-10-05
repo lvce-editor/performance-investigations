@@ -16,7 +16,7 @@ const ts6 = join(extension, 'node_modules/typescript'), tsc6 = join(ts6, 'lib/ts
 const hash = (path: string) => createHash('sha256').update(readFileSync(path)).digest('hex')
 const run = (name: string, args: string[]) => {
   const before = performance.now()
-  const child = spawnSync(process.execPath, args, { cwd: workspace, encoding: 'utf8', timeout: 240_000, maxBuffer: 30 * 1024 * 1024 })
+  const child = spawnSync(process.execPath, args, { cwd: workspace, encoding: 'utf8', timeout: 480_000, maxBuffer: 30 * 1024 * 1024 })
   const processElapsedMs = performance.now() - before
   writeFileSync(join(output, name + '.log'), child.stdout + child.stderr)
   if (child.error || child.signal || child.status !== 0) throw new Error(`${name}: ${child.error ?? child.signal ?? child.stdout + child.stderr}`)

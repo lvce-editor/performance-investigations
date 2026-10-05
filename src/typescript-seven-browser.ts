@@ -44,6 +44,7 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
     if (trace.error || (kind === 'cold' ? trace.languageService.cache !== 'created' : trace.languageService.cache !== 'reused')) throw new Error(JSON.stringify(trace))
     if (trace.diagnostics.count !== (edited ? 1 : 0)) throw new Error(JSON.stringify(trace))
     samples.push({ kind, durationMs: roundTripMs, workerDurationMs: trace.totalDurationMs, trace })
+    console.log(JSON.stringify({ kind, durationMs: roundTripMs, workerDurationMs: trace.totalDurationMs }))
   }
   await invoke('cold', text, false)
   for (let index = 0; index < 15; index++) {
@@ -60,6 +61,7 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
       const result = feature === 'completion' ? response.map(item => item.label).sort() : response.map(item => ({ uri: item.uri, range: { start: { line: item.startRowIndex, character: item.startColumnIndex }, end: { line: item.endRowIndex, character: item.endColumnIndex } } }))
       if (feature === 'completion' ? !result.includes('main') : !result.length) throw new Error('Missing ' + feature + ' result')
       samples.push({ kind: feature + (index === 0 ? '-first' : ''), durationMs, result })
+      console.log(JSON.stringify({ kind: feature, durationMs }))
     }
   }
   await FileSystem.writeFile(${JSON.stringify(pathToFileURL(coldOutput).href)}, JSON.stringify(samples))
@@ -85,9 +87,11 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
     browser = await chromium.launch({ env, headless: true, args: ['--disable-background-timer-throttling', '--disable-renderer-backgrounding'] })
     const context = await browser.newContext()
     const page = await context.newPage()
+    page.on('console', message => { log += `browser: ${message.text()}\n` })
+    page.on('pageerror', error => { log += `pageerror: ${error}\n` })
     await page.goto(`${url}/tests/typescript.benchmark.html`, { waitUntil: 'domcontentloaded', timeout: 120_000 })
     const overlay = page.locator('#TestOverlay')
-    await overlay.waitFor({ state: 'visible', timeout: 120_000 })
+    await overlay.waitFor({ state: 'visible', timeout: 360_000 })
     if (await overlay.getAttribute('data-state') !== 'pass') throw new Error(await overlay.textContent())
     const samples = JSON.parse(await readFile(coldOutput, 'utf8'))
     rows.push({ iteration, samples })
