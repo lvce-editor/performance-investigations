@@ -63,12 +63,20 @@ if (JSON.stringify(projectFiles(graphs.cli6)) !== JSON.stringify(projectFiles(ts
 if (JSON.stringify(projectFiles(graphs.cli6)) !== JSON.stringify(projectFiles(browserGraph))) throw new Error('Browser non-library source graph differs')
 const median = (values: number[]) => { const sorted = values.toSorted((a, b) => a - b), middle = Math.floor(sorted.length / 2); return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2 }
 const perTrial = (row: any, kind: string) => median(row.samples.filter((sample: any) => sample.kind === kind).map((sample: any) => sample.durationMs))
+const requestKinds = ['cold', 'unchanged', 'edit', 'restore', 'completion-first', 'completion', 'references-first', 'references']
+const featureResults = (row: any, kind: string) => row.samples.find((sample: any) => sample.kind === kind).result
+const referenceIdentity = (items: any[]) => items.map(item => ({ ...item, uri: normalize(item.uri) })).sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)))
+for (const row of rows.filter(row => ['ts6', 'ts7', 'lvce'].includes(row.mode))) {
+  const baseline = rows.find(other => other.mode === 'ts6' && other.iteration === row.iteration)
+  if (JSON.stringify(referenceIdentity(featureResults(row, 'references-first'))) !== JSON.stringify(referenceIdentity(featureResults(baseline, 'references-first')))) throw new Error(`Reference results differ: ${row.mode}`)
+  if (JSON.stringify(featureResults(row, 'completion-first')) !== JSON.stringify(featureResults(baseline, 'completion-first'))) throw new Error(`Completion labels differ: ${row.mode}`)
+}
 const summary = Object.fromEntries(modes.map(mode => {
   const trials = rows.filter(row => row.mode === mode)
   return [mode, mode.startsWith('cli') ? { processElapsedMs: median(trials.map(row => row.processElapsedMs)), extendedDiagnostics: trials.map(row => row.extendedDiagnostics) }
-    : Object.fromEntries(['cold', 'unchanged', 'edit', 'restore'].map(kind => [kind + 'Ms', median(trials.map(row => perTrial(row, kind)))]))]
+    : Object.fromEntries(requestKinds.map(kind => [kind + 'Ms', median(trials.map(row => perTrial(row, kind)))]))]
 }))
-const pairedRatios = Object.fromEntries(['cold', 'unchanged', 'edit', 'restore'].map(kind => [kind, median(Array.from({ length: repeats }, (_, iteration) =>
+const pairedRatios = Object.fromEntries(requestKinds.map(kind => [kind, median(Array.from({ length: repeats }, (_, iteration) =>
   perTrial(rows.find(row => row.mode === 'lvce' && row.iteration === iteration), kind) / perTrial(rows.find(row => row.mode === 'ts7' && row.iteration === iteration), kind)))]))
 const overview = {
   schemaVersion: 1, node: process.version, platform: process.platform, architecture: process.arch, logicalCpus: availableParallelism(), cpuModel: cpus()[0].model, repeats,
@@ -83,9 +91,10 @@ const overview = {
     'Each repetition alternates variant order; fresh processes and browser state, OS filesystem caches retained. No timed request is CPU-profiled.',
     'CLI timings include Node wrapper and native child startup and whole-project checking. CLI incremental state is fresh for every run.',
     'TS6 service cold includes config/program construction after loading the compiler. TS7 cold covers didOpen through the complete pull-diagnostic response after LSP initialize.',
-    'LVCE timings cover the extension-command round trip, including activation on cold. Worker-only traces are also saved. Browser/server startup and rendering are excluded.',
+    'LVCE timings cover harness-only commands forwarding to existing worker entry points, including activation on cold. Worker-only diagnostic traces are also saved. Browser/server startup and rendering are excluded.',
     'Five unchanged requests and five edit/restore pairs per trial. Edits add a type error to the open document in memory; the original file is never changed. Every edit must report the error; every restore must clear it.',
     'TS6 service uses semantic diagnostics; TS7 pull diagnostics can also include syntactic diagnostics. CLI checks the whole configured project. These boundaries are explicitly distinct.',
+    'Completion and reference requests follow diagnostics and restore; first requests and four repeats are recorded separately. Completion labels and reference locations must match across all three services.',
     'CLI and TS6/browser service non-library file paths must match; TS7 LSP must select the same tsconfig. No claim of identical TS7 LSP internal source graphs is made.',
   ],
 }

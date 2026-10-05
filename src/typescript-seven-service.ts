@@ -10,6 +10,10 @@ const compiler = resolve(compilerArg), workspace = resolve(workspaceArg), output
 const file = join(workspace, 'packages/about-view/src/aboutWorkerMain.ts'), uri = pathToFileURL(file).href
 const original = await readFile(file, 'utf8')
 const errorText = original + '\nconst startupPerformanceError: string = 123; void startupPerformanceError\n'
+const offset = original.lastIndexOf('Main.main') + 'Main.'.length
+if (offset < 'Main.'.length) throw new Error('Missing completion/reference target')
+const prefix = original.slice(0, offset).split('\n')
+const position = { line: prefix.length - 1, character: prefix.at(-1)!.length }
 const samples: any[] = []
 const verify = (items: any[], edited: boolean) => {
   if (edited ? !items.some(item => item.code === 2322) : items.length !== 0) throw new Error(`Unexpected ${edited ? 'edited' : 'original'} diagnostics: ${JSON.stringify(items)}`)
@@ -48,6 +52,19 @@ if (mode === 'ts6') {
     if (kind !== 'unchanged') { text = kind === 'edit' ? errorText : original; version++ }
     const diagnostics = request()
     samples.push({ kind, durationMs: performance.now() - before, diagnostics }); verify(diagnostics, kind === 'edit')
+  }
+  for (const feature of ['completion', 'references']) {
+    for (let index = 0; index < 5; index++) {
+      const before = performance.now()
+      const result = feature === 'completion' ? service.getCompletionsAtPosition(file, offset, {})?.entries.map((item: any) => item.name).sort()
+        : service.getReferencesAtPosition(file, offset)?.map((item: any) => {
+          const source = service.getProgram().getSourceFile(item.fileName)
+          return { uri: pathToFileURL(item.fileName).href, range: { start: source.getLineAndCharacterOfPosition(item.textSpan.start), end: source.getLineAndCharacterOfPosition(item.textSpan.start + item.textSpan.length) } }
+        })
+      const durationMs = performance.now() - before
+      if (feature === 'completion' ? !result?.includes('main') : !result?.length) throw new Error(`Missing ${feature} result`)
+      samples.push({ kind: feature + (index === 0 ? '-first' : ''), durationMs, result })
+    }
   }
   metadata = { version: ts.version, rootFiles: config.fileNames, loadedFiles: service.getProgram().getSourceFiles().map((s: any) => s.fileName) }
   service.dispose()
@@ -114,6 +131,16 @@ if (mode === 'ts6') {
       }
       const diagnostics = await pull()
       samples.push({ kind, durationMs: performance.now() - before, diagnostics }); verify(diagnostics, kind === 'edit')
+    }
+    for (const feature of ['completion', 'references']) {
+      for (let index = 0; index < 5; index++) {
+        const before = performance.now()
+        const response = await request('textDocument/' + feature, { textDocument: { uri }, position, ...(feature === 'references' ? { context: { includeDeclaration: true } } : {}) })
+        const durationMs = performance.now() - before
+        const result = feature === 'completion' ? (Array.isArray(response) ? response : response?.items)?.map((item: any) => item.label).sort() : response
+        if (feature === 'completion' ? !result?.includes('main') : !result?.length) throw new Error(`Missing ${feature} result`)
+        samples.push({ kind: feature + (index === 0 ? '-first' : ''), durationMs, result })
+      }
     }
     const project = await request('custom/projectInfo', { textDocument: { uri } })
     if (project.configFilePath !== join(workspace, 'packages/about-view/tsconfig.json')) throw new Error(`Wrong project: ${JSON.stringify(project)}`)

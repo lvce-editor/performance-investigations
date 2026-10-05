@@ -39,7 +39,7 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
   const samples = []
   const invoke = async (kind, text, edited) => {
     const start = performance.now()
-    const trace = await Command.executeExtensionCommand('typescript.showPerformanceTrace', { text, uri })
+    const trace = await Command.executeExtensionCommand('typescript.benchmarkDiagnostics', { text, uri, languageId: 'typescript' })
     const roundTripMs = performance.now() - start
     if (trace.error || (kind === 'cold' ? trace.languageService.cache !== 'created' : trace.languageService.cache !== 'reused')) throw new Error(JSON.stringify(trace))
     if (trace.diagnostics.count !== (edited ? 1 : 0)) throw new Error(JSON.stringify(trace))
@@ -49,6 +49,18 @@ export const test = async ({ Command, FileSystem, Main, Settings }) => {
   for (let index = 0; index < 15; index++) {
     const kind = index < 5 ? 'unchanged' : (index - 5) % 2 ? 'restore' : 'edit'
     await invoke(kind, kind === 'edit' ? text + '\\nconst startupPerformanceError: string = 123; void startupPerformanceError\\n' : text, kind === 'edit')
+  }
+  const offset = text.lastIndexOf('Main.main') + 'Main.'.length
+  if (offset < 'Main.'.length) throw new Error('Missing completion/reference target')
+  for (const feature of ['completion', 'references']) {
+    for (let index = 0; index < 5; index++) {
+      const before = performance.now()
+      const response = await Command.executeExtensionCommand(feature === 'completion' ? 'typescript.benchmarkCompletion' : 'typescript.benchmarkReferences', { text, uri, languageId: 'typescript', version: 20 }, offset)
+      const durationMs = performance.now() - before
+      const result = feature === 'completion' ? response.map(item => item.label).sort() : response.map(item => ({ uri: item.uri, range: { start: { line: item.startRowIndex, character: item.startColumnIndex }, end: { line: item.endRowIndex, character: item.endColumnIndex } } }))
+      if (feature === 'completion' ? !result.includes('main') : !result.length) throw new Error('Missing ' + feature + ' result')
+      samples.push({ kind: feature + (index === 0 ? '-first' : ''), durationMs, result })
+    }
   }
   await FileSystem.writeFile(${JSON.stringify(pathToFileURL(coldOutput).href)}, JSON.stringify(samples))
 }

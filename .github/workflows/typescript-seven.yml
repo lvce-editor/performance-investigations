@@ -31,6 +31,8 @@ jobs:
         working-directory: benchmark-workspace
       - run: nice npm ci
         working-directory: experiments/typescript
+      - name: Add harness-only command entry points
+        run: node src/typescript-seven-prepare.ts experiments/typescript results/instrumentation
       - run: npm run build
         working-directory: experiments/typescript
       - run: npx --no-install playwright install --with-deps chromium
