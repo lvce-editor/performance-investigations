@@ -36,3 +36,14 @@ test('unknown mounts, encoded separators and unspecified query identities fail e
   assert.throws(() => map.toCompiler('html://site/a.ts?version=1'), /query/)
   assert.throws(() => map.toCompiler('html://site/a.ts#fragment'), /query/)
 })
+
+
+test('encoded percent spelling does not alias a different literal filename', () => {
+  const map = new CompilerPathMap()
+  const space = map.toCompiler('memfs:///workspace/name%20file.ts')
+  const percent = map.toCompiler('memfs:///workspace/name%2520file.ts')
+  assert.notEqual(space, percent)
+  assert.ok(space.endsWith('/name file.ts'))
+  assert.ok(percent.endsWith('/name%20file.ts'))
+  assert.equal(map.toUri(percent.replace('.ts', '.js')), 'memfs:///workspace/name%2520file.js')
+})

@@ -1,0 +1,1474 @@
+{
+  "schemaVersion": 1,
+  "compilerCommit": "c7434ae2cc7d89f5e178f84556a8656756591b7e",
+  "workspaceCommit": "db84fa6c54201e7ebb026be3d7aab3436785e9f5",
+  "nodeVersion": "v24.15.0",
+  "typescriptVersion": "6.0.3",
+  "repeats": 7,
+  "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+  "loadedFiles": 732,
+  "rootFiles": 145,
+  "allGraphsEqual": true,
+  "modes": {
+    "native": {
+      "durationMs": 979.4660590000001,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "uniqueRequests": 3555
+    },
+    "uri": {
+      "durationMs": 1034.7893600000002,
+      "conversions": 3565,
+      "conversionMs": 14.721311999999074,
+      "conversionCacheHits": 0,
+      "uniqueRequests": 3555
+    },
+    "uri-cached": {
+      "durationMs": 1058.780716,
+      "conversions": 2805,
+      "conversionMs": 12.3701930000002,
+      "conversionCacheHits": 760,
+      "uniqueRequests": 3555
+    },
+    "mapped": {
+      "durationMs": 1066.4242900000002,
+      "conversions": 2805,
+      "conversionMs": 35.922460000000854,
+      "conversionCacheHits": 760,
+      "uniqueRequests": 3555
+    }
+  },
+  "repetitions": [
+    {
+      "iteration": 0,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 975.787504,
+      "cpuMs": {
+        "user": 1837.574,
+        "system": 172.833
+      },
+      "measures": {
+        "Parse": 489.5024219999998,
+        "ResolveModule": 99.71022499999981,
+        "ResolveTypeReference": 2.4346190000002252,
+        "Program": 713.207803,
+        "Bind": 214.7100040000007,
+        "Check": 13.125076000000035,
+        "transformTime": 2.032139000000143
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.01540999999824
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.887895999999984
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.919408999998609
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 18.13419499999975
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.1051839999999515
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 0,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1012.519035,
+      "cpuMs": {
+        "user": 1938.251,
+        "system": 182.903
+      },
+      "measures": {
+        "Parse": 488.3306400000005,
+        "ResolveModule": 115.28162700000115,
+        "ResolveTypeReference": 1.9299940000000788,
+        "Program": 740.320185,
+        "Bind": 223.75976700000035,
+        "Check": 13.071677000000136,
+        "transformTime": 1.963711000000103
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.10099799999975
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.710720000000009
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 10.885902999998905
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.15154799999948
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.1892060000001266
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 14.017636999996995,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 0,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1063.9756439999999,
+      "cpuMs": {
+        "user": 1966.233,
+        "system": 183.858
+      },
+      "measures": {
+        "Parse": 485.21934000000067,
+        "ResolveModule": 116.78578199999981,
+        "ResolveTypeReference": 1.9080189999998538,
+        "Program": 740.317548,
+        "Bind": 269.4790690000027,
+        "Check": 13.106461999999965,
+        "transformTime": 2.1299300000000585
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 26.68762599999917
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.969231999999977
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.400337999998726
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.891718999998687
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 0.9839029999998274
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 11.979134000000272,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 0,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1066.4242900000002,
+      "cpuMs": {
+        "user": 2003.92,
+        "system": 162.814
+      },
+      "measures": {
+        "Parse": 505.4206390000005,
+        "ResolveModule": 145.57189399999947,
+        "ResolveTypeReference": 2.2234940000000734,
+        "Program": 791.5959009999999,
+        "Bind": 222.10872500000323,
+        "Check": 13.228499000000056,
+        "transformTime": 2.1093920000000708
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.040198999999916
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.709057000000001
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 14.903123999999366
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 40.85341200000039
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0949770000000854
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 39.502794999998315,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 1,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 979.9762410000001,
+      "cpuMs": {
+        "user": 1935.983,
+        "system": 165.113
+      },
+      "measures": {
+        "Parse": 501.7476339999999,
+        "ResolveModule": 95.43016699999913,
+        "ResolveTypeReference": 1.8665889999999763,
+        "Program": 708.3894720000001,
+        "Bind": 222.06921299999715,
+        "Check": 13.233089000000064,
+        "transformTime": 2.010488000000123
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 25.85883600000085
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.011169999999993
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 8.543334999999786
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 11.11792099999937
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0520690000003015
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 1,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1064.376034,
+      "cpuMs": {
+        "user": 1986.587,
+        "system": 164.461
+      },
+      "measures": {
+        "Parse": 506.07388499999956,
+        "ResolveModule": 144.48886299999907,
+        "ResolveTypeReference": 2.643587000000025,
+        "Program": 783.250408,
+        "Bind": 230.73236400000087,
+        "Check": 13.43472399999996,
+        "transformTime": 1.9891379999999117
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 28.484885000001952
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.7172219999999925
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 16.737684000000456
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 35.811473999999976
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0458490000000893
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 35.922460000000854,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 1,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1038.212623,
+      "cpuMs": {
+        "user": 1947.117,
+        "system": 183.837
+      },
+      "measures": {
+        "Parse": 498.28823799999964,
+        "ResolveModule": 120.47463300000027,
+        "ResolveTypeReference": 1.9861410000000888,
+        "Program": 751.9441,
+        "Bind": 222.82851200000403,
+        "Check": 19.963459000000057,
+        "transformTime": 2.967290000000048
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.24744399999861
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.7592400000000055
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 10.249432000000212
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.287027000001757
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0342169999996713
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 12.335124000001656,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 1,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1027.839886,
+      "cpuMs": {
+        "user": 1948.634,
+        "system": 179.879
+      },
+      "measures": {
+        "Parse": 495.53033300000163,
+        "ResolveModule": 118.2490330000009,
+        "ResolveTypeReference": 2.0638159999999743,
+        "Program": 748.597165,
+        "Bind": 228.94706199999916,
+        "Check": 13.242795999999998,
+        "transformTime": 1.9837669999999434
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 30.43839900000097
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.024619999999999
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 8.88406099999952
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.76997899999884
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.3319089999997118
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 14.01371199999656,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 2,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1058.780716,
+      "cpuMs": {
+        "user": 2006.335,
+        "system": 166.037
+      },
+      "measures": {
+        "Parse": 507.611486000002,
+        "ResolveModule": 133.89869799999957,
+        "ResolveTypeReference": 7.164341000000036,
+        "Program": 781.472014,
+        "Bind": 226.5117729999979,
+        "Check": 13.187343000000055,
+        "transformTime": 1.9486210000000028
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.417981000000253
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.570002999999986
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 12.541001000000279
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 32.16266999999846
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0654719999999998
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 15.233865000002112,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 2,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1085.523553,
+      "cpuMs": {
+        "user": 2083.817,
+        "system": 150.39
+      },
+      "measures": {
+        "Parse": 516.7092210000005,
+        "ResolveModule": 145.4052479999989,
+        "ResolveTypeReference": 2.5870510000002014,
+        "Program": 804.2838260000001,
+        "Bind": 228.88094400000114,
+        "Check": 13.368942999999945,
+        "transformTime": 2.0516430000000128
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.464402000001115
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.149472000000003
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 15.566796000000352
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 37.39379599999802
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 0.9926369999998315
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 36.66098700000015,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 2,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 995.8495839999999,
+      "cpuMs": {
+        "user": 1907.766,
+        "system": 172.082
+      },
+      "measures": {
+        "Parse": 514.6842759999997,
+        "ResolveModule": 89.12757999999991,
+        "ResolveTypeReference": 1.8317719999998872,
+        "Program": 719.871257,
+        "Bind": 227.92672600000344,
+        "Check": 13.120458999999983,
+        "transformTime": 2.090765999999803
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 25.89662199999998
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.749176000000006
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 5.440621000000647
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 10.991540000000157
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0276380000001382
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 2,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1055.7198170000001,
+      "cpuMs": {
+        "user": 1982.533,
+        "system": 171.698
+      },
+      "measures": {
+        "Parse": 514.285076999999,
+        "ResolveModule": 124.32031000000075,
+        "ResolveTypeReference": 2.7528879999999845,
+        "Program": 777.1893699999999,
+        "Bind": 228.1684120000034,
+        "Check": 13.412881999999854,
+        "transformTime": 2.0962059999999383
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.65157699999969
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.076325999999995
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.610270999999273
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.517409999998193
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.265262000000007
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 15.004798000001045,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 3,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1070.892208,
+      "cpuMs": {
+        "user": 1971.308,
+        "system": 198.372
+      },
+      "measures": {
+        "Parse": 522.0753599999993,
+        "ResolveModule": 128.9330009999989,
+        "ResolveTypeReference": 2.086099000000104,
+        "Program": 792.13343,
+        "Bind": 228.67224300000066,
+        "Check": 13.258644000000004,
+        "transformTime": 1.9754519999999047
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.388133000000522
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.56307000000001
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.682305999999812
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 24.46133400000039
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0439579999999182
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 16.00543999999897,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 3,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1042.360145,
+      "cpuMs": {
+        "user": 1981.413,
+        "system": 166.342
+      },
+      "measures": {
+        "Parse": 508.2814820000008,
+        "ResolveModule": 120.36276099999901,
+        "ResolveTypeReference": 2.6832339999999704,
+        "Program": 767.2126030000001,
+        "Bind": 225.31958100000338,
+        "Check": 13.35184799999979,
+        "transformTime": 1.9214609999999084
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.730241000000404
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.684429999999992
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.020025999999632
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.018996999998535
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.2863579999998933
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 13.953036000000708,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 3,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 998.887444,
+      "cpuMs": {
+        "user": 1941.665,
+        "system": 165.935
+      },
+      "measures": {
+        "Parse": 509.85200400000105,
+        "ResolveModule": 90.49229499999961,
+        "ResolveTypeReference": 1.9124749999999722,
+        "Program": 725.077652,
+        "Bind": 224.75575399999934,
+        "Check": 13.227946999999858,
+        "transformTime": 2.0777429999998276
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.043641000000008
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.633274999999998
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 8.854090000000497
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 11.071322000000123
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0675100000001407
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 3,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1071.5462309999998,
+      "cpuMs": {
+        "user": 1990.324,
+        "system": 187.41
+      },
+      "measures": {
+        "Parse": 508.7863090000008,
+        "ResolveModule": 146.12524699999972,
+        "ResolveTypeReference": 2.0995259999998552,
+        "Program": 790.9947379999999,
+        "Bind": 229.6207420000012,
+        "Check": 13.240569999999707,
+        "transformTime": 2.1252220000001216
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.21817499999952
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.541785000000004
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 16.746992999998753
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 35.40518499999999
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 0.9813479999998549
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 34.9231399999986,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 4,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 979.4660590000001,
+      "cpuMs": {
+        "user": 1933.31,
+        "system": 161.638
+      },
+      "measures": {
+        "Parse": 499.8348599999992,
+        "ResolveModule": 95.91943099999975,
+        "ResolveTypeReference": 2.5112510000000157,
+        "Program": 711.858988,
+        "Bind": 219.2050340000003,
+        "Check": 13.110489000000143,
+        "transformTime": 2.126773999999841
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 26.318533000000087
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.7567650000000015
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 5.6840729999995006
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 11.385048000000324
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0488709999996786
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 4,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1044.012313,
+      "cpuMs": {
+        "user": 1988.041,
+        "system": 165.29
+      },
+      "measures": {
+        "Parse": 508.1113689999997,
+        "ResolveModule": 120.7820149999992,
+        "ResolveTypeReference": 2.018742999999972,
+        "Program": 770.0166399999999,
+        "Bind": 223.95745199999715,
+        "Check": 13.386712999999872,
+        "transformTime": 2.1025489999999536
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.623058999997852
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.642141000000009
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 8.92954599999996
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.478367000001356
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.1985319999998865
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 15.371889000002255,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 4,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1095.138058,
+      "cpuMs": {
+        "user": 2017.545,
+        "system": 181.274
+      },
+      "measures": {
+        "Parse": 516.9603390000008,
+        "ResolveModule": 118.43316800000014,
+        "ResolveTypeReference": 2.0984310000002324,
+        "Program": 768.921129,
+        "Bind": 274.2577319999998,
+        "Check": 13.913303999999926,
+        "transformTime": 2.0525350000000344
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 30.3177150000011
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.1565800000000195
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.851941000001148
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.40869400000082
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0924739999997541
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 12.3701930000002,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 4,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1055.7323509999999,
+      "cpuMs": {
+        "user": 1999.382,
+        "system": 158.124
+      },
+      "measures": {
+        "Parse": 505.705053000002,
+        "ResolveModule": 131.1868660000003,
+        "ResolveTypeReference": 2.1024089999998523,
+        "Program": 776.3939680000001,
+        "Bind": 227.2854079999945,
+        "Check": 13.32459700000004,
+        "transformTime": 2.0764200000000983
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 28.240245999999047
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.054538999999977
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 15.46940300000091
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 35.06237500000066
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0510600000001205
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 34.73626200000092,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 5,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 975.683415,
+      "cpuMs": {
+        "user": 1859.268,
+        "system": 171.059
+      },
+      "measures": {
+        "Parse": 494.35876899999926,
+        "ResolveModule": 91.82106399999893,
+        "ResolveTypeReference": 1.8067299999997886,
+        "Program": 705.368367,
+        "Bind": 222.5563819999993,
+        "Check": 13.350104000000101,
+        "transformTime": 2.0970189999998183
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 31.584317000000453
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.654903999999988
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 5.242567000001799
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 11.018070999998145
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0527920000004087
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 5,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1066.593178,
+      "cpuMs": {
+        "user": 1984.057,
+        "system": 179.611
+      },
+      "measures": {
+        "Parse": 518.4867000000004,
+        "ResolveModule": 137.3584430000024,
+        "ResolveTypeReference": 2.744909000000007,
+        "Program": 789.130627,
+        "Bind": 224.5855120000001,
+        "Check": 13.210252999999739,
+        "transformTime": 2.1111550000000534
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 28.15961600000091
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 7.09401299999999
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 17.49321599999996
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 34.66252500000013
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0489360000001398
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 33.985446999996725,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 5,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1045.0924799999998,
+      "cpuMs": {
+        "user": 1959.225,
+        "system": 183.946
+      },
+      "measures": {
+        "Parse": 515.555791,
+        "ResolveModule": 117.98730399999897,
+        "ResolveTypeReference": 2.048197000000073,
+        "Program": 764.5276240000001,
+        "Bind": 228.9780459999954,
+        "Check": 13.281966999999895,
+        "transformTime": 2.054209000000128
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.235262999999918
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.5571030000000405
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.245064999998476
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.613461000000427
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 0.9839250000003972
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 11.927929000002223,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 5,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1034.7893600000002,
+      "cpuMs": {
+        "user": 1975.217,
+        "system": 173.693
+      },
+      "measures": {
+        "Parse": 499.26943800000095,
+        "ResolveModule": 122.07568200000014,
+        "ResolveTypeReference": 1.9927839999998014,
+        "Program": 754.0139530000001,
+        "Bind": 230.57624800000258,
+        "Check": 13.38187199999993,
+        "transformTime": 2.1638839999998254
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.282586000000464
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.701051000000007
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 9.174128000000564
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.867085999996846
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.2463419999997996
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 14.837390000001136,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 6,
+      "schemaVersion": 1,
+      "mode": "uri-cached",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1044.214981,
+      "cpuMs": {
+        "user": 1995.707,
+        "system": 163.502
+      },
+      "measures": {
+        "Parse": 508.0198950000005,
+        "ResolveModule": 126.14587399999908,
+        "ResolveTypeReference": 2.358265999999844,
+        "Program": 765.4564310000001,
+        "Bind": 229.71906300000046,
+        "Check": 13.199619000000212,
+        "transformTime": 2.0797079999999823
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 27.248707000000536
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.527739999999994
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 14.948532000000682
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 20.259497999998132
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0484089999998218
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 17.626845999999375,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 6,
+      "schemaVersion": 1,
+      "mode": "mapped",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1048.3664939999999,
+      "cpuMs": {
+        "user": 1934.645,
+        "system": 210.687
+      },
+      "measures": {
+        "Parse": 498.3841739999984,
+        "ResolveModule": 140.70929699999897,
+        "ResolveTypeReference": 1.9707150000001548,
+        "Program": 773.571535,
+        "Bind": 224.03114599999867,
+        "Check": 13.191972999999962,
+        "transformTime": 2.1500780000001214
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 28.3658659999993
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.630391000000003
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 17.271674999999732
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 38.80789400000049
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0558620000005021
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 2805,
+      "conversionMs": 38.54800999999941,
+      "conversionCacheHits": 760,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 6,
+      "schemaVersion": 1,
+      "mode": "native",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 960.8390549999999,
+      "cpuMs": {
+        "user": 1840.753,
+        "system": 147.404
+      },
+      "measures": {
+        "Parse": 484.70919400000025,
+        "ResolveModule": 94.10464799999923,
+        "ResolveTypeReference": 1.8398429999999735,
+        "Program": 694.475566,
+        "Bind": 217.26034600000128,
+        "Check": 13.39494300000024,
+        "transformTime": 2.1729709999999614
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 25.89642800000064
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.995783000000017
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 5.4512500000001864
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 14.361094999999267
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.0151720000001774
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 0,
+      "conversionMs": 0,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    },
+    {
+      "iteration": 6,
+      "schemaVersion": 1,
+      "mode": "uri",
+      "typescriptVersion": "6.0.3",
+      "nodeVersion": "v24.15.0",
+      "durationMs": 1030.800418,
+      "cpuMs": {
+        "user": 1941.196,
+        "system": 173.676
+      },
+      "measures": {
+        "Parse": 508.64420199999944,
+        "ResolveModule": 116.72192000000172,
+        "ResolveTypeReference": 2.656404000000066,
+        "Program": 754.592124,
+        "Bind": 226.0410199999984,
+        "Check": 13.226296999999931,
+        "transformTime": 1.9913719999999557
+      },
+      "methods": {
+        "readFile": {
+          "calls": 774,
+          "ms": 29.057845999999557
+        },
+        "readDirectory": {
+          "calls": 1,
+          "ms": 6.621894999999995
+        },
+        "directoryExists": {
+          "calls": 679,
+          "ms": 8.64837500000067
+        },
+        "fileExists": {
+          "calls": 2066,
+          "ms": 19.58621000000244
+        },
+        "realpath": {
+          "calls": 45,
+          "ms": 1.1840259999999603
+        }
+      },
+      "uniqueRequests": 3555,
+      "conversions": 3565,
+      "conversionMs": 14.721311999999074,
+      "conversionCacheHits": 0,
+      "diagnostics": [],
+      "rootCount": 145,
+      "graphHash": "32c2a13a4f40a7a4bba3ef4912c3fe4f89fb7cd05ed6f34a9f0cbccc2de97863",
+      "note": "Standard TypeScript language service and resolver, direct Node filesystem, one opened-file diagnostic. Fresh process. Timer includes config/program creation, excludes loading compiler/harness and final graph hashing. Conversion time is instrumented wall time, not exclusive CPU. No IPC or production LVCE adapter."
+    }
+  ],
+  "note": "Fresh Node processes in rotated order, no profiler or IPC. Same standard TypeScript host and resolver; all successful source graphs and empty diagnostics must match. URI host forwards encoded URI strings; mapped host uses mount-specific UNC compiler roots and caches conversions. Includes config and program creation, excludes compiler/harness imports.",
+  "workflowRun": "https://github.com/lvce-editor/performance-investigations/actions/runs/37317911482"
+}

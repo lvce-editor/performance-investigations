@@ -13,6 +13,9 @@ export const probeUris = (ts: any) => {
     const map = new CompilerPathMap()
     const encode = (uri: string) => representation === 'mapped' ? map.toCompiler(uri) : uri
     const compilerRoot = encode(root)
+    let ancestor = compilerRoot
+    while (ts.getDirectoryPath(ancestor) !== ancestor) ancestor = ts.getDirectoryPath(ancestor)
+    assert.equal(ancestor, representation === 'mapped' ? compilerRoot.slice(0, compilerRoot.indexOf('/', 2) + 1) : root.slice(0, ts.getRootLength(root)))
     const files = new Map<string, string>([
       [`${root}/package.json`, JSON.stringify({ type: 'module' })],
       [`${root}/src/plain.ts`, 'export const value = 1'],

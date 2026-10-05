@@ -1,0 +1,725 @@
+{
+  "typescriptVersion": "6.0.3",
+  "rows": [
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./plain.js",
+      "resolved": "file:///workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "file:///workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "file:///workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "file:///workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "pkg",
+      "resolved": "file:///workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "exported",
+      "resolved": "file:///workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///workspace",
+      "specifier": "file:///workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./plain.js",
+      "resolved": "file:///workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./space name.js",
+      "resolved": "file:///workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "file:///workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "file:///workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "pkg",
+      "resolved": "file:///workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "exported",
+      "resolved": "file:///workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///workspace",
+      "specifier": "file:///workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./plain.js",
+      "resolved": "file:///C:/workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "file:///C:/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "file:///C:/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "file:///C:/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "pkg",
+      "resolved": "file:///C:/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "exported",
+      "resolved": "file:///C:/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file:///C:/workspace",
+      "specifier": "file:///C:/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./plain.js",
+      "resolved": "file:///C:/workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./space name.js",
+      "resolved": "file:///C:/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "file:///C:/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "file:///C:/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "pkg",
+      "resolved": "file:///C:/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "exported",
+      "resolved": "file:///C:/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file:///C:/workspace",
+      "specifier": "file:///C:/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./plain.js",
+      "resolved": "file://server/share/workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "file://server/share/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "file://server/share/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "file://server/share/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "pkg",
+      "resolved": "file://server/share/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "exported",
+      "resolved": "file://server/share/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "file://server/share/workspace",
+      "specifier": "file://server/share/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./plain.js",
+      "resolved": "file://server/share/workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./space name.js",
+      "resolved": "file://server/share/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "file://server/share/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "file://server/share/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "pkg",
+      "resolved": "file://server/share/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "exported",
+      "resolved": "file://server/share/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "file://server/share/workspace",
+      "specifier": "file://server/share/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./plain.js",
+      "resolved": "html://site/workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "html://site/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "html://site/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "html://site/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "pkg",
+      "resolved": "html://site/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "exported",
+      "resolved": "html://site/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "html://site/workspace",
+      "specifier": "html://site/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./plain.js",
+      "resolved": "html://site/workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./space name.js",
+      "resolved": "html://site/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "html://site/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "html://site/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "pkg",
+      "resolved": "html://site/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "exported",
+      "resolved": "html://site/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "html://site/workspace",
+      "specifier": "html://site/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./plain.js",
+      "resolved": "memfs:///workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "memfs:///workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "memfs:///workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "memfs:///workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "pkg",
+      "resolved": "memfs:///workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "exported",
+      "resolved": "memfs:///workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs:///workspace",
+      "specifier": "memfs:///workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./plain.js",
+      "resolved": "memfs:///workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./space name.js",
+      "resolved": "memfs:///workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "memfs:///workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "memfs:///workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "pkg",
+      "resolved": "memfs:///workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "exported",
+      "resolved": "memfs:///workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs:///workspace",
+      "specifier": "memfs:///workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./plain.js",
+      "resolved": "memfs://other/workspace/src/plain.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./space name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": "memfs://other/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": "memfs://other/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": null
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": "memfs://other/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "pkg",
+      "resolved": "memfs://other/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "exported",
+      "resolved": "memfs://other/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "uri",
+      "root": "memfs://other/workspace",
+      "specifier": "memfs://other/workspace/src/plain.ts",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./plain.js",
+      "resolved": "memfs://other/workspace/src/plain.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./space name.js",
+      "resolved": "memfs://other/workspace/src/space%20name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./space%20name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./hash#name.js",
+      "resolved": "memfs://other/workspace/src/hash%23name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./hash%23name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./percent%name.js",
+      "resolved": "memfs://other/workspace/src/percent%25name.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "./percent%25name.js",
+      "resolved": null
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "pkg",
+      "resolved": "memfs://other/workspace/node_modules/pkg/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "exported",
+      "resolved": "memfs://other/workspace/node_modules/exported/index.d.ts"
+    },
+    {
+      "representation": "mapped",
+      "root": "memfs://other/workspace",
+      "specifier": "memfs://other/workspace/src/plain.ts",
+      "resolved": null
+    }
+  ]
+}
