@@ -1,0 +1,1549 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "runId": 37320826177,
+      "url": "https://github.com/lvce-editor/typescript-benchmark/actions/runs/37320826177",
+      "node": "v26.10.0",
+      "editor": {
+        "tag": "v0.120.7",
+        "asset": "lvce-v0.120.7_amd64.deb",
+        "sha256": "961e4c2d0592857310d9aab1782a1dc1807443567f719dba4c07029125330ca1",
+        "dataDirectoryName": "lvce"
+      },
+      "fixture": {
+        "repository": "https://github.com/lvce-editor/about-view.git",
+        "commit": "15fe112cf4b82ab72eaa6d29589aede9e53d96d4",
+        "file": "packages/about-view/src/aboutWorkerMain.ts"
+      },
+      "variants": {
+        "baseline": {
+          "commit": "76761b0847cc4ff4dddf8b841a9ab0ba7a2f5f55",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "0b62fd04e64427c7cf14e02203d51916e9ad5a72479548f06738e35ba365c2ed",
+          "typescript": "6.0.3"
+        },
+        "candidate": {
+          "commit": "3c25fe64efb9ae542fa9f0f7127f5bed5fc4caf1",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "e27a1d0aca304830295a91e7d448cd79ec16c88ed7602ba73c3226131ca83649",
+          "typescript": "6.0.3"
+        }
+      },
+      "graphHash": "2049307208a790dadc31a558e6bc58437ee3a9c71424d60f6317ba798760100e",
+      "allGraphsEqual": true,
+      "loadedFiles": 731,
+      "summary": {
+        "baseline": {
+          "readyMs": 21389.62099,
+          "coldMs": 19542.290000000037,
+          "coldRpcCalls": 5441,
+          "coldRpcMs": 18164.77500000107,
+          "warmWallMs": 657.6134954999998,
+          "warmMs": 620.5599999999686,
+          "heapUsedBytes": 57943132
+        },
+        "candidate": {
+          "readyMs": 17606.074881,
+          "coldMs": 15773.080000000016,
+          "coldRpcCalls": 4246,
+          "coldRpcMs": 14451.144999999611,
+          "warmWallMs": 606.8648675000004,
+          "warmMs": 562.0125000000116,
+          "heapUsedBytes": 74450580
+        }
+      },
+      "pairedColdChangePercent": -19.34670894216125,
+      "pairedWarmChangePercent": -7.942239804355,
+      "pairs": [
+        {
+          "iteration": 0,
+          "coldChangePercent": -19.526286791221604,
+          "warmChangePercent": -25.302820890733468
+        },
+        {
+          "iteration": 1,
+          "coldChangePercent": -19.34670894216125,
+          "warmChangePercent": -7.942239804355
+        },
+        {
+          "iteration": 2,
+          "coldChangePercent": -19.287453005763467,
+          "warmChangePercent": -8.606612914530265
+        },
+        {
+          "iteration": 3,
+          "coldChangePercent": -37.27777834572025,
+          "warmChangePercent": -2.044312977406215
+        },
+        {
+          "iteration": 4,
+          "coldChangePercent": -8.335529844280565,
+          "warmChangePercent": -4.16574480108104
+        }
+      ],
+      "repetitions": [
+        {
+          "variant": "baseline",
+          "iteration": 0,
+          "readyMs": 23334.037103000002,
+          "coldMs": 21144.650000000023,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2035.3349999990896
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 17978.164999999775
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 40.60000000000582
+            }
+          },
+          "warmWallMs": 644.5882069999989,
+          "heapUsedBytes": 57921748
+        },
+        {
+          "variant": "candidate",
+          "iteration": 0,
+          "readyMs": 18829.512656,
+          "coldMs": 17015.88499999998,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1471.249999999156
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 13952.694999998785
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 299.13500000024214
+            }
+          },
+          "warmWallMs": 481.4892074999989,
+          "heapUsedBytes": 65182336
+        },
+        {
+          "variant": "candidate",
+          "iteration": 1,
+          "readyMs": 16625.945433,
+          "coldMs": 14793.099999999977,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1856.4550000028685
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 11220.554999999295
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 330.9149999990477
+            }
+          },
+          "warmWallMs": 605.3496350000005,
+          "heapUsedBytes": 89786740
+        },
+        {
+          "variant": "baseline",
+          "iteration": 1,
+          "readyMs": 20280.531924,
+          "coldMs": 18341.594999999972,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2436.7149999985704
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 14314.934999999474
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 53.27499999990687
+            }
+          },
+          "warmWallMs": 657.5758889999997,
+          "heapUsedBytes": 57943132
+        },
+        {
+          "variant": "baseline",
+          "iteration": 2,
+          "readyMs": 21389.62099,
+          "coldMs": 19542.290000000037,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2044.545000001497
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 16077.92999999976
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 42.299999999813735
+            }
+          },
+          "warmWallMs": 664.0139804999999,
+          "heapUsedBytes": 57898408
+        },
+        {
+          "variant": "candidate",
+          "iteration": 2,
+          "readyMs": 17606.074881,
+          "coldMs": 15773.080000000016,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1693.3449999995646
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 12461.314999999653
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 296.4850000003935
+            }
+          },
+          "warmWallMs": 606.8648675000004,
+          "heapUsedBytes": 74450580
+        },
+        {
+          "variant": "candidate",
+          "iteration": 3,
+          "readyMs": 15379.181337,
+          "coldMs": 13497.93499999994,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1866.9150000019
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 9938.335000001127
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 325.7750000007218
+            }
+          },
+          "warmWallMs": 654.8080724999982,
+          "heapUsedBytes": 89656204
+        },
+        {
+          "variant": "baseline",
+          "iteration": 3,
+          "readyMs": 23394.255143,
+          "coldMs": 21520.179999999935,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 1984.8849999980303
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 18294.100000000675
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 39.80999999970663
+            }
+          },
+          "warmWallMs": 668.4737685,
+          "heapUsedBytes": 83680552
+        },
+        {
+          "variant": "baseline",
+          "iteration": 4,
+          "readyMs": 19356.281565,
+          "coldMs": 17451.919999999925,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2554.9049999987474
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 13402.335000002058
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 40.064999999827705
+            }
+          },
+          "warmWallMs": 657.6134954999998,
+          "heapUsedBytes": 75023252
+        },
+        {
+          "variant": "candidate",
+          "iteration": 4,
+          "readyMs": 18066.591424000002,
+          "coldMs": 15997.209999999963,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1869.885000000475
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 12440.915000000852
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 383.7099999987986
+            }
+          },
+          "warmWallMs": 630.2189955000013,
+          "heapUsedBytes": 69686640
+        }
+      ]
+    },
+    {
+      "runId": 37321149426,
+      "url": "https://github.com/lvce-editor/typescript-benchmark/actions/runs/37321149426",
+      "node": "v26.10.0",
+      "editor": {
+        "tag": "v0.120.7",
+        "asset": "lvce-v0.120.7_amd64.deb",
+        "sha256": "961e4c2d0592857310d9aab1782a1dc1807443567f719dba4c07029125330ca1",
+        "dataDirectoryName": "lvce"
+      },
+      "fixture": {
+        "repository": "https://github.com/lvce-editor/about-view.git",
+        "commit": "15fe112cf4b82ab72eaa6d29589aede9e53d96d4",
+        "file": "packages/about-view/src/aboutWorkerMain.ts"
+      },
+      "variants": {
+        "baseline": {
+          "commit": "76761b0847cc4ff4dddf8b841a9ab0ba7a2f5f55",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "0b62fd04e64427c7cf14e02203d51916e9ad5a72479548f06738e35ba365c2ed",
+          "typescript": "6.0.3"
+        },
+        "candidate": {
+          "commit": "9244ef298388804b378eafd23586427c68fedd84",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "7d2919343df247e373f5bb61bdf9b54c5c7824f30b2ae2e285f47ed2fec21383",
+          "typescript": "6.0.3"
+        }
+      },
+      "graphHash": "2049307208a790dadc31a558e6bc58437ee3a9c71424d60f6317ba798760100e",
+      "allGraphsEqual": true,
+      "loadedFiles": 731,
+      "summary": {
+        "baseline": {
+          "readyMs": 11429.760803000001,
+          "coldMs": 9654.099999999977,
+          "coldRpcCalls": 5441,
+          "coldRpcMs": 8212.059999999008,
+          "warmWallMs": 653.9676835,
+          "warmMs": 609.922499999986,
+          "heapUsedBytes": 67932044
+        },
+        "candidate": {
+          "readyMs": 11351.942052,
+          "coldMs": 9642.98999999999,
+          "coldRpcCalls": 4246,
+          "coldRpcMs": 8090.314999999886,
+          "warmWallMs": 467.27759799999967,
+          "warmMs": 429.2600000000093,
+          "heapUsedBytes": 89668812
+        }
+      },
+      "pairedColdChangePercent": -3.6673759714186738,
+      "pairedWarmChangePercent": -28.495394704747035,
+      "pairs": [
+        {
+          "iteration": 0,
+          "coldChangePercent": -14.954615368333602,
+          "warmChangePercent": -29.417268487935655
+        },
+        {
+          "iteration": 1,
+          "coldChangePercent": -1.524307971992267,
+          "warmChangePercent": -25.67787517460993
+        },
+        {
+          "iteration": 2,
+          "coldChangePercent": 3.029386478283458,
+          "warmChangePercent": -33.04673494619256
+        },
+        {
+          "iteration": 3,
+          "coldChangePercent": -6.782041352665413,
+          "warmChangePercent": -28.495394704747035
+        },
+        {
+          "iteration": 4,
+          "coldChangePercent": -3.6673759714186738,
+          "warmChangePercent": -24.867360214107215
+        }
+      ],
+      "repetitions": [
+        {
+          "variant": "baseline",
+          "iteration": 0,
+          "readyMs": 15227.850398999999,
+          "coldMs": 11338.640000000014,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2254.479999998759
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7606.369999999239
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 31.054999999934807
+            }
+          },
+          "warmWallMs": 714.5701259999996,
+          "heapUsedBytes": 67966344
+        },
+        {
+          "variant": "candidate",
+          "iteration": 0,
+          "readyMs": 11351.942052,
+          "coldMs": 9642.98999999999,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1446.6599999988684
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6279.940000000526
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 363.7150000004913
+            }
+          },
+          "warmWallMs": 504.3631134999996,
+          "heapUsedBytes": 89693856
+        },
+        {
+          "variant": "candidate",
+          "iteration": 1,
+          "readyMs": 11458.69703,
+          "coldMs": 9707.005000000005,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1344.0250000000815
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6544.4199999999255
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 318.335000000312
+            }
+          },
+          "warmWallMs": 497.834914,
+          "heapUsedBytes": 70826524
+        },
+        {
+          "variant": "baseline",
+          "iteration": 1,
+          "readyMs": 11581.034332,
+          "coldMs": 9857.26000000001,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 1981.7400000005146
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6212.895000000717
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 32.60999999998603
+            }
+          },
+          "warmWallMs": 669.8340704999982,
+          "heapUsedBytes": 67927572
+        },
+        {
+          "variant": "baseline",
+          "iteration": 2,
+          "readyMs": 11429.760803000001,
+          "coldMs": 9654.099999999977,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2201.934999997611
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 5931.384999998496
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 28.094999999622814
+            }
+          },
+          "warmWallMs": 653.9676835,
+          "heapUsedBytes": 67932044
+        },
+        {
+          "variant": "candidate",
+          "iteration": 2,
+          "readyMs": 11643.290067,
+          "coldMs": 9946.55999999994,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1531.740000001504
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6535.2299999997485
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 414.90000000048894
+            }
+          },
+          "warmWallMs": 437.8527164999996,
+          "heapUsedBytes": 70842416
+        },
+        {
+          "variant": "candidate",
+          "iteration": 3,
+          "readyMs": 10325.169767000001,
+          "coldMs": 8768.234999999986,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1435.3400000033434
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 5659.885000001057
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 300.7599999991944
+            }
+          },
+          "warmWallMs": 408.35629999999946,
+          "heapUsedBytes": 89686968
+        },
+        {
+          "variant": "baseline",
+          "iteration": 3,
+          "readyMs": 11053.266313999999,
+          "coldMs": 9406.16499999992,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2085.7149999991525
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6096.864999999874
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 29.479999999981374
+            }
+          },
+          "warmWallMs": 571.0909085000003,
+          "heapUsedBytes": 67925860
+        },
+        {
+          "variant": "baseline",
+          "iteration": 4,
+          "readyMs": 10405.68686,
+          "coldMs": 8813.795000000042,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 1884.8949999985052
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 5637.754999998724
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 30.08499999984633
+            }
+          },
+          "warmWallMs": 621.9368830000003,
+          "heapUsedBytes": 68097688
+        },
+        {
+          "variant": "candidate",
+          "iteration": 4,
+          "readyMs": 10058.912897,
+          "coldMs": 8490.55999999994,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 1590.5349999991013
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 5285.459999998915
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 332.16499999910593
+            }
+          },
+          "warmWallMs": 467.27759799999967,
+          "heapUsedBytes": 89668812
+        }
+      ]
+    },
+    {
+      "runId": 37321858865,
+      "url": "https://github.com/lvce-editor/typescript-benchmark/actions/runs/37321858865",
+      "node": "v26.10.0",
+      "editor": {
+        "tag": "v0.120.7",
+        "asset": "lvce-v0.120.7_amd64.deb",
+        "sha256": "961e4c2d0592857310d9aab1782a1dc1807443567f719dba4c07029125330ca1",
+        "dataDirectoryName": "lvce"
+      },
+      "fixture": {
+        "repository": "https://github.com/lvce-editor/about-view.git",
+        "commit": "15fe112cf4b82ab72eaa6d29589aede9e53d96d4",
+        "file": "packages/about-view/src/aboutWorkerMain.ts"
+      },
+      "variants": {
+        "baseline": {
+          "commit": "76761b0847cc4ff4dddf8b841a9ab0ba7a2f5f55",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "0b62fd04e64427c7cf14e02203d51916e9ad5a72479548f06738e35ba365c2ed",
+          "typescript": "6.0.3"
+        },
+        "candidate": {
+          "commit": "fe078f498a4b6a483e47ee645fbb911ded457499",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "9dc9ee9e2304e9ebf568a6088a98a4c4ea92ef35ace94f719fc79119f146b8da",
+          "typescript": "6.0.3"
+        }
+      },
+      "graphHash": "2049307208a790dadc31a558e6bc58437ee3a9c71424d60f6317ba798760100e",
+      "allGraphsEqual": true,
+      "loadedFiles": 731,
+      "summary": {
+        "baseline": {
+          "readyMs": 15060.240879,
+          "coldMs": 12724.535000000033,
+          "coldRpcCalls": 5441,
+          "coldRpcMs": 10762.734999998123,
+          "warmWallMs": 1428.708303999998,
+          "warmMs": 1359.9949999999953,
+          "heapUsedBytes": 83574964
+        },
+        "candidate": {
+          "readyMs": 13867.156533000001,
+          "coldMs": 11532.919999999984,
+          "coldRpcCalls": 4246,
+          "coldRpcMs": 9563.774999998626,
+          "warmWallMs": 1047.3382624999995,
+          "warmMs": 992.929999999993,
+          "heapUsedBytes": 65182720
+        }
+      },
+      "pairedColdChangePercent": -9.364703700371335,
+      "pairedWarmChangePercent": -27.65484741663533,
+      "pairs": [
+        {
+          "iteration": 0,
+          "coldChangePercent": -28.46988603856444,
+          "warmChangePercent": -20.326102918083887
+        },
+        {
+          "iteration": 1,
+          "coldChangePercent": -9.364703700371335,
+          "warmChangePercent": -31.097052298442996
+        },
+        {
+          "iteration": 2,
+          "coldChangePercent": -10.683377893227474,
+          "warmChangePercent": -27.45577927285614
+        },
+        {
+          "iteration": 3,
+          "coldChangePercent": -8.589641223148236,
+          "warmChangePercent": -27.65484741663533
+        },
+        {
+          "iteration": 4,
+          "coldChangePercent": -4.156151407294217,
+          "warmChangePercent": -27.837012365484092
+        }
+      ],
+      "repetitions": [
+        {
+          "variant": "baseline",
+          "iteration": 0,
+          "readyMs": 19750.682566,
+          "coldMs": 16167.75,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3381.39500000063
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 10442.130000000267
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 61.05999999996857
+            }
+          },
+          "warmWallMs": 1354.4903940000004,
+          "heapUsedBytes": 62980420
+        },
+        {
+          "variant": "candidate",
+          "iteration": 0,
+          "readyMs": 13894.602247,
+          "coldMs": 11564.809999999998,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2119.8999999995576
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7062.004999999859
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 433.75000000037835
+            }
+          },
+          "warmWallMs": 1079.1752825000003,
+          "heapUsedBytes": 65182720
+        },
+        {
+          "variant": "candidate",
+          "iteration": 1,
+          "readyMs": 13867.156533000001,
+          "coldMs": 11532.919999999984,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2309.00999999902
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6800.800000000221
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 449.1249999990687
+            }
+          },
+          "warmWallMs": 978.7069030000002,
+          "heapUsedBytes": 89723624
+        },
+        {
+          "variant": "baseline",
+          "iteration": 1,
+          "readyMs": 15060.240879,
+          "coldMs": 12724.535000000033,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3145.8899999996647
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7560.254999998491
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 56.589999999967404
+            }
+          },
+          "warmWallMs": 1420.4136915,
+          "heapUsedBytes": 83682608
+        },
+        {
+          "variant": "baseline",
+          "iteration": 2,
+          "readyMs": 14846.827565,
+          "coldMs": 12503.770000000019,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3322.910000000964
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7064.965000000026
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 66.34000000020023
+            }
+          },
+          "warmWallMs": 1443.7239135,
+          "heapUsedBytes": 57916160
+        },
+        {
+          "variant": "candidate",
+          "iteration": 2,
+          "readyMs": 13491.552462,
+          "coldMs": 11167.945000000007,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2190.375
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6520.020000001357
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 414.29999999993015
+            }
+          },
+          "warmWallMs": 1047.3382624999995,
+          "heapUsedBytes": 65180648
+        },
+        {
+          "variant": "candidate",
+          "iteration": 3,
+          "readyMs": 13777.597746,
+          "coldMs": 11385.375,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2343.15499999898
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6743.1549999996205
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 477.4650000000256
+            }
+          },
+          "warmWallMs": 1033.6012025,
+          "heapUsedBytes": 61380224
+        },
+        {
+          "variant": "baseline",
+          "iteration": 3,
+          "readyMs": 14873.566046999998,
+          "coldMs": 12455.234999999986,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 2986.7149999981048
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7389.790000001667
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 57.785000000032596
+            }
+          },
+          "warmWallMs": 1428.708303999998,
+          "heapUsedBytes": 83739440
+        },
+        {
+          "variant": "baseline",
+          "iteration": 4,
+          "readyMs": 15243.260178,
+          "coldMs": 12862.259999999893,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3257.1700000043493
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7485.875000000815
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 62.780000000144355
+            }
+          },
+          "warmWallMs": 1462.780503,
+          "heapUsedBytes": 83574964
+        },
+        {
+          "variant": "candidate",
+          "iteration": 4,
+          "readyMs": 14655.404953,
+          "coldMs": 12327.685000000056,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2433.0550000059884
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7423.555000000866
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 520.0449999999255
+            }
+          },
+          "warmWallMs": 1055.5861134999996,
+          "heapUsedBytes": 69089820
+        }
+      ]
+    },
+    {
+      "runId": 37322753981,
+      "url": "https://github.com/lvce-editor/typescript-benchmark/actions/runs/37322753981",
+      "node": "v26.10.0",
+      "editor": {
+        "tag": "v0.120.7",
+        "asset": "lvce-v0.120.7_amd64.deb",
+        "sha256": "961e4c2d0592857310d9aab1782a1dc1807443567f719dba4c07029125330ca1",
+        "dataDirectoryName": "lvce"
+      },
+      "fixture": {
+        "repository": "https://github.com/lvce-editor/about-view.git",
+        "commit": "15fe112cf4b82ab72eaa6d29589aede9e53d96d4",
+        "file": "packages/about-view/src/aboutWorkerMain.ts"
+      },
+      "variants": {
+        "baseline": {
+          "commit": "76761b0847cc4ff4dddf8b841a9ab0ba7a2f5f55",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "0b62fd04e64427c7cf14e02203d51916e9ad5a72479548f06738e35ba365c2ed",
+          "typescript": "6.0.3"
+        },
+        "candidate": {
+          "commit": "6c72b49c38f7a02ac989e86af3a1d0c10930ec6a",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "5346eecbe48b3e0dabc71cd31a23e9355c141ed9355fbbee268629350e8d7f23",
+          "typescript": "6.0.3"
+        }
+      },
+      "graphHash": "2049307208a790dadc31a558e6bc58437ee3a9c71424d60f6317ba798760100e",
+      "allGraphsEqual": true,
+      "loadedFiles": 731,
+      "summary": {
+        "baseline": {
+          "readyMs": 15294.89652,
+          "coldMs": 12899.030000000028,
+          "coldRpcCalls": 5441,
+          "coldRpcMs": 10782.000000000698,
+          "warmWallMs": 1386.2046929999997,
+          "warmMs": 1327.9075000000012,
+          "retainedHeapUsedBytes": 57691128,
+          "heapUsedBytes": 83673668
+        },
+        "candidate": {
+          "readyMs": 14285.351963,
+          "coldMs": 11923.264999999898,
+          "coldRpcCalls": 4246,
+          "coldRpcMs": 10027.690000004775,
+          "warmWallMs": 1001.2331179999983,
+          "warmMs": 950.8849999999948,
+          "retainedHeapUsedBytes": 57725508,
+          "heapUsedBytes": 65231948
+        }
+      },
+      "pairedColdChangePercent": -7.139353660195658,
+      "pairedWarmChangePercent": -27.77162542761652,
+      "pairs": [
+        {
+          "iteration": 0,
+          "coldChangePercent": -26.72079574637589,
+          "warmChangePercent": -27.77162542761652
+        },
+        {
+          "iteration": 1,
+          "coldChangePercent": -7.139353660195658,
+          "warmChangePercent": -30.09001688547327
+        },
+        {
+          "iteration": 2,
+          "coldChangePercent": -4.404711051916587,
+          "warmChangePercent": -29.36761556422589
+        },
+        {
+          "iteration": 3,
+          "coldChangePercent": -13.827192973580315,
+          "warmChangePercent": -22.87515678461659
+        },
+        {
+          "iteration": 4,
+          "coldChangePercent": -5.399893366001285,
+          "warmChangePercent": -27.60789063613256
+        }
+      ],
+      "repetitions": [
+        {
+          "variant": "baseline",
+          "iteration": 0,
+          "readyMs": 20755.3349,
+          "coldMs": 15540.630000000005,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3881.8500000001222
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 9381.024999999994
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 59.67500000001746
+            }
+          },
+          "warmWallMs": 1386.2046929999997,
+          "heapUsedBytes": 57920756,
+          "retainedHeapUsedBytes": 57688268
+        },
+        {
+          "variant": "candidate",
+          "iteration": 0,
+          "readyMs": 13713.261304,
+          "coldMs": 11388.049999999988,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2086.1950000001816
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6914.514999999723
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 465.66500000015367
+            }
+          },
+          "warmWallMs": 1001.2331179999983,
+          "heapUsedBytes": 73779624,
+          "retainedHeapUsedBytes": 57725508
+        },
+        {
+          "variant": "candidate",
+          "iteration": 1,
+          "readyMs": 14285.351963,
+          "coldMs": 11946.289999999979,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2132.635000002396
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7407.110000001732
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 487.94500000064727
+            }
+          },
+          "warmWallMs": 968.9620485000014,
+          "heapUsedBytes": 89692088,
+          "retainedHeapUsedBytes": 57724920
+        },
+        {
+          "variant": "baseline",
+          "iteration": 1,
+          "readyMs": 15261.692245,
+          "coldMs": 12864.75,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3298.34500000166
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7420.479999998875
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 63.17500000016298
+            }
+          },
+          "warmWallMs": 1386.0138499999994,
+          "heapUsedBytes": 83673668,
+          "retainedHeapUsedBytes": 57679840
+        },
+        {
+          "variant": "baseline",
+          "iteration": 2,
+          "readyMs": 15294.89652,
+          "coldMs": 12899.030000000028,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3178.510000000242
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7459.38499999966
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 58.91500000009546
+            }
+          },
+          "warmWallMs": 1393.8987269999998,
+          "heapUsedBytes": 83684128,
+          "retainedHeapUsedBytes": 57691128
+        },
+        {
+          "variant": "candidate",
+          "iteration": 2,
+          "readyMs": 14724.095844,
+          "coldMs": 12330.86499999999,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2269.125000000233
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7629.364999998768
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 453.3200000008801
+            }
+          },
+          "warmWallMs": 984.5439075000013,
+          "heapUsedBytes": 65231948,
+          "retainedHeapUsedBytes": 57720588
+        },
+        {
+          "variant": "candidate",
+          "iteration": 3,
+          "readyMs": 14323.515611,
+          "coldMs": 11922.679999999993,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2187.935000001162
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7304.499999999476
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 548.7500000003492
+            }
+          },
+          "warmWallMs": 1036.431410000001,
+          "heapUsedBytes": 61441152,
+          "retainedHeapUsedBytes": 57731772
+        },
+        {
+          "variant": "baseline",
+          "iteration": 3,
+          "readyMs": 16253.856533999999,
+          "coldMs": 13835.780000000028,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3650.1699999971315
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 8154.064999999711
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 59.77499999955762
+            }
+          },
+          "warmWallMs": 1343.8360025000002,
+          "heapUsedBytes": 83697148,
+          "retainedHeapUsedBytes": 57704828
+        },
+        {
+          "variant": "baseline",
+          "iteration": 4,
+          "readyMs": 14941.017656,
+          "coldMs": 12603.859999999986,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3136.274999999092
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7368.075000000652
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 64.72499999951106
+            }
+          },
+          "warmWallMs": 1425.7814720000006,
+          "heapUsedBytes": 57940336,
+          "retainedHeapUsedBytes": 57707848
+        },
+        {
+          "variant": "candidate",
+          "iteration": 4,
+          "readyMs": 14264.489352,
+          "coldMs": 11923.264999999898,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2180.3300000000745
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7353.570000000298
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 457.1549999988638
+            }
+          },
+          "warmWallMs": 1032.1532824999995,
+          "heapUsedBytes": 65152424,
+          "retainedHeapUsedBytes": 57725756
+        }
+      ]
+    },
+    {
+      "runId": 37324041413,
+      "url": "https://github.com/lvce-editor/typescript-benchmark/actions/runs/37324041413",
+      "node": "v26.10.0",
+      "editor": {
+        "tag": "v0.120.7",
+        "asset": "lvce-v0.120.7_amd64.deb",
+        "sha256": "961e4c2d0592857310d9aab1782a1dc1807443567f719dba4c07029125330ca1",
+        "dataDirectoryName": "lvce"
+      },
+      "fixture": {
+        "repository": "https://github.com/lvce-editor/about-view.git",
+        "commit": "15fe112cf4b82ab72eaa6d29589aede9e53d96d4",
+        "file": "packages/about-view/src/aboutWorkerMain.ts"
+      },
+      "variants": {
+        "baseline": {
+          "commit": "76761b0847cc4ff4dddf8b841a9ab0ba7a2f5f55",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "0b62fd04e64427c7cf14e02203d51916e9ad5a72479548f06738e35ba365c2ed",
+          "typescript": "6.0.3"
+        },
+        "candidate": {
+          "commit": "ae61dd465b7de7e98585bf4326d15689720497de",
+          "lockSha256": "74892cd52493b711b1e8ce11f294c27ae93a8a307d2cc896e82899dd52a8f914",
+          "treeSha256": "45679e5889351da0022684875a33e666d4c43f0c90602e453aab49a245e8395d",
+          "typescript": "6.0.3"
+        }
+      },
+      "graphHash": "2049307208a790dadc31a558e6bc58437ee3a9c71424d60f6317ba798760100e",
+      "allGraphsEqual": true,
+      "loadedFiles": 731,
+      "summary": {
+        "baseline": {
+          "readyMs": 15341.036246,
+          "coldMs": 12892.119999999995,
+          "coldRpcCalls": 5441,
+          "coldRpcMs": 10870.304999998014,
+          "warmWallMs": 1424.7412965000003,
+          "warmMs": 1365.0374999999767,
+          "retainedHeapUsedBytes": 57694504,
+          "heapUsedBytes": 57926992
+        },
+        "candidate": {
+          "readyMs": 14084.334982,
+          "coldMs": 11724.534999999916,
+          "coldRpcCalls": 4246,
+          "coldRpcMs": 9688.359999999346,
+          "warmWallMs": 1053.682853000002,
+          "warmMs": 999.4474999999948,
+          "retainedHeapUsedBytes": 57716760,
+          "heapUsedBytes": 61446352
+        }
+      },
+      "pairedColdChangePercent": -7.417244021929603,
+      "pairedWarmChangePercent": -26.968219366999413,
+      "pairs": [
+        {
+          "iteration": 0,
+          "coldChangePercent": -29.081362045189397,
+          "warmChangePercent": -20.903298801985414
+        },
+        {
+          "iteration": 1,
+          "coldChangePercent": -7.417244021929603,
+          "warmChangePercent": -26.968219366999413
+        },
+        {
+          "iteration": 2,
+          "coldChangePercent": -7.2076420088957205,
+          "warmChangePercent": -29.024993213134387
+        },
+        {
+          "iteration": 3,
+          "coldChangePercent": -7.368308952454383,
+          "warmChangePercent": -26.607360110234325
+        },
+        {
+          "iteration": 4,
+          "coldChangePercent": -11.614303445973007,
+          "warmChangePercent": -28.303758934385492
+        }
+      ],
+      "repetitions": [
+        {
+          "variant": "baseline",
+          "iteration": 0,
+          "readyMs": 19759.999058,
+          "coldMs": 16308.710000000021,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3525.4699999992445
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 10417.759999999515
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 58.53500000014901
+            }
+          },
+          "warmWallMs": 1332.145129999999,
+          "heapUsedBytes": 57783648,
+          "retainedHeapUsedBytes": 57699516
+        },
+        {
+          "variant": "candidate",
+          "iteration": 0,
+          "readyMs": 13928.960699000001,
+          "coldMs": 11565.915000000008,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2216.324999999837
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6893.084999999672
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 429.90499999950407
+            }
+          },
+          "warmWallMs": 1053.682853000002,
+          "heapUsedBytes": 61446352,
+          "retainedHeapUsedBytes": 57735860
+        },
+        {
+          "variant": "candidate",
+          "iteration": 1,
+          "readyMs": 14354.143005000002,
+          "coldMs": 11935.880000000005,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2302.790000001376
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7131.980000000156
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 562.4150000005029
+            }
+          },
+          "warmWallMs": 1069.618321,
+          "heapUsedBytes": 65182196,
+          "retainedHeapUsedBytes": 57709744
+        },
+        {
+          "variant": "baseline",
+          "iteration": 1,
+          "readyMs": 15341.036246,
+          "coldMs": 12892.119999999995,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3199.4249999985914
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7609.504999999364
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 61.37500000005821
+            }
+          },
+          "warmWallMs": 1464.5929644999997,
+          "heapUsedBytes": 57925196,
+          "retainedHeapUsedBytes": 57692708
+        },
+        {
+          "variant": "baseline",
+          "iteration": 2,
+          "readyMs": 15048.63487,
+          "coldMs": 12639.085000000021,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3297.7150000025867
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7211.250000000524
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 59.014999999897555
+            }
+          },
+          "warmWallMs": 1422.7977935,
+          "heapUsedBytes": 57932956,
+          "retainedHeapUsedBytes": 57700268
+        },
+        {
+          "variant": "candidate",
+          "iteration": 2,
+          "readyMs": 14084.334982,
+          "coldMs": 11728.104999999981,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2329.9100000002654
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6870.454999999609
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 487.9949999994715
+            }
+          },
+          "warmWallMs": 1009.8308304999991,
+          "heapUsedBytes": 89695292,
+          "retainedHeapUsedBytes": 57716760
+        },
+        {
+          "variant": "candidate",
+          "iteration": 3,
+          "readyMs": 13990.956942,
+          "coldMs": 11612.10500000004,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2216.270000000659
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7058.104999999399
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 432.50000000023283
+            }
+          },
+          "warmWallMs": 1059.1666220000006,
+          "heapUsedBytes": 61411352,
+          "retainedHeapUsedBytes": 57715376
+        },
+        {
+          "variant": "baseline",
+          "iteration": 3,
+          "readyMs": 14964.131433999999,
+          "coldMs": 12535.780000000028,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3165.550000000745
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7281.589999997406
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 61.7349999997532
+            }
+          },
+          "warmWallMs": 1443.1510075000006,
+          "heapUsedBytes": 83670328,
+          "retainedHeapUsedBytes": 57677136
+        },
+        {
+          "variant": "baseline",
+          "iteration": 4,
+          "readyMs": 15693.082858,
+          "coldMs": 13265.194999999949,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 4627,
+              "durationMs": 3377.7599999994272
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 7729.949999998906
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 98,
+              "durationMs": 58.16499999957159
+            }
+          },
+          "warmWallMs": 1424.7412965000003,
+          "heapUsedBytes": 57926992,
+          "retainedHeapUsedBytes": 57694504
+        },
+        {
+          "variant": "candidate",
+          "iteration": 4,
+          "readyMs": 14119.547976,
+          "coldMs": 11724.534999999916,
+          "methods": {
+            "SyncApi.exists": {
+              "callCount": 3034,
+              "durationMs": 2153.585000004503
+            },
+            "SyncApi.readFileSync": {
+              "callCount": 716,
+              "durationMs": 6935.635000000824
+            },
+            "SyncApi.readDirSync": {
+              "callCount": 496,
+              "durationMs": 519.0399999991059
+            }
+          },
+          "warmWallMs": 1021.4859545000018,
+          "heapUsedBytes": 61414116,
+          "retainedHeapUsedBytes": 57718580
+        }
+      ]
+    }
+  ]
+}
