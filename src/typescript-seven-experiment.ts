@@ -58,6 +58,10 @@ const graphs = Object.fromEntries(['cli6', 'cli7'].map(mode => {
 const projectFiles = (files: string[]) => files.filter(path => !/(^|\/)lib\.[^/]+\.d\.ts$/.test(path))
 const ts6Graph = rows.find(row => row.mode === 'ts6').metadata.loadedFiles.map(normalize).sort()
 const browserGraph = rows.find(row => row.mode === 'lvce').samples[0].trace.loadedFiles.map((item: any) => normalize(item.fileName)).sort()
+for (const row of rows.filter(row => ['ts6', 'lvce'].includes(row.mode))) {
+  const files = row.mode === 'ts6' ? row.metadata.loadedFiles : row.samples[0].trace.loadedFiles.map((item: any) => item.fileName)
+  if (JSON.stringify(projectFiles(files.map(normalize).sort())) !== JSON.stringify(projectFiles(graphs.cli6))) throw new Error(`Service source graph differs: ${row.mode}/${row.iteration}`)
+}
 if (JSON.stringify(projectFiles(graphs.cli6)) !== JSON.stringify(projectFiles(graphs.cli7))) throw new Error('CLI non-library source graphs differ')
 if (JSON.stringify(projectFiles(graphs.cli6)) !== JSON.stringify(projectFiles(ts6Graph))) throw new Error('TS6 service non-library source graph differs')
 if (JSON.stringify(projectFiles(graphs.cli6)) !== JSON.stringify(projectFiles(browserGraph))) throw new Error('Browser non-library source graph differs')

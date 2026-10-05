@@ -13,10 +13,21 @@ const source = "import * as BenchmarkRpc from '../Rpc/Rpc.ts'\n" + original.repl
   registerCommand({ id: 'typescript.benchmarkCompletion', execute: (document: any, offset: number) => BenchmarkRpc.invoke('Completion.getCompletions', document, offset) })
   registerCommand({ id: 'typescript.benchmarkReferences', execute: (document: any, offset: number) => BenchmarkRpc.invoke('References.provideReferences', document, offset) })
 ${anchor}`)
+const manifestPath = join(checkout, 'packages/extension/extension.json')
+const manifestOriginal = await readFile(manifestPath, 'utf8')
+const manifest = JSON.parse(manifestOriginal)
+for (const feature of ['Diagnostics', 'Completion', 'References']) {
+  const id = 'typescript.benchmark' + feature
+  manifest.activation.push('onCommand:' + id)
+  manifest.commands.push({ id, label: 'Benchmark ' + feature })
+}
 await writeFile(path, source)
+await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n')
 await mkdir(output, { recursive: true })
 await writeFile(join(output, 'activation.original.ts'), original)
 await writeFile(join(output, 'activation.instrumented.ts'), source)
+await writeFile(join(output, 'manifest.original.json'), manifestOriginal)
+await writeFile(join(output, 'manifest.instrumented.json'), JSON.stringify(manifest, null, 2) + '\n')
 await writeFile(join(output, 'instrumentation.json'), JSON.stringify({
   originalHash: createHash('sha256').update(original).digest('hex'),
   instrumentedHash: createHash('sha256').update(source).digest('hex'),
