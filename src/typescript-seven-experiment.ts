@@ -1,5 +1,5 @@
 import { spawnSync, execFileSync } from 'node:child_process'
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { resolve, join, relative, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -11,6 +11,12 @@ const extension = resolve(extensionArg), workspace = resolve(workspaceArg), nati
 const repeats = Number(repeatsArg)
 if (!Number.isInteger(repeats) || repeats < 3 || repeats > 10) throw new Error('Use 3 to 10 repetitions')
 mkdirSync(output, { recursive: true })
+// A repeated invocation must not reuse the previous CLI's incremental journal.
+for (let iteration = 0; iteration < repeats; iteration++) {
+  for (const mode of ['cli6', 'cli7', 'cli7-single-threaded']) {
+    if (existsSync(join(output, `${mode}-${iteration}-fresh.tsbuildinfo`))) throw new Error('Use a fresh output directory; existing incremental state would invalidate cold measurements')
+  }
+}
 const scripts = dirname(fileURLToPath(import.meta.url))
 const ts6 = join(extension, 'node_modules/typescript'), tsc6 = join(ts6, 'lib/tsc.js'), tsc7 = join(native, 'bin/tsc')
 const hash = (path: string) => createHash('sha256').update(readFileSync(path)).digest('hex')
