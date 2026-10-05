@@ -68,3 +68,5 @@ node src/typescript-browser-benchmark.ts /path/to/language-features-typescript /
 See [TypeScript resource identities](investigations/typescript-path-identities.md) for URI compatibility, escaping probes and a provider-mounted compiler-path prototype. The **TypeScript path identity experiment** workflow compares four standard language-service hosts with identical source graphs and saves repeated timing results and resolver traces.
 
 See [directory metadata snapshots](investigations/typescript-directory-metadata.md) for the real Electron experiment reducing TypeScript existence probes and improving cold/warm diagnostics. Measurements include paired timing results, traced method counts and GC-normalized retained heap.
+
+See [TypeScript 7 versus the LVCE extension](investigations/typescript-seven.md) for native LSP versus real browser IPC measurements, direct TypeScript 6 host controls, and whole-project CLI comparisons. The **TypeScript 7 comparison** workflow repeats cold, unchanged and edited diagnostics, completions and references on one runner, validates project/results, and saves JSON plus full traces.

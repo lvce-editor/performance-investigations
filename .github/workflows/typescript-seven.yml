@@ -1,0 +1,49 @@
+name: TypeScript 7 comparison
+on:
+  pull_request:
+    paths:
+      - src/typescript-seven-*.ts
+      - .github/workflows/typescript-seven.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+      - run: nice npm ci
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/about-view
+          ref: 15fe112cf4b82ab72eaa6d29589aede9e53d96d4
+          path: benchmark-workspace
+      - uses: actions/checkout@v4
+        with:
+          repository: lvce-editor/language-features-typescript
+          ref: 15051b0798c49df044e1e8b0aec63c56f7169855
+          path: experiments/typescript
+      - run: nice npm ci
+        working-directory: benchmark-workspace
+      - run: nice npm ci
+        working-directory: experiments/typescript
+      - name: Add harness-only command entry points
+        run: node src/typescript-seven-prepare.ts experiments/typescript results/instrumentation
+      - run: npm run build
+        working-directory: experiments/typescript
+      - run: npx --no-install playwright install --with-deps chromium
+        working-directory: experiments/typescript
+      - name: Install pinned native compiler separately
+        run: npm install --prefix experiments/typescript7 --no-audit --no-fund --save-exact typescript@7.0.2
+      - name: Compare CLI and cold/edited diagnostics on one runner
+        run: node src/typescript-seven-experiment.ts experiments/typescript benchmark-workspace experiments/typescript7/node_modules/typescript results 5
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: typescript-seven-comparison
+          path: results
+          retention-days: 90
