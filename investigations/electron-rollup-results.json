@@ -1,0 +1,56 @@
+{
+  "sourceCommit": "694f45852a0f1726cd23bfd379854de489cccb65",
+  "electronVersion": "44.4.5",
+  "lvceVersion": "0.120.23",
+  "platform": "linux",
+  "arch": "x64",
+  "binary": "app/usr/lib/lvce/lvce",
+  "candidatePath": null,
+  "binarySha256": "ee9faf5bb9fe78a750cc5099863c85c4459e7f04c387fd1f111c83e4e8c57c97",
+  "candidateSha256": null,
+  "sourceInputs": {
+    "lib/node/init.ts": "ed4fbabd346ba56ce12601afee97d6c6b96d1b0b7dffbf84743cc5f6f39ae55a",
+    "lib/node/asar-fs-wrapper.ts": "72927acc4d7b81e87ade0392355379adee6207c4c98502d0e84b101b21b82abd"
+  },
+  "webpackSha256": "b4ed5a628addf6a48abe7e600a9ef1b6a40d29b29a5e795d76b43c7565141c7a",
+  "rollupSha256": "392c74af65a3ea72dfea0088f74bfd9cbd6498410e1b965f37da2ccac3bd6360",
+  "webpackBytes": 20772,
+  "rollupBytes": 21095,
+  "offset": 20567984,
+  "substitution": "blocked-oversized-source",
+  "paddedBytes": 20772,
+  "codeCache": "Unchanged embedded cache; --no-lazy required and execution marker must be checked",
+  "scope": "node_init only, used by ELECTRON_RUN_AS_NODE; browser_init and all other bundles unchanged",
+  "debSha256": "4a7dbd0fc21fc4bd5bd6e168fba8751e08cb01f0574f0d102aa6ab05400a6942",
+  "snapshotBlobSha256": "6a80dc5091db83ef5d8ff6d935b52f87d876ce9d1472f691cc1ff5dba6e12b62",
+  "tools": {
+    "@rollup/plugin-commonjs": "29.0.3",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-terser": "1.0.0",
+    "rollup": "4.64.2",
+    "typescript": "5.8.3"
+  },
+  "cacheProbe": {
+    "binarySha256": "ee9faf5bb9fe78a750cc5099863c85c4459e7f04c387fd1f111c83e4e8c57c97",
+    "probeBinarySha256": "4544cfc65598585ef53543d4720dabc3b3b7000678a90493bee6dcfa9a46b1ce",
+    "offset": 20567984,
+    "sourceBytes": 20772,
+    "rows": [
+      {
+        "variant": "normal",
+        "flags": [],
+        "sourceProbe": false,
+        "appEntry": true
+      },
+      {
+        "variant": "no-lazy",
+        "flags": [
+          "--no-lazy"
+        ],
+        "sourceProbe": true,
+        "appEntry": true
+      }
+    ],
+    "warning": "This probe removes node_init behavior and is not a runnable application candidate or performance measurement"
+  }
+}

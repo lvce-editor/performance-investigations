@@ -1,0 +1,34 @@
+name: Electron Rollup feasibility
+on:
+  pull_request:
+    paths: ['src/electron-rollup.ts', 'src/electron-source-probe.ts', 'investigations/electron-rollup*', 'package*.json', '.github/workflows/electron-rollup.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Download pinned application and matching source
+        run: |
+          mkdir -p .tmp/electron-rollup
+          curl -fL https://github.com/lvce-editor/lvce-editor/releases/download/v0.120.23/lvce-v0.120.23_amd64.deb -o .tmp/electron-rollup/lvce.deb
+          echo '4a7dbd0fc21fc4bd5bd6e168fba8751e08cb01f0574f0d102aa6ab05400a6942  .tmp/electron-rollup/lvce.deb' | sha256sum -c -
+          dpkg-deb -x .tmp/electron-rollup/lvce.deb .tmp/electron-rollup/app
+          git clone --depth 1 --branch v44.4.5 https://github.com/electron/electron.git .tmp/electron-rollup/source
+      - name: Build representative bundle and verify cache probe
+        run: |
+          node src/electron-rollup.ts .tmp/electron-rollup/source .tmp/electron-rollup/app/usr/lib/lvce/lvce .tmp/electron-rollup/build
+          node src/electron-source-probe.ts .tmp/electron-rollup/app/usr/lib/lvce/lvce .tmp/electron-rollup/source-probe.json
+          node -e 'const fs=require("fs"); new Function("process","require",fs.readFileSync(".tmp/electron-rollup/build/node-init-rollup.js","utf8"))'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: electron-rollup-feasibility
+          path: |
+            .tmp/electron-rollup/build
+            .tmp/electron-rollup/source-probe.json

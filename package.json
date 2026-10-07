@@ -3,11 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "analyze": "node --max-old-space-size=4096 src/analyze.ts",
     "test": "node --test test/*.test.ts",
     "capture": "node src/capture.ts",
     "compare": "node src/compare.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "29.0.3",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-terser": "1.0.0",
+    "rollup": "4.64.2",
+    "typescript": "5.8.3"
   }
 }
