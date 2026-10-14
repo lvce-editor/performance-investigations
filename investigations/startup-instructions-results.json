@@ -1,0 +1,1280 @@
+{
+  "windowPlus0Seconds": {
+    "editor": {
+      "id": "lvce",
+      "name": "LVCE Editor",
+      "version": "v0.122.9",
+      "archive": "lvce-v0.122.9_arm64.deb",
+      "url": "https://github.com/lvce-editor/lvce-editor/releases/download/v0.122.9/lvce-v0.122.9_arm64.deb",
+      "sha256": "5d7cb83a4bd34034f20a45dcd113f3bdd283a69859d7564e16dbfc4cb7d11478",
+      "binary": "usr/lib/lvce/lvce"
+    },
+    "protocol": {
+      "version": 2,
+      "metric": "retired hardware instructions (user and kernel)",
+      "boundary": "launch through first visible normal main window",
+      "accounting": "per-CPU cgroup; includes all descendants, including detached and exited tasks",
+      "profile": "fresh HOME and XDG directories every trial, no bootstrap launch",
+      "cache": "warm OS filesystem caches permitted; application profiles always fresh",
+      "pollSeconds": 0.02,
+      "timeoutSeconds": 120,
+      "launcher": "includes child cgroup-entry, privilege drop and exec overhead; controller and desktop excluded",
+      "cutoff": "perf disable acknowledgement before shutdown; includes polling/control latency"
+    },
+    "additionalWorkIntervalSeconds": 0,
+    "boundary": "first visible normal window",
+    "host": {
+      "machine": "aarch64",
+      "kernel": "6.17.0-1022-azure",
+      "cpuinfo": "processor\t: 0\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 1\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 2\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 3\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\n"
+    },
+    "runUrl": "https://github.com/lvce-editor/performance-investigations/actions/runs/38551289606",
+    "benchmarkCommit": "657c144ab1d4985ba31fa80232da59d2005b5ba5",
+    "trials": [
+      {
+        "instructions": 3290787488,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3290787488;;instructions;startup-146c3fe3b23b4706a30cce101f9e0ab7;791452600;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 5663,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 5663\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6436400320000075,
+        "launchToCutoffSeconds": 0.6487002310000207,
+        "pidsAtCutoff": [
+          5663,
+          5666,
+          5667,
+          5706,
+          5708,
+          5711,
+          5803
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-fhahig2e/home/profile"
+        ],
+        "repeat": 1,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3657599000,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3657599000;;instructions;startup-7cb18ab4b9bf438286db1f5fcb03b27b;855385008;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 5827,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 5827\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6952368220000267,
+        "launchToCutoffSeconds": 0.696896602000038,
+        "pidsAtCutoff": [
+          5827,
+          5830,
+          5831,
+          5876,
+          5878,
+          5881,
+          5976
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-m_8qgpv2/home/profile"
+        ],
+        "repeat": 1,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3682073578,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3682073578;;instructions;startup-acf8bd83373847dabd1af4303eaca62d;869244264;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 6006,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6006\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6356930400000351,
+        "launchToCutoffSeconds": 0.635963911000033,
+        "pidsAtCutoff": [
+          6006,
+          6009,
+          6010,
+          6053,
+          6056,
+          6062,
+          6154
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-1iw1pc1k/home/profile"
+        ],
+        "repeat": 2,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3476687468,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3476687468;;instructions;startup-10476494b3444d15b2a9582982acc504;831094632;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 6184,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6184\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6155113969999775,
+        "launchToCutoffSeconds": 0.6165050969999584,
+        "pidsAtCutoff": [
+          6184,
+          6187,
+          6188,
+          6229,
+          6233,
+          6240,
+          6330
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-49i4acz_/home/profile"
+        ],
+        "repeat": 2,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3496922255,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3496922255;;instructions;startup-99a16bd44c1241239ea99c0899143e8f;832082240;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 6361,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6361\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5905412840000395,
+        "launchToCutoffSeconds": 0.6036222289999955,
+        "pidsAtCutoff": [
+          6361,
+          6364,
+          6365,
+          6408,
+          6410,
+          6413,
+          6508
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-6xfgs4q4/home/profile"
+        ],
+        "repeat": 3,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3590858692,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3590858692;;instructions;startup-d1f16f1ba4934ea9be8a56e361bcecb8;843053256;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 6538,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6538\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6128268880000292,
+        "launchToCutoffSeconds": 0.6131316139999967,
+        "pidsAtCutoff": [
+          6538,
+          6541,
+          6542,
+          6585,
+          6588,
+          6595,
+          6684
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-dqm6i9px/home/profile"
+        ],
+        "repeat": 3,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3493398277,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3493398277;;instructions;startup-343b9794205c411e933516d98e73f638;837525216;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 6714,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6714\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5979689710000002,
+        "launchToCutoffSeconds": 0.6000288379999574,
+        "pidsAtCutoff": [
+          6714,
+          6718,
+          6719,
+          6762,
+          6765,
+          6769,
+          6863
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-lzpzlp9h/home/profile"
+        ],
+        "repeat": 4,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3261636511,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3261636511;;instructions;startup-570a9edeb5394287afcf94bb7276994b;758706744;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 6893,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 6893\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5590564180000115,
+        "launchToCutoffSeconds": 0.5611721380000176,
+        "pidsAtCutoff": [
+          6893,
+          6896,
+          6897,
+          6940,
+          6943,
+          6949,
+          7042
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-0vmuo5of/home/profile"
+        ],
+        "repeat": 4,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3710025536,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3710025536;;instructions;startup-1448fec5c6bc4f98ad7a4a2d7fbcb9eb;924903752;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 7065,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7065\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6631556539999792,
+        "launchToCutoffSeconds": 0.6634259100000008,
+        "pidsAtCutoff": [
+          7065,
+          7068,
+          7069,
+          7111,
+          7116,
+          7123,
+          7217
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-p45lk285/home/profile"
+        ],
+        "repeat": 5,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3245454627,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3245454627;;instructions;startup-850a71c4ed47431591ab788f4d395154;750393832;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 7248,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7248\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.544199084000013,
+        "launchToCutoffSeconds": 0.5452522450000288,
+        "pidsAtCutoff": [
+          7248,
+          7251,
+          7252,
+          7294,
+          7296,
+          7303,
+          7397
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-xbcj_er1/home/profile"
+        ],
+        "repeat": 5,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3458750747,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3458750747;;instructions;startup-b8e88fde964842879574d536205fcc0d;825963456;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 7418,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7418\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6039234429999851,
+        "launchToCutoffSeconds": 0.604279517000009,
+        "pidsAtCutoff": [
+          7418,
+          7421,
+          7422,
+          7463,
+          7467,
+          7473,
+          7566
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-ivprrs0p/home/profile"
+        ],
+        "repeat": 6,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3638835376,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3638835376;;instructions;startup-c4987433054648b8880876ee2d723840;841416936;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 7596,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7596\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6131527729999675,
+        "launchToCutoffSeconds": 0.6134062620000122,
+        "pidsAtCutoff": [
+          7596,
+          7599,
+          7600,
+          7640,
+          7644,
+          7652,
+          7743
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-2bfjpsuy/home/profile"
+        ],
+        "repeat": 6,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3309705932,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3309705932;;instructions;startup-697d4b968edf471c8eadefea92cd0290;788533912;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 7774,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7774\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5833748039999591,
+        "launchToCutoffSeconds": 0.585938920999979,
+        "pidsAtCutoff": [
+          7774,
+          7777,
+          7778,
+          7820,
+          7823,
+          7828,
+          7923
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-z_i1olug/home/profile"
+        ],
+        "repeat": 7,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3232540605,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3232540605;;instructions;startup-8af4d854252643fb9c6abb1fab120187;754163440;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 7949,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 7949\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5542272619999835,
+        "launchToCutoffSeconds": 0.5558485960000326,
+        "pidsAtCutoff": [
+          7949,
+          7952,
+          7953,
+          7996,
+          7999,
+          8000,
+          8099
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-3n04g9ul/home/profile"
+        ],
+        "repeat": 7,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3584279578,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3584279578;;instructions;startup-355a017e7cdf4f72aa84c198cae41e71;868201064;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 8121,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 8121\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6110416280000095,
+        "launchToCutoffSeconds": 0.6126970960000335,
+        "pidsAtCutoff": [
+          8121,
+          8124,
+          8125,
+          8166,
+          8170,
+          8176,
+          8269
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-hzx786bl/home/profile"
+        ],
+        "repeat": 8,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3617190276,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3617190276;;instructions;startup-b81327a03f1d4d149f91444c292955f2;841448560;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 8299,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 8299\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6081672260000346,
+        "launchToCutoffSeconds": 0.6084316179999973,
+        "pidsAtCutoff": [
+          8299,
+          8302,
+          8303,
+          8346,
+          8350,
+          8353,
+          8446
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-2razatxe/home/profile"
+        ],
+        "repeat": 8,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 3402144016,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3402144016;;instructions;startup-31d5cc9dab564d5e9935087ce5059393;820585944;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 8476,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 8476\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5961300380000125,
+        "launchToCutoffSeconds": 0.5977330189999748,
+        "pidsAtCutoff": [
+          8476,
+          8479,
+          8480,
+          8523,
+          8526,
+          8532,
+          8623
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-vsqdqvgo/home/profile"
+        ],
+        "repeat": 9,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 3613692868,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n3613692868;;instructions;startup-6108f6960b684093acf61a8dc4238ad6;841882880;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 8653,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 8653\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6144444569999905,
+        "launchToCutoffSeconds": 0.6148906039999815,
+        "pidsAtCutoff": [
+          8653,
+          8656,
+          8657,
+          8700,
+          8703,
+          8704,
+          8803
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-i7_l4k3k/home/profile"
+        ],
+        "repeat": 9,
+        "variant": "candidate"
+      }
+    ]
+  },
+  "windowPlus5Seconds": {
+    "editor": {
+      "id": "lvce",
+      "name": "LVCE Editor",
+      "version": "v0.122.9",
+      "archive": "lvce-v0.122.9_arm64.deb",
+      "url": "https://github.com/lvce-editor/lvce-editor/releases/download/v0.122.9/lvce-v0.122.9_arm64.deb",
+      "sha256": "5d7cb83a4bd34034f20a45dcd113f3bdd283a69859d7564e16dbfc4cb7d11478",
+      "binary": "usr/lib/lvce/lvce"
+    },
+    "protocol": {
+      "version": 2,
+      "metric": "retired hardware instructions (user and kernel)",
+      "boundary": "launch through first visible normal main window",
+      "accounting": "per-CPU cgroup; includes all descendants, including detached and exited tasks",
+      "profile": "fresh HOME and XDG directories every trial, no bootstrap launch",
+      "cache": "warm OS filesystem caches permitted; application profiles always fresh",
+      "pollSeconds": 0.02,
+      "timeoutSeconds": 120,
+      "launcher": "includes child cgroup-entry, privilege drop and exec overhead; controller and desktop excluded",
+      "cutoff": "perf disable acknowledgement before shutdown; includes polling/control latency"
+    },
+    "additionalWorkIntervalSeconds": 5,
+    "boundary": "five seconds after first visible normal window (cumulative-work guard)",
+    "host": {
+      "machine": "aarch64",
+      "kernel": "6.17.0-1022-azure",
+      "cpuinfo": "processor\t: 0\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 1\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 2\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\nprocessor\t: 3\nBogoMIPS\t: 2000.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm uscat ilrcpc flagm sb paca pacg dcpodp sve2 sveaes svebitperm svesha3 svesm4 flagm2 frint svei8mm svebf16 i8mm bf16\nCPU implementer\t: 0x41\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0xd49\nCPU revision\t: 0\n\n"
+    },
+    "runUrl": "https://github.com/lvce-editor/performance-investigations/actions/runs/38551289606",
+    "benchmarkCommit": "657c144ab1d4985ba31fa80232da59d2005b5ba5",
+    "trials": [
+      {
+        "instructions": 7115698988,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7115698988;;instructions;startup-468fd6b91f9e4a52bbde3203423a1cfa;1837324080;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 8836,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 8836\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6262103539999657,
+        "launchToCutoffSeconds": 5.626790916999994,
+        "pidsAtCutoff": [
+          8836,
+          8839,
+          8840,
+          8883,
+          8886,
+          8892,
+          8981
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-_ij4smnl/home/profile"
+        ],
+        "repeat": 1,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7035061732,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7035061732;;instructions;startup-9a477802a3a147f1a6e3936eb8011e30;1788116184;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 9078,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 9078\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5505150429999048,
+        "launchToCutoffSeconds": 5.550968455999964,
+        "pidsAtCutoff": [
+          9078,
+          9081,
+          9082,
+          9123,
+          9127,
+          9128,
+          9226
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-z9t0dp2i/home/profile"
+        ],
+        "repeat": 1,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7136278700,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7136278700;;instructions;startup-39e65d4887e14a9e9a256d8e34208305;1830808544;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 9325,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 9325\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.591816936999976,
+        "launchToCutoffSeconds": 5.59270966400004,
+        "pidsAtCutoff": [
+          9325,
+          9328,
+          9329,
+          9370,
+          9374,
+          9381,
+          9474
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-eq91ter0/home/profile"
+        ],
+        "repeat": 2,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 6991900594,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n6991900594;;instructions;startup-8b2bfed342504649bbcb5648e9e56517;1763960560;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 9574,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 9574\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5918934050000644,
+        "launchToCutoffSeconds": 5.592599655000072,
+        "pidsAtCutoff": [
+          9574,
+          9577,
+          9578,
+          9621,
+          9625,
+          9630,
+          9723
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-25mn9af7/home/profile"
+        ],
+        "repeat": 2,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7082801422,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7082801422;;instructions;startup-bdba60405fa141f5bfc603d6e3394509;1821546232;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 9826,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 9826\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5637283519999983,
+        "launchToCutoffSeconds": 5.564534070000036,
+        "pidsAtCutoff": [
+          9826,
+          9829,
+          9830,
+          9872,
+          9875,
+          9880,
+          9971
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-f7xjbws3/home/profile"
+        ],
+        "repeat": 3,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 6982124514,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n6982124514;;instructions;startup-5c026859e53640e989e345b531059831;1762574784;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 10071,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 10071\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5626893899999459,
+        "launchToCutoffSeconds": 5.563463058000025,
+        "pidsAtCutoff": [
+          10071,
+          10074,
+          10075,
+          10118,
+          10121,
+          10126,
+          10219
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-gkryoivc/home/profile"
+        ],
+        "repeat": 3,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7117844499,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7117844499;;instructions;startup-efc11730f545471189bf515a37649607;1826959768;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 10314,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 10314\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6203130750000128,
+        "launchToCutoffSeconds": 5.62072919700006,
+        "pidsAtCutoff": [
+          10314,
+          10317,
+          10318,
+          10360,
+          10363,
+          10365,
+          10462
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-jjjcm25_/home/profile"
+        ],
+        "repeat": 4,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7024728438,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7024728438;;instructions;startup-d023f95bdfed4de2bec8bae981b7303b;1788150120;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 10563,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 10563\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6251064840000709,
+        "launchToCutoffSeconds": 5.6256070440000485,
+        "pidsAtCutoff": [
+          10563,
+          10566,
+          10567,
+          10608,
+          10612,
+          10618,
+          10712
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-vkzf00nx/home/profile"
+        ],
+        "repeat": 4,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7104044428,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7104044428;;instructions;startup-0b0e83e963be47f1a97d8173a81b2315;1826972960;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 10815,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 10815\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6083371839999927,
+        "launchToCutoffSeconds": 5.608816058000002,
+        "pidsAtCutoff": [
+          10815,
+          10818,
+          10819,
+          10862,
+          10865,
+          10866,
+          10961
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-hz9z0ua_/home/profile"
+        ],
+        "repeat": 5,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7027550149,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7027550149;;instructions;startup-dcc67163d18f415a9711ab99d992fa68;1802805320;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 11065,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 11065\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5686175869999488,
+        "launchToCutoffSeconds": 5.569330836999939,
+        "pidsAtCutoff": [
+          11065,
+          11068,
+          11069,
+          11111,
+          11114,
+          11120,
+          11209
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-tjeyjcgo/home/profile"
+        ],
+        "repeat": 5,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7138965841,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7138965841;;instructions;startup-46943e29937c4fe0b0938e70eb808959;1868495792;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 11309,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 11309\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6411915620000173,
+        "launchToCutoffSeconds": 5.641800953000029,
+        "pidsAtCutoff": [
+          11309,
+          11312,
+          11313,
+          11355,
+          11359,
+          11360,
+          11455
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-gpgpiye1/home/profile"
+        ],
+        "repeat": 6,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7000694567,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7000694567;;instructions;startup-207a95fba00e4f2184ba9f1ab2fb69c9;1797022304;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 11557,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 11557\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5516394819999277,
+        "launchToCutoffSeconds": 5.552410796999993,
+        "pidsAtCutoff": [
+          11557,
+          11560,
+          11561,
+          11603,
+          11607,
+          11613,
+          11701
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-fnu7ybfi/home/profile"
+        ],
+        "repeat": 6,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7125150247,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7125150247;;instructions;startup-d30278a43b6a43828f19680a1b3fd799;1844102160;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 11798,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 11798\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5727900290000889,
+        "launchToCutoffSeconds": 5.5747563520000085,
+        "pidsAtCutoff": [
+          11798,
+          11801,
+          11802,
+          11844,
+          11847,
+          11853,
+          11943
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-ypga7tl0/home/profile"
+        ],
+        "repeat": 7,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7010002319,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7010002319;;instructions;startup-97218bfa70af4b94b23f5b5023540166;1831232528;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 12041,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 12041\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5800307340000472,
+        "launchToCutoffSeconds": 5.581017058000043,
+        "pidsAtCutoff": [
+          12041,
+          12044,
+          12045,
+          12088,
+          12090,
+          12092,
+          12188
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-9h52zdye/home/profile"
+        ],
+        "repeat": 7,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7097389353,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7097389353;;instructions;startup-f45c2b5ceb034698b72d5834c8ceb17a;1844303504;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 12285,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 12285\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6279940969999416,
+        "launchToCutoffSeconds": 5.628769208999984,
+        "pidsAtCutoff": [
+          12285,
+          12288,
+          12289,
+          12331,
+          12335,
+          12337,
+          12434
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-91ususzz/home/profile"
+        ],
+        "repeat": 8,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7033353912,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7033353912;;instructions;startup-6b63da68ddf94eee85e54c0d972df570;1818029880;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 12536,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 12536\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6273375670000405,
+        "launchToCutoffSeconds": 5.627934965999998,
+        "pidsAtCutoff": [
+          12536,
+          12539,
+          12540,
+          12583,
+          12586,
+          12592,
+          12686
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-1hyi133_/home/profile"
+        ],
+        "repeat": 8,
+        "variant": "candidate"
+      },
+      {
+        "instructions": 7137760770,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7137760770;;instructions;startup-09b2e5ea71e74a4b8ed08e3a26b19b48;1854230128;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "4194307",
+          "pid": 12789,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 12789\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.5904562480000095,
+        "launchToCutoffSeconds": 5.591342209999993,
+        "pidsAtCutoff": [
+          12789,
+          12792,
+          12793,
+          12836,
+          12840,
+          12847,
+          12940
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-eogpcgva/home/profile"
+        ],
+        "repeat": 9,
+        "variant": "baseline"
+      },
+      {
+        "instructions": 7018125444,
+        "rawCounter": "Events disabled\nEvents enabled\nEvents disabled\n7018125444;;instructions;startup-f1a0ce8b45cf45bead34a6e8d0d8768d;1824575208;100.00;;\n",
+        "source": "perf stat instructions, per-CPU cgroup",
+        "cutoffAcknowledged": true,
+        "valid": true,
+        "readiness": {
+          "windowId": "6291459",
+          "pid": 13036,
+          "properties": "_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL\nWM_NAME(UTF8_STRING) = \"Lvce Editor\"\nWM_CLASS(STRING) = \"lvce\", \"lvce\"\n_NET_WM_PID(CARDINAL) = 13036\nWM_TRANSIENT_FOR:  not found.\nWM_STATE(WM_STATE):\n\t\twindow state: Normal\n\t\ticon window: 0x0\n"
+        },
+        "launchToWindowSeconds": 0.6559743420000359,
+        "launchToCutoffSeconds": 5.657011078000096,
+        "pidsAtCutoff": [
+          13036,
+          13039,
+          13040,
+          13082,
+          13085,
+          13090,
+          13183
+        ],
+        "command": [
+          "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace/usr/lib/lvce/lvce",
+          "--no-sandbox",
+          "--disable-gpu",
+          "--ozone-platform=x11",
+          "--user-data-dir",
+          "/tmp/startup-trial-_y4vpf1r/home/profile"
+        ],
+        "repeat": 9,
+        "variant": "candidate"
+      }
+    ]
+  },
+  "provenance": {
+    "baseline": "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce",
+    "candidate": "/home/runner/work/performance-investigations/performance-investigations/benchmark/.tmp/apps/lvce-whitespace",
+    "file": "usr/lib/lvce/resources/app/static/4c89f27/packages/renderer-worker/dist/rendererWorkerMain.js",
+    "esbuildVersion": "0.28.2",
+    "options": {
+      "minifyWhitespace": true,
+      "minifyIdentifiers": false,
+      "minifySyntax": false,
+      "legalComments": "inline",
+      "target": "esnext"
+    },
+    "electronVersion": "44.7.0",
+    "originalBytes": 2272172,
+    "compactBytes": 1623559,
+    "originalSha256": "1a1d6f75ff76f306ac51d3ac884f1ec9372ecf4212c697fb886bbb8f8b201a35",
+    "compactSha256": "ca7073d491d9d2d6e447b252d340caeb604c68bcf4502766ec45c99beca17e6a",
+    "semanticAstSha256": "1f0fe18a618def2bc137ed00e2db95bc07400e7d18e382273636f4c0204ef6f3",
+    "semanticAstEqual": true,
+    "scope": "Only renderer-worker whitespace/comments; identifiers, syntax, function names and execution order preserved"
+  },
+  "runId": 38551289606
+}
