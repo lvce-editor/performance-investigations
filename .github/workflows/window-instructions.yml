@@ -69,7 +69,7 @@ jobs:
           SH
       - name: Prepare whitespace-only renderer candidate with AST equivalence gate
         run: node src/prepare-window-whitespace.ts benchmark/.tmp/apps/lvce benchmark/.tmp/apps/lvce-whitespace results/whitespace-provenance
-      - name: Alternate original and whitespace candidate (three pairs per boundary)
+      - name: Alternate original and whitespace candidate (nine pairs per boundary)
         env:
           BENCHMARK_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |

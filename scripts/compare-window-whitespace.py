@@ -1,4 +1,4 @@
-"""Alternate three baseline/candidate launches using production instruction accounting."""
+"""Alternate repeated baseline/candidate launches using production instruction accounting."""
 import argparse
 import importlib
 import json
@@ -17,6 +17,7 @@ def main():
     parser.add_argument('--perf', required=True)
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--hold-seconds', type=int, choices=[0, 5], default=0)
+    parser.add_argument('--repeats', type=int, choices=[3, 9], default=9)
     args = parser.parse_args()
     if platform.machine() != 'aarch64':
         parser.error('requires Linux ARM64')
@@ -48,7 +49,7 @@ def main():
         'benchmarkCommit': subprocess.check_output(['git', '-C', str(args.benchmark), 'rev-parse', 'HEAD'], text=True).strip(),
         'trials': [],
     }
-    for repeat in range(1, 4):
+    for repeat in range(1, args.repeats + 1):
         for variant, binary in [('baseline', baseline_binary), ('candidate', candidate_binary)]:
             def launch_command(entry, home):
                 command = command_for(entry, home)
