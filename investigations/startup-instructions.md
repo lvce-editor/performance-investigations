@@ -2,7 +2,7 @@
 
 Compacting only renderer-worker whitespace reduces measured cumulative startup work by **1.4%** in nine alternating pairs. The original first-visible-window metric remains **inconclusive**: its median increased 2.8% in this run, with large overlapping ranges and gains in only four pairs. This does not establish an improvement to the screenshot's 3,250M-instruction result.
 
-The measured cumulative reduction is actual avoided parsing work, without changing initialization order or introducing delayed tasks. Production integration is proposed in [LVCE PR 15954](https://github.com/lvce-editor/lvce-editor/pull/15954); its platform and packaged-startup acceptance remains pending. The cumulative guard is not a measurement of usable-editor readiness.
+The measured cumulative reduction is actual avoided work, consistent with the smaller parsing input, without changing initialization order or introducing delayed tasks. [LVCE PR 15954](https://github.com/lvce-editor/lvce-editor/pull/15954) is merged at `8ac2961d3c0c786dcf062ae4f122ab89414fd89f` after platform and packaged-functionality validation. The cumulative guard is not a measurement of usable-editor readiness.
 
 ## Fixed inputs and accounting
 
@@ -33,4 +33,10 @@ At the cumulative boundary every candidate count (6,982,124,514–7,035,061,732)
 
 The proposed build change enables whitespace compaction only for the renderer-worker bundle. A focused execution regression checks both normal and compact bundles, asynchronous IPC configuration before dynamic module initialization, worker URL values and function-name preservation. Current renderer source also produces equivalent complete ASTs with and without whitespace compaction (2,274,761 versus 1,658,681 bytes in the inspected source graph).
 
-Required platform/package CI and real packaged behavior still need validation before integration is complete. File opening, session restoration, themes, preferences, extensions and diagnostics remain acceptance requirements. No first-window speedup or full behavior acceptance is claimed by the experimental CPU counts alone.
+[Production CI run 38552381675](https://github.com/lvce-editor/lvce-editor/actions/runs/38552381675) passed all four intended jobs: Linux, macOS, Windows x64 and Windows ARM64. Linux also passed regular/ASAR packaged startup profiling, file/diagnostic provider acceptance, both native font-loading paths and tab-move regressions. No memory or validation gate was adjusted.
+
+The Linux Debian artifact from that exact PR head was extracted and launched under isolated XDG/Chromium directories, a private D-Bus session and Xvfb/Openbox. Real GUI acceptance passed opening the TypeScript and plaintext fixtures, editing and saving text, installed-extension listing, changing the theme to gruvbox, changing auto-save to onFocusChange, and normal exit/relaunch. Both editor tabs, saved text, theme and preference were restored. The expected TypeScript TS2322 diagnostic appeared before and after relaunch, demonstrating language-extension activation. Task-owned app/display/D-Bus processes were closed; no real profile was changed. Screenshots and execution evidence are preserved in the assigned task's local attempt directory.
+
+The final investigation-head [ARM run 38552557968](https://github.com/lvce-editor/performance-investigations/actions/runs/38552557968) independently reproduced a 1.38% cumulative median reduction with all nine candidate pairs lower and non-overlapping variant ranges. Its first-window medians again overlapped despite a 1.39% difference, reinforcing that a stable first-window gain has not been established.
+
+The change is integrated into application main; no dependency publication is required for this build-only option. It will be included in subsequent application builds/releases. The evidence supports a modest reduction in actual cumulative startup work, with the original first-window result explicitly inconclusive.
