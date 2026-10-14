@@ -59,6 +59,14 @@ jobs:
             sudo --preserve-env=DISPLAY,XAUTHORITY python3 scripts/profile-window-startup.py --benchmark benchmark --perf "$PERF" --editor "$editor" --output "results/profiled/$editor"
           done
           SH
+      - name: Make root-owned hardware artifacts readable by uploader
+        if: always()
+        run: |
+          for directory in results benchmark/results; do
+            if test -d "$directory"; then
+              sudo chown -R "$(id -u):$(id -g)" "$directory"
+            fi
+          done
       - name: Preserve raw counts, cutoff evidence and stacks
         if: always()
         uses: actions/upload-artifact@v5

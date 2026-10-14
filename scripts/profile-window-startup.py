@@ -10,9 +10,24 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import signal
 import subprocess
 import sys
+
+
+def stop_recording(process, profile, log):
+    process.send_signal(signal.SIGINT)
+    process.wait(timeout=10)
+    log.flush()
+    # perf record re-raises the requested SIGINT after writing its data. A
+    # completed capture therefore commonly has returncode -SIGINT, unlike stat.
+    raw = Path(log.name).read_text()
+    samples = re.search(r'Captured and wrote .*\((\d+) samples\)', raw)
+    if (process.returncode not in (0, -signal.SIGINT) or not profile.is_file()
+            or not samples or int(samples[1]) == 0):
+        raise RuntimeError(f'perf record did not complete with samples: exit {process.returncode}; inspect record.log')
+    return {'recordExitCode': process.returncode, 'recordedSamples': int(samples[1])}
 
 
 def main():
@@ -60,15 +75,11 @@ def main():
         def finish(self):
             if self.disabled_at is None:
                 raise RuntimeError('profile has no acknowledged cutoff')
-            self.process.send_signal(signal.SIGINT)
-            self.process.wait(timeout=10)
-            self.log.flush()
-            if self.process.returncode != 0 or not self.profile.is_file():
-                raise RuntimeError('perf record failed; inspect record.log')
+            recorded = stop_recording(self.process, self.profile, self.log)
             return {'source': 'sampled user-space cycles, per-CPU cgroup',
                     'cutoffAcknowledged': True,
                     'profile': str(self.profile.relative_to(output)),
-                    'instrumented': True}
+                    'instrumented': True, **recorded}
 
     benchmark.Capture = SampleCapture
     editor = next(e for e in json.loads((benchmark.ROOT / 'config/editors.lock.json').read_text())
@@ -99,7 +110,10 @@ def main():
         ]:
             with (profiles[-1] / name).open('w') as report:
                 subprocess.run([args.perf, *options, '-i', str(profiles[-1] / 'perf.data')],
-                               stdout=report, check=True)
+                               stdout=report, check=True, timeout=120,
+                               env={**os.environ, 'DEBUGINFOD_URLS': ''})
+        if (profiles[-1] / 'stacks.txt').stat().st_size == 0:
+            raise RuntimeError('recorded profile contains no readable samples')
 
 
 if __name__ == '__main__':
