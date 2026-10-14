@@ -4,6 +4,10 @@ on:
     paths:
       - .github/workflows/window-instructions.yml
       - scripts/profile-window-startup.py
+      - scripts/compare-window-whitespace.py
+      - src/prepare-window-whitespace.ts
+      - package.json
+      - package-lock.json
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,6 +18,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: nice npm ci
       - uses: actions/checkout@v5
         with:
           repository: levivilet/startup-instructions-benchmark
@@ -57,6 +65,24 @@ jobs:
           done
           for editor in lvce basic-electron; do
             sudo --preserve-env=DISPLAY,XAUTHORITY python3 scripts/profile-window-startup.py --benchmark benchmark --perf "$PERF" --editor "$editor" --output "results/profiled/$editor"
+          done
+          SH
+      - name: Prepare whitespace-only renderer candidate with AST equivalence gate
+        run: node src/prepare-window-whitespace.ts benchmark/.tmp/apps/lvce benchmark/.tmp/apps/lvce-whitespace results/whitespace-provenance
+      - name: Alternate original and whitespace candidate (three pairs per boundary)
+        env:
+          BENCHMARK_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          xvfb-run -a -s '-screen 0 1280x800x24' bash -euo pipefail <<'SH'
+          openbox > results/comparison-openbox.log 2>&1 &
+          desktop_pid=$!
+          trap 'kill "$desktop_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..100}; do
+            if xprop -root _NET_SUPPORTING_WM_CHECK | grep -q 'window id'; then break; fi
+            sleep .05
+          done
+          for interval in 0 5; do
+            sudo --preserve-env=DISPLAY,XAUTHORITY,BENCHMARK_RUN_URL python3 scripts/compare-window-whitespace.py --benchmark benchmark --candidate benchmark/.tmp/apps/lvce-whitespace --perf "$PERF" --hold-seconds "$interval" --output "results/whitespace-comparison-$interval"
           done
           SH
       - name: Make root-owned hardware artifacts readable by uploader
