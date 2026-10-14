@@ -28,7 +28,9 @@ jobs:
           echo "PERF=$PERF" >> "$GITHUB_ENV"
       - name: Verify production hardware accounting
         working-directory: benchmark
-        run: sudo env LC_ALL=C python3 scripts/validate_accounting.py "$PERF"
+        run: |
+          mkdir -p .tmp
+          sudo env LC_ALL=C python3 scripts/validate_accounting.py "$PERF"
       - name: Install exact screenshot artifacts
         working-directory: benchmark
         run: python3 scripts/install.py --editors lvce,basic-electron
