@@ -1,11 +1,12 @@
 import { build } from 'esbuild'
 import { readFile } from 'node:fs/promises'
-import { relative, resolve, sep } from 'node:path'
+import { dirname, relative, resolve, sep } from 'node:path'
 
 // Bundle local ESM only. Bare dependencies retain their original package loader,
 // and splitting retains dynamic import boundaries and shared singleton chunks.
 export const bundleSharedGraph = async (entry: string, outdir: string) => {
   const result = await build({
+    absWorkingDir: dirname(dirname(resolve(entry))),
     entryPoints: [resolve(entry)], outdir: resolve(outdir), entryNames: '[name]',
     chunkNames: '[name]-[hash]', bundle: true, splitting: true,
     platform: 'node', format: 'esm', target: 'esnext', packages: 'external',

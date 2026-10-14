@@ -15,11 +15,11 @@ const metadata = await bundleSharedGraph(entry, join(sharedRoot, 'dist-startup')
 const hash = (source: string) => createHash('sha256').update(source).digest('hex')
 const inputs = []
 for (const [file, data] of Object.entries(metadata.inputs)) {
-  inputs.push({ file, ...data, sha256: hash(await readFile(file, 'utf8')) })
+  inputs.push({ file, ...data, sha256: hash(await readFile(resolve(sharedRoot, file), 'utf8')) })
 }
 const outputs = []
 for (const [file, data] of Object.entries(metadata.outputs)) {
-  outputs.push({ file, ...data, sha256: hash(await readFile(file, 'utf8')) })
+  outputs.push({ file, ...data, sha256: hash(await readFile(resolve(sharedRoot, file), 'utf8')) })
 }
 if (!outputs.some(output => output.imports.some(item => item.kind === 'dynamic-import'))) throw new Error('Expected preserved dynamic imports')
 // Keep the production main-process launch path. All local graph references now
