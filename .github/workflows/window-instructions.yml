@@ -1,0 +1,69 @@
+name: ARM window startup investigation
+on:
+  pull_request:
+    paths:
+      - .github/workflows/window-instructions.yml
+      - scripts/profile-window-startup.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    name: ARM accounting and window profiles
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: levivilet/startup-instructions-benchmark
+          ref: 657c144ab1d4985ba31fa80232da59d2005b5ba5
+          path: benchmark
+      - name: Install desktop and hardware tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y linux-tools-generic build-essential python3 curl xz-utils xvfb xauth xdotool x11-utils openbox libgtk-3-0 libnss3 libgbm1 libxss1 libxtst6 libxkbcommon-x11-0 libxkbfile1 libsecret-1-0 libasound2t64
+          sudo sysctl kernel.perf_event_paranoid=-1
+          PERF=$(find -L /usr/lib/linux-tools -name perf -type f | sort | tail -n 1)
+          echo "PERF=$PERF" >> "$GITHUB_ENV"
+      - name: Verify production hardware accounting
+        working-directory: benchmark
+        run: sudo env LC_ALL=C python3 scripts/validate_accounting.py "$PERF"
+      - name: Install exact screenshot artifacts
+        working-directory: benchmark
+        run: python3 scripts/install.py --editors lvce,basic-electron
+      - name: Measure unprofiled baseline (three launches each)
+        working-directory: benchmark
+        env:
+          BENCHMARK_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          BENCHMARK_COMMIT: 657c144ab1d4985ba31fa80232da59d2005b5ba5
+        run: |
+          for editor in lvce basic-electron; do
+            xvfb-run -a -s '-screen 0 1280x800x24' bash scripts/run.sh "$editor" "$PERF"
+            mkdir -p "../results/unprofiled/$editor"
+            cp results/results.json "../results/unprofiled/$editor/"
+          done
+      - name: Profile separate launches through visible window
+        run: |
+          xvfb-run -a -s '-screen 0 1280x800x24' bash -euo pipefail <<'SH'
+          openbox > results/openbox.log 2>&1 &
+          desktop_pid=$!
+          trap 'kill "$desktop_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..100}; do
+            if xprop -root _NET_SUPPORTING_WM_CHECK | grep -q 'window id'; then break; fi
+            sleep .05
+          done
+          for editor in lvce basic-electron; do
+            sudo --preserve-env=DISPLAY,XAUTHORITY python3 scripts/profile-window-startup.py --benchmark benchmark --perf "$PERF" --editor "$editor" --output "results/profiled/$editor"
+          done
+          SH
+      - name: Preserve raw counts, cutoff evidence and stacks
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: arm-window-startup
+          path: |
+            results/
+            benchmark/results/
+          if-no-files-found: error
+          retention-days: 90
