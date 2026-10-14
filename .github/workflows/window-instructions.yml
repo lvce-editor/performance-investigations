@@ -8,6 +8,8 @@ on:
       - src/prepare-window-whitespace.ts
       - src/prepare-window-token-whitespace.ts
       - src/compact-token-whitespace.ts
+      - src/prepare-window-shared-bundle.ts
+      - src/bundle-shared-graph.ts
       - package.json
       - package-lock.json
   workflow_dispatch:
@@ -103,6 +105,24 @@ jobs:
           done
           for interval in 0 5; do
             sudo --preserve-env=DISPLAY,XAUTHORITY,BENCHMARK_RUN_URL python3 scripts/compare-window-whitespace.py --benchmark benchmark --baseline benchmark/.tmp/apps/lvce-whitespace --candidate benchmark/.tmp/apps/lvce-token-whitespace --perf "$PERF" --hold-seconds "$interval" --output "results/token-whitespace-comparison-$interval"
+          done
+          SH
+      - name: Prepare local shared-process split graph candidate
+        run: node src/prepare-window-shared-bundle.ts benchmark/.tmp/apps/lvce-whitespace benchmark/.tmp/apps/lvce-shared-bundle results/shared-bundle-provenance
+      - name: Compare split shared graph against integrated renderer optimization
+        env:
+          BENCHMARK_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          xvfb-run -a -s '-screen 0 1280x800x24' bash -euo pipefail <<'SH'
+          openbox > results/shared-comparison-openbox.log 2>&1 &
+          desktop_pid=$!
+          trap 'kill "$desktop_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..100}; do
+            if xprop -root _NET_SUPPORTING_WM_CHECK | grep -q 'window id'; then break; fi
+            sleep .05
+          done
+          for interval in 0 5; do
+            sudo --preserve-env=DISPLAY,XAUTHORITY,BENCHMARK_RUN_URL python3 scripts/compare-window-whitespace.py --benchmark benchmark --baseline benchmark/.tmp/apps/lvce-whitespace --candidate benchmark/.tmp/apps/lvce-shared-bundle --perf "$PERF" --hold-seconds "$interval" --output "results/shared-bundle-comparison-$interval"
           done
           SH
       - name: Make root-owned hardware artifacts readable by uploader
