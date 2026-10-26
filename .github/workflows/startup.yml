@@ -9,7 +9,7 @@ on:
       candidate:
         description: Candidate LVCE release tag
         required: true
-        default: v0.119.25
+        default: v0.125.20
       workspace_ref:
         description: about-view workspace commit (keep fixed across variants)
         required: true

@@ -5,7 +5,7 @@ on:
       release:
         description: Fixed official LVCE runtime
         required: true
-        default: v0.119.25
+        default: v0.125.20
       baseline_eslint:
         description: Baseline ESLint extension release
         required: true
